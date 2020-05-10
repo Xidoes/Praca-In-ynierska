@@ -1,0 +1,15 @@
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Praca Inżynierska.exe.config
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Praca Inżynierska.exe
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Praca Inżynierska.pdb
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csprojAssemblyReference.cache
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca_Inżynierska.Form1.resources
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca_Inżynierska.Properties.Resources.resources
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csproj.GenerateResource.cache
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csproj.CoreCompileInputs.cache
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.exe
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.pdb
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\FtdAdapter.dll
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Modbus.dll
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\log4net.dll
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Unme.Common.dll
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csproj.CopyComplete
