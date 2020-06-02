@@ -36,7 +36,10 @@
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelMaintPower = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.textBoxWrite4011 = new System.Windows.Forms.TextBox();
@@ -61,77 +64,97 @@
             this.btnStartReadHoldingRegisters = new System.Windows.Forms.Button();
             this.textBoxRead4000 = new System.Windows.Forms.TextBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabEngine = new System.Windows.Forms.TabControl();
+            this.textBoxPMSMSpeed = new System.Windows.Forms.TabControl();
             this.tabDC = new System.Windows.Forms.TabPage();
-            this.trackBar5 = new System.Windows.Forms.TrackBar();
-            this.trackBar4 = new System.Windows.Forms.TrackBar();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.trackBarDCx3 = new System.Windows.Forms.TrackBar();
+            this.trackBarDCx2 = new System.Windows.Forms.TrackBar();
+            this.trackBarDCx1 = new System.Windows.Forms.TrackBar();
+            this.trackBarDCTorque = new System.Windows.Forms.TrackBar();
+            this.trackBarDCSpeed = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDCx3 = new System.Windows.Forms.TextBox();
+            this.textBoxDCx2 = new System.Windows.Forms.TextBox();
+            this.textBoxDCx1 = new System.Windows.Forms.TextBox();
+            this.textBoxDCTorque = new System.Windows.Forms.TextBox();
+            this.textBoxDCSpeed = new System.Windows.Forms.TextBox();
             this.btnStopDC = new System.Windows.Forms.Button();
             this.btnStartDC = new System.Windows.Forms.Button();
             this.tabAsych = new System.Windows.Forms.TabPage();
-            this.trackBar6 = new System.Windows.Forms.TrackBar();
-            this.trackBar7 = new System.Windows.Forms.TrackBar();
-            this.trackBar8 = new System.Windows.Forms.TrackBar();
-            this.trackBar9 = new System.Windows.Forms.TrackBar();
-            this.trackBar10 = new System.Windows.Forms.TrackBar();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.trackBarAsychx3 = new System.Windows.Forms.TrackBar();
+            this.trackBarAsychx2 = new System.Windows.Forms.TrackBar();
+            this.trackBarAsychx1 = new System.Windows.Forms.TrackBar();
+            this.trackBarAsychTorque = new System.Windows.Forms.TrackBar();
+            this.trackBarAsychSpeed = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxAsynchx3 = new System.Windows.Forms.TextBox();
+            this.textBoxAsynchx2 = new System.Windows.Forms.TextBox();
+            this.textBoxAsynchx1 = new System.Windows.Forms.TextBox();
+            this.textBoxAsynchTorque = new System.Windows.Forms.TextBox();
+            this.textBoxAsynchSpeed = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tabBLDC = new System.Windows.Forms.TabPage();
-            this.trackBar11 = new System.Windows.Forms.TrackBar();
-            this.trackBar12 = new System.Windows.Forms.TrackBar();
-            this.trackBar13 = new System.Windows.Forms.TrackBar();
-            this.trackBar14 = new System.Windows.Forms.TrackBar();
-            this.trackBar15 = new System.Windows.Forms.TrackBar();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.trackBarBLDCx3 = new System.Windows.Forms.TrackBar();
+            this.trackBarBLDCx2 = new System.Windows.Forms.TrackBar();
+            this.trackBarBLDCx1 = new System.Windows.Forms.TrackBar();
+            this.trackBarBLDCTorque = new System.Windows.Forms.TrackBar();
+            this.trackBarBLDCSpeed = new System.Windows.Forms.TrackBar();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBoxBLDCx3 = new System.Windows.Forms.TextBox();
+            this.textBoxBLDCx2 = new System.Windows.Forms.TextBox();
+            this.textBoxBLDCx1 = new System.Windows.Forms.TextBox();
+            this.textBoxBLDCTorque = new System.Windows.Forms.TextBox();
+            this.textBoxBLDCSpeed = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.tabPMSM = new System.Windows.Forms.TabPage();
-            this.trackBar16 = new System.Windows.Forms.TrackBar();
-            this.trackBar17 = new System.Windows.Forms.TrackBar();
-            this.trackBar18 = new System.Windows.Forms.TrackBar();
-            this.trackBar19 = new System.Windows.Forms.TrackBar();
-            this.trackBar20 = new System.Windows.Forms.TrackBar();
+            this.textBoxPMSMSpeedd = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.trackBarPMSMx3 = new System.Windows.Forms.TrackBar();
+            this.trackBarPMSMx2 = new System.Windows.Forms.TrackBar();
+            this.trackBarPMSMx1 = new System.Windows.Forms.TrackBar();
+            this.trackBarPMSMTorque = new System.Windows.Forms.TrackBar();
+            this.trackBarPMSMSpeed = new System.Windows.Forms.TrackBar();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBoxPMSMx3 = new System.Windows.Forms.TextBox();
+            this.textBoxPMSMx2 = new System.Windows.Forms.TextBox();
+            this.textBoxPMSMx1 = new System.Windows.Forms.TextBox();
+            this.textBoxPMSMTorque = new System.Windows.Forms.TextBox();
+            this.textBoxPMSMSp = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -151,39 +174,45 @@
             this.btnCloseComPort = new System.Windows.Forms.Button();
             this.btnOpenComPort = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.labelDuration = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            this.tabEngine.SuspendLayout();
+            this.textBoxPMSMSpeed.SuspendLayout();
             this.tabDC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCTorque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCSpeed)).BeginInit();
             this.tabAsych.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychTorque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychSpeed)).BeginInit();
             this.tabBLDC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).BeginInit();
-            this.tabPMSM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCTorque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCSpeed)).BeginInit();
+            this.textBoxPMSMSpeedd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMTorque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label57);
+            this.groupBox1.Controls.Add(this.labelDuration);
+            this.groupBox1.Controls.Add(this.labelMaintPower);
+            this.groupBox1.Controls.Add(this.label56);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.textBoxWrite4011);
@@ -209,10 +238,28 @@
             this.groupBox1.Controls.Add(this.textBoxRead4000);
             this.groupBox1.Location = new System.Drawing.Point(601, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(476, 245);
+            this.groupBox1.Size = new System.Drawing.Size(392, 295);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ModbusTest";
+            this.groupBox1.Text = "DC Main";
+            // 
+            // labelMaintPower
+            // 
+            this.labelMaintPower.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.labelMaintPower.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMaintPower.Location = new System.Drawing.Point(252, 192);
+            this.labelMaintPower.Name = "labelMaintPower";
+            this.labelMaintPower.Size = new System.Drawing.Size(100, 23);
+            this.labelMaintPower.TabIndex = 5022;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(206, 198);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(40, 13);
+            this.label56.TabIndex = 5021;
+            this.label56.Text = "Power:";
             // 
             // label34
             // 
@@ -375,7 +422,7 @@
             this.textBoxWrite4002.Name = "textBoxWrite4002";
             this.textBoxWrite4002.Size = new System.Drawing.Size(123, 20);
             this.textBoxWrite4002.TabIndex = 16;
-            this.textBoxWrite4002.Text = "200";
+            this.textBoxWrite4002.Text = "50";
             // 
             // textBoxWrite4001
             // 
@@ -383,7 +430,7 @@
             this.textBoxWrite4001.Name = "textBoxWrite4001";
             this.textBoxWrite4001.Size = new System.Drawing.Size(123, 20);
             this.textBoxWrite4001.TabIndex = 5000;
-            this.textBoxWrite4001.Text = "500";
+            this.textBoxWrite4001.Text = "3";
             // 
             // btnWriteMultipleRegisters
             // 
@@ -391,7 +438,7 @@
             this.btnWriteMultipleRegisters.Name = "btnWriteMultipleRegisters";
             this.btnWriteMultipleRegisters.Size = new System.Drawing.Size(160, 23);
             this.btnWriteMultipleRegisters.TabIndex = 14;
-            this.btnWriteMultipleRegisters.Text = "Write Multiple Registers (word)";
+            this.btnWriteMultipleRegisters.Text = "Write Multiple Registers";
             this.btnWriteMultipleRegisters.UseVisualStyleBackColor = true;
             this.btnWriteMultipleRegisters.Click += new System.EventHandler(this.BtnWriteMultipleRegistersWord_Click);
             // 
@@ -418,7 +465,7 @@
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(12, 354);
+            this.chart2.Location = new System.Drawing.Point(12, 440);
             this.chart2.Name = "chart2";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -441,94 +488,158 @@
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series5.Legend = "Legend1";
             series5.Name = "Test4";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend1";
+            series6.Name = "Power";
             this.chart2.Series.Add(series1);
             this.chart2.Series.Add(series2);
             this.chart2.Series.Add(series3);
             this.chart2.Series.Add(series4);
             this.chart2.Series.Add(series5);
-            this.chart2.Size = new System.Drawing.Size(934, 618);
+            this.chart2.Series.Add(series6);
+            this.chart2.Size = new System.Drawing.Size(934, 532);
             this.chart2.TabIndex = 6;
             this.chart2.Text = "chart2";
             // 
-            // tabEngine
+            // textBoxPMSMSpeed
             // 
-            this.tabEngine.Controls.Add(this.tabDC);
-            this.tabEngine.Controls.Add(this.tabAsych);
-            this.tabEngine.Controls.Add(this.tabBLDC);
-            this.tabEngine.Controls.Add(this.tabPMSM);
-            this.tabEngine.Location = new System.Drawing.Point(12, 25);
-            this.tabEngine.Name = "tabEngine";
-            this.tabEngine.SelectedIndex = 0;
-            this.tabEngine.Size = new System.Drawing.Size(342, 304);
-            this.tabEngine.TabIndex = 6;
+            this.textBoxPMSMSpeed.Controls.Add(this.tabDC);
+            this.textBoxPMSMSpeed.Controls.Add(this.tabAsych);
+            this.textBoxPMSMSpeed.Controls.Add(this.tabBLDC);
+            this.textBoxPMSMSpeed.Controls.Add(this.textBoxPMSMSpeedd);
+            this.textBoxPMSMSpeed.Location = new System.Drawing.Point(12, 25);
+            this.textBoxPMSMSpeed.Name = "textBoxPMSMSpeed";
+            this.textBoxPMSMSpeed.SelectedIndex = 0;
+            this.textBoxPMSMSpeed.Size = new System.Drawing.Size(342, 397);
+            this.textBoxPMSMSpeed.TabIndex = 6;
             // 
             // tabDC
             // 
-            this.tabDC.Controls.Add(this.trackBar5);
-            this.tabDC.Controls.Add(this.trackBar4);
-            this.tabDC.Controls.Add(this.trackBar3);
-            this.tabDC.Controls.Add(this.trackBar2);
-            this.tabDC.Controls.Add(this.trackBar1);
+            this.tabDC.Controls.Add(this.label39);
+            this.tabDC.Controls.Add(this.label38);
+            this.tabDC.Controls.Add(this.label37);
+            this.tabDC.Controls.Add(this.label36);
+            this.tabDC.Controls.Add(this.label29);
+            this.tabDC.Controls.Add(this.trackBarDCx3);
+            this.tabDC.Controls.Add(this.trackBarDCx2);
+            this.tabDC.Controls.Add(this.trackBarDCx1);
+            this.tabDC.Controls.Add(this.trackBarDCTorque);
+            this.tabDC.Controls.Add(this.trackBarDCSpeed);
             this.tabDC.Controls.Add(this.label5);
             this.tabDC.Controls.Add(this.label4);
             this.tabDC.Controls.Add(this.label3);
             this.tabDC.Controls.Add(this.label2);
             this.tabDC.Controls.Add(this.label1);
-            this.tabDC.Controls.Add(this.textBox5);
-            this.tabDC.Controls.Add(this.textBox4);
-            this.tabDC.Controls.Add(this.textBox3);
-            this.tabDC.Controls.Add(this.textBox2);
-            this.tabDC.Controls.Add(this.textBox1);
+            this.tabDC.Controls.Add(this.textBoxDCx3);
+            this.tabDC.Controls.Add(this.textBoxDCx2);
+            this.tabDC.Controls.Add(this.textBoxDCx1);
+            this.tabDC.Controls.Add(this.textBoxDCTorque);
+            this.tabDC.Controls.Add(this.textBoxDCSpeed);
             this.tabDC.Controls.Add(this.btnStopDC);
             this.tabDC.Controls.Add(this.btnStartDC);
             this.tabDC.Location = new System.Drawing.Point(4, 22);
             this.tabDC.Name = "tabDC";
             this.tabDC.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDC.Size = new System.Drawing.Size(334, 278);
+            this.tabDC.Size = new System.Drawing.Size(334, 371);
             this.tabDC.TabIndex = 0;
             this.tabDC.Text = "DC";
             this.tabDC.UseVisualStyleBackColor = true;
             // 
-            // trackBar5
+            // label39
             // 
-            this.trackBar5.Location = new System.Drawing.Point(128, 214);
-            this.trackBar5.Name = "trackBar5";
-            this.trackBar5.Size = new System.Drawing.Size(104, 45);
-            this.trackBar5.TabIndex = 18;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(236, 323);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(17, 13);
+            this.label39.TabIndex = 23;
+            this.label39.Text = "xx";
             // 
-            // trackBar4
+            // label38
             // 
-            this.trackBar4.Location = new System.Drawing.Point(128, 163);
-            this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(104, 45);
-            this.trackBar4.TabIndex = 17;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(236, 272);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(17, 13);
+            this.label38.TabIndex = 22;
+            this.label38.Text = "xx";
             // 
-            // trackBar3
+            // label37
             // 
-            this.trackBar3.Location = new System.Drawing.Point(128, 112);
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(104, 45);
-            this.trackBar3.TabIndex = 16;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(236, 221);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(17, 13);
+            this.label37.TabIndex = 21;
+            this.label37.Text = "xx";
             // 
-            // trackBar2
+            // label36
             // 
-            this.trackBar2.Location = new System.Drawing.Point(128, 61);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(104, 45);
-            this.trackBar2.TabIndex = 15;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(236, 170);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(23, 13);
+            this.label36.TabIndex = 20;
+            this.label36.Text = "Nm";
             // 
-            // trackBar1
+            // label29
             // 
-            this.trackBar1.Location = new System.Drawing.Point(128, 10);
-            this.trackBar1.Maximum = 1000;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 14;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(235, 119);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(24, 13);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "rpm";
+            // 
+            // trackBarDCx3
+            // 
+            this.trackBarDCx3.Location = new System.Drawing.Point(64, 297);
+            this.trackBarDCx3.Maximum = 1000;
+            this.trackBarDCx3.Name = "trackBarDCx3";
+            this.trackBarDCx3.Size = new System.Drawing.Size(104, 45);
+            this.trackBarDCx3.TabIndex = 18;
+            this.trackBarDCx3.Scroll += new System.EventHandler(this.TrackBarDCx3_Scroll);
+            // 
+            // trackBarDCx2
+            // 
+            this.trackBarDCx2.Location = new System.Drawing.Point(64, 246);
+            this.trackBarDCx2.Maximum = 1000;
+            this.trackBarDCx2.Name = "trackBarDCx2";
+            this.trackBarDCx2.Size = new System.Drawing.Size(104, 45);
+            this.trackBarDCx2.TabIndex = 17;
+            this.trackBarDCx2.Scroll += new System.EventHandler(this.TrackBarDCx2_Scroll);
+            // 
+            // trackBarDCx1
+            // 
+            this.trackBarDCx1.Location = new System.Drawing.Point(64, 195);
+            this.trackBarDCx1.Maximum = 1000;
+            this.trackBarDCx1.Name = "trackBarDCx1";
+            this.trackBarDCx1.Size = new System.Drawing.Size(104, 45);
+            this.trackBarDCx1.TabIndex = 16;
+            this.trackBarDCx1.Scroll += new System.EventHandler(this.TrackBarDCx1_Scroll);
+            // 
+            // trackBarDCTorque
+            // 
+            this.trackBarDCTorque.Location = new System.Drawing.Point(64, 144);
+            this.trackBarDCTorque.Maximum = 1000;
+            this.trackBarDCTorque.Name = "trackBarDCTorque";
+            this.trackBarDCTorque.Size = new System.Drawing.Size(104, 45);
+            this.trackBarDCTorque.TabIndex = 15;
+            this.trackBarDCTorque.Scroll += new System.EventHandler(this.TrackBarDCTorque_Scroll);
+            // 
+            // trackBarDCSpeed
+            // 
+            this.trackBarDCSpeed.Location = new System.Drawing.Point(64, 93);
+            this.trackBarDCSpeed.Maximum = 1000;
+            this.trackBarDCSpeed.Name = "trackBarDCSpeed";
+            this.trackBarDCSpeed.Size = new System.Drawing.Size(104, 45);
+            this.trackBarDCSpeed.TabIndex = 14;
+            this.trackBarDCSpeed.Scroll += new System.EventHandler(this.TrackBarDCSpeed_Scroll);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 246);
+            this.label5.Location = new System.Drawing.Point(6, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 13;
@@ -537,7 +648,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 195);
+            this.label4.Location = new System.Drawing.Point(6, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 12;
@@ -546,7 +657,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 144);
+            this.label3.Location = new System.Drawing.Point(6, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 11;
@@ -555,7 +666,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 93);
+            this.label2.Location = new System.Drawing.Point(6, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 10;
@@ -564,50 +675,55 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 42);
+            this.label1.Location = new System.Drawing.Point(6, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Prędkość";
             // 
-            // textBox5
+            // textBoxDCx3
             // 
-            this.textBox5.Location = new System.Drawing.Point(66, 239);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(56, 20);
-            this.textBox5.TabIndex = 8;
+            this.textBoxDCx3.Location = new System.Drawing.Point(174, 320);
+            this.textBoxDCx3.Name = "textBoxDCx3";
+            this.textBoxDCx3.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDCx3.TabIndex = 8;
+            this.textBoxDCx3.Text = "0";
             // 
-            // textBox4
+            // textBoxDCx2
             // 
-            this.textBox4.Location = new System.Drawing.Point(66, 188);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(56, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxDCx2.Location = new System.Drawing.Point(174, 269);
+            this.textBoxDCx2.Name = "textBoxDCx2";
+            this.textBoxDCx2.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDCx2.TabIndex = 7;
+            this.textBoxDCx2.Text = "0";
             // 
-            // textBox3
+            // textBoxDCx1
             // 
-            this.textBox3.Location = new System.Drawing.Point(66, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(56, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBoxDCx1.Location = new System.Drawing.Point(174, 218);
+            this.textBoxDCx1.Name = "textBoxDCx1";
+            this.textBoxDCx1.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDCx1.TabIndex = 6;
+            this.textBoxDCx1.Text = "0";
             // 
-            // textBox2
+            // textBoxDCTorque
             // 
-            this.textBox2.Location = new System.Drawing.Point(66, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBoxDCTorque.Location = new System.Drawing.Point(174, 167);
+            this.textBoxDCTorque.Name = "textBoxDCTorque";
+            this.textBoxDCTorque.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDCTorque.TabIndex = 5;
+            this.textBoxDCTorque.Text = "0";
             // 
-            // textBox1
+            // textBoxDCSpeed
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBoxDCSpeed.Location = new System.Drawing.Point(174, 116);
+            this.textBoxDCSpeed.Name = "textBoxDCSpeed";
+            this.textBoxDCSpeed.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDCSpeed.TabIndex = 4;
+            this.textBoxDCSpeed.Text = "0";
             // 
             // btnStopDC
             // 
-            this.btnStopDC.Location = new System.Drawing.Point(238, 52);
+            this.btnStopDC.Location = new System.Drawing.Point(9, 48);
             this.btnStopDC.Name = "btnStopDC";
             this.btnStopDC.Size = new System.Drawing.Size(75, 23);
             this.btnStopDC.TabIndex = 2;
@@ -616,7 +732,7 @@
             // 
             // btnStartDC
             // 
-            this.btnStartDC.Location = new System.Drawing.Point(238, 22);
+            this.btnStartDC.Location = new System.Drawing.Point(9, 18);
             this.btnStartDC.Name = "btnStartDC";
             this.btnStartDC.Size = new System.Drawing.Size(75, 23);
             this.btnStartDC.TabIndex = 1;
@@ -625,71 +741,130 @@
             // 
             // tabAsych
             // 
-            this.tabAsych.Controls.Add(this.trackBar6);
-            this.tabAsych.Controls.Add(this.trackBar7);
-            this.tabAsych.Controls.Add(this.trackBar8);
-            this.tabAsych.Controls.Add(this.trackBar9);
-            this.tabAsych.Controls.Add(this.trackBar10);
+            this.tabAsych.Controls.Add(this.label40);
+            this.tabAsych.Controls.Add(this.label41);
+            this.tabAsych.Controls.Add(this.label42);
+            this.tabAsych.Controls.Add(this.label43);
+            this.tabAsych.Controls.Add(this.label44);
+            this.tabAsych.Controls.Add(this.trackBarAsychx3);
+            this.tabAsych.Controls.Add(this.trackBarAsychx2);
+            this.tabAsych.Controls.Add(this.trackBarAsychx1);
+            this.tabAsych.Controls.Add(this.trackBarAsychTorque);
+            this.tabAsych.Controls.Add(this.trackBarAsychSpeed);
             this.tabAsych.Controls.Add(this.label6);
             this.tabAsych.Controls.Add(this.label7);
             this.tabAsych.Controls.Add(this.label8);
             this.tabAsych.Controls.Add(this.label9);
             this.tabAsych.Controls.Add(this.label10);
-            this.tabAsych.Controls.Add(this.textBox6);
-            this.tabAsych.Controls.Add(this.textBox7);
-            this.tabAsych.Controls.Add(this.textBox8);
-            this.tabAsych.Controls.Add(this.textBox9);
-            this.tabAsych.Controls.Add(this.textBox10);
+            this.tabAsych.Controls.Add(this.textBoxAsynchx3);
+            this.tabAsych.Controls.Add(this.textBoxAsynchx2);
+            this.tabAsych.Controls.Add(this.textBoxAsynchx1);
+            this.tabAsych.Controls.Add(this.textBoxAsynchTorque);
+            this.tabAsych.Controls.Add(this.textBoxAsynchSpeed);
             this.tabAsych.Controls.Add(this.button1);
             this.tabAsych.Controls.Add(this.button2);
             this.tabAsych.Location = new System.Drawing.Point(4, 22);
             this.tabAsych.Name = "tabAsych";
             this.tabAsych.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAsych.Size = new System.Drawing.Size(334, 278);
+            this.tabAsych.Size = new System.Drawing.Size(334, 371);
             this.tabAsych.TabIndex = 1;
-            this.tabAsych.Text = "Asynchroniczny";
+            this.tabAsych.Text = "Asynchronous";
             this.tabAsych.UseVisualStyleBackColor = true;
             // 
-            // trackBar6
+            // label40
             // 
-            this.trackBar6.Location = new System.Drawing.Point(134, 214);
-            this.trackBar6.Name = "trackBar6";
-            this.trackBar6.Size = new System.Drawing.Size(104, 45);
-            this.trackBar6.TabIndex = 35;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(242, 316);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(17, 13);
+            this.label40.TabIndex = 40;
+            this.label40.Text = "xx";
             // 
-            // trackBar7
+            // label41
             // 
-            this.trackBar7.Location = new System.Drawing.Point(134, 163);
-            this.trackBar7.Name = "trackBar7";
-            this.trackBar7.Size = new System.Drawing.Size(104, 45);
-            this.trackBar7.TabIndex = 34;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(242, 265);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(17, 13);
+            this.label41.TabIndex = 39;
+            this.label41.Text = "xx";
             // 
-            // trackBar8
+            // label42
             // 
-            this.trackBar8.Location = new System.Drawing.Point(134, 112);
-            this.trackBar8.Name = "trackBar8";
-            this.trackBar8.Size = new System.Drawing.Size(104, 45);
-            this.trackBar8.TabIndex = 33;
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(242, 214);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(17, 13);
+            this.label42.TabIndex = 38;
+            this.label42.Text = "xx";
             // 
-            // trackBar9
+            // label43
             // 
-            this.trackBar9.Location = new System.Drawing.Point(134, 61);
-            this.trackBar9.Name = "trackBar9";
-            this.trackBar9.Size = new System.Drawing.Size(104, 45);
-            this.trackBar9.TabIndex = 32;
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(242, 163);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(23, 13);
+            this.label43.TabIndex = 37;
+            this.label43.Text = "Nm";
             // 
-            // trackBar10
+            // label44
             // 
-            this.trackBar10.Location = new System.Drawing.Point(134, 10);
-            this.trackBar10.Maximum = 1000;
-            this.trackBar10.Name = "trackBar10";
-            this.trackBar10.Size = new System.Drawing.Size(104, 45);
-            this.trackBar10.TabIndex = 31;
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(241, 112);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(24, 13);
+            this.label44.TabIndex = 36;
+            this.label44.Text = "rpm";
+            // 
+            // trackBarAsychx3
+            // 
+            this.trackBarAsychx3.Location = new System.Drawing.Point(73, 297);
+            this.trackBarAsychx3.Maximum = 1000;
+            this.trackBarAsychx3.Name = "trackBarAsychx3";
+            this.trackBarAsychx3.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAsychx3.TabIndex = 35;
+            this.trackBarAsychx3.Scroll += new System.EventHandler(this.TrackBarAsychx3_Scroll);
+            // 
+            // trackBarAsychx2
+            // 
+            this.trackBarAsychx2.Location = new System.Drawing.Point(73, 246);
+            this.trackBarAsychx2.Maximum = 1000;
+            this.trackBarAsychx2.Name = "trackBarAsychx2";
+            this.trackBarAsychx2.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAsychx2.TabIndex = 34;
+            this.trackBarAsychx2.Scroll += new System.EventHandler(this.TrackBarAsychx2_Scroll);
+            // 
+            // trackBarAsychx1
+            // 
+            this.trackBarAsychx1.Location = new System.Drawing.Point(73, 195);
+            this.trackBarAsychx1.Maximum = 1000;
+            this.trackBarAsychx1.Name = "trackBarAsychx1";
+            this.trackBarAsychx1.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAsychx1.TabIndex = 33;
+            this.trackBarAsychx1.Scroll += new System.EventHandler(this.TrackBarAsychx1_Scroll);
+            // 
+            // trackBarAsychTorque
+            // 
+            this.trackBarAsychTorque.Location = new System.Drawing.Point(73, 144);
+            this.trackBarAsychTorque.Maximum = 1000;
+            this.trackBarAsychTorque.Name = "trackBarAsychTorque";
+            this.trackBarAsychTorque.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAsychTorque.TabIndex = 32;
+            this.trackBarAsychTorque.Scroll += new System.EventHandler(this.TrackBarAsychTorque_Scroll);
+            // 
+            // trackBarAsychSpeed
+            // 
+            this.trackBarAsychSpeed.Location = new System.Drawing.Point(73, 93);
+            this.trackBarAsychSpeed.Maximum = 1000;
+            this.trackBarAsychSpeed.Name = "trackBarAsychSpeed";
+            this.trackBarAsychSpeed.Size = new System.Drawing.Size(104, 45);
+            this.trackBarAsychSpeed.TabIndex = 31;
+            this.trackBarAsychSpeed.Scroll += new System.EventHandler(this.TrackBarAsychSpeed_Scroll);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 246);
+            this.label6.Location = new System.Drawing.Point(15, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 30;
@@ -698,7 +873,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 195);
+            this.label7.Location = new System.Drawing.Point(15, 269);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(18, 13);
             this.label7.TabIndex = 29;
@@ -707,7 +882,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 144);
+            this.label8.Location = new System.Drawing.Point(15, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(18, 13);
             this.label8.TabIndex = 28;
@@ -716,7 +891,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 93);
+            this.label9.Location = new System.Drawing.Point(15, 167);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 27;
@@ -725,50 +900,55 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 42);
+            this.label10.Location = new System.Drawing.Point(15, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 26;
             this.label10.Text = "Prędkość";
             // 
-            // textBox6
+            // textBoxAsynchx3
             // 
-            this.textBox6.Location = new System.Drawing.Point(72, 239);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 20);
-            this.textBox6.TabIndex = 25;
+            this.textBoxAsynchx3.Location = new System.Drawing.Point(183, 313);
+            this.textBoxAsynchx3.Name = "textBoxAsynchx3";
+            this.textBoxAsynchx3.Size = new System.Drawing.Size(56, 20);
+            this.textBoxAsynchx3.TabIndex = 25;
+            this.textBoxAsynchx3.Text = "0";
             // 
-            // textBox7
+            // textBoxAsynchx2
             // 
-            this.textBox7.Location = new System.Drawing.Point(72, 188);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(56, 20);
-            this.textBox7.TabIndex = 24;
+            this.textBoxAsynchx2.Location = new System.Drawing.Point(183, 262);
+            this.textBoxAsynchx2.Name = "textBoxAsynchx2";
+            this.textBoxAsynchx2.Size = new System.Drawing.Size(56, 20);
+            this.textBoxAsynchx2.TabIndex = 24;
+            this.textBoxAsynchx2.Text = "0";
             // 
-            // textBox8
+            // textBoxAsynchx1
             // 
-            this.textBox8.Location = new System.Drawing.Point(72, 137);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(56, 20);
-            this.textBox8.TabIndex = 23;
+            this.textBoxAsynchx1.Location = new System.Drawing.Point(183, 211);
+            this.textBoxAsynchx1.Name = "textBoxAsynchx1";
+            this.textBoxAsynchx1.Size = new System.Drawing.Size(56, 20);
+            this.textBoxAsynchx1.TabIndex = 23;
+            this.textBoxAsynchx1.Text = "0";
             // 
-            // textBox9
+            // textBoxAsynchTorque
             // 
-            this.textBox9.Location = new System.Drawing.Point(72, 86);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(56, 20);
-            this.textBox9.TabIndex = 22;
+            this.textBoxAsynchTorque.Location = new System.Drawing.Point(183, 160);
+            this.textBoxAsynchTorque.Name = "textBoxAsynchTorque";
+            this.textBoxAsynchTorque.Size = new System.Drawing.Size(56, 20);
+            this.textBoxAsynchTorque.TabIndex = 22;
+            this.textBoxAsynchTorque.Text = "0";
             // 
-            // textBox10
+            // textBoxAsynchSpeed
             // 
-            this.textBox10.Location = new System.Drawing.Point(72, 35);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(56, 20);
-            this.textBox10.TabIndex = 21;
+            this.textBoxAsynchSpeed.Location = new System.Drawing.Point(183, 109);
+            this.textBoxAsynchSpeed.Name = "textBoxAsynchSpeed";
+            this.textBoxAsynchSpeed.Size = new System.Drawing.Size(56, 20);
+            this.textBoxAsynchSpeed.TabIndex = 21;
+            this.textBoxAsynchSpeed.Text = "0";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 52);
+            this.button1.Location = new System.Drawing.Point(18, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 20;
@@ -777,7 +957,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(244, 22);
+            this.button2.Location = new System.Drawing.Point(18, 18);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -786,70 +966,129 @@
             // 
             // tabBLDC
             // 
-            this.tabBLDC.Controls.Add(this.trackBar11);
-            this.tabBLDC.Controls.Add(this.trackBar12);
-            this.tabBLDC.Controls.Add(this.trackBar13);
-            this.tabBLDC.Controls.Add(this.trackBar14);
-            this.tabBLDC.Controls.Add(this.trackBar15);
+            this.tabBLDC.Controls.Add(this.label45);
+            this.tabBLDC.Controls.Add(this.label46);
+            this.tabBLDC.Controls.Add(this.label47);
+            this.tabBLDC.Controls.Add(this.label48);
+            this.tabBLDC.Controls.Add(this.label49);
+            this.tabBLDC.Controls.Add(this.trackBarBLDCx3);
+            this.tabBLDC.Controls.Add(this.trackBarBLDCx2);
+            this.tabBLDC.Controls.Add(this.trackBarBLDCx1);
+            this.tabBLDC.Controls.Add(this.trackBarBLDCTorque);
+            this.tabBLDC.Controls.Add(this.trackBarBLDCSpeed);
             this.tabBLDC.Controls.Add(this.label12);
             this.tabBLDC.Controls.Add(this.label13);
             this.tabBLDC.Controls.Add(this.label14);
             this.tabBLDC.Controls.Add(this.label15);
             this.tabBLDC.Controls.Add(this.label20);
-            this.tabBLDC.Controls.Add(this.textBox11);
-            this.tabBLDC.Controls.Add(this.textBox12);
-            this.tabBLDC.Controls.Add(this.textBox13);
-            this.tabBLDC.Controls.Add(this.textBox14);
-            this.tabBLDC.Controls.Add(this.textBox15);
+            this.tabBLDC.Controls.Add(this.textBoxBLDCx3);
+            this.tabBLDC.Controls.Add(this.textBoxBLDCx2);
+            this.tabBLDC.Controls.Add(this.textBoxBLDCx1);
+            this.tabBLDC.Controls.Add(this.textBoxBLDCTorque);
+            this.tabBLDC.Controls.Add(this.textBoxBLDCSpeed);
             this.tabBLDC.Controls.Add(this.button3);
             this.tabBLDC.Controls.Add(this.button4);
             this.tabBLDC.Location = new System.Drawing.Point(4, 22);
             this.tabBLDC.Name = "tabBLDC";
-            this.tabBLDC.Size = new System.Drawing.Size(334, 278);
+            this.tabBLDC.Size = new System.Drawing.Size(334, 371);
             this.tabBLDC.TabIndex = 2;
             this.tabBLDC.Text = "BLDC";
             this.tabBLDC.UseVisualStyleBackColor = true;
             // 
-            // trackBar11
+            // label45
             // 
-            this.trackBar11.Location = new System.Drawing.Point(129, 214);
-            this.trackBar11.Name = "trackBar11";
-            this.trackBar11.Size = new System.Drawing.Size(104, 45);
-            this.trackBar11.TabIndex = 35;
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(241, 329);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(17, 13);
+            this.label45.TabIndex = 40;
+            this.label45.Text = "xx";
             // 
-            // trackBar12
+            // label46
             // 
-            this.trackBar12.Location = new System.Drawing.Point(129, 163);
-            this.trackBar12.Name = "trackBar12";
-            this.trackBar12.Size = new System.Drawing.Size(104, 45);
-            this.trackBar12.TabIndex = 34;
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(241, 278);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(17, 13);
+            this.label46.TabIndex = 39;
+            this.label46.Text = "xx";
             // 
-            // trackBar13
+            // label47
             // 
-            this.trackBar13.Location = new System.Drawing.Point(129, 112);
-            this.trackBar13.Name = "trackBar13";
-            this.trackBar13.Size = new System.Drawing.Size(104, 45);
-            this.trackBar13.TabIndex = 33;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(241, 227);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(17, 13);
+            this.label47.TabIndex = 38;
+            this.label47.Text = "xx";
             // 
-            // trackBar14
+            // label48
             // 
-            this.trackBar14.Location = new System.Drawing.Point(129, 61);
-            this.trackBar14.Name = "trackBar14";
-            this.trackBar14.Size = new System.Drawing.Size(104, 45);
-            this.trackBar14.TabIndex = 32;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(241, 176);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(23, 13);
+            this.label48.TabIndex = 37;
+            this.label48.Text = "Nm";
             // 
-            // trackBar15
+            // label49
             // 
-            this.trackBar15.Location = new System.Drawing.Point(129, 10);
-            this.trackBar15.Maximum = 1000;
-            this.trackBar15.Name = "trackBar15";
-            this.trackBar15.Size = new System.Drawing.Size(104, 45);
-            this.trackBar15.TabIndex = 31;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(240, 125);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(24, 13);
+            this.label49.TabIndex = 36;
+            this.label49.Text = "rpm";
+            // 
+            // trackBarBLDCx3
+            // 
+            this.trackBarBLDCx3.Location = new System.Drawing.Point(68, 307);
+            this.trackBarBLDCx3.Maximum = 1000;
+            this.trackBarBLDCx3.Name = "trackBarBLDCx3";
+            this.trackBarBLDCx3.Size = new System.Drawing.Size(104, 45);
+            this.trackBarBLDCx3.TabIndex = 35;
+            this.trackBarBLDCx3.Scroll += new System.EventHandler(this.TrackBarBLDCx3_Scroll);
+            // 
+            // trackBarBLDCx2
+            // 
+            this.trackBarBLDCx2.Location = new System.Drawing.Point(68, 256);
+            this.trackBarBLDCx2.Maximum = 1000;
+            this.trackBarBLDCx2.Name = "trackBarBLDCx2";
+            this.trackBarBLDCx2.Size = new System.Drawing.Size(104, 45);
+            this.trackBarBLDCx2.TabIndex = 34;
+            this.trackBarBLDCx2.Scroll += new System.EventHandler(this.TrackBarBLDCx2_Scroll);
+            // 
+            // trackBarBLDCx1
+            // 
+            this.trackBarBLDCx1.Location = new System.Drawing.Point(68, 205);
+            this.trackBarBLDCx1.Maximum = 1000;
+            this.trackBarBLDCx1.Name = "trackBarBLDCx1";
+            this.trackBarBLDCx1.Size = new System.Drawing.Size(104, 45);
+            this.trackBarBLDCx1.TabIndex = 33;
+            this.trackBarBLDCx1.Scroll += new System.EventHandler(this.TrackBarBLDCx1_Scroll);
+            // 
+            // trackBarBLDCTorque
+            // 
+            this.trackBarBLDCTorque.Location = new System.Drawing.Point(68, 154);
+            this.trackBarBLDCTorque.Maximum = 1000;
+            this.trackBarBLDCTorque.Name = "trackBarBLDCTorque";
+            this.trackBarBLDCTorque.Size = new System.Drawing.Size(104, 45);
+            this.trackBarBLDCTorque.TabIndex = 32;
+            this.trackBarBLDCTorque.Scroll += new System.EventHandler(this.TrackBarBLDCTorque_Scroll);
+            // 
+            // trackBarBLDCSpeed
+            // 
+            this.trackBarBLDCSpeed.Location = new System.Drawing.Point(68, 103);
+            this.trackBarBLDCSpeed.Maximum = 1000;
+            this.trackBarBLDCSpeed.Name = "trackBarBLDCSpeed";
+            this.trackBarBLDCSpeed.Size = new System.Drawing.Size(104, 45);
+            this.trackBarBLDCSpeed.TabIndex = 31;
+            this.trackBarBLDCSpeed.Scroll += new System.EventHandler(this.TrackBarBLDCSpeed_Scroll);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 246);
+            this.label12.Location = new System.Drawing.Point(10, 333);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(18, 13);
             this.label12.TabIndex = 30;
@@ -858,7 +1097,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 195);
+            this.label13.Location = new System.Drawing.Point(10, 282);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(18, 13);
             this.label13.TabIndex = 29;
@@ -867,7 +1106,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 144);
+            this.label14.Location = new System.Drawing.Point(10, 231);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(18, 13);
             this.label14.TabIndex = 28;
@@ -876,7 +1115,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 93);
+            this.label15.Location = new System.Drawing.Point(10, 180);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(45, 13);
             this.label15.TabIndex = 27;
@@ -885,50 +1124,55 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(9, 42);
+            this.label20.Location = new System.Drawing.Point(10, 129);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(52, 13);
             this.label20.TabIndex = 26;
             this.label20.Text = "Prędkość";
             // 
-            // textBox11
+            // textBoxBLDCx3
             // 
-            this.textBox11.Location = new System.Drawing.Point(67, 239);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(56, 20);
-            this.textBox11.TabIndex = 25;
+            this.textBoxBLDCx3.Location = new System.Drawing.Point(178, 326);
+            this.textBoxBLDCx3.Name = "textBoxBLDCx3";
+            this.textBoxBLDCx3.Size = new System.Drawing.Size(56, 20);
+            this.textBoxBLDCx3.TabIndex = 25;
+            this.textBoxBLDCx3.Text = "0";
             // 
-            // textBox12
+            // textBoxBLDCx2
             // 
-            this.textBox12.Location = new System.Drawing.Point(67, 188);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(56, 20);
-            this.textBox12.TabIndex = 24;
+            this.textBoxBLDCx2.Location = new System.Drawing.Point(178, 275);
+            this.textBoxBLDCx2.Name = "textBoxBLDCx2";
+            this.textBoxBLDCx2.Size = new System.Drawing.Size(56, 20);
+            this.textBoxBLDCx2.TabIndex = 24;
+            this.textBoxBLDCx2.Text = "0";
             // 
-            // textBox13
+            // textBoxBLDCx1
             // 
-            this.textBox13.Location = new System.Drawing.Point(67, 137);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(56, 20);
-            this.textBox13.TabIndex = 23;
+            this.textBoxBLDCx1.Location = new System.Drawing.Point(178, 224);
+            this.textBoxBLDCx1.Name = "textBoxBLDCx1";
+            this.textBoxBLDCx1.Size = new System.Drawing.Size(56, 20);
+            this.textBoxBLDCx1.TabIndex = 23;
+            this.textBoxBLDCx1.Text = "0";
             // 
-            // textBox14
+            // textBoxBLDCTorque
             // 
-            this.textBox14.Location = new System.Drawing.Point(67, 86);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(56, 20);
-            this.textBox14.TabIndex = 22;
+            this.textBoxBLDCTorque.Location = new System.Drawing.Point(178, 173);
+            this.textBoxBLDCTorque.Name = "textBoxBLDCTorque";
+            this.textBoxBLDCTorque.Size = new System.Drawing.Size(56, 20);
+            this.textBoxBLDCTorque.TabIndex = 22;
+            this.textBoxBLDCTorque.Text = "0";
             // 
-            // textBox15
+            // textBoxBLDCSpeed
             // 
-            this.textBox15.Location = new System.Drawing.Point(67, 35);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(56, 20);
-            this.textBox15.TabIndex = 21;
+            this.textBoxBLDCSpeed.Location = new System.Drawing.Point(178, 122);
+            this.textBoxBLDCSpeed.Name = "textBoxBLDCSpeed";
+            this.textBoxBLDCSpeed.Size = new System.Drawing.Size(56, 20);
+            this.textBoxBLDCSpeed.TabIndex = 21;
+            this.textBoxBLDCSpeed.Text = "0";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(239, 52);
+            this.button3.Location = new System.Drawing.Point(13, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 20;
@@ -937,79 +1181,138 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(239, 22);
+            this.button4.Location = new System.Drawing.Point(13, 18);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 19;
             this.button4.Text = "Start";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // tabPMSM
+            // textBoxPMSMSpeedd
             // 
-            this.tabPMSM.Controls.Add(this.trackBar16);
-            this.tabPMSM.Controls.Add(this.trackBar17);
-            this.tabPMSM.Controls.Add(this.trackBar18);
-            this.tabPMSM.Controls.Add(this.trackBar19);
-            this.tabPMSM.Controls.Add(this.trackBar20);
-            this.tabPMSM.Controls.Add(this.label21);
-            this.tabPMSM.Controls.Add(this.label22);
-            this.tabPMSM.Controls.Add(this.label23);
-            this.tabPMSM.Controls.Add(this.label24);
-            this.tabPMSM.Controls.Add(this.label25);
-            this.tabPMSM.Controls.Add(this.textBox16);
-            this.tabPMSM.Controls.Add(this.textBox17);
-            this.tabPMSM.Controls.Add(this.textBox18);
-            this.tabPMSM.Controls.Add(this.textBox19);
-            this.tabPMSM.Controls.Add(this.textBox20);
-            this.tabPMSM.Controls.Add(this.button5);
-            this.tabPMSM.Controls.Add(this.button6);
-            this.tabPMSM.Location = new System.Drawing.Point(4, 22);
-            this.tabPMSM.Name = "tabPMSM";
-            this.tabPMSM.Size = new System.Drawing.Size(334, 278);
-            this.tabPMSM.TabIndex = 3;
-            this.tabPMSM.Text = "PMSM";
-            this.tabPMSM.UseVisualStyleBackColor = true;
+            this.textBoxPMSMSpeedd.Controls.Add(this.label50);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label51);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label52);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label53);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label54);
+            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx3);
+            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx2);
+            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx1);
+            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMTorque);
+            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMSpeed);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label21);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label22);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label23);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label24);
+            this.textBoxPMSMSpeedd.Controls.Add(this.label25);
+            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx3);
+            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx2);
+            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx1);
+            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMTorque);
+            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMSp);
+            this.textBoxPMSMSpeedd.Controls.Add(this.button5);
+            this.textBoxPMSMSpeedd.Controls.Add(this.button6);
+            this.textBoxPMSMSpeedd.Location = new System.Drawing.Point(4, 22);
+            this.textBoxPMSMSpeedd.Name = "textBoxPMSMSpeedd";
+            this.textBoxPMSMSpeedd.Size = new System.Drawing.Size(334, 371);
+            this.textBoxPMSMSpeedd.TabIndex = 3;
+            this.textBoxPMSMSpeedd.Text = "PMSM";
+            this.textBoxPMSMSpeedd.UseVisualStyleBackColor = true;
             // 
-            // trackBar16
+            // label50
             // 
-            this.trackBar16.Location = new System.Drawing.Point(130, 214);
-            this.trackBar16.Name = "trackBar16";
-            this.trackBar16.Size = new System.Drawing.Size(104, 45);
-            this.trackBar16.TabIndex = 35;
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(240, 317);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(17, 13);
+            this.label50.TabIndex = 40;
+            this.label50.Text = "xx";
             // 
-            // trackBar17
+            // label51
             // 
-            this.trackBar17.Location = new System.Drawing.Point(130, 163);
-            this.trackBar17.Name = "trackBar17";
-            this.trackBar17.Size = new System.Drawing.Size(104, 45);
-            this.trackBar17.TabIndex = 34;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(240, 266);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(17, 13);
+            this.label51.TabIndex = 39;
+            this.label51.Text = "xx";
             // 
-            // trackBar18
+            // label52
             // 
-            this.trackBar18.Location = new System.Drawing.Point(130, 112);
-            this.trackBar18.Name = "trackBar18";
-            this.trackBar18.Size = new System.Drawing.Size(104, 45);
-            this.trackBar18.TabIndex = 33;
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(240, 215);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(17, 13);
+            this.label52.TabIndex = 38;
+            this.label52.Text = "xx";
             // 
-            // trackBar19
+            // label53
             // 
-            this.trackBar19.Location = new System.Drawing.Point(130, 61);
-            this.trackBar19.Name = "trackBar19";
-            this.trackBar19.Size = new System.Drawing.Size(104, 45);
-            this.trackBar19.TabIndex = 32;
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(240, 164);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(23, 13);
+            this.label53.TabIndex = 37;
+            this.label53.Text = "Nm";
             // 
-            // trackBar20
+            // label54
             // 
-            this.trackBar20.Location = new System.Drawing.Point(130, 10);
-            this.trackBar20.Maximum = 1000;
-            this.trackBar20.Name = "trackBar20";
-            this.trackBar20.Size = new System.Drawing.Size(104, 45);
-            this.trackBar20.TabIndex = 31;
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(239, 113);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(24, 13);
+            this.label54.TabIndex = 36;
+            this.label54.Text = "rpm";
+            // 
+            // trackBarPMSMx3
+            // 
+            this.trackBarPMSMx3.Location = new System.Drawing.Point(67, 297);
+            this.trackBarPMSMx3.Maximum = 1000;
+            this.trackBarPMSMx3.Name = "trackBarPMSMx3";
+            this.trackBarPMSMx3.Size = new System.Drawing.Size(104, 45);
+            this.trackBarPMSMx3.TabIndex = 35;
+            this.trackBarPMSMx3.Scroll += new System.EventHandler(this.TrackBarPMSMx3_Scroll);
+            // 
+            // trackBarPMSMx2
+            // 
+            this.trackBarPMSMx2.Location = new System.Drawing.Point(67, 246);
+            this.trackBarPMSMx2.Maximum = 1000;
+            this.trackBarPMSMx2.Name = "trackBarPMSMx2";
+            this.trackBarPMSMx2.Size = new System.Drawing.Size(104, 45);
+            this.trackBarPMSMx2.TabIndex = 34;
+            this.trackBarPMSMx2.Scroll += new System.EventHandler(this.TrackBarPMSMx2_Scroll);
+            // 
+            // trackBarPMSMx1
+            // 
+            this.trackBarPMSMx1.Location = new System.Drawing.Point(67, 195);
+            this.trackBarPMSMx1.Maximum = 1000;
+            this.trackBarPMSMx1.Name = "trackBarPMSMx1";
+            this.trackBarPMSMx1.Size = new System.Drawing.Size(104, 45);
+            this.trackBarPMSMx1.TabIndex = 33;
+            this.trackBarPMSMx1.Scroll += new System.EventHandler(this.TrackBarPMSMx1_Scroll);
+            // 
+            // trackBarPMSMTorque
+            // 
+            this.trackBarPMSMTorque.Location = new System.Drawing.Point(67, 144);
+            this.trackBarPMSMTorque.Maximum = 1000;
+            this.trackBarPMSMTorque.Name = "trackBarPMSMTorque";
+            this.trackBarPMSMTorque.Size = new System.Drawing.Size(104, 45);
+            this.trackBarPMSMTorque.TabIndex = 32;
+            this.trackBarPMSMTorque.Scroll += new System.EventHandler(this.TrackBarPMSMTorque_Scroll);
+            // 
+            // trackBarPMSMSpeed
+            // 
+            this.trackBarPMSMSpeed.Location = new System.Drawing.Point(67, 93);
+            this.trackBarPMSMSpeed.Maximum = 1000;
+            this.trackBarPMSMSpeed.Name = "trackBarPMSMSpeed";
+            this.trackBarPMSMSpeed.Size = new System.Drawing.Size(104, 45);
+            this.trackBarPMSMSpeed.TabIndex = 31;
+            this.trackBarPMSMSpeed.Scroll += new System.EventHandler(this.TrackBarPMSMSpedd_Scroll);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 246);
+            this.label21.Location = new System.Drawing.Point(9, 325);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(18, 13);
             this.label21.TabIndex = 30;
@@ -1018,7 +1321,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(10, 195);
+            this.label22.Location = new System.Drawing.Point(9, 274);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(18, 13);
             this.label22.TabIndex = 29;
@@ -1027,7 +1330,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 144);
+            this.label23.Location = new System.Drawing.Point(9, 223);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(18, 13);
             this.label23.TabIndex = 28;
@@ -1036,7 +1339,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(10, 93);
+            this.label24.Location = new System.Drawing.Point(9, 172);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 13);
             this.label24.TabIndex = 27;
@@ -1045,50 +1348,55 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(10, 42);
+            this.label25.Location = new System.Drawing.Point(9, 121);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 13);
             this.label25.TabIndex = 26;
             this.label25.Text = "Prędkość";
             // 
-            // textBox16
+            // textBoxPMSMx3
             // 
-            this.textBox16.Location = new System.Drawing.Point(68, 239);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(56, 20);
-            this.textBox16.TabIndex = 25;
+            this.textBoxPMSMx3.Location = new System.Drawing.Point(177, 314);
+            this.textBoxPMSMx3.Name = "textBoxPMSMx3";
+            this.textBoxPMSMx3.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPMSMx3.TabIndex = 25;
+            this.textBoxPMSMx3.Text = "0";
             // 
-            // textBox17
+            // textBoxPMSMx2
             // 
-            this.textBox17.Location = new System.Drawing.Point(68, 188);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(56, 20);
-            this.textBox17.TabIndex = 24;
+            this.textBoxPMSMx2.Location = new System.Drawing.Point(177, 263);
+            this.textBoxPMSMx2.Name = "textBoxPMSMx2";
+            this.textBoxPMSMx2.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPMSMx2.TabIndex = 24;
+            this.textBoxPMSMx2.Text = "0";
             // 
-            // textBox18
+            // textBoxPMSMx1
             // 
-            this.textBox18.Location = new System.Drawing.Point(68, 137);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(56, 20);
-            this.textBox18.TabIndex = 23;
+            this.textBoxPMSMx1.Location = new System.Drawing.Point(177, 212);
+            this.textBoxPMSMx1.Name = "textBoxPMSMx1";
+            this.textBoxPMSMx1.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPMSMx1.TabIndex = 23;
+            this.textBoxPMSMx1.Text = "0";
             // 
-            // textBox19
+            // textBoxPMSMTorque
             // 
-            this.textBox19.Location = new System.Drawing.Point(68, 86);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(56, 20);
-            this.textBox19.TabIndex = 22;
+            this.textBoxPMSMTorque.Location = new System.Drawing.Point(177, 161);
+            this.textBoxPMSMTorque.Name = "textBoxPMSMTorque";
+            this.textBoxPMSMTorque.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPMSMTorque.TabIndex = 22;
+            this.textBoxPMSMTorque.Text = "0";
             // 
-            // textBox20
+            // textBoxPMSMSp
             // 
-            this.textBox20.Location = new System.Drawing.Point(68, 35);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(56, 20);
-            this.textBox20.TabIndex = 21;
+            this.textBoxPMSMSp.Location = new System.Drawing.Point(177, 110);
+            this.textBoxPMSMSp.Name = "textBoxPMSMSp";
+            this.textBoxPMSMSp.Size = new System.Drawing.Size(56, 20);
+            this.textBoxPMSMSp.TabIndex = 21;
+            this.textBoxPMSMSp.Text = "0";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(240, 52);
+            this.button5.Location = new System.Drawing.Point(12, 48);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 20;
@@ -1097,7 +1405,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(240, 22);
+            this.button6.Location = new System.Drawing.Point(12, 18);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 19;
@@ -1107,9 +1415,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(979, 354);
+            this.dataGridView1.Location = new System.Drawing.Point(989, 440);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(568, 618);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 532);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
@@ -1130,7 +1438,7 @@
             this.groupBox2.Controls.Add(this.btnOpenComPort);
             this.groupBox2.Location = new System.Drawing.Point(360, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(235, 304);
+            this.groupBox2.Size = new System.Drawing.Size(235, 295);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "COM Port";
@@ -1280,51 +1588,71 @@
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // labelDuration
+            // 
+            this.labelDuration.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.labelDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDuration.Location = new System.Drawing.Point(252, 225);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(100, 23);
+            this.labelDuration.TabIndex = 5023;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(199, 231);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(50, 13);
+            this.label57.TabIndex = 5024;
+            this.label57.Text = "Duration:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1637, 984);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.tabEngine);
+            this.Controls.Add(this.textBoxPMSMSpeed);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.tabEngine.ResumeLayout(false);
+            this.textBoxPMSMSpeed.ResumeLayout(false);
             this.tabDC.ResumeLayout(false);
             this.tabDC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCTorque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDCSpeed)).EndInit();
             this.tabAsych.ResumeLayout(false);
             this.tabAsych.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychTorque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarAsychSpeed)).EndInit();
             this.tabBLDC.ResumeLayout(false);
             this.tabBLDC.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).EndInit();
-            this.tabPMSM.ResumeLayout(false);
-            this.tabPMSM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCTorque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCSpeed)).EndInit();
+            this.textBoxPMSMSpeedd.ResumeLayout(false);
+            this.textBoxPMSMSpeedd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMTorque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1335,14 +1663,14 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.TabControl tabEngine;
+        private System.Windows.Forms.TabControl textBoxPMSMSpeed;
         private System.Windows.Forms.TabPage tabDC;
         private System.Windows.Forms.Button btnStopDC;
         private System.Windows.Forms.Button btnStartDC;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabAsych;
         private System.Windows.Forms.TabPage tabBLDC;
-        private System.Windows.Forms.TabPage tabPMSM;
+        private System.Windows.Forms.TabPage textBoxPMSMSpeedd;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cBoxComPort;
         private System.Windows.Forms.ProgressBar progressBarComPort;
@@ -1353,12 +1681,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TextBox textBoxDCx3;
+        private System.Windows.Forms.TextBox textBoxDCx2;
+        private System.Windows.Forms.TextBox textBoxDCx1;
+        private System.Windows.Forms.TextBox textBoxDCTorque;
+        private System.Windows.Forms.TextBox textBoxDCSpeed;
+        private System.Windows.Forms.TrackBar trackBarDCSpeed;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -1368,10 +1696,10 @@
         private System.Windows.Forms.ComboBox cBoxStopBits;
         private System.Windows.Forms.ComboBox cBoxDataBits;
         private System.Windows.Forms.ComboBox cBoxBaudRate;
-        private System.Windows.Forms.TrackBar trackBar5;
-        private System.Windows.Forms.TrackBar trackBar4;
-        private System.Windows.Forms.TrackBar trackBar3;
-        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.TrackBar trackBarDCx3;
+        private System.Windows.Forms.TrackBar trackBarDCx2;
+        private System.Windows.Forms.TrackBar trackBarDCx1;
+        private System.Windows.Forms.TrackBar trackBarDCTorque;
         private System.Windows.Forms.Button btnComPortRefresh;
         private System.Windows.Forms.Button btnStartReadHoldingRegisters;
         private System.Windows.Forms.TextBox textBoxRead4000;
@@ -1384,55 +1712,55 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnExportClear;
-        private System.Windows.Forms.TrackBar trackBar6;
-        private System.Windows.Forms.TrackBar trackBar7;
-        private System.Windows.Forms.TrackBar trackBar8;
-        private System.Windows.Forms.TrackBar trackBar9;
-        private System.Windows.Forms.TrackBar trackBar10;
+        private System.Windows.Forms.TrackBar trackBarAsychx3;
+        private System.Windows.Forms.TrackBar trackBarAsychx2;
+        private System.Windows.Forms.TrackBar trackBarAsychx1;
+        private System.Windows.Forms.TrackBar trackBarAsychTorque;
+        private System.Windows.Forms.TrackBar trackBarAsychSpeed;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxAsynchx3;
+        private System.Windows.Forms.TextBox textBoxAsynchx2;
+        private System.Windows.Forms.TextBox textBoxAsynchx1;
+        private System.Windows.Forms.TextBox textBoxAsynchTorque;
+        private System.Windows.Forms.TextBox textBoxAsynchSpeed;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TrackBar trackBar11;
-        private System.Windows.Forms.TrackBar trackBar12;
-        private System.Windows.Forms.TrackBar trackBar13;
-        private System.Windows.Forms.TrackBar trackBar14;
-        private System.Windows.Forms.TrackBar trackBar15;
+        private System.Windows.Forms.TrackBar trackBarBLDCx3;
+        private System.Windows.Forms.TrackBar trackBarBLDCx2;
+        private System.Windows.Forms.TrackBar trackBarBLDCx1;
+        private System.Windows.Forms.TrackBar trackBarBLDCTorque;
+        private System.Windows.Forms.TrackBar trackBarBLDCSpeed;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBoxBLDCx3;
+        private System.Windows.Forms.TextBox textBoxBLDCx2;
+        private System.Windows.Forms.TextBox textBoxBLDCx1;
+        private System.Windows.Forms.TextBox textBoxBLDCTorque;
+        private System.Windows.Forms.TextBox textBoxBLDCSpeed;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TrackBar trackBar16;
-        private System.Windows.Forms.TrackBar trackBar17;
-        private System.Windows.Forms.TrackBar trackBar18;
-        private System.Windows.Forms.TrackBar trackBar19;
-        private System.Windows.Forms.TrackBar trackBar20;
+        private System.Windows.Forms.TrackBar trackBarPMSMx3;
+        private System.Windows.Forms.TrackBar trackBarPMSMx2;
+        private System.Windows.Forms.TrackBar trackBarPMSMx1;
+        private System.Windows.Forms.TrackBar trackBarPMSMTorque;
+        private System.Windows.Forms.TrackBar trackBarPMSMSpeed;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBoxPMSMx3;
+        private System.Windows.Forms.TextBox textBoxPMSMx2;
+        private System.Windows.Forms.TextBox textBoxPMSMx1;
+        private System.Windows.Forms.TextBox textBoxPMSMTorque;
+        private System.Windows.Forms.TextBox textBoxPMSMSp;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label34;
@@ -1448,6 +1776,30 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label labelMaintPower;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label labelDuration;
     }
 }
 
