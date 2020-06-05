@@ -38,6 +38,8 @@
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.labelDuration = new System.Windows.Forms.Label();
             this.labelMaintPower = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -134,7 +136,7 @@
             this.textBoxBLDCSpeed = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBoxPMSMSpeedd = new System.Windows.Forms.TabPage();
+            this.tabPMSM = new System.Windows.Forms.TabPage();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -174,8 +176,6 @@
             this.btnCloseComPort = new System.Windows.Forms.Button();
             this.btnOpenComPort = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.labelDuration = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.textBoxPMSMSpeed.SuspendLayout();
@@ -197,7 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCTorque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCSpeed)).BeginInit();
-            this.textBoxPMSMSpeedd.SuspendLayout();
+            this.tabPMSM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx1)).BeginInit();
@@ -236,12 +236,30 @@
             this.groupBox1.Controls.Add(this.btnWriteMultipleRegisters);
             this.groupBox1.Controls.Add(this.btnStartReadHoldingRegisters);
             this.groupBox1.Controls.Add(this.textBoxRead4000);
-            this.groupBox1.Location = new System.Drawing.Point(601, 25);
+            this.groupBox1.Location = new System.Drawing.Point(360, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 295);
+            this.groupBox1.Size = new System.Drawing.Size(392, 393);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DC Main";
+            this.groupBox1.Text = "M1";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(199, 231);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(50, 13);
+            this.label57.TabIndex = 5024;
+            this.label57.Text = "Duration:";
+            // 
+            // labelDuration
+            // 
+            this.labelDuration.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.labelDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDuration.Location = new System.Drawing.Point(252, 225);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(100, 23);
+            this.labelDuration.TabIndex = 5023;
             // 
             // labelMaintPower
             // 
@@ -507,7 +525,7 @@
             this.textBoxPMSMSpeed.Controls.Add(this.tabDC);
             this.textBoxPMSMSpeed.Controls.Add(this.tabAsych);
             this.textBoxPMSMSpeed.Controls.Add(this.tabBLDC);
-            this.textBoxPMSMSpeed.Controls.Add(this.textBoxPMSMSpeedd);
+            this.textBoxPMSMSpeed.Controls.Add(this.tabPMSM);
             this.textBoxPMSMSpeed.Location = new System.Drawing.Point(12, 25);
             this.textBoxPMSMSpeed.Name = "textBoxPMSMSpeed";
             this.textBoxPMSMSpeed.SelectedIndex = 0;
@@ -543,7 +561,7 @@
             this.tabDC.Padding = new System.Windows.Forms.Padding(3);
             this.tabDC.Size = new System.Drawing.Size(334, 371);
             this.tabDC.TabIndex = 0;
-            this.tabDC.Text = "DC";
+            this.tabDC.Text = "M2 DC";
             this.tabDC.UseVisualStyleBackColor = true;
             // 
             // label39
@@ -768,7 +786,7 @@
             this.tabAsych.Padding = new System.Windows.Forms.Padding(3);
             this.tabAsych.Size = new System.Drawing.Size(334, 371);
             this.tabAsych.TabIndex = 1;
-            this.tabAsych.Text = "Asynchronous";
+            this.tabAsych.Text = "M2 Asynchronous";
             this.tabAsych.UseVisualStyleBackColor = true;
             // 
             // label40
@@ -992,7 +1010,7 @@
             this.tabBLDC.Name = "tabBLDC";
             this.tabBLDC.Size = new System.Drawing.Size(334, 371);
             this.tabBLDC.TabIndex = 2;
-            this.tabBLDC.Text = "BLDC";
+            this.tabBLDC.Text = "M2 BLDC";
             this.tabBLDC.UseVisualStyleBackColor = true;
             // 
             // label45
@@ -1188,36 +1206,36 @@
             this.button4.Text = "Start";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBoxPMSMSpeedd
+            // tabPMSM
             // 
-            this.textBoxPMSMSpeedd.Controls.Add(this.label50);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label51);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label52);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label53);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label54);
-            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx3);
-            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx2);
-            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMx1);
-            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMTorque);
-            this.textBoxPMSMSpeedd.Controls.Add(this.trackBarPMSMSpeed);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label21);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label22);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label23);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label24);
-            this.textBoxPMSMSpeedd.Controls.Add(this.label25);
-            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx3);
-            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx2);
-            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMx1);
-            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMTorque);
-            this.textBoxPMSMSpeedd.Controls.Add(this.textBoxPMSMSp);
-            this.textBoxPMSMSpeedd.Controls.Add(this.button5);
-            this.textBoxPMSMSpeedd.Controls.Add(this.button6);
-            this.textBoxPMSMSpeedd.Location = new System.Drawing.Point(4, 22);
-            this.textBoxPMSMSpeedd.Name = "textBoxPMSMSpeedd";
-            this.textBoxPMSMSpeedd.Size = new System.Drawing.Size(334, 371);
-            this.textBoxPMSMSpeedd.TabIndex = 3;
-            this.textBoxPMSMSpeedd.Text = "PMSM";
-            this.textBoxPMSMSpeedd.UseVisualStyleBackColor = true;
+            this.tabPMSM.Controls.Add(this.label50);
+            this.tabPMSM.Controls.Add(this.label51);
+            this.tabPMSM.Controls.Add(this.label52);
+            this.tabPMSM.Controls.Add(this.label53);
+            this.tabPMSM.Controls.Add(this.label54);
+            this.tabPMSM.Controls.Add(this.trackBarPMSMx3);
+            this.tabPMSM.Controls.Add(this.trackBarPMSMx2);
+            this.tabPMSM.Controls.Add(this.trackBarPMSMx1);
+            this.tabPMSM.Controls.Add(this.trackBarPMSMTorque);
+            this.tabPMSM.Controls.Add(this.trackBarPMSMSpeed);
+            this.tabPMSM.Controls.Add(this.label21);
+            this.tabPMSM.Controls.Add(this.label22);
+            this.tabPMSM.Controls.Add(this.label23);
+            this.tabPMSM.Controls.Add(this.label24);
+            this.tabPMSM.Controls.Add(this.label25);
+            this.tabPMSM.Controls.Add(this.textBoxPMSMx3);
+            this.tabPMSM.Controls.Add(this.textBoxPMSMx2);
+            this.tabPMSM.Controls.Add(this.textBoxPMSMx1);
+            this.tabPMSM.Controls.Add(this.textBoxPMSMTorque);
+            this.tabPMSM.Controls.Add(this.textBoxPMSMSp);
+            this.tabPMSM.Controls.Add(this.button5);
+            this.tabPMSM.Controls.Add(this.button6);
+            this.tabPMSM.Location = new System.Drawing.Point(4, 22);
+            this.tabPMSM.Name = "tabPMSM";
+            this.tabPMSM.Size = new System.Drawing.Size(334, 371);
+            this.tabPMSM.TabIndex = 3;
+            this.tabPMSM.Text = "M2 PMSM";
+            this.tabPMSM.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -1436,7 +1454,7 @@
             this.groupBox2.Controls.Add(this.progressBarComPort);
             this.groupBox2.Controls.Add(this.btnCloseComPort);
             this.groupBox2.Controls.Add(this.btnOpenComPort);
-            this.groupBox2.Location = new System.Drawing.Point(360, 25);
+            this.groupBox2.Location = new System.Drawing.Point(1009, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(235, 295);
             this.groupBox2.TabIndex = 7;
@@ -1588,24 +1606,6 @@
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // labelDuration
-            // 
-            this.labelDuration.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.labelDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelDuration.Location = new System.Drawing.Point(252, 225);
-            this.labelDuration.Name = "labelDuration";
-            this.labelDuration.Size = new System.Drawing.Size(100, 23);
-            this.labelDuration.TabIndex = 5023;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(199, 231);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(50, 13);
-            this.label57.TabIndex = 5024;
-            this.label57.Text = "Duration:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1646,8 +1646,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCTorque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBLDCSpeed)).EndInit();
-            this.textBoxPMSMSpeedd.ResumeLayout(false);
-            this.textBoxPMSMSpeedd.PerformLayout();
+            this.tabPMSM.ResumeLayout(false);
+            this.tabPMSM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPMSMx1)).EndInit();
@@ -1670,7 +1670,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabAsych;
         private System.Windows.Forms.TabPage tabBLDC;
-        private System.Windows.Forms.TabPage textBoxPMSMSpeedd;
+        private System.Windows.Forms.TabPage tabPMSM;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cBoxComPort;
         private System.Windows.Forms.ProgressBar progressBarComPort;

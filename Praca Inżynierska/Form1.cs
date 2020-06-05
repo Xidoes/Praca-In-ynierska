@@ -179,10 +179,12 @@ namespace Praca_Inżynierska
                 duration = 0;                               //zeruje licznik ticków czasu
                 timer.Enabled = true;                       //włącza timer
                 timer.Start();                              //startuje timer
-                ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>                          //nie podejmuje następnego działania przed dostaniem informacji zwrotnej
+
+
+                while (start == true)                                                       //sprawdza czy zmianna start ma wartość true
                 {
                     IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);         //tworzy połączenie do protokołu modbus przez port seryjny
-                    while (start == true)                                                       //sprawdza czy zmianna start ma wartość true
+                    ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>                          //nie podejmuje następnego działania przed dostaniem informacji zwrotnej
                     {
                         ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);      //zczytuje wartosci z rejestrów dla adresu urządzenia slave, adresu rejestru i liczbie kolejnych adresów
                         export.Add(new Excel_Export { ID = ID, Time = Convert.ToString(duration), Speed = Convert.ToString(result1[0]), Torque = Convert.ToString(result1[1]), x1 = Convert.ToString(result1[2]), x2 = Convert.ToString(result1[3]), x3 = Convert.ToString(result1[4]) }); //dodaje wartości zczytane do listy Excel Export
@@ -190,28 +192,28 @@ namespace Praca_Inżynierska
                         {
                             start = false;
                         }
-                            for (int i = 0; i < 5; i++)                                             //dla każdej kolejnej wartości w result 1
+                        for (int i = 0; i < 5; i++)                                             //dla każdej kolejnej wartości w result 1
+                        {
+                            chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2 
                             {
-                                chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2 
-                                {
-                                    chart2.Series["Test" + Convert.ToString(i)].Points.AddXY(Convert.ToString(duration), result1[i]);   //łączy wartości rejestru z konkretnymi seriami wykresu
+                                chart2.Series["Test" + Convert.ToString(i)].Points.AddXY(Convert.ToString(duration), result1[i]);   //łączy wartości rejestru z konkretnymi seriami wykresu
                                 }));
-                            }
-                            textBoxRead4000.Invoke(new Action(delegate ()                           //"wzywa" okna tekstowe
-                            {
-                                textBoxRead4000.Text = Convert.ToString(result1[0]);                //wstawia pojedyńcze wartości z resutl1 w odpowiednie pole tekstowe
+                        }
+                        textBoxRead4000.Invoke(new Action(delegate ()                           //"wzywa" okna tekstowe
+                        {
+                            textBoxRead4000.Text = Convert.ToString(result1[0]);                //wstawia pojedyńcze wartości z resutl1 w odpowiednie pole tekstowe
                                 textBoxRead4001.Text = Convert.ToString(result1[1]);
-                                textBoxRead4002.Text = Convert.ToString(result1[2]);
-                                labelMaintPower.Text = (result1[0] * result1[1]).ToString();
-                                labelDuration.Text = duration.ToString();
-                                chart2.Series["Power"].Points.AddXY(Convert.ToString(duration), (result1[0] * result1[1]));
+                            textBoxRead4002.Text = Convert.ToString(result1[2]);
+                            labelMaintPower.Text = (result1[0] * result1[1]).ToString();
+                            labelDuration.Text = duration.ToString();
+                            chart2.Series["Power"].Points.AddXY(Convert.ToString(duration), (result1[0] * result1[1]));
 
-                            }));
-                        
+                        }));
+
                         ID = ID + 1;                // zwiększa ID    
                         Thread.Sleep(20);
-                    }
-                })); 
+                    }));
+                } 
             }
             catch (Exception ex)
             {

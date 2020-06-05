@@ -13,3 +13,4 @@ C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\log4
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Unme.Common.dll
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csproj.CopyComplete
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca_Inżynierska.Form2.resources
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csprojAssemblyReference.cache
