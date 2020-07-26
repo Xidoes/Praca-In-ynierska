@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label57 = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
@@ -162,20 +162,24 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnComPortRefresh = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cBoxParityBits = new System.Windows.Forms.ComboBox();
-            this.cBoxStopBits = new System.Windows.Forms.ComboBox();
-            this.cBoxDataBits = new System.Windows.Forms.ComboBox();
-            this.cBoxBaudRate = new System.Windows.Forms.ComboBox();
             this.cBoxComPort = new System.Windows.Forms.ComboBox();
             this.progressBarComPort = new System.Windows.Forms.ProgressBar();
             this.btnCloseComPort = new System.Windows.Forms.Button();
             this.btnOpenComPort = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.textBoxPMSMSpeed.SuspendLayout();
@@ -236,7 +240,7 @@
             this.groupBox1.Controls.Add(this.btnWriteMultipleRegisters);
             this.groupBox1.Controls.Add(this.btnStartReadHoldingRegisters);
             this.groupBox1.Controls.Add(this.textBoxRead4000);
-            this.groupBox1.Location = new System.Drawing.Point(360, 25);
+            this.groupBox1.Location = new System.Drawing.Point(438, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(392, 393);
             this.groupBox1.TabIndex = 5;
@@ -392,7 +396,7 @@
             // 
             // btnExportClear
             // 
-            this.btnExportClear.Location = new System.Drawing.Point(23, 221);
+            this.btnExportClear.Location = new System.Drawing.Point(6, 211);
             this.btnExportClear.Name = "btnExportClear";
             this.btnExportClear.Size = new System.Drawing.Size(75, 23);
             this.btnExportClear.TabIndex = 5004;
@@ -402,7 +406,7 @@
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(23, 192);
+            this.btnExport.Location = new System.Drawing.Point(6, 182);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(75, 23);
             this.btnExport.TabIndex = 5003;
@@ -412,7 +416,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(108, 192);
+            this.btnStop.Location = new System.Drawing.Point(91, 182);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 24;
@@ -479,43 +483,43 @@
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(12, 440);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Test0";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Test1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Test2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "Test3";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Test4";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Power";
-            this.chart2.Series.Add(series1);
-            this.chart2.Series.Add(series2);
-            this.chart2.Series.Add(series3);
-            this.chart2.Series.Add(series4);
-            this.chart2.Series.Add(series5);
-            this.chart2.Series.Add(series6);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.Name = "Test0";
+            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series14.Legend = "Legend1";
+            series14.Name = "Test1";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series15.Legend = "Legend1";
+            series15.Name = "Test2";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series16.Legend = "Legend1";
+            series16.Name = "Test3";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series17.Legend = "Legend1";
+            series17.Name = "Test4";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series18.Legend = "Legend1";
+            series18.Name = "Power";
+            this.chart2.Series.Add(series13);
+            this.chart2.Series.Add(series14);
+            this.chart2.Series.Add(series15);
+            this.chart2.Series.Add(series16);
+            this.chart2.Series.Add(series17);
+            this.chart2.Series.Add(series18);
             this.chart2.Size = new System.Drawing.Size(934, 532);
             this.chart2.TabIndex = 6;
             this.chart2.Text = "chart2";
@@ -529,7 +533,7 @@
             this.textBoxPMSMSpeed.Location = new System.Drawing.Point(12, 25);
             this.textBoxPMSMSpeed.Name = "textBoxPMSMSpeed";
             this.textBoxPMSMSpeed.SelectedIndex = 0;
-            this.textBoxPMSMSpeed.Size = new System.Drawing.Size(342, 397);
+            this.textBoxPMSMSpeed.Size = new System.Drawing.Size(420, 397);
             this.textBoxPMSMSpeed.TabIndex = 6;
             // 
             // tabDC
@@ -559,7 +563,7 @@
             this.tabDC.Location = new System.Drawing.Point(4, 22);
             this.tabDC.Name = "tabDC";
             this.tabDC.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDC.Size = new System.Drawing.Size(334, 371);
+            this.tabDC.Size = new System.Drawing.Size(412, 371);
             this.tabDC.TabIndex = 0;
             this.tabDC.Text = "M2 DC";
             this.tabDC.UseVisualStyleBackColor = true;
@@ -784,7 +788,7 @@
             this.tabAsych.Location = new System.Drawing.Point(4, 22);
             this.tabAsych.Name = "tabAsych";
             this.tabAsych.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAsych.Size = new System.Drawing.Size(334, 371);
+            this.tabAsych.Size = new System.Drawing.Size(412, 371);
             this.tabAsych.TabIndex = 1;
             this.tabAsych.Text = "M2 Asynchronous";
             this.tabAsych.UseVisualStyleBackColor = true;
@@ -1008,7 +1012,7 @@
             this.tabBLDC.Controls.Add(this.button4);
             this.tabBLDC.Location = new System.Drawing.Point(4, 22);
             this.tabBLDC.Name = "tabBLDC";
-            this.tabBLDC.Size = new System.Drawing.Size(334, 371);
+            this.tabBLDC.Size = new System.Drawing.Size(412, 371);
             this.tabBLDC.TabIndex = 2;
             this.tabBLDC.Text = "M2 BLDC";
             this.tabBLDC.UseVisualStyleBackColor = true;
@@ -1232,7 +1236,7 @@
             this.tabPMSM.Controls.Add(this.button6);
             this.tabPMSM.Location = new System.Drawing.Point(4, 22);
             this.tabPMSM.Name = "tabPMSM";
-            this.tabPMSM.Size = new System.Drawing.Size(334, 371);
+            this.tabPMSM.Size = new System.Drawing.Size(412, 371);
             this.tabPMSM.TabIndex = 3;
             this.tabPMSM.Text = "M2 PMSM";
             this.tabPMSM.UseVisualStyleBackColor = true;
@@ -1433,37 +1437,29 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(989, 440);
+            this.dataGridView1.Location = new System.Drawing.Point(1082, 440);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(558, 532);
+            this.dataGridView1.Size = new System.Drawing.Size(465, 532);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnComPortRefresh);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.cBoxParityBits);
-            this.groupBox2.Controls.Add(this.cBoxStopBits);
-            this.groupBox2.Controls.Add(this.cBoxDataBits);
-            this.groupBox2.Controls.Add(this.cBoxBaudRate);
             this.groupBox2.Controls.Add(this.cBoxComPort);
             this.groupBox2.Controls.Add(this.progressBarComPort);
             this.groupBox2.Controls.Add(this.btnCloseComPort);
             this.groupBox2.Controls.Add(this.btnOpenComPort);
-            this.groupBox2.Location = new System.Drawing.Point(1009, 25);
+            this.groupBox2.Location = new System.Drawing.Point(839, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(235, 295);
+            this.groupBox2.Size = new System.Drawing.Size(171, 171);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "COM Port";
             // 
             // btnComPortRefresh
             // 
-            this.btnComPortRefresh.Location = new System.Drawing.Point(87, 192);
+            this.btnComPortRefresh.Location = new System.Drawing.Point(87, 80);
             this.btnComPortRefresh.Name = "btnComPortRefresh";
             this.btnComPortRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnComPortRefresh.TabIndex = 13;
@@ -1471,120 +1467,33 @@
             this.btnComPortRefresh.UseVisualStyleBackColor = true;
             this.btnComPortRefresh.Click += new System.EventHandler(this.BtnComPortRefresh_Click);
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 166);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 13);
-            this.label19.TabIndex = 12;
-            this.label19.Text = "Parity Bits";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 138);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 13);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "Stop Bits";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(50, 13);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Data Bits";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 82);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 13);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Baud Rate";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 54);
+            this.label11.Location = new System.Drawing.Point(6, 30);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.Size = new System.Drawing.Size(87, 13);
             this.label11.TabIndex = 8;
-            this.label11.Text = "COM Port";
-            // 
-            // cBoxParityBits
-            // 
-            this.cBoxParityBits.FormattingEnabled = true;
-            this.cBoxParityBits.Items.AddRange(new object[] {
-            "None",
-            "Even",
-            "Odd"});
-            this.cBoxParityBits.Location = new System.Drawing.Point(73, 163);
-            this.cBoxParityBits.Name = "cBoxParityBits";
-            this.cBoxParityBits.Size = new System.Drawing.Size(156, 21);
-            this.cBoxParityBits.TabIndex = 7;
-            this.cBoxParityBits.Text = "None";
-            // 
-            // cBoxStopBits
-            // 
-            this.cBoxStopBits.AutoCompleteCustomSource.AddRange(new string[] {
-            "One",
-            "Two"});
-            this.cBoxStopBits.FormattingEnabled = true;
-            this.cBoxStopBits.Location = new System.Drawing.Point(73, 135);
-            this.cBoxStopBits.Name = "cBoxStopBits";
-            this.cBoxStopBits.Size = new System.Drawing.Size(156, 21);
-            this.cBoxStopBits.TabIndex = 6;
-            this.cBoxStopBits.Text = "One";
-            // 
-            // cBoxDataBits
-            // 
-            this.cBoxDataBits.FormattingEnabled = true;
-            this.cBoxDataBits.Items.AddRange(new object[] {
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cBoxDataBits.Location = new System.Drawing.Point(73, 107);
-            this.cBoxDataBits.Name = "cBoxDataBits";
-            this.cBoxDataBits.Size = new System.Drawing.Size(156, 21);
-            this.cBoxDataBits.TabIndex = 5;
-            this.cBoxDataBits.Text = "8";
-            // 
-            // cBoxBaudRate
-            // 
-            this.cBoxBaudRate.FormattingEnabled = true;
-            this.cBoxBaudRate.Items.AddRange(new object[] {
-            "115200",
-            "9600"});
-            this.cBoxBaudRate.Location = new System.Drawing.Point(73, 79);
-            this.cBoxBaudRate.Name = "cBoxBaudRate";
-            this.cBoxBaudRate.Size = new System.Drawing.Size(156, 21);
-            this.cBoxBaudRate.TabIndex = 4;
-            this.cBoxBaudRate.Text = "115200";
+            this.label11.Text = "COM Port Name:";
             // 
             // cBoxComPort
             // 
             this.cBoxComPort.FormattingEnabled = true;
-            this.cBoxComPort.Location = new System.Drawing.Point(73, 51);
+            this.cBoxComPort.Location = new System.Drawing.Point(9, 50);
             this.cBoxComPort.Name = "cBoxComPort";
             this.cBoxComPort.Size = new System.Drawing.Size(156, 21);
             this.cBoxComPort.TabIndex = 3;
             // 
             // progressBarComPort
             // 
-            this.progressBarComPort.Location = new System.Drawing.Point(6, 272);
+            this.progressBarComPort.Location = new System.Drawing.Point(6, 140);
             this.progressBarComPort.Name = "progressBarComPort";
             this.progressBarComPort.Size = new System.Drawing.Size(156, 23);
             this.progressBarComPort.TabIndex = 2;
             // 
             // btnCloseComPort
             // 
-            this.btnCloseComPort.Location = new System.Drawing.Point(87, 242);
+            this.btnCloseComPort.Location = new System.Drawing.Point(87, 110);
             this.btnCloseComPort.Name = "btnCloseComPort";
             this.btnCloseComPort.Size = new System.Drawing.Size(75, 23);
             this.btnCloseComPort.TabIndex = 1;
@@ -1594,7 +1503,7 @@
             // 
             // btnOpenComPort
             // 
-            this.btnOpenComPort.Location = new System.Drawing.Point(6, 242);
+            this.btnOpenComPort.Location = new System.Drawing.Point(6, 110);
             this.btnOpenComPort.Name = "btnOpenComPort";
             this.btnOpenComPort.Size = new System.Drawing.Size(75, 23);
             this.btnOpenComPort.TabIndex = 0;
@@ -1606,11 +1515,146 @@
             // 
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(1016, 25);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(75, 23);
+            this.btnSettings.TabIndex = 8;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Compare M1 with M2",
+            "M1 Only",
+            "M2 Only"});
+            this.comboBox1.Location = new System.Drawing.Point(953, 440);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "Chart View Settings";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(953, 468);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(57, 17);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Speed";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(953, 491);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(63, 17);
+            this.checkBox2.TabIndex = 12;
+            this.checkBox2.Text = "Position";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(953, 514);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(60, 17);
+            this.checkBox3.TabIndex = 13;
+            this.checkBox3.Text = "Torque";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(953, 537);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(56, 17);
+            this.checkBox4.TabIndex = 14;
+            this.checkBox4.Text = "Power";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(953, 560);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(33, 17);
+            this.checkBox5.TabIndex = 15;
+            this.checkBox5.Text = "P";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(953, 583);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(29, 17);
+            this.checkBox6.TabIndex = 16;
+            this.checkBox6.Text = "I";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(953, 606);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(34, 17);
+            this.checkBox7.TabIndex = 17;
+            this.checkBox7.Text = "D";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(952, 629);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(37, 17);
+            this.checkBox8.TabIndex = 18;
+            this.checkBox8.Text = "x1";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(952, 652);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(37, 17);
+            this.checkBox9.TabIndex = 19;
+            this.checkBox9.Text = "x2";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(952, 675);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(37, 17);
+            this.checkBox10.TabIndex = 20;
+            this.checkBox10.Text = "x3";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1637, 984);
+            this.Controls.Add(this.checkBox10);
+            this.Controls.Add(this.checkBox9);
+            this.Controls.Add(this.checkBox8);
+            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBoxPMSMSpeed);
             this.Controls.Add(this.groupBox1);
@@ -1657,6 +1701,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1687,15 +1732,7 @@
         private System.Windows.Forms.TextBox textBoxDCTorque;
         private System.Windows.Forms.TextBox textBoxDCSpeed;
         private System.Windows.Forms.TrackBar trackBarDCSpeed;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cBoxParityBits;
-        private System.Windows.Forms.ComboBox cBoxStopBits;
-        private System.Windows.Forms.ComboBox cBoxDataBits;
-        private System.Windows.Forms.ComboBox cBoxBaudRate;
         private System.Windows.Forms.TrackBar trackBarDCx3;
         private System.Windows.Forms.TrackBar trackBarDCx2;
         private System.Windows.Forms.TrackBar trackBarDCx1;
@@ -1800,6 +1837,18 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label labelDuration;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox10;
     }
 }
 

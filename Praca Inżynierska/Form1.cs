@@ -12,40 +12,49 @@ using Modbus.IO;
 using Modbus.Utility;
 using System.IO.Ports;
 using System.Threading;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Praca_Inżynierska
 {
     public partial class Form1 : Form
     {
-        private SerialPort serialPort = null;                           //zarezerwowanie nazwy zmiennej portu seryjnego
+        public SerialPort serialPort = new SerialPort();                           //zarezerwowanie nazwy zmiennej portu seryjnego
         int duration = 0;                                               //ilość tików czasu = 0
-        public bool start;                                              //zmienna start (zatrzymuje 
+        public bool start = false;                                              //zmienna start, domyślnie ustawiona na false.
         public byte slaveAddress = 9;                                          //adres urządzenia slave
         public ushort readStartAddress = 4000;                                 //
-        public ushort writeStartAddress;                                //
+        public ushort writeStartAddress;                                        //
         public ushort numberOfPoints = 5;                                     //ilość adresów rejestru, które program ma obsłużyć
         public List<Excel_Export> export = new List<Excel_Export>();    //przypisanie zmiennej export do listy klasy Excel Export
-        public string settingsvalues;
+        public Settings settings = new Settings();
+        public Form2 form2 = new Form2();
+        
         public Form1()
         {
             try
             {
                 InitializeComponent();
-                textBoxDCSpeed.Text = Convert.ToString(trackBarDCSpeed.Value);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             try
             {
                 start = false;
-                string[] ports = SerialPort.GetPortNames();             //pobranie listy dostępnych portów COM
-                cBoxComPort.Items.AddRange(ports);                      //pokazanie dostępnych portów w polu wyboru Port COM
+                string[] serialPorts = SerialPort.GetPortNames();             //pobranie listy dostępnych portów COM
+                cBoxComPort.Items.AddRange(serialPorts);                      //pokazanie dostępnych portów w polu wyboru Port COM
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config.xml", FileMode.Open, FileAccess.Read))
+                {
+                    settings = serializer.Deserialize(fs) as Settings;
+                }
+
             }
             catch (Exception ex)
             {
@@ -57,10 +66,13 @@ namespace Praca_Inżynierska
         {                           //do dokończenia tak aby mieć wybór Parity i Stop Bite
             try
             {
-                serialPort = new SerialPort(cBoxComPort.Text, Convert.ToInt32(cBoxBaudRate.Text), Parity.None, Convert.ToInt32(cBoxDataBits.Text), StopBits.One);
+                serialPort.PortName = cBoxComPort.Text;
+                serialPort.BaudRate = Convert.ToInt32(settings.CPBaudRate);
+                serialPort.DataBits = Convert.ToInt32(settings.CPDataBits);
+                serialPort.Parity = (Parity)Enum.Parse(typeof(Parity), settings.CPParity);
+                serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), settings.CPStopBits);
                 serialPort.Open();
                 progressBarComPort.Value = 100;                        //Progress bar zmienia kolor na zielony, jako oznaczenie poprawnego połączenia z portem COM.
-                //readWrite.OpenSerialPort();
             }
             catch (Exception ex)
             {
@@ -100,11 +112,10 @@ namespace Praca_Inżynierska
         {
             try
             {
-                StartTest();
                 start = true;                       //ustawia wartość start na true
                 Read();
             } 
-            catch (Exception ex)
+            catch (TimeoutException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -175,56 +186,57 @@ namespace Praca_Inżynierska
         {
             try
             {
-                int ID = 1;                                 //ustawia wartość ID do exportu wartości do listy Excel Export
-                duration = 0;                               //zeruje licznik ticków czasu
-                timer.Enabled = true;                       //włącza timer
-                timer.Start();                              //startuje timer
-
-
-                while (start == true)                                                       //sprawdza czy zmianna start ma wartość true
+                if (serialPort.IsOpen)
                 {
-                    IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);         //tworzy połączenie do protokołu modbus przez port seryjny
+                    int ID = 1;                                 //ustawia wartość ID do exportu wartości do listy Excel Export
+                    duration = 0;                               //zeruje licznik ticków czasu
+                    timer.Enabled = true;                       //włącza timer
+                    timer.Start();                              //startuje timer
                     ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>                          //nie podejmuje następnego działania przed dostaniem informacji zwrotnej
                     {
-                        ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);      //zczytuje wartosci z rejestrów dla adresu urządzenia slave, adresu rejestru i liczbie kolejnych adresów
-                        export.Add(new Excel_Export { ID = ID, Time = Convert.ToString(duration), Speed = Convert.ToString(result1[0]), Torque = Convert.ToString(result1[1]), x1 = Convert.ToString(result1[2]), x2 = Convert.ToString(result1[3]), x3 = Convert.ToString(result1[4]) }); //dodaje wartości zczytane do listy Excel Export
-                        if (result1.Length == 0)
+                        IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);         //tworzy połączenie do protokołu modbus przez port seryjny
+                    masterRtu.Transport.Retries = 500;
+                        masterRtu.Transport.ReadTimeout = 100;
+                        while (start == true)                                                       //sprawdza czy zmianna start ma wartość true
                         {
-                            start = false;
-                        }
-                        for (int i = 0; i < 5; i++)                                             //dla każdej kolejnej wartości w result 1
-                        {
-                            chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2 
+
+                            ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);      //zczytuje wartosci z rejestrów dla adresu urządzenia slave, adresu rejestru i liczbie kolejnych adresów
+                            export.Add(new Excel_Export { ID = ID, Time = Convert.ToString(duration), Speed = Convert.ToString(result1[0]), Torque = Convert.ToString(result1[1]), x1 = Convert.ToString(result1[2]), x2 = Convert.ToString(result1[3]), x3 = Convert.ToString(result1[4]) }); //dodaje wartości zczytane do listy Excel Export
+                            for (int i = 0; i < result1.Length; i++)                                             //dla każdej kolejnej wartości w result 1
                             {
-                                chart2.Series["Test" + Convert.ToString(i)].Points.AddXY(Convert.ToString(duration), result1[i]);   //łączy wartości rejestru z konkretnymi seriami wykresu
-                                }));
-                        }
-                        textBoxRead4000.Invoke(new Action(delegate ()                           //"wzywa" okna tekstowe
-                        {
-                            textBoxRead4000.Text = Convert.ToString(result1[0]);                //wstawia pojedyńcze wartości z resutl1 w odpowiednie pole tekstowe
-                                textBoxRead4001.Text = Convert.ToString(result1[1]);
-                            textBoxRead4002.Text = Convert.ToString(result1[2]);
-                            labelMaintPower.Text = (result1[0] * result1[1]).ToString();
-                            labelDuration.Text = duration.ToString();
-                            chart2.Series["Power"].Points.AddXY(Convert.ToString(duration), (result1[0] * result1[1]));
+                                chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2 
+                                {
+                                    chart2.Series["Test" + Convert.ToString(i)].Points.AddXY(Convert.ToString(duration), result1[i]);   //łączy wartości rejestru z konkretnymi seriami wykresu
+                            }));
+                            }
+                            textBoxRead4000.Invoke(new Action(delegate ()                           //"wzywa" okna tekstowe
+                            {
+                                textBoxRead4000.Text = Convert.ToString(result1[0]);                //wstawia pojedyńcze wartości z resutl1 w odpowiednie pole tekstowe
+                            textBoxRead4001.Text = Convert.ToString(result1[1]);
+                                textBoxRead4002.Text = Convert.ToString(result1[2]);
+                                labelMaintPower.Text = (result1[0] * result1[1]).ToString();
+                                labelDuration.Text = duration.ToString();
+                                chart2.Series["Power"].Points.AddXY(Convert.ToString(duration), (result1[0] * result1[1]));
 
-                        }));
+                            }));
 
-                        ID = ID + 1;                // zwiększa ID    
+                            ID = ID + 1;                // zwiększa ID    
                         Thread.Sleep(20);
+                            duration = duration + 20;
+                        }
                     }));
-                } 
+                }
+                else
+                {
+                    MessageBox.Show("Port COM jest zamknięty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
+                start = false;
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-        }
-        private void StartTest()
-        {
-            IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);
-            ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);
         }
         private void Stop()
         {
@@ -235,6 +247,8 @@ namespace Praca_Inżynierska
             try
             {
                 IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);            //tworzy połączenie do protokołu modbus przez port seryjny      
+                masterRtu.Transport.WriteTimeout = 50;
+                masterRtu.Transport.Retries = 5;
                 ushort[] WriteMulipleRegistersTable = { Convert.ToUInt16(textBoxWrite4001.Text), Convert.ToUInt16(textBoxWrite4002.Text), 0, 0, 0, 0, 0, 0, 0, Convert.ToUInt16(textBoxWrite4010.Text), Convert.ToUInt16(textBoxWrite4011.Text) }; //tworzy tabelę wartości z pól tekstowych 
                 masterRtu.WriteMultipleRegisters(slaveAddress, writeStartAddress, WriteMulipleRegistersTable);      //wysyła wcześniej zdefiniowane wartości na konkretne adresy urządzenia
             }
@@ -342,6 +356,21 @@ namespace Praca_Inżynierska
         private void TrackBarPMSMx3_Scroll(object sender, EventArgs e)
         {
             textBoxPMSMx3.Text = trackBarPMSMx3.Value.ToString();
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            form2.ShowDialog();
+        }
+
+        private void BtnTEST_Click(object sender, EventArgs e)
+        {
+            //Form2 form2 = new Form2(cBoxBaudRate.Text);
+            //form2.ShowDialog();
+            //form2.GetData();
+            //Thread.Sleep(1000);
+           
+
         }
     }
     
