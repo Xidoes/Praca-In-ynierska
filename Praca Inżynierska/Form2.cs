@@ -41,13 +41,20 @@ namespace Praca_Inżynierska
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Settings));
-            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config.xml", FileMode.Open, FileAccess.Read))
+            try
             {
-                settings = serializer.Deserialize(fs) as Settings;
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config.xml", FileMode.Open, FileAccess.Read))
+                {
+                    settings = serializer.Deserialize(fs) as Settings;
 
+                }
+                LoadData();
             }
-            LoadData();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnSetToDefault_Click(object sender, EventArgs e)
@@ -60,14 +67,26 @@ namespace Praca_Inżynierska
             settings.CPDataBits = cBoxDataBits.Text;
             settings.CPParity = cBoxParityBits.Text;
             settings.CPStopBits = cBoxStopBits.Text;
+            settings.ReadGenAddr = txtBoxReadGenAddress.Text;
+            settings.WriteGenAddr = txtBoxWriteGenAddress.Text;
+            settings.ReadGenNOP = txtBoxReadGenNOP.Text;
+            settings.ReadGenNOP = txtBoxReadGenNOP.Text;
+
+            settings.SlaveAddressM1 = txtBoxM1SlaveAddress.Text;
+            settings.SlaveAddressM2DC = txtBoxM2DCSlaveAddress.Text;
+            settings.SlaveAddressM2Asynch = txtBoxM2AsynchSlaveAddress.Text;
+            settings.SlaveAddressM2BLDC = txtBoxM2BLDCSlaveAddress.Text;
+            settings.SlaveAddressM2PMSM = txtBoxM2PMSMSlaveAddress.Text;
             settings.AddrM1SpeedS = txtBoxM1SpeedS.Text;
             settings.AddrM1SpeedSNOP = txtBoxM1SpeedSNOP.Text;
             settings.AddrM1PositionS = txtBoxM1PositionS.Text;
             settings.AddrM1PositionSNOP = txtBoxM1PositionSNOP.Text;
             settings.AddrM1TorqueS = txtBoxM1TorqueS.Text;
             settings.AddrM1TorqueSNOP = txtBoxM1TorqueSNOP.Text;
-            settings.AddrM1PowerS = txtBoxM1PowerS.Text;
-            settings.AddrM1PowerSNOP = txtBoxM1PowerSNOP.Text;
+            settings.AddrM1CurrentS = txtBoxM1CurrentS.Text;
+            settings.AddrM1CurrentSNOP = txtBoxM1CurrentSNOP.Text;
+            settings.AddrM1VoltageS = txtBoxM1VoltageS.Text;
+            settings.AddrM1VoltageSNOP = txtBoxM1VoltageSNOP.Text;
             settings.AddrM1PS = txtBoxM1PS.Text;
             settings.AddrM1PSNOP = txtBoxM1PSNOP.Text;
             settings.AddrM1IS = txtBoxM1IS.Text;
@@ -86,8 +105,10 @@ namespace Praca_Inżynierska
             settings.AddrM1PositionRNOP = txtBoxM1PositionRNOP.Text;
             settings.AddrM1TorqueR = txtBoxM1TorqueR.Text;
             settings.AddrM1TorqueRNOP = txtBoxM1TorqueRNOP.Text;
-            settings.AddrM1PowerR = txtBoxM1PowerR.Text;
-            settings.AddrM1PowerRNOP = txtBoxM1PowerRNOP.Text;
+            settings.AddrM1CurrentR = txtBoxM1CurrentR.Text;
+            settings.AddrM1CurrentRNOP = txtBoxM1CurrentRNOP.Text;
+            settings.AddrM1VoltageR = txtBoxM1VoltageR.Text;
+            settings.AddrM1VoltageRNOP = txtBoxM1VoltageRNOP.Text;
             settings.AddrM1PR = txtBoxM1PR.Text;
             settings.AddrM1PRNOP = txtBoxM1PRNOP.Text;
             settings.AddrM1IR = txtBoxM1IR.Text;
@@ -106,8 +127,10 @@ namespace Praca_Inżynierska
             settings.AddrM2DCPositionSNOP = txtBoxM2DCPositionSNOP.Text;
             settings.AddrM2DCTorqueS = txtBoxM2DCTorqueS.Text;
             settings.AddrM2DCTorqueSNOP = txtBoxM2DCTorqueSNOP.Text;
-            settings.AddrM2DCPowerS = txtBoxM2DCPowerS.Text;
-            settings.AddrM2DCPowerSNOP = txtBoxM2DCPowerSNOP.Text;
+            settings.AddrM2DCCurrentS = txtBoxM2DCCurrentS.Text;
+            settings.AddrM2DCCurrentSNOP = txtBoxM2DCCurrentSNOP.Text;
+            settings.AddrM2DCVoltageS = txtBoxM2DCVoltageS.Text;
+            settings.AddrM2DCVoltageSNOP = txtBoxM2DCVoltageSNOP.Text;
             settings.AddrM2DCPS = txtBoxM2DCPS.Text;
             settings.AddrM2DCPSNOP = txtBoxM2DCPSNOP.Text;
             settings.AddrM2DCIS = txtBoxM2DCIS.Text;
@@ -126,8 +149,10 @@ namespace Praca_Inżynierska
             settings.AddrM2DCPositionRNOP = txtBoxM2DCPositionRNOP.Text;
             settings.AddrM2DCTorqueR = txtBoxM2DCTorqueR.Text;
             settings.AddrM2DCTorqueRNOP = txtBoxM2DCTorqueRNOP.Text;
-            settings.AddrM2DCPowerR = txtBoxM2DCPowerR.Text;
-            settings.AddrM2DCPowerRNOP = txtBoxM2DCPowerRNOP.Text;
+            settings.AddrM2DCCurrentR = txtBoxM2DCCurrentR.Text;
+            settings.AddrM2DCCurrentRNOP = txtBoxM2DCCurrentRNOP.Text;
+            settings.AddrM2DCVoltageR = txtBoxM2DCVoltageR.Text;
+            settings.AddrM2DCVoltageRNOP = txtBoxM2DCVoltageRNOP.Text;
             settings.AddrM2DCPR = txtBoxM2DCPR.Text;
             settings.AddrM2DCPRNOP = txtBoxM2DCPRNOP.Text;
             settings.AddrM2DCIR = txtBoxM2DCIR.Text;
@@ -146,8 +171,10 @@ namespace Praca_Inżynierska
             settings.AddrM2AsynchPositionSNOP = txtBoxM2AsynchPositionSNOP.Text;
             settings.AddrM2AsynchTorqueS = txtBoxM2AsynchTorqueS.Text;
             settings.AddrM2AsynchTorqueSNOP = txtBoxM2AsynchTorqueSNOP.Text;
-            settings.AddrM2AsynchPowerS = txtBoxM2AsynchPowerS.Text;
-            settings.AddrM2AsynchPowerSNOP = txtBoxM2AsynchPowerSNOP.Text;
+            settings.AddrM2AsynchCurrentS = txtBoxM2AsynchCurrentS.Text;
+            settings.AddrM2AsynchCurrentSNOP = txtBoxM2AsynchCurrentSNOP.Text;
+            settings.AddrM2AsynchVoltageS = txtBoxM2AsynchVoltageS.Text;
+            settings.AddrM2AsynchVoltageSNOP = txtBoxM2AsynchVoltageSNOP.Text;
             settings.AddrM2AsynchPS = txtBoxM2AsynchPS.Text;
             settings.AddrM2AsynchPSNOP = txtBoxM2AsynchPSNOP.Text;
             settings.AddrM2AsynchIS = txtBoxM2AsynchIS.Text;
@@ -166,8 +193,10 @@ namespace Praca_Inżynierska
             settings.AddrM2AsynchPositionRNOP = txtBoxM2AsynchPositionRNOP.Text;
             settings.AddrM2AsynchTorqueR = txtBoxM2AsynchTorqueR.Text;
             settings.AddrM2AsynchTorqueRNOP = txtBoxM2AsynchTorqueRNOP.Text;
-            settings.AddrM2AsynchPowerR = txtBoxM2AsynchPowerR.Text;
-            settings.AddrM2AsynchPowerRNOP = txtBoxM2AsynchPowerRNOP.Text;
+            settings.AddrM2AsynchCurrentR = txtBoxM2AsynchCurrentR.Text;
+            settings.AddrM2AsynchCurrentRNOP = txtBoxM2AsynchCurrentRNOP.Text;
+            settings.AddrM2AsynchVoltageR = txtBoxM2AsynchVoltageR.Text;
+            settings.AddrM2AsynchVoltageRNOP = txtBoxM2AsynchVoltageRNOP.Text;
             settings.AddrM2AsynchPR = txtBoxM2AsynchPR.Text;
             settings.AddrM2AsynchPRNOP = txtBoxM2AsynchPRNOP.Text;
             settings.AddrM2AsynchIR = txtBoxM2AsynchIR.Text;
@@ -186,8 +215,10 @@ namespace Praca_Inżynierska
             settings.AddrM2BLDCPositionSNOP = txtBoxM2BLDCPositionSNOP.Text;
             settings.AddrM2BLDCTorqueS = txtBoxM2BLDCTorqueS.Text;
             settings.AddrM2BLDCTorqueSNOP = txtBoxM2BLDCTorqueSNOP.Text;
-            settings.AddrM2BLDCPowerS = txtBoxM2BLDCPowerS.Text;
-            settings.AddrM2BLDCPowerSNOP = txtBoxM2BLDCPowerSNOP.Text;
+            settings.AddrM2BLDCCurrentS = txtBoxM2BLDCCurrentS.Text;
+            settings.AddrM2BLDCCurrentSNOP = txtBoxM2BLDCCurrentSNOP.Text;
+            settings.AddrM2BLDCVoltageS = txtBoxM2BLDCVoltageS.Text;
+            settings.AddrM2BLDCVoltageSNOP = txtBoxM2BLDCVoltageSNOP.Text;
             settings.AddrM2BLDCPS = txtBoxM2BLDCPS.Text;
             settings.AddrM2BLDCPSNOP = txtBoxM2BLDCPSNOP.Text;
             settings.AddrM2BLDCIS = txtBoxM2BLDCIS.Text;
@@ -206,8 +237,10 @@ namespace Praca_Inżynierska
             settings.AddrM2BLDCPositionRNOP = txtBoxM2BLDCPositionRNOP.Text;
             settings.AddrM2BLDCTorqueR = txtBoxM2BLDCTorqueR.Text;
             settings.AddrM2BLDCTorqueRNOP = txtBoxM2BLDCTorqueRNOP.Text;
-            settings.AddrM2BLDCPowerR = txtBoxM2BLDCPowerR.Text;
-            settings.AddrM2BLDCPowerRNOP = txtBoxM2BLDCPowerRNOP.Text;
+            settings.AddrM2BLDCCurrentR = txtBoxM2BLDCCurrentR.Text;
+            settings.AddrM2BLDCCurrentRNOP = txtBoxM2BLDCCurrentRNOP.Text;
+            settings.AddrM2BLDCVoltageR = txtBoxM2BLDCVoltageR.Text;
+            settings.AddrM2BLDCVoltageRNOP = txtBoxM2BLDCVoltageRNOP.Text;
             settings.AddrM2BLDCPR = txtBoxM2BLDCPR.Text;
             settings.AddrM2BLDCPRNOP = txtBoxM2BLDCPRNOP.Text;
             settings.AddrM2BLDCIR = txtBoxM2BLDCIR.Text;
@@ -226,8 +259,10 @@ namespace Praca_Inżynierska
             settings.AddrM2PMSMPositionSNOP = txtBoxM2PMSMPositionSNOP.Text;
             settings.AddrM2PMSMTorqueS = txtBoxM2PMSMTorqueS.Text;
             settings.AddrM2PMSMTorqueSNOP = txtBoxM2PMSMTorqueSNOP.Text;
-            settings.AddrM2PMSMPowerS = txtBoxM2PMSMPowerS.Text;
-            settings.AddrM2PMSMPowerSNOP = txtBoxM2PMSMPowerSNOP.Text;
+            settings.AddrM2PMSMCurrentS = txtBoxM2PMSMCurrentS.Text;
+            settings.AddrM2PMSMCurrentSNOP = txtBoxM2PMSMCurrentSNOP.Text;
+            settings.AddrM2PMSMVoltageS = txtBoxM2PMSMVoltageS.Text;
+            settings.AddrM2PMSMVoltageSNOP = txtBoxM2PMSMVoltageSNOP.Text;
             settings.AddrM2PMSMPS = txtBoxM2PMSMPS.Text;
             settings.AddrM2PMSMPSNOP = txtBoxM2PMSMPSNOP.Text;
             settings.AddrM2PMSMIS = txtBoxM2PMSMIS.Text;
@@ -246,8 +281,10 @@ namespace Praca_Inżynierska
             settings.AddrM2PMSMPositionRNOP = txtBoxM2PMSMPositionRNOP.Text;
             settings.AddrM2PMSMTorqueR = txtBoxM2PMSMTorqueR.Text;
             settings.AddrM2PMSMTorqueRNOP = txtBoxM2PMSMTorqueRNOP.Text;
-            settings.AddrM2PMSMPowerR = txtBoxM2PMSMPowerR.Text;
-            settings.AddrM2PMSMPowerRNOP = txtBoxM2PMSMPowerRNOP.Text;
+            settings.AddrM2PMSMCurrentR = txtBoxM2PMSMCurrentR.Text;
+            settings.AddrM2PMSMCurrentRNOP = txtBoxM2PMSMCurrentRNOP.Text;
+            settings.AddrM2PMSMVoltageR = txtBoxM2PMSMVoltageR.Text;
+            settings.AddrM2PMSMVoltageRNOP = txtBoxM2PMSMVoltageRNOP.Text;
             settings.AddrM2PMSMPR = txtBoxM2PMSMPR.Text;
             settings.AddrM2PMSMPRNOP = txtBoxM2PMSMPRNOP.Text;
             settings.AddrM2PMSMIR = txtBoxM2PMSMIR.Text;
@@ -284,13 +321,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM1TorqueS = "No";
             }
-            if (checkBoxM1PowerS.Checked)
+            if (checkBoxM1CurrentS.Checked)
             {
-                settings.CheckM1PowerS = "Yes";
+                settings.CheckM1CurrentS = "Yes";
             }
             else
             {
-                settings.CheckM1PowerS = "No";
+                settings.CheckM1CurrentS = "No";
+            }
+            if (checkBoxM1VoltageS.Checked)
+            {
+                settings.CheckM1VoltageS = "Yes";
+            }
+            else
+            {
+                settings.CheckM1VoltageS = "No";
             }
             if (checkBoxM1PS.Checked)
             {
@@ -364,13 +409,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM1TorqueR = "No";
             }
-            if (checkBoxM1PowerR.Checked)
+            if (checkBoxM1CurrentR.Checked)
             {
-                settings.CheckM1PowerR = "Yes";
+                settings.CheckM1CurrentR = "Yes";
             }
             else
             {
-                settings.CheckM1PowerR = "No";
+                settings.CheckM1CurrentR = "No";
+            }
+            if (checkBoxM1VoltageR.Checked)
+            {
+                settings.CheckM1VoltageR = "Yes";
+            }
+            else
+            {
+                settings.CheckM1VoltageR = "No";
             }
             if (checkBoxM1PR.Checked)
             {
@@ -444,13 +497,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2DCTorqueS = "No";
             }
-            if (checkBoxM2DCPowerS.Checked)
+            if (checkBoxM2DCCurrentS.Checked)
             {
-                settings.CheckM2DCPowerS = "Yes";
+                settings.CheckM2DCCurrentS = "Yes";
             }
             else
             {
-                settings.CheckM2DCPowerS = "No";
+                settings.CheckM2DCCurrentS = "No";
+            }
+            if (checkBoxM2DCVoltageS.Checked)
+            {
+                settings.CheckM2DCVoltageS = "Yes";
+            }
+            else
+            {
+                settings.CheckM2DCVoltageS = "No";
             }
             if (checkBoxM2DCPS.Checked)
             {
@@ -524,13 +585,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2DCTorqueR = "No";
             }
-            if (checkBoxM2DCPowerR.Checked)
+            if (checkBoxM2DCCurrentR.Checked)
             {
-                settings.CheckM2DCPowerR = "Yes";
+                settings.CheckM2DCCurrentR = "Yes";
             }
             else
             {
-                settings.CheckM2DCPowerR = "No";
+                settings.CheckM2DCCurrentR = "No";
+            }
+            if (checkBoxM2DCVoltageR.Checked)
+            {
+                settings.CheckM2DCVoltageR = "Yes";
+            }
+            else
+            {
+                settings.CheckM2DCVoltageR = "No";
             }
             if (checkBoxM2DCPR.Checked)
             {
@@ -604,13 +673,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2AsynchTorqueS = "No";
             }
-            if (checkBoxM2AsynchPowerS.Checked)
+            if (checkBoxM2AsynchCurrentS.Checked)
             {
-                settings.CheckM2AsynchPowerS = "Yes";
+                settings.CheckM2AsynchCurrentS = "Yes";
             }
             else
             {
-                settings.CheckM2AsynchPowerS = "No";
+                settings.CheckM2AsynchCurrentS = "No";
+            }
+            if (checkBoxM2AsynchVoltageS.Checked)
+            {
+                settings.CheckM2AsynchVoltageS = "Yes";
+            }
+            else
+            {
+                settings.CheckM2AsynchVoltageS = "No";
             }
             if (checkBoxM2AsynchPS.Checked)
             {
@@ -684,13 +761,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2AsynchTorqueR = "No";
             }
-            if (checkBoxM2AsynchPowerR.Checked)
+            if (checkBoxM2AsynchCurrentR.Checked)
             {
-                settings.CheckM2AsynchPowerR = "Yes";
+                settings.CheckM2AsynchCurrentR = "Yes";
             }
             else
             {
-                settings.CheckM2AsynchPowerR = "No";
+                settings.CheckM2AsynchCurrentR = "No";
+            }
+            if (checkBoxM2AsynchVoltageR.Checked)
+            {
+                settings.CheckM2AsynchVoltageR = "Yes";
+            }
+            else
+            {
+                settings.CheckM2AsynchVoltageR = "No";
             }
             if (checkBoxM2AsynchPR.Checked)
             {
@@ -764,13 +849,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2BLDCTorqueS = "No";
             }
-            if (checkBoxM2BLDCPowerS.Checked)
+            if (checkBoxM2BLDCCurrentS.Checked)
             {
-                settings.CheckM2BLDCPowerS = "Yes";
+                settings.CheckM2BLDCCurrentS = "Yes";
             }
             else
             {
-                settings.CheckM2BLDCPowerS = "No";
+                settings.CheckM2BLDCCurrentS = "No";
+            }
+            if (checkBoxM2BLDCVoltageS.Checked)
+            {
+                settings.CheckM2BLDCVoltageS = "Yes";
+            }
+            else
+            {
+                settings.CheckM2BLDCVoltageS = "No";
             }
             if (checkBoxM2BLDCPS.Checked)
             {
@@ -844,13 +937,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2BLDCTorqueR = "No";
             }
-            if (checkBoxM2BLDCPowerR.Checked)
+            if (checkBoxM2BLDCCurrentR.Checked)
             {
-                settings.CheckM2BLDCPowerR = "Yes";
+                settings.CheckM2BLDCCurrentR = "Yes";
             }
             else
             {
-                settings.CheckM2BLDCPowerR = "No";
+                settings.CheckM2BLDCCurrentR = "No";
+            }
+            if (checkBoxM2BLDCVoltageR.Checked)
+            {
+                settings.CheckM2BLDCVoltageR = "Yes";
+            }
+            else
+            {
+                settings.CheckM2BLDCVoltageR = "No";
             }
             if (checkBoxM2BLDCPR.Checked)
             {
@@ -924,13 +1025,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2PMSMTorqueS = "No";
             }
-            if (checkBoxM2PMSMPowerS.Checked)
+            if (checkBoxM2PMSMCurrentS.Checked)
             {
-                settings.CheckM2PMSMPowerS = "Yes";
+                settings.CheckM2PMSMCurrentS = "Yes";
             }
             else
             {
-                settings.CheckM2PMSMPowerS = "No";
+                settings.CheckM2PMSMCurrentS = "No";
+            }
+            if (checkBoxM2PMSMVoltageS.Checked)
+            {
+                settings.CheckM2PMSMVoltageS = "Yes";
+            }
+            else
+            {
+                settings.CheckM2PMSMVoltageS = "No";
             }
             if (checkBoxM2PMSMPS.Checked)
             {
@@ -1004,13 +1113,21 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2PMSMTorqueR = "No";
             }
-            if (checkBoxM2PMSMPowerR.Checked)
+            if (checkBoxM2PMSMCurrentR.Checked)
             {
-                settings.CheckM2PMSMPowerR = "Yes";
+                settings.CheckM2PMSMCurrentR = "Yes";
             }
             else
             {
-                settings.CheckM2PMSMPowerR = "No";
+                settings.CheckM2PMSMCurrentR = "No";
+            }
+            if (checkBoxM2PMSMVoltageR.Checked)
+            {
+                settings.CheckM2PMSMVoltageR = "Yes";
+            }
+            else
+            {
+                settings.CheckM2PMSMVoltageR = "No";
             }
             if (checkBoxM2PMSMPR.Checked)
             {
@@ -1067,14 +1184,25 @@ namespace Praca_Inżynierska
             cBoxDataBits.Text = settings.CPDataBits;
             cBoxParityBits.Text = settings.CPParity;
             cBoxStopBits.Text = settings.CPStopBits;
+            txtBoxReadGenAddress.Text = settings.ReadGenAddr;
+            txtBoxWriteGenAddress.Text = settings.WriteGenAddr;
+            txtBoxReadGenNOP.Text = settings.ReadGenNOP;
+            txtBoxReadGenNOP.Text = settings.ReadGenNOP; 
+            txtBoxM1SlaveAddress.Text =settings.SlaveAddressM1;
+            txtBoxM2DCSlaveAddress.Text = settings.SlaveAddressM2DC;
+            txtBoxM2AsynchSlaveAddress.Text = settings.SlaveAddressM2Asynch;
+            txtBoxM2BLDCSlaveAddress.Text = settings.SlaveAddressM2BLDC; 
+            txtBoxM2PMSMSlaveAddress.Text = settings.SlaveAddressM2PMSM;
             txtBoxM1SpeedS.Text = settings.AddrM1SpeedS;
             txtBoxM1SpeedSNOP.Text = settings.AddrM1SpeedSNOP;
             txtBoxM1PositionS.Text = settings.AddrM1PositionS;
             txtBoxM1PositionSNOP.Text = settings.AddrM1PositionSNOP;
             txtBoxM1TorqueS.Text = settings.AddrM1TorqueS;
             txtBoxM1TorqueSNOP.Text = settings.AddrM1TorqueSNOP;
-            txtBoxM1PowerS.Text = settings.AddrM1PowerS;
-            txtBoxM1PowerSNOP.Text = settings.AddrM1PowerSNOP;
+            txtBoxM1CurrentS.Text = settings.AddrM1CurrentS;
+            txtBoxM1CurrentSNOP.Text = settings.AddrM1CurrentSNOP;
+            txtBoxM1VoltageS.Text = settings.AddrM1VoltageS;
+            txtBoxM1VoltageSNOP.Text = settings.AddrM1VoltageSNOP;
             txtBoxM1PS.Text = settings.AddrM1PS;
             txtBoxM1PSNOP.Text = settings.AddrM1PSNOP;
             txtBoxM1IS.Text = settings.AddrM1IS;
@@ -1093,8 +1221,10 @@ namespace Praca_Inżynierska
             txtBoxM1PositionRNOP.Text = settings.AddrM1PositionRNOP;
             txtBoxM1TorqueR.Text = settings.AddrM1TorqueR;
             txtBoxM1TorqueRNOP.Text = settings.AddrM1TorqueRNOP;
-            txtBoxM1PowerR.Text = settings.AddrM1PowerR;
-            txtBoxM1PowerRNOP.Text = settings.AddrM1PowerRNOP;
+            txtBoxM1CurrentR.Text = settings.AddrM1CurrentR;
+            txtBoxM1CurrentRNOP.Text = settings.AddrM1CurrentRNOP;
+            txtBoxM1VoltageR.Text = settings.AddrM1VoltageR;
+            txtBoxM1VoltageRNOP.Text = settings.AddrM1VoltageRNOP;
             txtBoxM1PR.Text = settings.AddrM1PR;
             txtBoxM1PRNOP.Text = settings.AddrM1PRNOP;
             txtBoxM1IR.Text = settings.AddrM1IR;
@@ -1113,8 +1243,10 @@ namespace Praca_Inżynierska
             txtBoxM2DCPositionSNOP.Text = settings.AddrM2DCPositionSNOP;
             txtBoxM2DCTorqueS.Text = settings.AddrM2DCTorqueS;
             txtBoxM2DCTorqueSNOP.Text = settings.AddrM2DCTorqueSNOP;
-            txtBoxM2DCPowerS.Text = settings.AddrM2DCPowerS;
-            txtBoxM2DCPowerSNOP.Text = settings.AddrM2DCPowerSNOP;
+            txtBoxM2DCCurrentS.Text = settings.AddrM2DCCurrentS;
+            txtBoxM2DCCurrentSNOP.Text = settings.AddrM2DCCurrentSNOP;
+            txtBoxM2DCVoltageS.Text = settings.AddrM2DCVoltageS;
+            txtBoxM2DCVoltageSNOP.Text = settings.AddrM2DCVoltageSNOP;
             txtBoxM2DCPS.Text = settings.AddrM2DCPS;
             txtBoxM2DCPSNOP.Text = settings.AddrM2DCPSNOP;
             txtBoxM2DCIS.Text = settings.AddrM2DCIS;
@@ -1133,8 +1265,10 @@ namespace Praca_Inżynierska
             txtBoxM2DCPositionRNOP.Text = settings.AddrM2DCPositionRNOP;
             txtBoxM2DCTorqueR.Text = settings.AddrM2DCTorqueR;
             txtBoxM2DCTorqueRNOP.Text = settings.AddrM2DCTorqueRNOP;
-            txtBoxM2DCPowerR.Text = settings.AddrM2DCPowerR;
-            txtBoxM2DCPowerRNOP.Text = settings.AddrM2DCPowerRNOP;
+            txtBoxM2DCCurrentR.Text = settings.AddrM2DCCurrentR;
+            txtBoxM2DCCurrentRNOP.Text = settings.AddrM2DCCurrentRNOP;
+            txtBoxM2DCVoltageR.Text = settings.AddrM2DCVoltageR;
+            txtBoxM2DCVoltageRNOP.Text = settings.AddrM2DCVoltageRNOP;
             txtBoxM2DCPR.Text = settings.AddrM2DCPR;
             txtBoxM2DCPRNOP.Text = settings.AddrM2DCPRNOP;
             txtBoxM2DCIR.Text = settings.AddrM2DCIR;
@@ -1153,8 +1287,10 @@ namespace Praca_Inżynierska
             txtBoxM2AsynchPositionSNOP.Text = settings.AddrM2AsynchPositionSNOP;
             txtBoxM2AsynchTorqueS.Text = settings.AddrM2AsynchTorqueS;
             txtBoxM2AsynchTorqueSNOP.Text = settings.AddrM2AsynchTorqueSNOP;
-            txtBoxM2AsynchPowerS.Text = settings.AddrM2AsynchPowerS;
-            txtBoxM2AsynchPowerSNOP.Text = settings.AddrM2AsynchPowerSNOP;
+            txtBoxM2AsynchCurrentS.Text = settings.AddrM2AsynchCurrentS;
+            txtBoxM2AsynchCurrentSNOP.Text = settings.AddrM2AsynchCurrentSNOP;
+            txtBoxM2AsynchVoltageS.Text = settings.AddrM2AsynchVoltageS;
+            txtBoxM2AsynchVoltageSNOP.Text = settings.AddrM2AsynchVoltageSNOP;
             txtBoxM2AsynchPS.Text = settings.AddrM2AsynchPS;
             txtBoxM2AsynchPSNOP.Text = settings.AddrM2AsynchPSNOP;
             txtBoxM2AsynchIS.Text = settings.AddrM2AsynchIS;
@@ -1173,8 +1309,10 @@ namespace Praca_Inżynierska
             txtBoxM2AsynchPositionRNOP.Text = settings.AddrM2AsynchPositionRNOP;
             txtBoxM2AsynchTorqueR.Text = settings.AddrM2AsynchTorqueR;
             txtBoxM2AsynchTorqueRNOP.Text = settings.AddrM2AsynchTorqueRNOP;
-            txtBoxM2AsynchPowerR.Text = settings.AddrM2AsynchPowerR;
-            txtBoxM2AsynchPowerRNOP.Text = settings.AddrM2AsynchPowerRNOP;
+            txtBoxM2AsynchCurrentR.Text = settings.AddrM2AsynchCurrentR;
+            txtBoxM2AsynchCurrentRNOP.Text = settings.AddrM2AsynchCurrentRNOP;
+            txtBoxM2AsynchVoltageR.Text = settings.AddrM2AsynchVoltageR;
+            txtBoxM2AsynchVoltageRNOP.Text = settings.AddrM2AsynchVoltageRNOP;
             txtBoxM2AsynchPR.Text = settings.AddrM2AsynchPR;
             txtBoxM2AsynchPRNOP.Text = settings.AddrM2AsynchPRNOP;
             txtBoxM2AsynchIR.Text = settings.AddrM2AsynchIR;
@@ -1193,8 +1331,10 @@ namespace Praca_Inżynierska
             txtBoxM2BLDCPositionSNOP.Text = settings.AddrM2BLDCPositionSNOP;
             txtBoxM2BLDCTorqueS.Text = settings.AddrM2BLDCTorqueS;
             txtBoxM2BLDCTorqueSNOP.Text = settings.AddrM2BLDCTorqueSNOP;
-            txtBoxM2BLDCPowerS.Text = settings.AddrM2BLDCPowerS;
-            txtBoxM2BLDCPowerSNOP.Text = settings.AddrM2BLDCPowerSNOP;
+            txtBoxM2BLDCCurrentS.Text = settings.AddrM2BLDCCurrentS;
+            txtBoxM2BLDCCurrentSNOP.Text = settings.AddrM2BLDCCurrentSNOP;
+            txtBoxM2BLDCVoltageS.Text = settings.AddrM2BLDCVoltageS;
+            txtBoxM2BLDCVoltageSNOP.Text = settings.AddrM2BLDCVoltageSNOP;
             txtBoxM2BLDCPS.Text = settings.AddrM2BLDCPS;
             txtBoxM2BLDCPSNOP.Text = settings.AddrM2BLDCPSNOP;
             txtBoxM2BLDCIS.Text = settings.AddrM2BLDCIS;
@@ -1213,8 +1353,10 @@ namespace Praca_Inżynierska
             txtBoxM2BLDCPositionRNOP.Text = settings.AddrM2BLDCPositionRNOP;
             txtBoxM2BLDCTorqueR.Text = settings.AddrM2BLDCTorqueR;
             txtBoxM2BLDCTorqueRNOP.Text = settings.AddrM2BLDCTorqueRNOP;
-            txtBoxM2BLDCPowerR.Text = settings.AddrM2BLDCPowerR;
-            txtBoxM2BLDCPowerRNOP.Text = settings.AddrM2BLDCPowerRNOP;
+            txtBoxM2BLDCCurrentR.Text = settings.AddrM2BLDCCurrentR;
+            txtBoxM2BLDCCurrentRNOP.Text = settings.AddrM2BLDCCurrentRNOP;
+            txtBoxM2BLDCVoltageR.Text = settings.AddrM2BLDCVoltageR;
+            txtBoxM2BLDCVoltageRNOP.Text = settings.AddrM2BLDCVoltageRNOP;
             txtBoxM2BLDCPR.Text = settings.AddrM2BLDCPR;
             txtBoxM2BLDCPRNOP.Text = settings.AddrM2BLDCPRNOP;
             txtBoxM2BLDCIR.Text = settings.AddrM2BLDCIR;
@@ -1233,8 +1375,10 @@ namespace Praca_Inżynierska
             txtBoxM2PMSMPositionSNOP.Text = settings.AddrM2PMSMPositionSNOP;
             txtBoxM2PMSMTorqueS.Text = settings.AddrM2PMSMTorqueS;
             txtBoxM2PMSMTorqueSNOP.Text = settings.AddrM2PMSMTorqueSNOP;
-            txtBoxM2PMSMPowerS.Text = settings.AddrM2PMSMPowerS;
-            txtBoxM2PMSMPowerSNOP.Text = settings.AddrM2PMSMPowerSNOP;
+            txtBoxM2PMSMCurrentS.Text = settings.AddrM2PMSMCurrentS;
+            txtBoxM2PMSMCurrentSNOP.Text = settings.AddrM2PMSMCurrentSNOP;
+            txtBoxM2PMSMCurrentS.Text = settings.AddrM2PMSMVoltageS;
+            txtBoxM2PMSMCurrentSNOP.Text = settings.AddrM2PMSMVoltageSNOP;
             txtBoxM2PMSMPS.Text = settings.AddrM2PMSMPS;
             txtBoxM2PMSMPSNOP.Text = settings.AddrM2PMSMPSNOP;
             txtBoxM2PMSMIS.Text = settings.AddrM2PMSMIS;
@@ -1253,8 +1397,10 @@ namespace Praca_Inżynierska
             txtBoxM2PMSMPositionRNOP.Text = settings.AddrM2PMSMPositionRNOP;
             txtBoxM2PMSMTorqueR.Text = settings.AddrM2PMSMTorqueR;
             txtBoxM2PMSMTorqueRNOP.Text = settings.AddrM2PMSMTorqueRNOP;
-            txtBoxM2PMSMPowerR.Text = settings.AddrM2PMSMPowerR;
-            txtBoxM2PMSMPowerRNOP.Text = settings.AddrM2PMSMPowerRNOP;
+            txtBoxM2PMSMCurrentR.Text = settings.AddrM2PMSMCurrentR;
+            txtBoxM2PMSMCurrentRNOP.Text = settings.AddrM2PMSMCurrentRNOP;
+            txtBoxM2PMSMVoltageR.Text = settings.AddrM2PMSMVoltageR;
+            txtBoxM2PMSMVoltageRNOP.Text = settings.AddrM2PMSMVoltageRNOP;
             txtBoxM2PMSMPR.Text = settings.AddrM2PMSMPR;
             txtBoxM2PMSMPRNOP.Text = settings.AddrM2PMSMPRNOP;
             txtBoxM2PMSMIR.Text = settings.AddrM2PMSMIR;
@@ -1291,13 +1437,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1TorqueS.Checked = false;
             }
-            if (settings.CheckM1PowerS == ("Yes"))
+            if (settings.CheckM1CurrentS == ("Yes"))
             {
-                checkBoxM1PowerS.Checked = true;
+                checkBoxM1CurrentS.Checked = true;
             }
             else
             {
-                checkBoxM1PowerS.Checked = false;
+                checkBoxM1CurrentS.Checked = false;
+            }
+            if (settings.CheckM1VoltageS == ("Yes"))
+            {
+                checkBoxM1VoltageS.Checked = true;
+            }
+            else
+            {
+                checkBoxM1VoltageS.Checked = false;
             }
             if (settings.CheckM1PS == ("Yes"))
             {
@@ -1371,13 +1525,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1TorqueR.Checked = false;
             }
-            if (settings.CheckM1PowerR == ("Yes"))
+            if (settings.CheckM1CurrentR == ("Yes"))
             {
-                checkBoxM1PowerR.Checked = true;
+                checkBoxM1CurrentR.Checked = true;
             }
             else
             {
-                checkBoxM1PowerR.Checked = false;
+                checkBoxM1CurrentR.Checked = false;
+            }
+            if (settings.CheckM1VoltageR == ("Yes"))
+            {
+                checkBoxM1VoltageR.Checked = true;
+            }
+            else
+            {
+                checkBoxM1VoltageR.Checked = false;
             }
             if (settings.CheckM1PR == ("Yes"))
             {
@@ -1451,13 +1613,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCTorqueS.Checked = false;
             }
-            if (settings.CheckM2DCPowerS == ("Yes"))
+            if (settings.CheckM2DCCurrentS == ("Yes"))
             {
-                checkBoxM2DCPowerS.Checked = true;
+                checkBoxM2DCCurrentS.Checked = true;
             }
             else
             {
-                checkBoxM2DCPowerS.Checked = false;
+                checkBoxM2DCCurrentS.Checked = false;
+            }
+            if (settings.CheckM2DCVoltageS == ("Yes"))
+            {
+                checkBoxM2DCVoltageS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2DCVoltageS.Checked = false;
             }
             if (settings.CheckM2DCPS == ("Yes"))
             {
@@ -1531,13 +1701,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCTorqueR.Checked = false;
             }
-            if (settings.CheckM2DCPowerR == ("Yes"))
+            if (settings.CheckM2DCCurrentR == ("Yes"))
             {
-                checkBoxM2DCPowerR.Checked = true;
+                checkBoxM2DCCurrentR.Checked = true;
             }
             else
             {
-                checkBoxM2DCPowerR.Checked = false;
+                checkBoxM2DCCurrentR.Checked = false;
+            }
+            if (settings.CheckM2DCVoltageR == ("Yes"))
+            {
+                checkBoxM2DCVoltageR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2DCVoltageR.Checked = false;
             }
             if (settings.CheckM2DCPR == ("Yes"))
             {
@@ -1611,13 +1789,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchTorqueS.Checked = false;
             }
-            if (settings.CheckM2AsynchPowerS == ("Yes"))
+            if (settings.CheckM2AsynchCurrentS == ("Yes"))
             {
-                checkBoxM2AsynchPowerS.Checked = true;
+                checkBoxM2AsynchCurrentS.Checked = true;
             }
             else
             {
-                checkBoxM2AsynchPowerS.Checked = false;
+                checkBoxM2AsynchCurrentS.Checked = false;
+            }
+            if (settings.CheckM2AsynchVoltageS == ("Yes"))
+            {
+                checkBoxM2AsynchVoltageS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2AsynchVoltageS.Checked = false;
             }
             if (settings.CheckM2AsynchPS == ("Yes"))
             {
@@ -1691,13 +1877,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchTorqueR.Checked = false;
             }
-            if (settings.CheckM2AsynchPowerR == ("Yes"))
+            if (settings.CheckM2AsynchCurrentR == ("Yes"))
             {
-                checkBoxM2AsynchPowerR.Checked = true;
+                checkBoxM2AsynchCurrentR.Checked = true;
             }
             else
             {
-                checkBoxM2AsynchPowerR.Checked = false;
+                checkBoxM2AsynchCurrentR.Checked = false;
+            }
+            if (settings.CheckM2AsynchVoltageR == ("Yes"))
+            {
+                checkBoxM2AsynchVoltageR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2AsynchVoltageR.Checked = false;
             }
             if (settings.CheckM2AsynchPR == ("Yes"))
             {
@@ -1771,13 +1965,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCTorqueS.Checked = false;
             }
-            if (settings.CheckM2BLDCPowerS == ("Yes"))
+            if (settings.CheckM2BLDCCurrentS == ("Yes"))
             {
-                checkBoxM2BLDCPowerS.Checked = true;
+                checkBoxM2BLDCCurrentS.Checked = true;
             }
             else
             {
-                checkBoxM2BLDCPowerS.Checked = false;
+                checkBoxM2BLDCCurrentS.Checked = false;
+            }
+            if (settings.CheckM2BLDCVoltageS == ("Yes"))
+            {
+                checkBoxM2BLDCVoltageS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2BLDCVoltageS.Checked = false;
             }
             if (settings.CheckM2BLDCPS == ("Yes"))
             {
@@ -1851,13 +2053,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCTorqueR.Checked = false;
             }
-            if (settings.CheckM2BLDCPowerR == ("Yes"))
+            if (settings.CheckM2BLDCCurrentR == ("Yes"))
             {
-                checkBoxM2BLDCPowerR.Checked = true;
+                checkBoxM2BLDCCurrentR.Checked = true;
             }
             else
             {
-                checkBoxM2BLDCPowerR.Checked = false;
+                checkBoxM2BLDCCurrentR.Checked = false;
+            }
+            if (settings.CheckM2BLDCVoltageR == ("Yes"))
+            {
+                checkBoxM2BLDCVoltageR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2BLDCVoltageR.Checked = false;
             }
             if (settings.CheckM2BLDCPR == ("Yes"))
             {
@@ -1931,13 +2141,21 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMTorqueS.Checked = false;
             }
-            if (settings.CheckM2PMSMPowerS == ("Yes"))
+            if (settings.CheckM2PMSMCurrentS == ("Yes"))
             {
-                checkBoxM2PMSMPowerS.Checked = true;
+                checkBoxM2PMSMCurrentS.Checked = true;
             }
             else
             {
-                checkBoxM2PMSMPowerS.Checked = false;
+                checkBoxM2PMSMCurrentS.Checked = false;
+            }
+            if (settings.CheckM2PMSMVoltageS == ("Yes"))
+            {
+                checkBoxM2PMSMVoltageS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2PMSMVoltageS.Checked = false;
             }
             if (settings.CheckM2PMSMPS == ("Yes"))
             {
@@ -2011,13 +2229,13 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMTorqueR.Checked = false;
             }
-            if (settings.CheckM2PMSMPowerR == ("Yes"))
+            if (settings.CheckM2PMSMCurrentR == ("Yes"))
             {
-                checkBoxM2PMSMPowerR.Checked = true;
+                checkBoxM2PMSMCurrentR.Checked = true;
             }
             else
             {
-                checkBoxM2PMSMPowerR.Checked = false;
+                checkBoxM2PMSMCurrentR.Checked = false;
             }
             if (settings.CheckM2PMSMPR == ("Yes"))
             {
@@ -2071,15 +2289,58 @@ namespace Praca_Inżynierska
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Settings));
-            SaveData();
-
-            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config_default.xml", FileMode.Create, FileAccess.Write))
+            try
             {
-                serializer.Serialize(fs, settings);
-                MessageBox.Show("Created");
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+                SaveData();
+
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config_default.xml", FileMode.Create, FileAccess.Write))
+                {
+                    serializer.Serialize(fs, settings);
+                    MessageBox.Show("Created");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void ComboBoxSaveConfig_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config"+comboBoxSaveConfig.Text+".xml", FileMode.Open, FileAccess.Read))
+                {
+                    settings = serializer.Deserialize(fs) as Settings;
+
+                }
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnConfigSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+                SaveData();
+
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config" + comboBoxSaveConfig.Text + ".xml", FileMode.Create, FileAccess.Write))
+                {
+                    serializer.Serialize(fs, settings);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

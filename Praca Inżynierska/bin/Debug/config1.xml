@@ -20,7 +20,7 @@
   <AddrM1x1S />
   <AddrM1x2S />
   <AddrM1x3S />
-  <CheckM1SpeedS>Yes</CheckM1SpeedS>
+  <CheckM1SpeedS>No</CheckM1SpeedS>
   <CheckM1PositionS>Yes</CheckM1PositionS>
   <CheckM1TorqueS>Yes</CheckM1TorqueS>
   <CheckM1CurrentS>No</CheckM1CurrentS>

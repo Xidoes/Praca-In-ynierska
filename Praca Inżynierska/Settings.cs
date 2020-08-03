@@ -12,10 +12,16 @@ namespace Praca_Inżynierska
         public string CPDataBits { get; set; }
         public string CPStopBits { get; set; }
         public string CPParity { get; set; }
+        public string SlaveAddressM1 { get; set; }
+        public string SlaveAddressM2DC { get; set; }
+        public string SlaveAddressM2Asynch { get; set; }
+        public string SlaveAddressM2BLDC { get; set; }
+        public string SlaveAddressM2PMSM { get; set; }
         public string AddrM1SpeedS { get; set; }
         public string AddrM1PositionS { get; set; }
         public string AddrM1TorqueS { get; set; }
-        public string AddrM1PowerS { get; set; }
+        public string AddrM1CurrentS { get; set; }
+        public string AddrM1VoltageS { get; set; }
         public string AddrM1PS { get; set; }
         public string AddrM1IS { get; set; }
         public string AddrM1DS { get; set; }
@@ -25,7 +31,8 @@ namespace Praca_Inżynierska
         public string CheckM1SpeedS { get; set; }
         public string CheckM1PositionS { get; set; }
         public string CheckM1TorqueS { get; set; }
-        public string CheckM1PowerS { get; set; }
+        public string CheckM1CurrentS { get; set; }
+        public string CheckM1VoltageS { get; set; }
         public string CheckM1PS { get; set; }
         public string CheckM1IS { get; set; }
         public string CheckM1DS { get; set; }
@@ -35,7 +42,8 @@ namespace Praca_Inżynierska
         public string AddrM1SpeedR { get; set; }
         public string AddrM1PositionR { get; set; }
         public string AddrM1TorqueR { get; set; }
-        public string AddrM1PowerR { get; set; }
+        public string AddrM1CurrentR { get; set; }
+        public string AddrM1VoltageR { get; set; }
         public string AddrM1PR { get; set; }
         public string AddrM1IR { get; set; }
         public string AddrM1DR { get; set; }
@@ -45,7 +53,8 @@ namespace Praca_Inżynierska
         public string CheckM1SpeedR { get; set; }
         public string CheckM1PositionR { get; set; }
         public string CheckM1TorqueR { get; set; }
-        public string CheckM1PowerR { get; set; }
+        public string CheckM1CurrentR { get; set; }
+        public string CheckM1VoltageR { get; set; }
         public string CheckM1PR { get; set; }
         public string CheckM1IR { get; set; }
         public string CheckM1DR { get; set; }
@@ -55,7 +64,8 @@ namespace Praca_Inżynierska
         public string AddrM2DCSpeedS { get; set; }
         public string AddrM2DCPositionS { get; set; }
         public string AddrM2DCTorqueS { get; set; }
-        public string AddrM2DCPowerS { get; set; }
+        public string AddrM2DCCurrentS { get; set; }
+        public string AddrM2DCVoltageS { get; set; }
         public string AddrM2DCPS { get; set; }
         public string AddrM2DCIS { get; set; }
         public string AddrM2DCDS { get; set; }
@@ -65,7 +75,8 @@ namespace Praca_Inżynierska
         public string CheckM2DCSpeedS { get; set; }
         public string CheckM2DCPositionS { get; set; }
         public string CheckM2DCTorqueS { get; set; }
-        public string CheckM2DCPowerS { get; set; }
+        public string CheckM2DCCurrentS { get; set; }
+        public string CheckM2DCVoltageS { get; set; }
         public string CheckM2DCPS { get; set; }
         public string CheckM2DCIS { get; set; }
         public string CheckM2DCDS { get; set; }
@@ -75,7 +86,8 @@ namespace Praca_Inżynierska
         public string AddrM2DCSpeedR { get; set; }
         public string AddrM2DCPositionR { get; set; }
         public string AddrM2DCTorqueR { get; set; }
-        public string AddrM2DCPowerR { get; set; }
+        public string AddrM2DCCurrentR { get; set; }
+        public string AddrM2DCVoltageR { get; set; }
         public string AddrM2DCPR { get; set; }
         public string AddrM2DCIR { get; set; }
         public string AddrM2DCDR { get; set; }
@@ -85,7 +97,8 @@ namespace Praca_Inżynierska
         public string CheckM2DCSpeedR { get; set; }
         public string CheckM2DCPositionR { get; set; }
         public string CheckM2DCTorqueR { get; set; }
-        public string CheckM2DCPowerR { get; set; }
+        public string CheckM2DCCurrentR { get; set; }
+        public string CheckM2DCVoltageR { get; set; }
         public string CheckM2DCPR { get; set; }
         public string CheckM2DCIR { get; set; }
         public string CheckM2DCDR { get; set; }
@@ -95,7 +108,8 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchSpeedS { get; set; }
         public string AddrM2AsynchPositionS { get; set; }
         public string AddrM2AsynchTorqueS { get; set; }
-        public string AddrM2AsynchPowerS { get; set; }
+        public string AddrM2AsynchCurrentS { get; set; }
+        public string AddrM2AsynchVoltageS { get; set; }
         public string AddrM2AsynchPS { get; set; }
         public string AddrM2AsynchIS { get; set; }
         public string AddrM2AsynchDS { get; set; }
@@ -105,7 +119,8 @@ namespace Praca_Inżynierska
         public string CheckM2AsynchSpeedS { get; set; }
         public string CheckM2AsynchPositionS { get; set; }
         public string CheckM2AsynchTorqueS { get; set; }
-        public string CheckM2AsynchPowerS { get; set; }
+        public string CheckM2AsynchCurrentS { get; set; }
+        public string CheckM2AsynchVoltageS { get; set; }
         public string CheckM2AsynchPS { get; set; }
         public string CheckM2AsynchIS { get; set; }
         public string CheckM2AsynchDS { get; set; }
@@ -115,7 +130,8 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchSpeedR { get; set; }
         public string AddrM2AsynchPositionR { get; set; }
         public string AddrM2AsynchTorqueR { get; set; }
-        public string AddrM2AsynchPowerR { get; set; }
+        public string AddrM2AsynchCurrentR { get; set; }
+        public string AddrM2AsynchVoltageR { get; set; }
         public string AddrM2AsynchPR { get; set; }
         public string AddrM2AsynchIR { get; set; }
         public string AddrM2AsynchDR { get; set; }
@@ -125,7 +141,8 @@ namespace Praca_Inżynierska
         public string CheckM2AsynchSpeedR { get; set; }
         public string CheckM2AsynchPositionR { get; set; }
         public string CheckM2AsynchTorqueR { get; set; }
-        public string CheckM2AsynchPowerR { get; set; }
+        public string CheckM2AsynchCurrentR { get; set; }
+        public string CheckM2AsynchVoltageR { get; set; }
         public string CheckM2AsynchPR { get; set; }
         public string CheckM2AsynchIR { get; set; }
         public string CheckM2AsynchDR { get; set; }
@@ -135,7 +152,8 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCSpeedS { get; set; }
         public string AddrM2BLDCPositionS { get; set; }
         public string AddrM2BLDCTorqueS { get; set; }
-        public string AddrM2BLDCPowerS { get; set; }
+        public string AddrM2BLDCCurrentS { get; set; }
+        public string AddrM2BLDCVoltageS { get; set; }
         public string AddrM2BLDCPS { get; set; }
         public string AddrM2BLDCIS { get; set; }
         public string AddrM2BLDCDS { get; set; }
@@ -145,7 +163,8 @@ namespace Praca_Inżynierska
         public string CheckM2BLDCSpeedS { get; set; }
         public string CheckM2BLDCPositionS { get; set; }
         public string CheckM2BLDCTorqueS { get; set; }
-        public string CheckM2BLDCPowerS { get; set; }
+        public string CheckM2BLDCCurrentS { get; set; }
+        public string CheckM2BLDCVoltageS { get; set; }
         public string CheckM2BLDCPS { get; set; }
         public string CheckM2BLDCIS { get; set; }
         public string CheckM2BLDCDS { get; set; }
@@ -155,7 +174,8 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCSpeedR { get; set; }
         public string AddrM2BLDCPositionR { get; set; }
         public string AddrM2BLDCTorqueR { get; set; }
-        public string AddrM2BLDCPowerR { get; set; }
+        public string AddrM2BLDCCurrentR { get; set; }
+        public string AddrM2BLDCVoltageR { get; set; }
         public string AddrM2BLDCPR { get; set; }
         public string AddrM2BLDCIR { get; set; }
         public string AddrM2BLDCDR { get; set; }
@@ -165,7 +185,8 @@ namespace Praca_Inżynierska
         public string CheckM2BLDCSpeedR { get; set; }
         public string CheckM2BLDCPositionR { get; set; }
         public string CheckM2BLDCTorqueR { get; set; }
-        public string CheckM2BLDCPowerR { get; set; }
+        public string CheckM2BLDCCurrentR { get; set; }
+        public string CheckM2BLDCVoltageR { get; set; }
         public string CheckM2BLDCPR { get; set; }
         public string CheckM2BLDCIR { get; set; }
         public string CheckM2BLDCDR { get; set; }
@@ -175,7 +196,8 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMSpeedS { get; set; }
         public string AddrM2PMSMPositionS { get; set; }
         public string AddrM2PMSMTorqueS { get; set; }
-        public string AddrM2PMSMPowerS { get; set; }
+        public string AddrM2PMSMCurrentS { get; set; }
+        public string AddrM2PMSMVoltageS { get; set; }
         public string AddrM2PMSMPS { get; set; }
         public string AddrM2PMSMIS { get; set; }
         public string AddrM2PMSMDS { get; set; }
@@ -185,7 +207,8 @@ namespace Praca_Inżynierska
         public string CheckM2PMSMSpeedS { get; set; }
         public string CheckM2PMSMPositionS { get; set; }
         public string CheckM2PMSMTorqueS { get; set; }
-        public string CheckM2PMSMPowerS { get; set; }
+        public string CheckM2PMSMCurrentS { get; set; }
+        public string CheckM2PMSMVoltageS { get; set; }
         public string CheckM2PMSMPS { get; set; }
         public string CheckM2PMSMIS { get; set; }
         public string CheckM2PMSMDS { get; set; }
@@ -195,7 +218,8 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMSpeedR { get; set; }
         public string AddrM2PMSMPositionR { get; set; }
         public string AddrM2PMSMTorqueR { get; set; }
-        public string AddrM2PMSMPowerR { get; set; }
+        public string AddrM2PMSMCurrentR { get; set; }
+        public string AddrM2PMSMVoltageR { get; set; }
         public string AddrM2PMSMPR { get; set; }
         public string AddrM2PMSMIR { get; set; }
         public string AddrM2PMSMDR { get; set; }
@@ -205,7 +229,8 @@ namespace Praca_Inżynierska
         public string CheckM2PMSMSpeedR { get; set; }
         public string CheckM2PMSMPositionR { get; set; }
         public string CheckM2PMSMTorqueR { get; set; }
-        public string CheckM2PMSMPowerR { get; set; }
+        public string CheckM2PMSMCurrentR { get; set; }
+        public string CheckM2PMSMVoltageR { get; set; }
         public string CheckM2PMSMPR { get; set; }
         public string CheckM2PMSMIR { get; set; }
         public string CheckM2PMSMDR { get; set; }
@@ -215,7 +240,8 @@ namespace Praca_Inżynierska
         public string AddrM1SpeedSNOP { get; set; }
         public string AddrM1PositionSNOP { get; set; }
         public string AddrM1TorqueSNOP { get; set; }
-        public string AddrM1PowerSNOP { get; set; }
+        public string AddrM1CurrentSNOP { get; set; }
+        public string AddrM1VoltageSNOP { get; set; }
         public string AddrM1PSNOP { get; set; }
         public string AddrM1ISNOP { get; set; }
         public string AddrM1DSNOP { get; set; }
@@ -226,17 +252,19 @@ namespace Praca_Inżynierska
         public string AddrM1PositionRNOP { get; set; }
         public string AddrM1TorqueRNOP { get; set; }
         public string AddrM1PowerRNOP { get; set; }
+        public string AddrM1CurrentRNOP { get; set; }
+        public string AddrM1VoltageRNOP { get; set; }
         public string AddrM1PRNOP { get; set; }
         public string AddrM1IRNOP { get; set; }
         public string AddrM1DRNOP { get; set; }
         public string AddrM1x1RNOP { get; set; }
         public string AddrM1x2RNOP { get; set; }
         public string AddrM1x3RNOP { get; set; }
-       
         public string AddrM2DCSpeedSNOP { get; set; }
         public string AddrM2DCPositionSNOP { get; set; }
         public string AddrM2DCTorqueSNOP { get; set; }
-        public string AddrM2DCPowerSNOP { get; set; }
+        public string AddrM2DCCurrentSNOP { get; set; }
+        public string AddrM2DCVoltageSNOP { get; set; }
         public string AddrM2DCPSNOP { get; set; }
         public string AddrM2DCISNOP { get; set; }
         public string AddrM2DCDSNOP { get; set; }
@@ -247,6 +275,8 @@ namespace Praca_Inżynierska
         public string AddrM2DCPositionRNOP { get; set; }
         public string AddrM2DCTorqueRNOP { get; set; }
         public string AddrM2DCPowerRNOP { get; set; }
+        public string AddrM2DCCurrentRNOP { get; set; }
+        public string AddrM2DCVoltageRNOP { get; set; }
         public string AddrM2DCPRNOP { get; set; }
         public string AddrM2DCIRNOP { get; set; }
         public string AddrM2DCDRNOP { get; set; }
@@ -256,7 +286,8 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchSpeedSNOP { get; set; }
         public string AddrM2AsynchPositionSNOP { get; set; }
         public string AddrM2AsynchTorqueSNOP { get; set; }
-        public string AddrM2AsynchPowerSNOP { get; set; }
+        public string AddrM2AsynchCurrentSNOP { get; set; }
+        public string AddrM2AsynchVoltageSNOP { get; set; }
         public string AddrM2AsynchPSNOP { get; set; }
         public string AddrM2AsynchISNOP { get; set; }
         public string AddrM2AsynchDSNOP { get; set; }
@@ -267,6 +298,8 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchPositionRNOP { get; set; }
         public string AddrM2AsynchTorqueRNOP { get; set; }
         public string AddrM2AsynchPowerRNOP { get; set; }
+        public string AddrM2AsynchCurrentRNOP { get; set; }
+        public string AddrM2AsynchVoltageRNOP { get; set; }
         public string AddrM2AsynchPRNOP { get; set; }
         public string AddrM2AsynchIRNOP { get; set; }
         public string AddrM2AsynchDRNOP { get; set; }
@@ -276,7 +309,8 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCSpeedSNOP { get; set; }
         public string AddrM2BLDCPositionSNOP { get; set; }
         public string AddrM2BLDCTorqueSNOP { get; set; }
-        public string AddrM2BLDCPowerSNOP { get; set; }
+        public string AddrM2BLDCCurrentSNOP { get; set; }
+        public string AddrM2BLDCVoltageSNOP { get; set; }
         public string AddrM2BLDCPSNOP { get; set; }
         public string AddrM2BLDCISNOP { get; set; }
         public string AddrM2BLDCDSNOP { get; set; }
@@ -287,6 +321,8 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCPositionRNOP { get; set; }
         public string AddrM2BLDCTorqueRNOP { get; set; }
         public string AddrM2BLDCPowerRNOP { get; set; }
+        public string AddrM2BLDCCurrentRNOP { get; set; }
+        public string AddrM2BLDCVoltageRNOP { get; set; }
         public string AddrM2BLDCPRNOP { get; set; }
         public string AddrM2BLDCIRNOP { get; set; }
         public string AddrM2BLDCDRNOP { get; set; }
@@ -296,7 +332,8 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMSpeedSNOP { get; set; }
         public string AddrM2PMSMPositionSNOP { get; set; }
         public string AddrM2PMSMTorqueSNOP { get; set; }
-        public string AddrM2PMSMPowerSNOP { get; set; }
+        public string AddrM2PMSMCurrentSNOP { get; set; }
+        public string AddrM2PMSMVoltageSNOP { get; set; }
         public string AddrM2PMSMPSNOP { get; set; }
         public string AddrM2PMSMISNOP { get; set; }
         public string AddrM2PMSMDSNOP { get; set; }
@@ -307,11 +344,17 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMPositionRNOP { get; set; }
         public string AddrM2PMSMTorqueRNOP { get; set; }
         public string AddrM2PMSMPowerRNOP { get; set; }
+        public string AddrM2PMSMCurrentRNOP { get; set; }
+        public string AddrM2PMSMVoltageRNOP { get; set; }
         public string AddrM2PMSMPRNOP { get; set; }
         public string AddrM2PMSMIRNOP { get; set; }
         public string AddrM2PMSMDRNOP { get; set; }
         public string AddrM2PMSMx1RNOP { get; set; }
         public string AddrM2PMSMx2RNOP { get; set; }
         public string AddrM2PMSMx3RNOP { get; set; }
+        public string ReadGenAddr { get; set; }
+        public string ReadGenNOP { get; set; }
+        public string WriteGenAddr { get; set; }
+        public string WriteGenNOP { get; set; }
     }
 }

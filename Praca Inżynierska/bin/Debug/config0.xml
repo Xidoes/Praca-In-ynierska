@@ -9,7 +9,7 @@
   <SlaveAddressM2Asynch>9</SlaveAddressM2Asynch>
   <SlaveAddressM2BLDC>9</SlaveAddressM2BLDC>
   <SlaveAddressM2PMSM>9</SlaveAddressM2PMSM>
-  <AddrM1SpeedS>4000</AddrM1SpeedS>
+  <AddrM1SpeedS>1</AddrM1SpeedS>
   <AddrM1PositionS>4001</AddrM1PositionS>
   <AddrM1TorqueS>4010</AddrM1TorqueS>
   <AddrM1CurrentS />
@@ -31,7 +31,7 @@
   <CheckM1x1S>No</CheckM1x1S>
   <CheckM1x2S>No</CheckM1x2S>
   <CheckM1x3S>No</CheckM1x3S>
-  <AddrM1SpeedR>4000</AddrM1SpeedR>
+  <AddrM1SpeedR>2</AddrM1SpeedR>
   <AddrM1PositionR>4010</AddrM1PositionR>
   <AddrM1TorqueR>4010</AddrM1TorqueR>
   <AddrM1CurrentR />
