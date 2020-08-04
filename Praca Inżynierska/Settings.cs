@@ -28,17 +28,17 @@ namespace Praca_Inżynierska
         public string AddrM1x1S { get; set; }
         public string AddrM1x2S { get; set; }
         public string AddrM1x3S { get; set; }
-        public string CheckM1SpeedS { get; set; }
-        public string CheckM1PositionS { get; set; }
-        public string CheckM1TorqueS { get; set; }
-        public string CheckM1CurrentS { get; set; }
-        public string CheckM1VoltageS { get; set; }
-        public string CheckM1PS { get; set; }
-        public string CheckM1IS { get; set; }
-        public string CheckM1DS { get; set; }
-        public string CheckM1x1S { get; set; }
-        public string CheckM1x2S { get; set; }
-        public string CheckM1x3S { get; set; }
+        public bool CheckM1SpeedS { get; set; }
+        public bool CheckM1PositionS { get; set; }
+        public bool CheckM1TorqueS { get; set; }
+        public bool CheckM1CurrentS { get; set; }
+        public bool CheckM1VoltageS { get; set; }
+        public bool CheckM1PS { get; set; }
+        public bool CheckM1IS { get; set; }
+        public bool CheckM1DS { get; set; }
+        public bool CheckM1x1S { get; set; }
+        public bool CheckM1x2S { get; set; }
+        public bool CheckM1x3S { get; set; }
         public string AddrM1SpeedR { get; set; }
         public string AddrM1PositionR { get; set; }
         public string AddrM1TorqueR { get; set; }
@@ -50,17 +50,17 @@ namespace Praca_Inżynierska
         public string AddrM1x1R { get; set; }
         public string AddrM1x2R { get; set; }
         public string AddrM1x3R { get; set; }
-        public string CheckM1SpeedR { get; set; }
-        public string CheckM1PositionR { get; set; }
-        public string CheckM1TorqueR { get; set; }
-        public string CheckM1CurrentR { get; set; }
-        public string CheckM1VoltageR { get; set; }
-        public string CheckM1PR { get; set; }
-        public string CheckM1IR { get; set; }
-        public string CheckM1DR { get; set; }
-        public string CheckM1x1R { get; set; }
-        public string CheckM1x2R { get; set; }
-        public string CheckM1x3R { get; set; }
+        public bool CheckM1SpeedR { get; set; }
+        public bool CheckM1PositionR { get; set; }
+        public bool CheckM1TorqueR { get; set; }
+        public bool CheckM1CurrentR { get; set; }
+        public bool CheckM1VoltageR { get; set; }
+        public bool CheckM1PR { get; set; }
+        public bool CheckM1IR { get; set; }
+        public bool CheckM1DR { get; set; }
+        public bool CheckM1x1R { get; set; }
+        public bool CheckM1x2R { get; set; }
+        public bool CheckM1x3R { get; set; }
         public string AddrM2DCSpeedS { get; set; }
         public string AddrM2DCPositionS { get; set; }
         public string AddrM2DCTorqueS { get; set; }
@@ -72,17 +72,17 @@ namespace Praca_Inżynierska
         public string AddrM2DCx1S { get; set; }
         public string AddrM2DCx2S { get; set; }
         public string AddrM2DCx3S { get; set; }
-        public string CheckM2DCSpeedS { get; set; }
-        public string CheckM2DCPositionS { get; set; }
-        public string CheckM2DCTorqueS { get; set; }
-        public string CheckM2DCCurrentS { get; set; }
-        public string CheckM2DCVoltageS { get; set; }
-        public string CheckM2DCPS { get; set; }
-        public string CheckM2DCIS { get; set; }
-        public string CheckM2DCDS { get; set; }
-        public string CheckM2DCx1S { get; set; }
-        public string CheckM2DCx2S { get; set; }
-        public string CheckM2DCx3S { get; set; }
+        public bool CheckM2DCSpeedS { get; set; }
+        public bool CheckM2DCPositionS { get; set; }
+        public bool CheckM2DCTorqueS { get; set; }
+        public bool CheckM2DCCurrentS { get; set; }
+        public bool CheckM2DCVoltageS { get; set; }
+        public bool CheckM2DCPS { get; set; }
+        public bool CheckM2DCIS { get; set; }
+        public bool CheckM2DCDS { get; set; }
+        public bool CheckM2DCx1S { get; set; }
+        public bool CheckM2DCx2S { get; set; }
+        public bool CheckM2DCx3S { get; set; }
         public string AddrM2DCSpeedR { get; set; }
         public string AddrM2DCPositionR { get; set; }
         public string AddrM2DCTorqueR { get; set; }
@@ -94,17 +94,17 @@ namespace Praca_Inżynierska
         public string AddrM2DCx1R { get; set; }
         public string AddrM2DCx2R { get; set; }
         public string AddrM2DCx3R { get; set; }
-        public string CheckM2DCSpeedR { get; set; }
-        public string CheckM2DCPositionR { get; set; }
-        public string CheckM2DCTorqueR { get; set; }
-        public string CheckM2DCCurrentR { get; set; }
-        public string CheckM2DCVoltageR { get; set; }
-        public string CheckM2DCPR { get; set; }
-        public string CheckM2DCIR { get; set; }
-        public string CheckM2DCDR { get; set; }
-        public string CheckM2DCx1R { get; set; }
-        public string CheckM2DCx2R { get; set; }
-        public string CheckM2DCx3R { get; set; }
+        public bool CheckM2DCSpeedR { get; set; }
+        public bool CheckM2DCPositionR { get; set; }
+        public bool CheckM2DCTorqueR { get; set; }
+        public bool CheckM2DCCurrentR { get; set; }
+        public bool CheckM2DCVoltageR { get; set; }
+        public bool CheckM2DCPR { get; set; }
+        public bool CheckM2DCIR { get; set; }
+        public bool CheckM2DCDR { get; set; }
+        public bool CheckM2DCx1R { get; set; }
+        public bool CheckM2DCx2R { get; set; }
+        public bool CheckM2DCx3R { get; set; }
         public string AddrM2AsynchSpeedS { get; set; }
         public string AddrM2AsynchPositionS { get; set; }
         public string AddrM2AsynchTorqueS { get; set; }
@@ -116,17 +116,17 @@ namespace Praca_Inżynierska
         public string AddrM2Asynchx1S { get; set; }
         public string AddrM2Asynchx2S { get; set; }
         public string AddrM2Asynchx3S { get; set; }
-        public string CheckM2AsynchSpeedS { get; set; }
-        public string CheckM2AsynchPositionS { get; set; }
-        public string CheckM2AsynchTorqueS { get; set; }
-        public string CheckM2AsynchCurrentS { get; set; }
-        public string CheckM2AsynchVoltageS { get; set; }
-        public string CheckM2AsynchPS { get; set; }
-        public string CheckM2AsynchIS { get; set; }
-        public string CheckM2AsynchDS { get; set; }
-        public string CheckM2Asynchx1S { get; set; }
-        public string CheckM2Asynchx2S { get; set; }
-        public string CheckM2Asynchx3S { get; set; }
+        public bool CheckM2AsynchSpeedS { get; set; }
+        public bool CheckM2AsynchPositionS { get; set; }
+        public bool CheckM2AsynchTorqueS { get; set; }
+        public bool CheckM2AsynchCurrentS { get; set; }
+        public bool CheckM2AsynchVoltageS { get; set; }
+        public bool CheckM2AsynchPS { get; set; }
+        public bool CheckM2AsynchIS { get; set; }
+        public bool CheckM2AsynchDS { get; set; }
+        public bool CheckM2Asynchx1S { get; set; }
+        public bool CheckM2Asynchx2S { get; set; }
+        public bool CheckM2Asynchx3S { get; set; }
         public string AddrM2AsynchSpeedR { get; set; }
         public string AddrM2AsynchPositionR { get; set; }
         public string AddrM2AsynchTorqueR { get; set; }
@@ -138,17 +138,17 @@ namespace Praca_Inżynierska
         public string AddrM2Asynchx1R { get; set; }
         public string AddrM2Asynchx2R { get; set; }
         public string AddrM2Asynchx3R { get; set; }
-        public string CheckM2AsynchSpeedR { get; set; }
-        public string CheckM2AsynchPositionR { get; set; }
-        public string CheckM2AsynchTorqueR { get; set; }
-        public string CheckM2AsynchCurrentR { get; set; }
-        public string CheckM2AsynchVoltageR { get; set; }
-        public string CheckM2AsynchPR { get; set; }
-        public string CheckM2AsynchIR { get; set; }
-        public string CheckM2AsynchDR { get; set; }
-        public string CheckM2Asynchx1R { get; set; }
-        public string CheckM2Asynchx2R { get; set; }
-        public string CheckM2Asynchx3R { get; set; }
+        public bool CheckM2AsynchSpeedR { get; set; }
+        public bool CheckM2AsynchPositionR { get; set; }
+        public bool CheckM2AsynchTorqueR { get; set; }
+        public bool CheckM2AsynchCurrentR { get; set; }
+        public bool CheckM2AsynchVoltageR { get; set; }
+        public bool CheckM2AsynchPR { get; set; }
+        public bool CheckM2AsynchIR { get; set; }
+        public bool CheckM2AsynchDR { get; set; }
+        public bool CheckM2Asynchx1R { get; set; }
+        public bool CheckM2Asynchx2R { get; set; }
+        public bool CheckM2Asynchx3R { get; set; }
         public string AddrM2BLDCSpeedS { get; set; }
         public string AddrM2BLDCPositionS { get; set; }
         public string AddrM2BLDCTorqueS { get; set; }
@@ -160,17 +160,17 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCx1S { get; set; }
         public string AddrM2BLDCx2S { get; set; }
         public string AddrM2BLDCx3S { get; set; }
-        public string CheckM2BLDCSpeedS { get; set; }
-        public string CheckM2BLDCPositionS { get; set; }
-        public string CheckM2BLDCTorqueS { get; set; }
-        public string CheckM2BLDCCurrentS { get; set; }
-        public string CheckM2BLDCVoltageS { get; set; }
-        public string CheckM2BLDCPS { get; set; }
-        public string CheckM2BLDCIS { get; set; }
-        public string CheckM2BLDCDS { get; set; }
-        public string CheckM2BLDCx1S { get; set; }
-        public string CheckM2BLDCx2S { get; set; }
-        public string CheckM2BLDCx3S { get; set; }
+        public bool CheckM2BLDCSpeedS { get; set; }
+        public bool CheckM2BLDCPositionS { get; set; }
+        public bool CheckM2BLDCTorqueS { get; set; }
+        public bool CheckM2BLDCCurrentS { get; set; }
+        public bool CheckM2BLDCVoltageS { get; set; }
+        public bool CheckM2BLDCPS { get; set; }
+        public bool CheckM2BLDCIS { get; set; }
+        public bool CheckM2BLDCDS { get; set; }
+        public bool CheckM2BLDCx1S { get; set; }
+        public bool CheckM2BLDCx2S { get; set; }
+        public bool CheckM2BLDCx3S { get; set; }
         public string AddrM2BLDCSpeedR { get; set; }
         public string AddrM2BLDCPositionR { get; set; }
         public string AddrM2BLDCTorqueR { get; set; }
@@ -182,17 +182,17 @@ namespace Praca_Inżynierska
         public string AddrM2BLDCx1R { get; set; }
         public string AddrM2BLDCx2R { get; set; }
         public string AddrM2BLDCx3R { get; set; }
-        public string CheckM2BLDCSpeedR { get; set; }
-        public string CheckM2BLDCPositionR { get; set; }
-        public string CheckM2BLDCTorqueR { get; set; }
-        public string CheckM2BLDCCurrentR { get; set; }
-        public string CheckM2BLDCVoltageR { get; set; }
-        public string CheckM2BLDCPR { get; set; }
-        public string CheckM2BLDCIR { get; set; }
-        public string CheckM2BLDCDR { get; set; }
-        public string CheckM2BLDCx1R { get; set; }
-        public string CheckM2BLDCx2R { get; set; }
-        public string CheckM2BLDCx3R { get; set; }
+        public bool CheckM2BLDCSpeedR { get; set; }
+        public bool CheckM2BLDCPositionR { get; set; }
+        public bool CheckM2BLDCTorqueR { get; set; }
+        public bool CheckM2BLDCCurrentR { get; set; }
+        public bool CheckM2BLDCVoltageR { get; set; }
+        public bool CheckM2BLDCPR { get; set; }
+        public bool CheckM2BLDCIR { get; set; }
+        public bool CheckM2BLDCDR { get; set; }
+        public bool CheckM2BLDCx1R { get; set; }
+        public bool CheckM2BLDCx2R { get; set; }
+        public bool CheckM2BLDCx3R { get; set; }
         public string AddrM2PMSMSpeedS { get; set; }
         public string AddrM2PMSMPositionS { get; set; }
         public string AddrM2PMSMTorqueS { get; set; }
@@ -204,17 +204,17 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMx1S { get; set; }
         public string AddrM2PMSMx2S { get; set; }
         public string AddrM2PMSMx3S { get; set; }
-        public string CheckM2PMSMSpeedS { get; set; }
-        public string CheckM2PMSMPositionS { get; set; }
-        public string CheckM2PMSMTorqueS { get; set; }
-        public string CheckM2PMSMCurrentS { get; set; }
-        public string CheckM2PMSMVoltageS { get; set; }
-        public string CheckM2PMSMPS { get; set; }
-        public string CheckM2PMSMIS { get; set; }
-        public string CheckM2PMSMDS { get; set; }
-        public string CheckM2PMSMx1S { get; set; }
-        public string CheckM2PMSMx2S { get; set; }
-        public string CheckM2PMSMx3S { get; set; }
+        public bool CheckM2PMSMSpeedS { get; set; }
+        public bool CheckM2PMSMPositionS { get; set; }
+        public bool CheckM2PMSMTorqueS { get; set; }
+        public bool CheckM2PMSMCurrentS { get; set; }
+        public bool CheckM2PMSMVoltageS { get; set; }
+        public bool CheckM2PMSMPS { get; set; }
+        public bool CheckM2PMSMIS { get; set; }
+        public bool CheckM2PMSMDS { get; set; }
+        public bool CheckM2PMSMx1S { get; set; }
+        public bool CheckM2PMSMx2S { get; set; }
+        public bool CheckM2PMSMx3S { get; set; }
         public string AddrM2PMSMSpeedR { get; set; }
         public string AddrM2PMSMPositionR { get; set; }
         public string AddrM2PMSMTorqueR { get; set; }
@@ -226,17 +226,17 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMx1R { get; set; }
         public string AddrM2PMSMx2R { get; set; }
         public string AddrM2PMSMx3R { get; set; }
-        public string CheckM2PMSMSpeedR { get; set; }
-        public string CheckM2PMSMPositionR { get; set; }
-        public string CheckM2PMSMTorqueR { get; set; }
-        public string CheckM2PMSMCurrentR { get; set; }
-        public string CheckM2PMSMVoltageR { get; set; }
-        public string CheckM2PMSMPR { get; set; }
-        public string CheckM2PMSMIR { get; set; }
-        public string CheckM2PMSMDR { get; set; }
-        public string CheckM2PMSMx1R { get; set; }
-        public string CheckM2PMSMx2R { get; set; }
-        public string CheckM2PMSMx3R { get; set; }
+        public bool CheckM2PMSMSpeedR { get; set; }
+        public bool CheckM2PMSMPositionR { get; set; }
+        public bool CheckM2PMSMTorqueR { get; set; }
+        public bool CheckM2PMSMCurrentR { get; set; }
+        public bool CheckM2PMSMVoltageR { get; set; }
+        public bool CheckM2PMSMPR { get; set; }
+        public bool CheckM2PMSMIR { get; set; }
+        public bool CheckM2PMSMDR { get; set; }
+        public bool CheckM2PMSMx1R { get; set; }
+        public bool CheckM2PMSMx2R { get; set; }
+        public bool CheckM2PMSMx3R { get; set; }
         public string AddrM1SpeedSNOP { get; set; }
         public string AddrM1PositionSNOP { get; set; }
         public string AddrM1TorqueSNOP { get; set; }

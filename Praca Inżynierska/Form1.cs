@@ -14,6 +14,7 @@ using System.IO.Ports;
 using System.Threading;
 using System.Xml.Serialization;
 using System.IO;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Praca_Inżynierska
 {
@@ -30,6 +31,10 @@ namespace Praca_Inżynierska
         public List<Excel_Export> export = new List<Excel_Export>();    //przypisanie zmiennej export do listy klasy Excel Export
         public Settings settings = new Settings();
         public Form2 form2 = new Form2();
+        public bool startM1 = false;
+        public bool chartStart = false;
+        DataGridView dataGridView2 = new DataGridView();
+
 
         public Form1()
         {
@@ -119,11 +124,12 @@ namespace Praca_Inżynierska
                     Stop();
                     Thread.Sleep(50);
                     ReadTEST();
+                    RunChart();
                 }
                 else
                 {
                     start = true;                       //ustawia wartość start na true
-                                                        //Read();
+                    startM1 = true;
                     ReadTEST();
                 }
             }
@@ -136,8 +142,11 @@ namespace Praca_Inżynierska
         {
             try
             {
-                writeStartAddress = 4000;
+                start = false;
+                writeStartAddress = 4001;
                 Write();
+                Thread.Sleep(10);
+                start = true;
             }
             catch (Exception ex)
             {
@@ -258,8 +267,19 @@ namespace Praca_Inżynierska
 
                 if (serialPort.IsOpen)
                 {
-                    int speedsum = 0;
+                    int speedSumM1 = 0;
+                    int positionSumM1 = 0;
+                    int torqueSumM1 = 0;
+                    int currentSumM1 = 0;
+                    int voltageSumM1 = 0;
+                    int PsumM1 = 0;
+                    int IsumM1 = 0;
+                    int DsumM1 = 0;
+                    int x1SumM1 = 0;
+                    int x2SumM1 = 0;
+                    int x3SumM1 = 0;
                     int ID = 1;
+
                     duration = 0;
                     timer.Enabled = true;
                     timer.Start();
@@ -268,27 +288,118 @@ namespace Praca_Inżynierska
                         IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);
                         masterRtu.Transport.Retries = 5000;
                         masterRtu.Transport.ReadTimeout = 100;
+
                         while (start == true)
                         {
-                            speedsum = 0;
                             ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);
-                            for (int i = 0; i < 5; i++)
+                            if (startM1 == true)
                             {
-                                
-                                speedsum += result1[i];
+                                if (settings.CheckM1SpeedR == true)
+                                {
+                                    speedSumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1SpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1SpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1SpeedRNOP); i++)
+                                    {
+                                        speedSumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1PositionR == true)
+                                {
+                                    positionSumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1PositionR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1PositionR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1PositionRNOP); i++)
+                                    {
+                                        positionSumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1TorqueR == true)
+                                {
+                                    torqueSumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1TorqueR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1TorqueR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1TorqueRNOP); i++)
+                                    {
+                                        torqueSumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1CurrentR == true)
+                                {
+                                    currentSumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1CurrentR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1CurrentR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1CurrentRNOP); i++)
+                                    {
+                                        currentSumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1VoltageR == true)
+                                {
+                                    voltageSumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1VoltageR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1VoltageR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1VoltageRNOP); i++)
+                                    {
+                                        voltageSumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1PR == true)
+                                {
+                                    PsumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1PR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1PR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1PRNOP); i++)
+                                    {
+                                        PsumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1IR == true)
+                                {
+                                    IsumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1IR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1IR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1IRNOP); i++)
+                                    {
+                                        IsumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1DR == true)
+                                {
+                                    DsumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1DR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1DR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1DRNOP); i++)
+                                    {
+                                        DsumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1x1R == true)
+                                {
+                                    x1SumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1x1R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1x1R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1x1RNOP); i++)
+                                    {
+                                        x1SumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1x2R == true)
+                                {
+                                    x2SumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1x2R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1x2R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1x2RNOP); i++)
+                                    {
+                                        x2SumM1 += result1[i];
+                                    }
+                                }
+                                if (settings.CheckM1x3R == true)
+                                {
+                                    x3SumM1 = 0;
+                                    for (int i = Convert.ToInt32(settings.AddrM1x3R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1x3R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1x3RNOP); i++)
+                                    {
+                                        x3SumM1 += result1[i];
+                                    }
+                                }
+
+                                textBoxRead4000.Invoke(new Action(delegate ()
+                                {
+                                    textBoxRead4000.Text = Convert.ToString(speedSumM1);
+                                    textBoxRead4001.Text = Convert.ToString(result1[0]);
+                                    textBoxRead4010.Text = settings.AddrM1SpeedR;
+                                    textBoxRead4011.Text = settings.AddrM1SpeedRNOP;
+
+                                }));
+
+                                export.Add(new Excel_Export() { ID = ID, Speed = Convert.ToString(speedSumM1), Torque = Convert.ToString(result1[1]) });
+                                dataGridView2.DataSource = export;
+
+                                ID = ID + 1;                // zwiększa ID    
+                                Thread.Sleep(20);
+                                duration = duration + 20;
+
                             }
-                            textBoxRead4000.Invoke(new Action(delegate ()
-                            {
-                                textBoxRead4000.Text = Convert.ToString(result1[0]);
-                                textBoxRead4001.Text = Convert.ToString(result1[1]);
-                            }));
-
-                            export.Add(new Excel_Export() { ID = ID, Speed = Convert.ToString(speedsum), Torque = Convert.ToString(result1[1]) });
-
-                            ID = ID + 1;                // zwiększa ID    
-                            Thread.Sleep(20);
-                            duration = duration + 20;
-
 
                         }
                     }));
@@ -303,7 +414,6 @@ namespace Praca_Inżynierska
                 start = false;
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         private void Stop()
         {
@@ -313,11 +423,18 @@ namespace Praca_Inżynierska
         {
             try
             {
+                start = false;
                 IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);            //tworzy połączenie do protokołu modbus przez port seryjny      
                 masterRtu.Transport.WriteTimeout = 50;
                 masterRtu.Transport.Retries = 5;
                 ushort[] WriteMulipleRegistersTable = { Convert.ToUInt16(textBoxWrite4001.Text), Convert.ToUInt16(textBoxWrite4002.Text), 0, 0, 0, 0, 0, 0, 0, Convert.ToUInt16(textBoxWrite4010.Text), Convert.ToUInt16(textBoxWrite4011.Text) }; //tworzy tabelę wartości z pól tekstowych 
                 masterRtu.WriteMultipleRegisters(slaveAddress, writeStartAddress, WriteMulipleRegistersTable);      //wysyła wcześniej zdefiniowane wartości na konkretne adresy urządzenia
+                Thread.Sleep(10);
+                if (start == false)
+                {
+                    Thread.Sleep(10);
+                    start = true;
+                }
             }
             catch (Exception ex)
             {
@@ -641,16 +758,6 @@ namespace Praca_Inżynierska
         
         }
 
-        private void RunChart()
-        {
-            while (start == true)
-            {
-
-                //zmienić pola wyoru na combo box i wyświetlać tylko jedną wartość na osi X. 
-                //Wtedy w zależności od nazwy pola nazywać serie, wszystkie wartości trzymać w tabeli export żeby można było porównać różne warości po zakończeniu ćwiczenia.
-                //zastanowiś się nad sensem pętli while, chyba że trzymać aż będzie dodawać inne wartości. 
-            }
-        }
         public void LoadReadAddress()
         {
             
@@ -665,6 +772,30 @@ namespace Praca_Inżynierska
             {
 
             }
+        }
+        private void RunChart()
+        {
+            try
+            {
+                int speed = 2;
+                while (chartStart == true)
+                {
+                    chart2.Series[comboBoxX1chart.Text] = new Series();
+                    chart2.Series[comboBoxX1chart.Text].ChartType = SeriesChartType.Spline;
+                    chart2.Series[comboBoxX1chart.Text].XValueMember = dataGridView2.Columns[speed].DataPropertyName;
+                    chart2.Series[comboBoxX1chart.Text].YValueMembers = dataGridView2.Columns[1].DataPropertyName;
+                    chart2.Series[comboBoxX2chart.Text] = new Series();
+                    chart2.Series[comboBoxX2chart.Text].ChartType = SeriesChartType.Spline;
+                    chart2.Series[comboBoxX2chart.Text].XValueMember = dataGridView2.Columns[3].DataPropertyName;
+                    chart2.Series[comboBoxX2chart.Text].YValueMembers = dataGridView2.Columns[1].DataPropertyName;
+                    Thread.Sleep(100);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
     

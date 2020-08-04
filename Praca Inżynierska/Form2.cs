@@ -299,883 +299,883 @@ namespace Praca_Inżynierska
             settings.AddrM2PMSMx3RNOP = txtBoxM2PMSMx3RNOP.Text;
             if (checkBoxM1SpeedS.Checked)
             {
-                settings.CheckM1SpeedS = "Yes";
+                settings.CheckM1SpeedS = true;
             }
             else
             {
-                settings.CheckM1SpeedS = "No";
+                settings.CheckM1SpeedS = false;
             }
             if (checkBoxM1PositionS.Checked)
             {
-                settings.CheckM1PositionS = "Yes";
+                settings.CheckM1PositionS = true;
             }
             else
             {
-                settings.CheckM1PositionS = "No";
+                settings.CheckM1PositionS = false;
             }
             if (checkBoxM1TorqueS.Checked)
             {
-                settings.CheckM1TorqueS = "Yes";
+                settings.CheckM1TorqueS = true;
             }
             else
             {
-                settings.CheckM1TorqueS = "No";
+                settings.CheckM1TorqueS = false;
             }
             if (checkBoxM1CurrentS.Checked)
             {
-                settings.CheckM1CurrentS = "Yes";
+                settings.CheckM1CurrentS = true;
             }
             else
             {
-                settings.CheckM1CurrentS = "No";
+                settings.CheckM1CurrentS = false;
             }
             if (checkBoxM1VoltageS.Checked)
             {
-                settings.CheckM1VoltageS = "Yes";
+                settings.CheckM1VoltageS = true;
             }
             else
             {
-                settings.CheckM1VoltageS = "No";
+                settings.CheckM1VoltageS = false;
             }
             if (checkBoxM1PS.Checked)
             {
-                settings.CheckM1PS = "Yes";
+                settings.CheckM1PS = true;
             }
             else
             {
-                settings.CheckM1PS = "No";
+                settings.CheckM1PS = false;
             }
             if (checkBoxM1IS.Checked)
             {
-                settings.CheckM1IS = "Yes";
+                settings.CheckM1IS = true;
             }
             else
             {
-                settings.CheckM1IS = "No";
+                settings.CheckM1IS = false;
             }
             if (checkBoxM1DS.Checked)
             {
-                settings.CheckM1DS = "Yes";
+                settings.CheckM1DS = true;
             }
             else
             {
-                settings.CheckM1DS = "No";
+                settings.CheckM1DS = false;
             }
             if (checkBoxM1x1S.Checked)
             {
-                settings.CheckM1x1S = "Yes";
+                settings.CheckM1x1S = true;
             }
             else
             {
-                settings.CheckM1x1S = "No";
+                settings.CheckM1x1S = false;
             }
             if (checkBoxM1x2S.Checked)
             {
-                settings.CheckM1x2S = "Yes";
+                settings.CheckM1x2S = true;
             }
             else
             {
-                settings.CheckM1x2S = "No";
+                settings.CheckM1x2S = false;
             }
             if (checkBoxM1x3S.Checked)
             {
-                settings.CheckM1x3S = "Yes";
+                settings.CheckM1x3S = true;
             }
             else
             {
-                settings.CheckM1x3S = "No";
+                settings.CheckM1x3S = false;
             }
             if (checkBoxM1SpeedR.Checked)
             {
-                settings.CheckM1SpeedR = "Yes";
+                settings.CheckM1SpeedR = true;
             }
             else
             {
-                settings.CheckM1SpeedR = "No";
+                settings.CheckM1SpeedR = false;
             }
             if (checkBoxM1PositionR.Checked)
             {
-                settings.CheckM1PositionR = "Yes";
+                settings.CheckM1PositionR = true;
             }
             else
             {
-                settings.CheckM1PositionR = "No";
+                settings.CheckM1PositionR = false;
             }
             if (checkBoxM1TorqueR.Checked)
             {
-                settings.CheckM1TorqueR = "Yes";
+                settings.CheckM1TorqueR = true;
             }
             else
             {
-                settings.CheckM1TorqueR = "No";
+                settings.CheckM1TorqueR = false;
             }
             if (checkBoxM1CurrentR.Checked)
             {
-                settings.CheckM1CurrentR = "Yes";
+                settings.CheckM1CurrentR = true;
             }
             else
             {
-                settings.CheckM1CurrentR = "No";
+                settings.CheckM1CurrentR = false;
             }
             if (checkBoxM1VoltageR.Checked)
             {
-                settings.CheckM1VoltageR = "Yes";
+                settings.CheckM1VoltageR = true;
             }
             else
             {
-                settings.CheckM1VoltageR = "No";
+                settings.CheckM1VoltageR = false;
             }
             if (checkBoxM1PR.Checked)
             {
-                settings.CheckM1PR = "Yes";
+                settings.CheckM1PR = true;
             }
             else
             {
-                settings.CheckM1PR = "No";
+                settings.CheckM1PR = false;
             }
             if (checkBoxM1IR.Checked)
             {
-                settings.CheckM1IR = "Yes";
+                settings.CheckM1IR = true;
             }
             else
             {
-                settings.CheckM1IR = "No";
+                settings.CheckM1IR = false;
             }
             if (checkBoxM1DR.Checked)
             {
-                settings.CheckM1DR = "Yes";
+                settings.CheckM1DR = true;
             }
             else
             {
-                settings.CheckM1DR = "No";
+                settings.CheckM1DR = false;
             }
             if (checkBoxM1x1R.Checked)
             {
-                settings.CheckM1x1R = "Yes";
+                settings.CheckM1x1R = true;
             }
             else
             {
-                settings.CheckM1x1R = "No";
+                settings.CheckM1x1R = false;
             }
             if (checkBoxM1x2R.Checked)
             {
-                settings.CheckM1x2R = "Yes";
+                settings.CheckM1x2R = true;
             }
             else
             {
-                settings.CheckM1x2R = "No";
+                settings.CheckM1x2R = false;
             }
             if (checkBoxM1x3R.Checked)
             {
-                settings.CheckM1x3R = "Yes";
+                settings.CheckM1x3R = true;
             }
             else
             {
-                settings.CheckM1x3R = "No";
+                settings.CheckM1x3R = false;
             }
             if (checkBoxM2DCSpeedS.Checked)
             {
-                settings.CheckM2DCSpeedS = "Yes";
+                settings.CheckM2DCSpeedS = true;
             }
             else
             {
-                settings.CheckM2DCSpeedS = "No";
+                settings.CheckM2DCSpeedS = false;
             }
             if (checkBoxM2DCPositionS.Checked)
             {
-                settings.CheckM2DCPositionS = "Yes";
+                settings.CheckM2DCPositionS = true;
             }
             else
             {
-                settings.CheckM2DCPositionS = "No";
+                settings.CheckM2DCPositionS = false;
             }
             if (checkBoxM2DCTorqueS.Checked)
             {
-                settings.CheckM2DCTorqueS = "Yes";
+                settings.CheckM2DCTorqueS = true;
             }
             else
             {
-                settings.CheckM2DCTorqueS = "No";
+                settings.CheckM2DCTorqueS = false;
             }
             if (checkBoxM2DCCurrentS.Checked)
             {
-                settings.CheckM2DCCurrentS = "Yes";
+                settings.CheckM2DCCurrentS = true;
             }
             else
             {
-                settings.CheckM2DCCurrentS = "No";
+                settings.CheckM2DCCurrentS = false;
             }
             if (checkBoxM2DCVoltageS.Checked)
             {
-                settings.CheckM2DCVoltageS = "Yes";
+                settings.CheckM2DCVoltageS = true;
             }
             else
             {
-                settings.CheckM2DCVoltageS = "No";
+                settings.CheckM2DCVoltageS = false;
             }
             if (checkBoxM2DCPS.Checked)
             {
-                settings.CheckM2DCPS = "Yes";
+                settings.CheckM2DCPS = true;
             }
             else
             {
-                settings.CheckM2DCPS = "No";
+                settings.CheckM2DCPS = false;
             }
             if (checkBoxM2DCIS.Checked)
             {
-                settings.CheckM2DCIS = "Yes";
+                settings.CheckM2DCIS = true;
             }
             else
             {
-                settings.CheckM2DCIS = "No";
+                settings.CheckM2DCIS = false;
             }
             if (checkBoxM2DCDS.Checked)
             {
-                settings.CheckM2DCDS = "Yes";
+                settings.CheckM2DCDS = true;
             }
             else
             {
-                settings.CheckM2DCDS = "No";
+                settings.CheckM2DCDS = false;
             }
             if (checkBoxM2DCx1S.Checked)
             {
-                settings.CheckM2DCx1S = "Yes";
+                settings.CheckM2DCx1S = true;
             }
             else
             {
-                settings.CheckM2DCx1S = "No";
+                settings.CheckM2DCx1S = false;
             }
             if (checkBoxM2DCx2S.Checked)
             {
-                settings.CheckM2DCx2S = "Yes";
+                settings.CheckM2DCx2S = true;
             }
             else
             {
-                settings.CheckM2DCx2S = "No";
+                settings.CheckM2DCx2S = false;
             }
             if (checkBoxM2DCx3S.Checked)
             {
-                settings.CheckM2DCx3S = "Yes";
+                settings.CheckM2DCx3S = true;
             }
             else
             {
-                settings.CheckM2DCx3S = "No";
+                settings.CheckM2DCx3S = false;
             }
             if (checkBoxM2DCSpeedR.Checked)
             {
-                settings.CheckM2DCSpeedR = "Yes";
+                settings.CheckM2DCSpeedR = true;
             }
             else
             {
-                settings.CheckM2DCSpeedR = "No";
+                settings.CheckM2DCSpeedR = false;
             }
             if (checkBoxM2DCPositionR.Checked)
             {
-                settings.CheckM2DCPositionR = "Yes";
+                settings.CheckM2DCPositionR = true;
             }
             else
             {
-                settings.CheckM2DCPositionR = "No";
+                settings.CheckM2DCPositionR = false;
             }
             if (checkBoxM2DCTorqueR.Checked)
             {
-                settings.CheckM2DCTorqueR = "Yes";
+                settings.CheckM2DCTorqueR = true;
             }
             else
             {
-                settings.CheckM2DCTorqueR = "No";
+                settings.CheckM2DCTorqueR = false;
             }
             if (checkBoxM2DCCurrentR.Checked)
             {
-                settings.CheckM2DCCurrentR = "Yes";
+                settings.CheckM2DCCurrentR = true;
             }
             else
             {
-                settings.CheckM2DCCurrentR = "No";
+                settings.CheckM2DCCurrentR = false;
             }
             if (checkBoxM2DCVoltageR.Checked)
             {
-                settings.CheckM2DCVoltageR = "Yes";
+                settings.CheckM2DCVoltageR = true;
             }
             else
             {
-                settings.CheckM2DCVoltageR = "No";
+                settings.CheckM2DCVoltageR = false;
             }
             if (checkBoxM2DCPR.Checked)
             {
-                settings.CheckM2DCPR = "Yes";
+                settings.CheckM2DCPR = true;
             }
             else
             {
-                settings.CheckM2DCPR = "No";
+                settings.CheckM2DCPR = false;
             }
             if (checkBoxM2DCIR.Checked)
             {
-                settings.CheckM2DCIR = "Yes";
+                settings.CheckM2DCIR = true;
             }
             else
             {
-                settings.CheckM2DCIR = "No";
+                settings.CheckM2DCIR = false;
             }
             if (checkBoxM2DCDR.Checked)
             {
-                settings.CheckM2DCDR = "Yes";
+                settings.CheckM2DCDR = true;
             }
             else
             {
-                settings.CheckM2DCDR = "No";
+                settings.CheckM2DCDR = false;
             }
             if (checkBoxM2DCx1R.Checked)
             {
-                settings.CheckM2DCx1R = "Yes";
+                settings.CheckM2DCx1R = true;
             }
             else
             {
-                settings.CheckM2DCx1R = "No";
+                settings.CheckM2DCx1R = false;
             }
             if (checkBoxM2DCx2R.Checked)
             {
-                settings.CheckM2DCx2R = "Yes";
+                settings.CheckM2DCx2R = true;
             }
             else
             {
-                settings.CheckM2DCx2R = "No";
+                settings.CheckM2DCx2R = false;
             }
             if (checkBoxM2DCx3R.Checked)
             {
-                settings.CheckM2DCx3R = "Yes";
+                settings.CheckM2DCx3R = true;
             }
             else
             {
-                settings.CheckM2DCx3R = "No";
+                settings.CheckM2DCx3R = false;
             }
             if (checkBoxM2AsynchSpeedS.Checked)
             {
-                settings.CheckM2AsynchSpeedS = "Yes";
+                settings.CheckM2AsynchSpeedS = true;
             }
             else
             {
-                settings.CheckM2AsynchSpeedS = "No";
+                settings.CheckM2AsynchSpeedS = false;
             }
             if (checkBoxM2AsynchPositionS.Checked)
             {
-                settings.CheckM2AsynchPositionS = "Yes";
+                settings.CheckM2AsynchPositionS = true;
             }
             else
             {
-                settings.CheckM2AsynchPositionS = "No";
+                settings.CheckM2AsynchPositionS = false;
             }
             if (checkBoxM2AsynchTorqueS.Checked)
             {
-                settings.CheckM2AsynchTorqueS = "Yes";
+                settings.CheckM2AsynchTorqueS = true;
             }
             else
             {
-                settings.CheckM2AsynchTorqueS = "No";
+                settings.CheckM2AsynchTorqueS = false;
             }
             if (checkBoxM2AsynchCurrentS.Checked)
             {
-                settings.CheckM2AsynchCurrentS = "Yes";
+                settings.CheckM2AsynchCurrentS = true;
             }
             else
             {
-                settings.CheckM2AsynchCurrentS = "No";
+                settings.CheckM2AsynchCurrentS = false;
             }
             if (checkBoxM2AsynchVoltageS.Checked)
             {
-                settings.CheckM2AsynchVoltageS = "Yes";
+                settings.CheckM2AsynchVoltageS = true;
             }
             else
             {
-                settings.CheckM2AsynchVoltageS = "No";
+                settings.CheckM2AsynchVoltageS = false;
             }
             if (checkBoxM2AsynchPS.Checked)
             {
-                settings.CheckM2AsynchPS = "Yes";
+                settings.CheckM2AsynchPS = true;
             }
             else
             {
-                settings.CheckM2AsynchPS = "No";
+                settings.CheckM2AsynchPS = false;
             }
             if (checkBoxM2AsynchIS.Checked)
             {
-                settings.CheckM2AsynchIS = "Yes";
+                settings.CheckM2AsynchIS = true;
             }
             else
             {
-                settings.CheckM2AsynchIS = "No";
+                settings.CheckM2AsynchIS = false;
             }
             if (checkBoxM2AsynchDS.Checked)
             {
-                settings.CheckM2AsynchDS = "Yes";
+                settings.CheckM2AsynchDS = true;
             }
             else
             {
-                settings.CheckM2AsynchDS = "No";
+                settings.CheckM2AsynchDS = false;
             }
             if (checkBoxM2Asynchx1S.Checked)
             {
-                settings.CheckM2Asynchx1S = "Yes";
+                settings.CheckM2Asynchx1S = true;
             }
             else
             {
-                settings.CheckM2Asynchx1S = "No";
+                settings.CheckM2Asynchx1S = false;
             }
             if (checkBoxM2Asynchx2S.Checked)
             {
-                settings.CheckM2Asynchx2S = "Yes";
+                settings.CheckM2Asynchx2S = true;
             }
             else
             {
-                settings.CheckM2Asynchx2S = "No";
+                settings.CheckM2Asynchx2S = false;
             }
             if (checkBoxM2Asynchx3S.Checked)
             {
-                settings.CheckM2Asynchx3S = "Yes";
+                settings.CheckM2Asynchx3S = true;
             }
             else
             {
-                settings.CheckM2Asynchx3S = "No";
+                settings.CheckM2Asynchx3S = false;
             }
             if (checkBoxM2AsynchSpeedR.Checked)
             {
-                settings.CheckM2AsynchSpeedR = "Yes";
+                settings.CheckM2AsynchSpeedR = true;
             }
             else
             {
-                settings.CheckM2AsynchSpeedR = "No";
+                settings.CheckM2AsynchSpeedR = false;
             }
             if (checkBoxM2AsynchPositionR.Checked)
             {
-                settings.CheckM2AsynchPositionR = "Yes";
+                settings.CheckM2AsynchPositionR = true;
             }
             else
             {
-                settings.CheckM2AsynchPositionR = "No";
+                settings.CheckM2AsynchPositionR = false;
             }
             if (checkBoxM2AsynchTorqueR.Checked)
             {
-                settings.CheckM2AsynchTorqueR = "Yes";
+                settings.CheckM2AsynchTorqueR = true;
             }
             else
             {
-                settings.CheckM2AsynchTorqueR = "No";
+                settings.CheckM2AsynchTorqueR = false;
             }
             if (checkBoxM2AsynchCurrentR.Checked)
             {
-                settings.CheckM2AsynchCurrentR = "Yes";
+                settings.CheckM2AsynchCurrentR = true;
             }
             else
             {
-                settings.CheckM2AsynchCurrentR = "No";
+                settings.CheckM2AsynchCurrentR = false;
             }
             if (checkBoxM2AsynchVoltageR.Checked)
             {
-                settings.CheckM2AsynchVoltageR = "Yes";
+                settings.CheckM2AsynchVoltageR = true;
             }
             else
             {
-                settings.CheckM2AsynchVoltageR = "No";
+                settings.CheckM2AsynchVoltageR = false;
             }
             if (checkBoxM2AsynchPR.Checked)
             {
-                settings.CheckM2AsynchPR = "Yes";
+                settings.CheckM2AsynchPR = true;
             }
             else
             {
-                settings.CheckM2AsynchPR = "No";
+                settings.CheckM2AsynchPR = false;
             }
             if (checkBoxM2AsynchIR.Checked)
             {
-                settings.CheckM2AsynchIR = "Yes";
+                settings.CheckM2AsynchIR = true;
             }
             else
             {
-                settings.CheckM2AsynchIR = "No";
+                settings.CheckM2AsynchIR = false;
             }
             if (checkBoxM2AsynchDR.Checked)
             {
-                settings.CheckM2AsynchDR = "Yes";
+                settings.CheckM2AsynchDR = true;
             }
             else
             {
-                settings.CheckM2AsynchDR = "No";
+                settings.CheckM2AsynchDR = false;
             }
             if (checkBoxM2Asynchx1R.Checked)
             {
-                settings.CheckM2Asynchx1R = "Yes";
+                settings.CheckM2Asynchx1R = true;
             }
             else
             {
-                settings.CheckM2Asynchx1R = "No";
+                settings.CheckM2Asynchx1R = false;
             }
             if (checkBoxM2Asynchx2R.Checked)
             {
-                settings.CheckM2Asynchx2R = "Yes";
+                settings.CheckM2Asynchx2R = true;
             }
             else
             {
-                settings.CheckM2Asynchx2R = "No";
+                settings.CheckM2Asynchx2R = false;
             }
             if (checkBoxM2Asynchx3R.Checked)
             {
-                settings.CheckM2Asynchx3R = "Yes";
+                settings.CheckM2Asynchx3R = true;
             }
             else
             {
-                settings.CheckM2Asynchx3R = "No";
+                settings.CheckM2Asynchx3R = false;
             }
             if (checkBoxM2BLDCSpeedS.Checked)
             {
-                settings.CheckM2BLDCSpeedS = "Yes";
+                settings.CheckM2BLDCSpeedS = true;
             }
             else
             {
-                settings.CheckM2BLDCSpeedS = "No";
+                settings.CheckM2BLDCSpeedS = false;
             }
             if (checkBoxM2BLDCPositionS.Checked)
             {
-                settings.CheckM2BLDCPositionS = "Yes";
+                settings.CheckM2BLDCPositionS = true;
             }
             else
             {
-                settings.CheckM2BLDCPositionS = "No";
+                settings.CheckM2BLDCPositionS = false;
             }
             if (checkBoxM2BLDCTorqueS.Checked)
             {
-                settings.CheckM2BLDCTorqueS = "Yes";
+                settings.CheckM2BLDCTorqueS = true;
             }
             else
             {
-                settings.CheckM2BLDCTorqueS = "No";
+                settings.CheckM2BLDCTorqueS = false;
             }
             if (checkBoxM2BLDCCurrentS.Checked)
             {
-                settings.CheckM2BLDCCurrentS = "Yes";
+                settings.CheckM2BLDCCurrentS = true;
             }
             else
             {
-                settings.CheckM2BLDCCurrentS = "No";
+                settings.CheckM2BLDCCurrentS = false;
             }
             if (checkBoxM2BLDCVoltageS.Checked)
             {
-                settings.CheckM2BLDCVoltageS = "Yes";
+                settings.CheckM2BLDCVoltageS = true;
             }
             else
             {
-                settings.CheckM2BLDCVoltageS = "No";
+                settings.CheckM2BLDCVoltageS = false;
             }
             if (checkBoxM2BLDCPS.Checked)
             {
-                settings.CheckM2BLDCPS = "Yes";
+                settings.CheckM2BLDCPS = true;
             }
             else
             {
-                settings.CheckM2BLDCPS = "No";
+                settings.CheckM2BLDCPS = false;
             }
             if (checkBoxM2BLDCIS.Checked)
             {
-                settings.CheckM2BLDCIS = "Yes";
+                settings.CheckM2BLDCIS = true;
             }
             else
             {
-                settings.CheckM2BLDCIS = "No";
+                settings.CheckM2BLDCIS = false;
             }
             if (checkBoxM2BLDCDS.Checked)
             {
-                settings.CheckM2BLDCDS = "Yes";
+                settings.CheckM2BLDCDS = true;
             }
             else
             {
-                settings.CheckM2BLDCDS = "No";
+                settings.CheckM2BLDCDS = false;
             }
             if (checkBoxM2BLDCx1S.Checked)
             {
-                settings.CheckM2BLDCx1S = "Yes";
+                settings.CheckM2BLDCx1S = true;
             }
             else
             {
-                settings.CheckM2BLDCx1S = "No";
+                settings.CheckM2BLDCx1S = false;
             }
             if (checkBoxM2BLDCx2S.Checked)
             {
-                settings.CheckM2BLDCx2S = "Yes";
+                settings.CheckM2BLDCx2S = true;
             }
             else
             {
-                settings.CheckM2BLDCx2S = "No";
+                settings.CheckM2BLDCx2S = false;
             }
             if (checkBoxM2BLDCx3S.Checked)
             {
-                settings.CheckM2BLDCx3S = "Yes";
+                settings.CheckM2BLDCx3S = true;
             }
             else
             {
-                settings.CheckM2BLDCx3S = "No";
+                settings.CheckM2BLDCx3S = false;
             }
             if (checkBoxM2BLDCSpeedR.Checked)
             {
-                settings.CheckM2BLDCSpeedR = "Yes";
+                settings.CheckM2BLDCSpeedR = true;
             }
             else
             {
-                settings.CheckM2BLDCSpeedR = "No";
+                settings.CheckM2BLDCSpeedR = false;
             }
             if (checkBoxM2BLDCPositionR.Checked)
             {
-                settings.CheckM2BLDCPositionR = "Yes";
+                settings.CheckM2BLDCPositionR = true;
             }
             else
             {
-                settings.CheckM2BLDCPositionR = "No";
+                settings.CheckM2BLDCPositionR = false;
             }
             if (checkBoxM2BLDCTorqueR.Checked)
             {
-                settings.CheckM2BLDCTorqueR = "Yes";
+                settings.CheckM2BLDCTorqueR = true;
             }
             else
             {
-                settings.CheckM2BLDCTorqueR = "No";
+                settings.CheckM2BLDCTorqueR = false;
             }
             if (checkBoxM2BLDCCurrentR.Checked)
             {
-                settings.CheckM2BLDCCurrentR = "Yes";
+                settings.CheckM2BLDCCurrentR = true;
             }
             else
             {
-                settings.CheckM2BLDCCurrentR = "No";
+                settings.CheckM2BLDCCurrentR = false;
             }
             if (checkBoxM2BLDCVoltageR.Checked)
             {
-                settings.CheckM2BLDCVoltageR = "Yes";
+                settings.CheckM2BLDCVoltageR = true;
             }
             else
             {
-                settings.CheckM2BLDCVoltageR = "No";
+                settings.CheckM2BLDCVoltageR = false;
             }
             if (checkBoxM2BLDCPR.Checked)
             {
-                settings.CheckM2BLDCPR = "Yes";
+                settings.CheckM2BLDCPR = true;
             }
             else
             {
-                settings.CheckM2BLDCPR = "No";
+                settings.CheckM2BLDCPR = false;
             }
             if (checkBoxM2BLDCIR.Checked)
             {
-                settings.CheckM2BLDCIR = "Yes";
+                settings.CheckM2BLDCIR = true;
             }
             else
             {
-                settings.CheckM2BLDCIR = "No";
+                settings.CheckM2BLDCIR = false;
             }
             if (checkBoxM2BLDCDR.Checked)
             {
-                settings.CheckM2BLDCDR = "Yes";
+                settings.CheckM2BLDCDR = true;
             }
             else
             {
-                settings.CheckM2BLDCDR = "No";
+                settings.CheckM2BLDCDR = false;
             }
             if (checkBoxM2BLDCx1R.Checked)
             {
-                settings.CheckM2BLDCx1R = "Yes";
+                settings.CheckM2BLDCx1R = true;
             }
             else
             {
-                settings.CheckM2BLDCx1R = "No";
+                settings.CheckM2BLDCx1R = false;
             }
             if (checkBoxM2BLDCx2R.Checked)
             {
-                settings.CheckM2BLDCx2R = "Yes";
+                settings.CheckM2BLDCx2R = true;
             }
             else
             {
-                settings.CheckM2BLDCx2R = "No";
+                settings.CheckM2BLDCx2R = false;
             }
             if (checkBoxM2BLDCx3R.Checked)
             {
-                settings.CheckM2BLDCx3R = "Yes";
+                settings.CheckM2BLDCx3R = true;
             }
             else
             {
-                settings.CheckM2BLDCx3R = "No";
+                settings.CheckM2BLDCx3R = false;
             }
             if (checkBoxM2PMSMSpeedS.Checked)
             {
-                settings.CheckM2PMSMSpeedS = "Yes";
+                settings.CheckM2PMSMSpeedS = true;
             }
             else
             {
-                settings.CheckM2PMSMSpeedS = "No";
+                settings.CheckM2PMSMSpeedS = false;
             }
             if (checkBoxM2PMSMPositionS.Checked)
             {
-                settings.CheckM2PMSMPositionS = "Yes";
+                settings.CheckM2PMSMPositionS = true;
             }
             else
             {
-                settings.CheckM2PMSMPositionS = "No";
+                settings.CheckM2PMSMPositionS = false;
             }
             if (checkBoxM2PMSMTorqueS.Checked)
             {
-                settings.CheckM2PMSMTorqueS = "Yes";
+                settings.CheckM2PMSMTorqueS = true;
             }
             else
             {
-                settings.CheckM2PMSMTorqueS = "No";
+                settings.CheckM2PMSMTorqueS = false;
             }
             if (checkBoxM2PMSMCurrentS.Checked)
             {
-                settings.CheckM2PMSMCurrentS = "Yes";
+                settings.CheckM2PMSMCurrentS = true;
             }
             else
             {
-                settings.CheckM2PMSMCurrentS = "No";
+                settings.CheckM2PMSMCurrentS = false;
             }
             if (checkBoxM2PMSMVoltageS.Checked)
             {
-                settings.CheckM2PMSMVoltageS = "Yes";
+                settings.CheckM2PMSMVoltageS = true;
             }
             else
             {
-                settings.CheckM2PMSMVoltageS = "No";
+                settings.CheckM2PMSMVoltageS = false;
             }
             if (checkBoxM2PMSMPS.Checked)
             {
-                settings.CheckM2PMSMPS = "Yes";
+                settings.CheckM2PMSMPS = true;
             }
             else
             {
-                settings.CheckM2PMSMPS = "No";
+                settings.CheckM2PMSMPS = false;
             }
             if (checkBoxM2PMSMIS.Checked)
             {
-                settings.CheckM2PMSMIS = "Yes";
+                settings.CheckM2PMSMIS = true;
             }
             else
             {
-                settings.CheckM2PMSMIS = "No";
+                settings.CheckM2PMSMIS = false;
             }
             if (checkBoxM2PMSMDS.Checked)
             {
-                settings.CheckM2PMSMDS = "Yes";
+                settings.CheckM2PMSMDS = true;
             }
             else
             {
-                settings.CheckM2PMSMDS = "No";
+                settings.CheckM2PMSMDS = false;
             }
             if (checkBoxM2PMSMx1S.Checked)
             {
-                settings.CheckM2PMSMx1S = "Yes";
+                settings.CheckM2PMSMx1S = true;
             }
             else
             {
-                settings.CheckM2PMSMx1S = "No";
+                settings.CheckM2PMSMx1S = false;
             }
             if (checkBoxM2PMSMx2S.Checked)
             {
-                settings.CheckM2PMSMx2S = "Yes";
+                settings.CheckM2PMSMx2S = true;
             }
             else
             {
-                settings.CheckM2PMSMx2S = "No";
+                settings.CheckM2PMSMx2S = false;
             }
             if (checkBoxM2PMSMx3S.Checked)
             {
-                settings.CheckM2PMSMx3S = "Yes";
+                settings.CheckM2PMSMx3S = true;
             }
             else
             {
-                settings.CheckM2PMSMx3S = "No";
+                settings.CheckM2PMSMx3S = false;
             }
             if (checkBoxM2PMSMSpeedR.Checked)
             {
-                settings.CheckM2PMSMSpeedR = "Yes";
+                settings.CheckM2PMSMSpeedR = true;
             }
             else
             {
-                settings.CheckM2PMSMSpeedR = "No";
+                settings.CheckM2PMSMSpeedR = false;
             }
             if (checkBoxM2PMSMPositionR.Checked)
             {
-                settings.CheckM2PMSMPositionR = "Yes";
+                settings.CheckM2PMSMPositionR = true;
             }
             else
             {
-                settings.CheckM2PMSMPositionR = "No";
+                settings.CheckM2PMSMPositionR = false;
             }
             if (checkBoxM2PMSMTorqueR.Checked)
             {
-                settings.CheckM2PMSMTorqueR = "Yes";
+                settings.CheckM2PMSMTorqueR = true;
             }
             else
             {
-                settings.CheckM2PMSMTorqueR = "No";
+                settings.CheckM2PMSMTorqueR = false;
             }
             if (checkBoxM2PMSMCurrentR.Checked)
             {
-                settings.CheckM2PMSMCurrentR = "Yes";
+                settings.CheckM2PMSMCurrentR = true;
             }
             else
             {
-                settings.CheckM2PMSMCurrentR = "No";
+                settings.CheckM2PMSMCurrentR = false;
             }
             if (checkBoxM2PMSMVoltageR.Checked)
             {
-                settings.CheckM2PMSMVoltageR = "Yes";
+                settings.CheckM2PMSMVoltageR = true;
             }
             else
             {
-                settings.CheckM2PMSMVoltageR = "No";
+                settings.CheckM2PMSMVoltageR = false;
             }
             if (checkBoxM2PMSMPR.Checked)
             {
-                settings.CheckM2PMSMPR = "Yes";
+                settings.CheckM2PMSMPR = true;
             }
             else
             {
-                settings.CheckM2PMSMPR = "No";
+                settings.CheckM2PMSMPR = false;
             }
             if (checkBoxM2PMSMIR.Checked)
             {
-                settings.CheckM2PMSMIR = "Yes";
+                settings.CheckM2PMSMIR = true;
             }
             else
             {
-                settings.CheckM2PMSMIR = "No";
+                settings.CheckM2PMSMIR = false;
             }
             if (checkBoxM2PMSMDR.Checked)
             {
-                settings.CheckM2PMSMDR = "Yes";
+                settings.CheckM2PMSMDR = true;
             }
             else
             {
-                settings.CheckM2PMSMDR = "No";
+                settings.CheckM2PMSMDR = false;
             }
             if (checkBoxM2PMSMx1R.Checked)
             {
-                settings.CheckM2PMSMx1R = "Yes";
+                settings.CheckM2PMSMx1R = true;
             }
             else
             {
-                settings.CheckM2PMSMx1R = "No";
+                settings.CheckM2PMSMx1R = false;
             }
             if (checkBoxM2PMSMx2R.Checked)
             {
-                settings.CheckM2PMSMx2R = "Yes";
+                settings.CheckM2PMSMx2R = true;
             }
             else
             {
-                settings.CheckM2PMSMx2R = "No";
+                settings.CheckM2PMSMx2R = false;
             }
             if (checkBoxM2PMSMx3R.Checked)
             {
-                settings.CheckM2PMSMx3R = "Yes";
+                settings.CheckM2PMSMx3R = true;
             }
             else
             {
-                settings.CheckM2PMSMx3R = "No";
+                settings.CheckM2PMSMx3R = false;
             }
         }
         private void LoadData()
@@ -1187,11 +1187,11 @@ namespace Praca_Inżynierska
             txtBoxReadGenAddress.Text = settings.ReadGenAddr;
             txtBoxWriteGenAddress.Text = settings.WriteGenAddr;
             txtBoxReadGenNOP.Text = settings.ReadGenNOP;
-            txtBoxReadGenNOP.Text = settings.ReadGenNOP; 
-            txtBoxM1SlaveAddress.Text =settings.SlaveAddressM1;
+            txtBoxReadGenNOP.Text = settings.ReadGenNOP;
+            txtBoxM1SlaveAddress.Text = settings.SlaveAddressM1;
             txtBoxM2DCSlaveAddress.Text = settings.SlaveAddressM2DC;
             txtBoxM2AsynchSlaveAddress.Text = settings.SlaveAddressM2Asynch;
-            txtBoxM2BLDCSlaveAddress.Text = settings.SlaveAddressM2BLDC; 
+            txtBoxM2BLDCSlaveAddress.Text = settings.SlaveAddressM2BLDC;
             txtBoxM2PMSMSlaveAddress.Text = settings.SlaveAddressM2PMSM;
             txtBoxM1SpeedS.Text = settings.AddrM1SpeedS;
             txtBoxM1SpeedSNOP.Text = settings.AddrM1SpeedSNOP;
@@ -1413,7 +1413,8 @@ namespace Praca_Inżynierska
             txtBoxM2PMSMx2RNOP.Text = settings.AddrM2PMSMx2RNOP;
             txtBoxM2PMSMx3R.Text = settings.AddrM2PMSMx3R;
             txtBoxM2PMSMx3RNOP.Text = settings.AddrM2PMSMx3RNOP;
-            if (settings.CheckM1SpeedS == ("Yes"))
+
+            if (settings.CheckM1SpeedS == true)
             {
                 checkBoxM1SpeedS.Checked = true;
             }
@@ -1421,7 +1422,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1SpeedS.Checked = false;
             }
-            if (settings.CheckM1PositionS == ("Yes"))
+            if (settings.CheckM1PositionS == true)
             {
                 checkBoxM1PositionS.Checked = true;
             }
@@ -1429,7 +1430,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1PositionS.Checked = false;
             }
-            if (settings.CheckM1TorqueS == ("Yes"))
+            if (settings.CheckM1TorqueS == true)
             {
                 checkBoxM1TorqueS.Checked = true;
             }
@@ -1437,7 +1438,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1TorqueS.Checked = false;
             }
-            if (settings.CheckM1CurrentS == ("Yes"))
+            if (settings.CheckM1CurrentS == true)
             {
                 checkBoxM1CurrentS.Checked = true;
             }
@@ -1445,7 +1446,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1CurrentS.Checked = false;
             }
-            if (settings.CheckM1VoltageS == ("Yes"))
+            if (settings.CheckM1VoltageS == true)
             {
                 checkBoxM1VoltageS.Checked = true;
             }
@@ -1453,7 +1454,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1VoltageS.Checked = false;
             }
-            if (settings.CheckM1PS == ("Yes"))
+            if (settings.CheckM1PS == true)
             {
                 checkBoxM1PS.Checked = true;
             }
@@ -1461,7 +1462,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1PS.Checked = false;
             }
-            if (settings.CheckM1IS == ("Yes"))
+            if (settings.CheckM1IS == true)
             {
                 checkBoxM1IS.Checked = true;
             }
@@ -1469,7 +1470,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1IS.Checked = false;
             }
-            if (settings.CheckM1DS == ("Yes"))
+            if (settings.CheckM1DS == true)
             {
                 checkBoxM1DS.Checked = true;
             }
@@ -1477,7 +1478,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1DS.Checked = false;
             }
-            if (settings.CheckM1x1S == ("Yes"))
+            if (settings.CheckM1x1S == true)
             {
                 checkBoxM1x1S.Checked = true;
             }
@@ -1485,7 +1486,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x1S.Checked = false;
             }
-            if (settings.CheckM1x2S == ("Yes"))
+            if (settings.CheckM1x2S == true)
             {
                 checkBoxM1x2S.Checked = true;
             }
@@ -1493,7 +1494,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x2S.Checked = false;
             }
-            if (settings.CheckM1x3S == ("Yes"))
+            if (settings.CheckM1x3S == true)
             {
                 checkBoxM1x3S.Checked = true;
             }
@@ -1501,15 +1502,15 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x3S.Checked = false;
             }
-            if (settings.CheckM1SpeedS == ("Yes"))
+            if (settings.CheckM1SpeedR == true)
             {
-                checkBoxM1SpeedS.Checked = true;
+                checkBoxM1SpeedR.Checked = true;
             }
             else
             {
                 checkBoxM1SpeedR.Checked = false;
             }
-            if (settings.CheckM1PositionR == ("Yes"))
+            if (settings.CheckM1PositionR == true)
             {
                 checkBoxM1PositionR.Checked = true;
             }
@@ -1517,7 +1518,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1PositionR.Checked = false;
             }
-            if (settings.CheckM1TorqueR == ("Yes"))
+            if (settings.CheckM1TorqueR == true)
             {
                 checkBoxM1TorqueR.Checked = true;
             }
@@ -1525,7 +1526,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1TorqueR.Checked = false;
             }
-            if (settings.CheckM1CurrentR == ("Yes"))
+            if (settings.CheckM1CurrentR == true)
             {
                 checkBoxM1CurrentR.Checked = true;
             }
@@ -1533,7 +1534,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1CurrentR.Checked = false;
             }
-            if (settings.CheckM1VoltageR == ("Yes"))
+            if (settings.CheckM1VoltageR == true)
             {
                 checkBoxM1VoltageR.Checked = true;
             }
@@ -1541,7 +1542,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1VoltageR.Checked = false;
             }
-            if (settings.CheckM1PR == ("Yes"))
+            if (settings.CheckM1PR == true)
             {
                 checkBoxM1PR.Checked = true;
             }
@@ -1549,7 +1550,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1PR.Checked = false;
             }
-            if (settings.CheckM1IR == ("Yes"))
+            if (settings.CheckM1IR == true)
             {
                 checkBoxM1IR.Checked = true;
             }
@@ -1557,7 +1558,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1IR.Checked = false;
             }
-            if (settings.CheckM1DR == ("Yes"))
+            if (settings.CheckM1DR == true)
             {
                 checkBoxM1DR.Checked = true;
             }
@@ -1565,7 +1566,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1DR.Checked = false;
             }
-            if (settings.CheckM1x1R == ("Yes"))
+            if (settings.CheckM1x1R == true)
             {
                 checkBoxM1x1R.Checked = true;
             }
@@ -1573,7 +1574,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x1R.Checked = false;
             }
-            if (settings.CheckM1x2R == ("Yes"))
+            if (settings.CheckM1x2R == true)
             {
                 checkBoxM1x2R.Checked = true;
             }
@@ -1581,7 +1582,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x2R.Checked = false;
             }
-            if (settings.CheckM1x3R == ("Yes"))
+            if (settings.CheckM1x3R == true)
             {
                 checkBoxM1x3R.Checked = true;
             }
@@ -1589,7 +1590,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM1x3R.Checked = false;
             }
-            if (settings.CheckM2DCSpeedS == ("Yes"))
+            if (settings.CheckM2DCSpeedS == true)
             {
                 checkBoxM2DCSpeedS.Checked = true;
             }
@@ -1597,7 +1598,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCSpeedS.Checked = false;
             }
-            if (settings.CheckM2DCPositionS == ("Yes"))
+            if (settings.CheckM2DCPositionS == true)
             {
                 checkBoxM2DCPositionS.Checked = true;
             }
@@ -1605,7 +1606,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCPositionS.Checked = false;
             }
-            if (settings.CheckM2DCTorqueS == ("Yes"))
+            if (settings.CheckM2DCTorqueS == true)
             {
                 checkBoxM2DCTorqueS.Checked = true;
             }
@@ -1613,7 +1614,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCTorqueS.Checked = false;
             }
-            if (settings.CheckM2DCCurrentS == ("Yes"))
+            if (settings.CheckM2DCCurrentS == true)
             {
                 checkBoxM2DCCurrentS.Checked = true;
             }
@@ -1621,7 +1622,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCCurrentS.Checked = false;
             }
-            if (settings.CheckM2DCVoltageS == ("Yes"))
+            if (settings.CheckM2DCVoltageS == true)
             {
                 checkBoxM2DCVoltageS.Checked = true;
             }
@@ -1629,7 +1630,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCVoltageS.Checked = false;
             }
-            if (settings.CheckM2DCPS == ("Yes"))
+            if (settings.CheckM2DCPS == true)
             {
                 checkBoxM2DCPS.Checked = true;
             }
@@ -1637,7 +1638,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCPS.Checked = false;
             }
-            if (settings.CheckM2DCIS == ("Yes"))
+            if (settings.CheckM2DCIS == true)
             {
                 checkBoxM2DCIS.Checked = true;
             }
@@ -1645,7 +1646,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCIS.Checked = false;
             }
-            if (settings.CheckM2DCDS == ("Yes"))
+            if (settings.CheckM2DCDS == true)
             {
                 checkBoxM2DCDS.Checked = true;
             }
@@ -1653,7 +1654,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCDS.Checked = false;
             }
-            if (settings.CheckM2DCx1S == ("Yes"))
+            if (settings.CheckM2DCx1S == true)
             {
                 checkBoxM2DCx1S.Checked = true;
             }
@@ -1661,7 +1662,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx1S.Checked = false;
             }
-            if (settings.CheckM2DCx2S == ("Yes"))
+            if (settings.CheckM2DCx2S == true)
             {
                 checkBoxM2DCx2S.Checked = true;
             }
@@ -1669,7 +1670,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx2S.Checked = false;
             }
-            if (settings.CheckM2DCx3S == ("Yes"))
+            if (settings.CheckM2DCx3S == true)
             {
                 checkBoxM2DCx3S.Checked = true;
             }
@@ -1677,7 +1678,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx3S.Checked = false;
             }
-            if (settings.CheckM2DCSpeedS == ("Yes"))
+            if (settings.CheckM2DCSpeedS == true)
             {
                 checkBoxM2DCSpeedS.Checked = true;
             }
@@ -1685,7 +1686,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCSpeedR.Checked = false;
             }
-            if (settings.CheckM2DCPositionR == ("Yes"))
+            if (settings.CheckM2DCPositionR == true)
             {
                 checkBoxM2DCPositionR.Checked = true;
             }
@@ -1693,7 +1694,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCPositionR.Checked = false;
             }
-            if (settings.CheckM2DCTorqueR == ("Yes"))
+            if (settings.CheckM2DCTorqueR == true)
             {
                 checkBoxM2DCTorqueR.Checked = true;
             }
@@ -1701,7 +1702,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCTorqueR.Checked = false;
             }
-            if (settings.CheckM2DCCurrentR == ("Yes"))
+            if (settings.CheckM2DCCurrentR == true)
             {
                 checkBoxM2DCCurrentR.Checked = true;
             }
@@ -1709,7 +1710,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCCurrentR.Checked = false;
             }
-            if (settings.CheckM2DCVoltageR == ("Yes"))
+            if (settings.CheckM2DCVoltageR == true)
             {
                 checkBoxM2DCVoltageR.Checked = true;
             }
@@ -1717,7 +1718,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCVoltageR.Checked = false;
             }
-            if (settings.CheckM2DCPR == ("Yes"))
+            if (settings.CheckM2DCPR == true)
             {
                 checkBoxM2DCPR.Checked = true;
             }
@@ -1725,7 +1726,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCPR.Checked = false;
             }
-            if (settings.CheckM2DCIR == ("Yes"))
+            if (settings.CheckM2DCIR == true)
             {
                 checkBoxM2DCIR.Checked = true;
             }
@@ -1733,7 +1734,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCIR.Checked = false;
             }
-            if (settings.CheckM2DCDR == ("Yes"))
+            if (settings.CheckM2DCDR == true)
             {
                 checkBoxM2DCDR.Checked = true;
             }
@@ -1741,7 +1742,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCDR.Checked = false;
             }
-            if (settings.CheckM2DCx1R == ("Yes"))
+            if (settings.CheckM2DCx1R == true)
             {
                 checkBoxM2DCx1R.Checked = true;
             }
@@ -1749,7 +1750,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx1R.Checked = false;
             }
-            if (settings.CheckM2DCx2R == ("Yes"))
+            if (settings.CheckM2DCx2R == true)
             {
                 checkBoxM2DCx2R.Checked = true;
             }
@@ -1757,7 +1758,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx2R.Checked = false;
             }
-            if (settings.CheckM2DCx3R == ("Yes"))
+            if (settings.CheckM2DCx3R == true)
             {
                 checkBoxM2DCx3R.Checked = true;
             }
@@ -1765,7 +1766,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2DCx3R.Checked = false;
             }
-            if (settings.CheckM2AsynchSpeedS == ("Yes"))
+            if (settings.CheckM2AsynchSpeedS == true)
             {
                 checkBoxM2AsynchSpeedS.Checked = true;
             }
@@ -1773,7 +1774,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchSpeedS.Checked = false;
             }
-            if (settings.CheckM2AsynchPositionS == ("Yes"))
+            if (settings.CheckM2AsynchPositionS == true)
             {
                 checkBoxM2AsynchPositionS.Checked = true;
             }
@@ -1781,7 +1782,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchPositionS.Checked = false;
             }
-            if (settings.CheckM2AsynchTorqueS == ("Yes"))
+            if (settings.CheckM2AsynchTorqueS == true)
             {
                 checkBoxM2AsynchTorqueS.Checked = true;
             }
@@ -1789,7 +1790,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchTorqueS.Checked = false;
             }
-            if (settings.CheckM2AsynchCurrentS == ("Yes"))
+            if (settings.CheckM2AsynchCurrentS == true)
             {
                 checkBoxM2AsynchCurrentS.Checked = true;
             }
@@ -1797,7 +1798,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchCurrentS.Checked = false;
             }
-            if (settings.CheckM2AsynchVoltageS == ("Yes"))
+            if (settings.CheckM2AsynchVoltageS == true)
             {
                 checkBoxM2AsynchVoltageS.Checked = true;
             }
@@ -1805,7 +1806,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchVoltageS.Checked = false;
             }
-            if (settings.CheckM2AsynchPS == ("Yes"))
+            if (settings.CheckM2AsynchPS == true)
             {
                 checkBoxM2AsynchPS.Checked = true;
             }
@@ -1813,7 +1814,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchPS.Checked = false;
             }
-            if (settings.CheckM2AsynchIS == ("Yes"))
+            if (settings.CheckM2AsynchIS == true)
             {
                 checkBoxM2AsynchIS.Checked = true;
             }
@@ -1821,7 +1822,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchIS.Checked = false;
             }
-            if (settings.CheckM2AsynchDS == ("Yes"))
+            if (settings.CheckM2AsynchDS == true)
             {
                 checkBoxM2AsynchDS.Checked = true;
             }
@@ -1829,7 +1830,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchDS.Checked = false;
             }
-            if (settings.CheckM2Asynchx1S == ("Yes"))
+            if (settings.CheckM2Asynchx1S == true)
             {
                 checkBoxM2Asynchx1S.Checked = true;
             }
@@ -1837,7 +1838,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx1S.Checked = false;
             }
-            if (settings.CheckM2Asynchx2S == ("Yes"))
+            if (settings.CheckM2Asynchx2S == true)
             {
                 checkBoxM2Asynchx2S.Checked = true;
             }
@@ -1845,7 +1846,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx2S.Checked = false;
             }
-            if (settings.CheckM2Asynchx3S == ("Yes"))
+            if (settings.CheckM2Asynchx3S == true)
             {
                 checkBoxM2Asynchx3S.Checked = true;
             }
@@ -1853,7 +1854,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx3S.Checked = false;
             }
-            if (settings.CheckM2AsynchSpeedS == ("Yes"))
+            if (settings.CheckM2AsynchSpeedS == true)
             {
                 checkBoxM2AsynchSpeedS.Checked = true;
             }
@@ -1861,7 +1862,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchSpeedR.Checked = false;
             }
-            if (settings.CheckM2AsynchPositionR == ("Yes"))
+            if (settings.CheckM2AsynchPositionR == true)
             {
                 checkBoxM2AsynchPositionR.Checked = true;
             }
@@ -1869,7 +1870,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchPositionR.Checked = false;
             }
-            if (settings.CheckM2AsynchTorqueR == ("Yes"))
+            if (settings.CheckM2AsynchTorqueR == true)
             {
                 checkBoxM2AsynchTorqueR.Checked = true;
             }
@@ -1877,7 +1878,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchTorqueR.Checked = false;
             }
-            if (settings.CheckM2AsynchCurrentR == ("Yes"))
+            if (settings.CheckM2AsynchCurrentR == true)
             {
                 checkBoxM2AsynchCurrentR.Checked = true;
             }
@@ -1885,7 +1886,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchCurrentR.Checked = false;
             }
-            if (settings.CheckM2AsynchVoltageR == ("Yes"))
+            if (settings.CheckM2AsynchVoltageR == true)
             {
                 checkBoxM2AsynchVoltageR.Checked = true;
             }
@@ -1893,7 +1894,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchVoltageR.Checked = false;
             }
-            if (settings.CheckM2AsynchPR == ("Yes"))
+            if (settings.CheckM2AsynchPR == true)
             {
                 checkBoxM2AsynchPR.Checked = true;
             }
@@ -1901,7 +1902,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchPR.Checked = false;
             }
-            if (settings.CheckM2AsynchIR == ("Yes"))
+            if (settings.CheckM2AsynchIR == true)
             {
                 checkBoxM2AsynchIR.Checked = true;
             }
@@ -1909,7 +1910,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchIR.Checked = false;
             }
-            if (settings.CheckM2AsynchDR == ("Yes"))
+            if (settings.CheckM2AsynchDR == true)
             {
                 checkBoxM2AsynchDR.Checked = true;
             }
@@ -1917,7 +1918,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchDR.Checked = false;
             }
-            if (settings.CheckM2Asynchx1R == ("Yes"))
+            if (settings.CheckM2Asynchx1R == true)
             {
                 checkBoxM2Asynchx1R.Checked = true;
             }
@@ -1925,7 +1926,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx1R.Checked = false;
             }
-            if (settings.CheckM2Asynchx2R == ("Yes"))
+            if (settings.CheckM2Asynchx2R == true)
             {
                 checkBoxM2Asynchx2R.Checked = true;
             }
@@ -1933,7 +1934,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx2R.Checked = false;
             }
-            if (settings.CheckM2Asynchx3R == ("Yes"))
+            if (settings.CheckM2Asynchx3R == true)
             {
                 checkBoxM2Asynchx3R.Checked = true;
             }
@@ -1941,7 +1942,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2Asynchx3R.Checked = false;
             }
-            if (settings.CheckM2BLDCSpeedS == ("Yes"))
+            if (settings.CheckM2BLDCSpeedS == true)
             {
                 checkBoxM2BLDCSpeedS.Checked = true;
             }
@@ -1949,7 +1950,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCSpeedS.Checked = false;
             }
-            if (settings.CheckM2BLDCPositionS == ("Yes"))
+            if (settings.CheckM2BLDCPositionS == true)
             {
                 checkBoxM2BLDCPositionS.Checked = true;
             }
@@ -1957,7 +1958,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCPositionS.Checked = false;
             }
-            if (settings.CheckM2BLDCTorqueS == ("Yes"))
+            if (settings.CheckM2BLDCTorqueS == true)
             {
                 checkBoxM2BLDCTorqueS.Checked = true;
             }
@@ -1965,7 +1966,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCTorqueS.Checked = false;
             }
-            if (settings.CheckM2BLDCCurrentS == ("Yes"))
+            if (settings.CheckM2BLDCCurrentS == true)
             {
                 checkBoxM2BLDCCurrentS.Checked = true;
             }
@@ -1973,7 +1974,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCCurrentS.Checked = false;
             }
-            if (settings.CheckM2BLDCVoltageS == ("Yes"))
+            if (settings.CheckM2BLDCVoltageS == true)
             {
                 checkBoxM2BLDCVoltageS.Checked = true;
             }
@@ -1981,7 +1982,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCVoltageS.Checked = false;
             }
-            if (settings.CheckM2BLDCPS == ("Yes"))
+            if (settings.CheckM2BLDCPS == true)
             {
                 checkBoxM2BLDCPS.Checked = true;
             }
@@ -1989,7 +1990,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCPS.Checked = false;
             }
-            if (settings.CheckM2BLDCIS == ("Yes"))
+            if (settings.CheckM2BLDCIS == true)
             {
                 checkBoxM2BLDCIS.Checked = true;
             }
@@ -1997,7 +1998,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCIS.Checked = false;
             }
-            if (settings.CheckM2BLDCDS == ("Yes"))
+            if (settings.CheckM2BLDCDS == true)
             {
                 checkBoxM2BLDCDS.Checked = true;
             }
@@ -2005,7 +2006,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCDS.Checked = false;
             }
-            if (settings.CheckM2BLDCx1S == ("Yes"))
+            if (settings.CheckM2BLDCx1S == true)
             {
                 checkBoxM2BLDCx1S.Checked = true;
             }
@@ -2013,7 +2014,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx1S.Checked = false;
             }
-            if (settings.CheckM2BLDCx2S == ("Yes"))
+            if (settings.CheckM2BLDCx2S == true)
             {
                 checkBoxM2BLDCx2S.Checked = true;
             }
@@ -2021,7 +2022,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx2S.Checked = false;
             }
-            if (settings.CheckM2BLDCx3S == ("Yes"))
+            if (settings.CheckM2BLDCx3S == true)
             {
                 checkBoxM2BLDCx3S.Checked = true;
             }
@@ -2029,7 +2030,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx3S.Checked = false;
             }
-            if (settings.CheckM2BLDCSpeedS == ("Yes"))
+            if (settings.CheckM2BLDCSpeedS == true)
             {
                 checkBoxM2BLDCSpeedS.Checked = true;
             }
@@ -2037,7 +2038,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCSpeedR.Checked = false;
             }
-            if (settings.CheckM2BLDCPositionR == ("Yes"))
+            if (settings.CheckM2BLDCPositionR == true)
             {
                 checkBoxM2BLDCPositionR.Checked = true;
             }
@@ -2045,7 +2046,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCPositionR.Checked = false;
             }
-            if (settings.CheckM2BLDCTorqueR == ("Yes"))
+            if (settings.CheckM2BLDCTorqueR == true)
             {
                 checkBoxM2BLDCTorqueR.Checked = true;
             }
@@ -2053,7 +2054,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCTorqueR.Checked = false;
             }
-            if (settings.CheckM2BLDCCurrentR == ("Yes"))
+            if (settings.CheckM2BLDCCurrentR == true)
             {
                 checkBoxM2BLDCCurrentR.Checked = true;
             }
@@ -2061,7 +2062,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCCurrentR.Checked = false;
             }
-            if (settings.CheckM2BLDCVoltageR == ("Yes"))
+            if (settings.CheckM2BLDCVoltageR == true)
             {
                 checkBoxM2BLDCVoltageR.Checked = true;
             }
@@ -2069,7 +2070,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCVoltageR.Checked = false;
             }
-            if (settings.CheckM2BLDCPR == ("Yes"))
+            if (settings.CheckM2BLDCPR == true)
             {
                 checkBoxM2BLDCPR.Checked = true;
             }
@@ -2077,7 +2078,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCPR.Checked = false;
             }
-            if (settings.CheckM2BLDCIR == ("Yes"))
+            if (settings.CheckM2BLDCIR == true)
             {
                 checkBoxM2BLDCIR.Checked = true;
             }
@@ -2085,7 +2086,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCIR.Checked = false;
             }
-            if (settings.CheckM2BLDCDR == ("Yes"))
+            if (settings.CheckM2BLDCDR == true)
             {
                 checkBoxM2BLDCDR.Checked = true;
             }
@@ -2093,7 +2094,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCDR.Checked = false;
             }
-            if (settings.CheckM2BLDCx1R == ("Yes"))
+            if (settings.CheckM2BLDCx1R == true)
             {
                 checkBoxM2BLDCx1R.Checked = true;
             }
@@ -2101,7 +2102,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx1R.Checked = false;
             }
-            if (settings.CheckM2BLDCx2R == ("Yes"))
+            if (settings.CheckM2BLDCx2R == true)
             {
                 checkBoxM2BLDCx2R.Checked = true;
             }
@@ -2109,7 +2110,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx2R.Checked = false;
             }
-            if (settings.CheckM2BLDCx3R == ("Yes"))
+            if (settings.CheckM2BLDCx3R == true)
             {
                 checkBoxM2BLDCx3R.Checked = true;
             }
@@ -2117,7 +2118,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2BLDCx3R.Checked = false;
             }
-            if (settings.CheckM2PMSMSpeedS == ("Yes"))
+            if (settings.CheckM2PMSMSpeedS == true)
             {
                 checkBoxM2PMSMSpeedS.Checked = true;
             }
@@ -2125,7 +2126,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMSpeedS.Checked = false;
             }
-            if (settings.CheckM2PMSMPositionS == ("Yes"))
+            if (settings.CheckM2PMSMPositionS == true)
             {
                 checkBoxM2PMSMPositionS.Checked = true;
             }
@@ -2133,7 +2134,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMPositionS.Checked = false;
             }
-            if (settings.CheckM2PMSMTorqueS == ("Yes"))
+            if (settings.CheckM2PMSMTorqueS == true)
             {
                 checkBoxM2PMSMTorqueS.Checked = true;
             }
@@ -2141,7 +2142,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMTorqueS.Checked = false;
             }
-            if (settings.CheckM2PMSMCurrentS == ("Yes"))
+            if (settings.CheckM2PMSMCurrentS == true)
             {
                 checkBoxM2PMSMCurrentS.Checked = true;
             }
@@ -2149,7 +2150,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMCurrentS.Checked = false;
             }
-            if (settings.CheckM2PMSMVoltageS == ("Yes"))
+            if (settings.CheckM2PMSMVoltageS == true)
             {
                 checkBoxM2PMSMVoltageS.Checked = true;
             }
@@ -2157,7 +2158,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMVoltageS.Checked = false;
             }
-            if (settings.CheckM2PMSMPS == ("Yes"))
+            if (settings.CheckM2PMSMPS == true)
             {
                 checkBoxM2PMSMPS.Checked = true;
             }
@@ -2165,7 +2166,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMPS.Checked = false;
             }
-            if (settings.CheckM2PMSMIS == ("Yes"))
+            if (settings.CheckM2PMSMIS == true)
             {
                 checkBoxM2PMSMIS.Checked = true;
             }
@@ -2173,7 +2174,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMIS.Checked = false;
             }
-            if (settings.CheckM2PMSMDS == ("Yes"))
+            if (settings.CheckM2PMSMDS == true)
             {
                 checkBoxM2PMSMDS.Checked = true;
             }
@@ -2181,7 +2182,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMDS.Checked = false;
             }
-            if (settings.CheckM2PMSMx1S == ("Yes"))
+            if (settings.CheckM2PMSMx1S == true)
             {
                 checkBoxM2PMSMx1S.Checked = true;
             }
@@ -2189,7 +2190,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMx1S.Checked = false;
             }
-            if (settings.CheckM2PMSMx2S == ("Yes"))
+            if (settings.CheckM2PMSMx2S == true)
             {
                 checkBoxM2PMSMx2S.Checked = true;
             }
@@ -2197,7 +2198,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMx2S.Checked = false;
             }
-            if (settings.CheckM2PMSMx3S == ("Yes"))
+            if (settings.CheckM2PMSMx3S == true)
             {
                 checkBoxM2PMSMx3S.Checked = true;
             }
@@ -2205,7 +2206,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMx3S.Checked = false;
             }
-            if (settings.CheckM2PMSMSpeedS == ("Yes"))
+            if (settings.CheckM2PMSMSpeedS == true)
             {
                 checkBoxM2PMSMSpeedS.Checked = true;
             }
@@ -2213,7 +2214,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMSpeedR.Checked = false;
             }
-            if (settings.CheckM2PMSMPositionR == ("Yes"))
+            if (settings.CheckM2PMSMPositionR == true)
             {
                 checkBoxM2PMSMPositionR.Checked = true;
             }
@@ -2221,7 +2222,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMPositionR.Checked = false;
             }
-            if (settings.CheckM2PMSMTorqueR == ("Yes"))
+            if (settings.CheckM2PMSMTorqueR == true)
             {
                 checkBoxM2PMSMTorqueR.Checked = true;
             }
@@ -2229,7 +2230,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMTorqueR.Checked = false;
             }
-            if (settings.CheckM2PMSMCurrentR == ("Yes"))
+            if (settings.CheckM2PMSMCurrentR == true)
             {
                 checkBoxM2PMSMCurrentR.Checked = true;
             }
@@ -2237,7 +2238,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMCurrentR.Checked = false;
             }
-            if (settings.CheckM2PMSMPR == ("Yes"))
+            if (settings.CheckM2PMSMPR == true)
             {
                 checkBoxM2PMSMPR.Checked = true;
             }
@@ -2245,7 +2246,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMPR.Checked = false;
             }
-            if (settings.CheckM2PMSMIR == ("Yes"))
+            if (settings.CheckM2PMSMIR == true)
             {
                 checkBoxM2PMSMIR.Checked = true;
             }
@@ -2253,7 +2254,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMIR.Checked = false;
             }
-            if (settings.CheckM2PMSMDR == ("Yes"))
+            if (settings.CheckM2PMSMDR == true)
             {
                 checkBoxM2PMSMDR.Checked = true;
             }
@@ -2261,7 +2262,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMDR.Checked = false;
             }
-            if (settings.CheckM2PMSMx1R == ("Yes"))
+            if (settings.CheckM2PMSMx1R == true)
             {
                 checkBoxM2PMSMx1R.Checked = true;
             }
@@ -2269,7 +2270,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMx1R.Checked = false;
             }
-            if (settings.CheckM2PMSMx2R == ("Yes"))
+            if (settings.CheckM2PMSMx2R == true)
             {
                 checkBoxM2PMSMx2R.Checked = true;
             }
@@ -2277,7 +2278,7 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMx2R.Checked = false;
             }
-            if (settings.CheckM2PMSMx3R == ("Yes"))
+            if (settings.CheckM2PMSMx3R == true)
             {
                 checkBoxM2PMSMx3R.Checked = true;
             }
