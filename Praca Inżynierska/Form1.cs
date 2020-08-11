@@ -60,7 +60,7 @@ namespace Praca_Inżynierska
                 {
                     settings = serializer.Deserialize(fs) as Settings;
                 }
-               
+
                 textBoxRead4011.Text = settings.AddrM1SpeedR;
             }
             catch (Exception ex)
@@ -124,7 +124,6 @@ namespace Praca_Inżynierska
                     Stop();
                     Thread.Sleep(50);
                     ReadTEST();
-                    RunChart();
                 }
                 else
                 {
@@ -389,11 +388,24 @@ namespace Praca_Inżynierska
                                     textBoxRead4001.Text = Convert.ToString(result1[0]);
                                     textBoxRead4010.Text = settings.AddrM1SpeedR;
                                     textBoxRead4011.Text = settings.AddrM1SpeedRNOP;
-
+                                    chart2.Series.Clear();
+                                    Series series1 = new Series();
+                                    series1.Name = "ser1";
+                                    series1.Color = System.Drawing.Color.Green;
+                                    series1.IsVisibleInLegend = true;
+                                    series1.IsXValueIndexed = true;
+                                    series1.ChartType = SeriesChartType.Spline;
+                                    chart2.Series.Add(series1);
+                                    chart2.DataSource = export;
+                                    foreach (Excel_Export data in export)
+                                    {
+                                        series1.Points.AddXY(data.ID, data.Speed);
+                                    }
                                 }));
 
                                 export.Add(new Excel_Export() { ID = ID, Speed = Convert.ToString(speedSumM1), Torque = Convert.ToString(result1[1]) });
-                                dataGridView2.DataSource = export;
+                                //dataGridView2.DataSource = export;
+
 
                                 ID = ID + 1;                // zwiększa ID    
                                 Thread.Sleep(20);
@@ -748,55 +760,20 @@ namespace Praca_Inżynierska
                 XmlSerializer serializer = new XmlSerializer(typeof(Settings));
                 using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config" + comboBoxLoadConfig.Text + ".xml", FileMode.Open, FileAccess.Read))
                 {
-                settings = serializer.Deserialize(fs) as Settings;
+                    settings = serializer.Deserialize(fs) as Settings;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
+
         }
 
         public void LoadReadAddress()
         {
-            
-        }
-        public void Process()
-        {
-            
-            int[] addrvalues = { Convert.ToInt32(settings.AddrM1SpeedR), Convert.ToInt32(settings.AddrM1PositionR), Convert.ToInt32(settings.AddrM1TorqueR), Convert.ToInt32(settings.AddrM1CurrentR), Convert.ToInt32(settings.AddrM1VoltageR), Convert.ToInt32(settings.AddrM1PR), Convert.ToInt32(settings.AddrM1IR), Convert.ToInt32(settings.AddrM1DR), Convert.ToInt32(settings.AddrM1x1R), Convert.ToInt32(settings.AddrM1x2R), Convert.ToInt32(settings.AddrM1x3R), Convert.ToInt32(settings.AddrM2DCSpeedR), Convert.ToInt32(settings.AddrM2DCPositionR), Convert.ToInt32(settings.AddrM2DCTorqueR), Convert.ToInt32(settings.AddrM2DCCurrentR), Convert.ToInt32(settings.AddrM2DCVoltageR), Convert.ToInt32(settings.AddrM2DCPR), Convert.ToInt32(settings.AddrM2DCIR), Convert.ToInt32(settings.AddrM2DCDR), Convert.ToInt32(settings.AddrM2DCx1R), Convert.ToInt32(settings.AddrM2DCx2R), Convert.ToInt32(settings.AddrM2DCx3R), Convert.ToInt32(settings.AddrM2AsynchSpeedR), Convert.ToInt32(settings.AddrM2AsynchPositionR), Convert.ToInt32(settings.AddrM2AsynchTorqueR), Convert.ToInt32(settings.AddrM2AsynchCurrentR), Convert.ToInt32(settings.AddrM2AsynchVoltageR), Convert.ToInt32(settings.AddrM2AsynchPR), Convert.ToInt32(settings.AddrM2AsynchIR), Convert.ToInt32(settings.AddrM2AsynchDR), Convert.ToInt32(settings.AddrM2Asynchx1R), Convert.ToInt32(settings.AddrM2Asynchx2R), Convert.ToInt32(settings.AddrM2Asynchx3R), Convert.ToInt32(settings.AddrM2BLDCSpeedR), Convert.ToInt32(settings.AddrM2BLDCPositionR), Convert.ToInt32(settings.AddrM2BLDCTorqueR), Convert.ToInt32(settings.AddrM2BLDCCurrentR), Convert.ToInt32(settings.AddrM2BLDCVoltageR), Convert.ToInt32(settings.AddrM2BLDCPR), Convert.ToInt32(settings.AddrM2BLDCIR), Convert.ToInt32(settings.AddrM2BLDCDR), Convert.ToInt32(settings.AddrM2BLDCx1R), Convert.ToInt32(settings.AddrM2BLDCx2R), Convert.ToInt32(settings.AddrM2BLDCx3R), Convert.ToInt32(settings.AddrM2PMSMSpeedR), Convert.ToInt32(settings.AddrM2PMSMPositionR), Convert.ToInt32(settings.AddrM2PMSMTorqueR), Convert.ToInt32(settings.AddrM2PMSMCurrentR), Convert.ToInt32(settings.AddrM2PMSMVoltageR), Convert.ToInt32(settings.AddrM2PMSMPR), Convert.ToInt32(settings.AddrM2PMSMIR), Convert.ToInt32(settings.AddrM2PMSMDR), Convert.ToInt32(settings.AddrM2PMSMx1R), Convert.ToInt32(settings.AddrM2PMSMx2R), Convert.ToInt32(settings.AddrM2PMSMx3R) };
-            int[] nopvalues = { Convert.ToInt32(settings.AddrM1SpeedRNOP), Convert.ToInt32(settings.AddrM1PositionRNOP), Convert.ToInt32(settings.AddrM1TorqueRNOP), Convert.ToInt32(settings.AddrM1CurrentRNOP), Convert.ToInt32(settings.AddrM1VoltageRNOP), Convert.ToInt32(settings.AddrM1PRNOP), Convert.ToInt32(settings.AddrM1IRNOP), Convert.ToInt32(settings.AddrM1DRNOP), Convert.ToInt32(settings.AddrM1x1RNOP), Convert.ToInt32(settings.AddrM1x2RNOP), Convert.ToInt32(settings.AddrM1x3RNOP), Convert.ToInt32(settings.AddrM2DCSpeedRNOP), Convert.ToInt32(settings.AddrM2DCPositionRNOP), Convert.ToInt32(settings.AddrM2DCTorqueRNOP), Convert.ToInt32(settings.AddrM2DCCurrentRNOP), Convert.ToInt32(settings.AddrM2DCVoltageRNOP), Convert.ToInt32(settings.AddrM2DCPRNOP), Convert.ToInt32(settings.AddrM2DCIRNOP), Convert.ToInt32(settings.AddrM2DCDRNOP), Convert.ToInt32(settings.AddrM2DCx1RNOP), Convert.ToInt32(settings.AddrM2DCx2RNOP), Convert.ToInt32(settings.AddrM2DCx3RNOP), Convert.ToInt32(settings.AddrM2AsynchSpeedRNOP), Convert.ToInt32(settings.AddrM2AsynchPositionRNOP), Convert.ToInt32(settings.AddrM2AsynchTorqueRNOP), Convert.ToInt32(settings.AddrM2AsynchCurrentRNOP), Convert.ToInt32(settings.AddrM2AsynchVoltageRNOP), Convert.ToInt32(settings.AddrM2AsynchPRNOP), Convert.ToInt32(settings.AddrM2AsynchIRNOP), Convert.ToInt32(settings.AddrM2AsynchDRNOP), Convert.ToInt32(settings.AddrM2Asynchx1RNOP), Convert.ToInt32(settings.AddrM2Asynchx2RNOP), Convert.ToInt32(settings.AddrM2Asynchx3RNOP), Convert.ToInt32(settings.AddrM2BLDCSpeedRNOP), Convert.ToInt32(settings.AddrM2BLDCPositionRNOP), Convert.ToInt32(settings.AddrM2BLDCTorqueRNOP), Convert.ToInt32(settings.AddrM2BLDCCurrentRNOP), Convert.ToInt32(settings.AddrM2BLDCVoltageRNOP), Convert.ToInt32(settings.AddrM2BLDCPRNOP), Convert.ToInt32(settings.AddrM2BLDCIRNOP), Convert.ToInt32(settings.AddrM2BLDCDRNOP), Convert.ToInt32(settings.AddrM2BLDCx1RNOP), Convert.ToInt32(settings.AddrM2BLDCx2RNOP), Convert.ToInt32(settings.AddrM2BLDCx3RNOP), Convert.ToInt32(settings.AddrM2PMSMSpeedRNOP), Convert.ToInt32(settings.AddrM2PMSMPositionRNOP), Convert.ToInt32(settings.AddrM2PMSMTorqueRNOP), Convert.ToInt32(settings.AddrM2PMSMCurrentRNOP), Convert.ToInt32(settings.AddrM2PMSMVoltageRNOP), Convert.ToInt32(settings.AddrM2PMSMPRNOP), Convert.ToInt32(settings.AddrM2PMSMIRNOP), Convert.ToInt32(settings.AddrM2PMSMDRNOP), Convert.ToInt32(settings.AddrM2PMSMx1RNOP), Convert.ToInt32(settings.AddrM2PMSMx2RNOP), Convert.ToInt32(settings.AddrM2PMSMx3RNOP) };
-            
-            for (int i = 0; i < Convert.ToInt32(settings.ReadGenNOP); i ++)
-            {
-
-            }
-        }
-        private void RunChart()
-        {
-            try
-            {
-                int speed = 2;
-                while (chartStart == true)
-                {
-                    chart2.Series[comboBoxX1chart.Text] = new Series();
-                    chart2.Series[comboBoxX1chart.Text].ChartType = SeriesChartType.Spline;
-                    chart2.Series[comboBoxX1chart.Text].XValueMember = dataGridView2.Columns[speed].DataPropertyName;
-                    chart2.Series[comboBoxX1chart.Text].YValueMembers = dataGridView2.Columns[1].DataPropertyName;
-                    chart2.Series[comboBoxX2chart.Text] = new Series();
-                    chart2.Series[comboBoxX2chart.Text].ChartType = SeriesChartType.Spline;
-                    chart2.Series[comboBoxX2chart.Text].XValueMember = dataGridView2.Columns[3].DataPropertyName;
-                    chart2.Series[comboBoxX2chart.Text].YValueMembers = dataGridView2.Columns[1].DataPropertyName;
-                    Thread.Sleep(100);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
         }
+
     }
-    
 }
