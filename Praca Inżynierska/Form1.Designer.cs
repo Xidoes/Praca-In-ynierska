@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.trackBarM1D = new System.Windows.Forms.TrackBar();
             this.trackBarM1I = new System.Windows.Forms.TrackBar();
@@ -303,9 +303,9 @@
             this.btnConfigLoad = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
-            this.comboBoxYchart = new System.Windows.Forms.ComboBox();
-            this.comboBoxX1chart = new System.Windows.Forms.ComboBox();
-            this.comboBoxX2chart = new System.Windows.Forms.ComboBox();
+            this.comboBoxXchart = new System.Windows.Forms.ComboBox();
+            this.comboBoxY1chart = new System.Windows.Forms.ComboBox();
+            this.comboBoxY2chart = new System.Windows.Forms.ComboBox();
             this.label109 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -1041,43 +1041,43 @@
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(12, 440);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Test0";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Test1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Test2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "Test3";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Test4";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Power";
-            this.chart2.Series.Add(series1);
-            this.chart2.Series.Add(series2);
-            this.chart2.Series.Add(series3);
-            this.chart2.Series.Add(series4);
-            this.chart2.Series.Add(series5);
-            this.chart2.Series.Add(series6);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Legend = "Legend1";
+            series7.Name = "Test0";
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "Test1";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Legend = "Legend1";
+            series9.Name = "Test2";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Legend = "Legend1";
+            series10.Name = "Test3";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Legend = "Legend1";
+            series11.Name = "Test4";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Legend = "Legend1";
+            series12.Name = "Power";
+            this.chart2.Series.Add(series7);
+            this.chart2.Series.Add(series8);
+            this.chart2.Series.Add(series9);
+            this.chart2.Series.Add(series10);
+            this.chart2.Series.Add(series11);
+            this.chart2.Series.Add(series12);
             this.chart2.Size = new System.Drawing.Size(934, 532);
             this.chart2.TabIndex = 6;
             this.chart2.Text = "chart2";
@@ -2996,21 +2996,41 @@
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(17, 13);
             this.label54.TabIndex = 23;
-            this.label54.Text = "Y:";
+            this.label54.Text = "X:";
             // 
             // label108
             // 
             this.label108.AutoSize = true;
             this.label108.Location = new System.Drawing.Point(952, 476);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(17, 13);
+            this.label108.Size = new System.Drawing.Size(23, 13);
             this.label108.TabIndex = 24;
-            this.label108.Text = "X:";
+            this.label108.Text = "Y1:";
             // 
-            // comboBoxYchart
+            // comboBoxXchart
             // 
-            this.comboBoxYchart.FormattingEnabled = true;
-            this.comboBoxYchart.Items.AddRange(new object[] {
+            this.comboBoxXchart.FormattingEnabled = true;
+            this.comboBoxXchart.Items.AddRange(new object[] {
+            "Speed",
+            "Position",
+            "Current",
+            "Voltage",
+            "Power",
+            "Time",
+            "x1",
+            "x2",
+            "x3",
+            "ID"});
+            this.comboBoxXchart.Location = new System.Drawing.Point(954, 582);
+            this.comboBoxXchart.Name = "comboBoxXchart";
+            this.comboBoxXchart.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxXchart.TabIndex = 25;
+            this.comboBoxXchart.Text = "Time";
+            // 
+            // comboBoxY1chart
+            // 
+            this.comboBoxY1chart.FormattingEnabled = true;
+            this.comboBoxY1chart.Items.AddRange(new object[] {
             "Speed",
             "Position",
             "Current",
@@ -3020,16 +3040,16 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxYchart.Location = new System.Drawing.Point(954, 582);
-            this.comboBoxYchart.Name = "comboBoxYchart";
-            this.comboBoxYchart.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxYchart.TabIndex = 25;
-            this.comboBoxYchart.Text = "Time";
+            this.comboBoxY1chart.Location = new System.Drawing.Point(952, 492);
+            this.comboBoxY1chart.Name = "comboBoxY1chart";
+            this.comboBoxY1chart.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxY1chart.TabIndex = 26;
+            this.comboBoxY1chart.Text = "Time";
             // 
-            // comboBoxX1chart
+            // comboBoxY2chart
             // 
-            this.comboBoxX1chart.FormattingEnabled = true;
-            this.comboBoxX1chart.Items.AddRange(new object[] {
+            this.comboBoxY2chart.FormattingEnabled = true;
+            this.comboBoxY2chart.Items.AddRange(new object[] {
             "Speed",
             "Position",
             "Current",
@@ -3039,39 +3059,27 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxX1chart.Location = new System.Drawing.Point(952, 492);
-            this.comboBoxX1chart.Name = "comboBoxX1chart";
-            this.comboBoxX1chart.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxX1chart.TabIndex = 26;
-            this.comboBoxX1chart.Text = "Time";
-            // 
-            // comboBoxX2chart
-            // 
-            this.comboBoxX2chart.FormattingEnabled = true;
-            this.comboBoxX2chart.Items.AddRange(new object[] {
-            "Speed",
-            "Position",
-            "Current",
-            "Voltage",
-            "Power",
-            "Time",
-            "x1",
-            "x2",
-            "x3"});
-            this.comboBoxX2chart.Location = new System.Drawing.Point(952, 532);
-            this.comboBoxX2chart.Name = "comboBoxX2chart";
-            this.comboBoxX2chart.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxX2chart.TabIndex = 28;
-            this.comboBoxX2chart.Text = "Time";
+            this.comboBoxY2chart.Location = new System.Drawing.Point(952, 532);
+            this.comboBoxY2chart.Name = "comboBoxY2chart";
+            this.comboBoxY2chart.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxY2chart.TabIndex = 28;
+            this.comboBoxY2chart.Text = "Time";
             // 
             // label109
             // 
             this.label109.AutoSize = true;
             this.label109.Location = new System.Drawing.Point(952, 516);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(17, 13);
+            this.label109.Size = new System.Drawing.Size(23, 13);
             this.label109.TabIndex = 27;
-            this.label109.Text = "X:";
+            this.label109.Text = "Y2:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -3079,10 +3087,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 984);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBoxX2chart);
+            this.Controls.Add(this.comboBoxY2chart);
             this.Controls.Add(this.label109);
-            this.Controls.Add(this.comboBoxX1chart);
-            this.Controls.Add(this.comboBoxYchart);
+            this.Controls.Add(this.comboBoxY1chart);
+            this.Controls.Add(this.comboBoxXchart);
             this.Controls.Add(this.label108);
             this.Controls.Add(this.label54);
             this.Controls.Add(this.groupBox4);
@@ -3444,9 +3452,9 @@
         private System.Windows.Forms.Button btnConfigLoad;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.ComboBox comboBoxYchart;
-        private System.Windows.Forms.ComboBox comboBoxX1chart;
-        private System.Windows.Forms.ComboBox comboBoxX2chart;
+        private System.Windows.Forms.ComboBox comboBoxXchart;
+        private System.Windows.Forms.ComboBox comboBoxY1chart;
+        private System.Windows.Forms.ComboBox comboBoxY2chart;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Button button1;
     }

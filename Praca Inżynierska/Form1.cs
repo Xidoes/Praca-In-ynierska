@@ -32,8 +32,14 @@ namespace Praca_Inżynierska
         public Settings settings = new Settings();
         public Form2 form2 = new Form2();
         public bool startM1 = false;
+        public bool startM2 = false;
+        public bool M2DC = false;
+        public bool M2Asynch = false;
+        public bool M2BLDC = false;
+        public bool M2PMSM = false;
         public bool chartStart = false;
         DataGridView dataGridView2 = new DataGridView();
+
 
 
         public Form1()
@@ -85,7 +91,7 @@ namespace Praca_Inżynierska
             {
 
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBarComPort.Value = 0;                           //W wypadku wystąpienia błędu, 
+                progressBarComPort.Value = 0;                           //W wypadku wystąpienia błędu,
             }
         }
 
@@ -122,6 +128,7 @@ namespace Praca_Inżynierska
                 if (start == true)
                 {
                     Stop();
+                    startM1 = true;
                     Thread.Sleep(50);
                     ReadTEST();
                 }
@@ -193,7 +200,7 @@ namespace Praca_Inżynierska
             {
                 export.Clear();
                 export = new List<Excel_Export>();
-                export.Add(new Excel_Export { ID = 0, Speed = "0", Torque = "0", x1 = "0", x2 = "0", x3 = "0" });
+                export.Add(new Excel_Export { ID = 0, M1Speed = "0", M1Torque = "0", M1x1 = "0", M1x2 = "0", M1x3 = "0" });
                 dataGridView1.DataSource = export;
             }
             catch (Exception ex)
@@ -222,10 +229,10 @@ namespace Praca_Inżynierska
                         {
 
                             ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);      //zczytuje wartosci z rejestrów dla adresu urządzenia slave, adresu rejestru i liczbie kolejnych adresów
-                            export.Add(new Excel_Export { ID = ID, Time = Convert.ToString(duration), Speed = Convert.ToString(result1[0]), Torque = Convert.ToString(result1[1]), x1 = Convert.ToString(result1[2]), x2 = Convert.ToString(result1[3]), x3 = Convert.ToString(result1[4]) }); //dodaje wartości zczytane do listy Excel Export
+                            export.Add(new Excel_Export { ID = ID, Time = Convert.ToString(duration), M1Speed = Convert.ToString(result1[0]), M1Torque = Convert.ToString(result1[1]), M1x1 = Convert.ToString(result1[2]), M1x2 = Convert.ToString(result1[3]), M1x3 = Convert.ToString(result1[4]) }); //dodaje wartości zczytane do listy Excel Export
                             for (int i = 0; i < 5; i++)                                             //dla każdej kolejnej wartości w result 1
                             {
-                                chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2 
+                                chart2.Invoke(new Action(delegate ()                                //"wzywa" wykres chart2
                                 {
                                     chart2.Series["Test" + Convert.ToString(i)].Points.AddXY(Convert.ToString(duration), result1[i]);   //łączy wartości rejestru z konkretnymi seriami wykresu
                                 }));
@@ -277,7 +284,19 @@ namespace Praca_Inżynierska
                     int x1SumM1 = 0;
                     int x2SumM1 = 0;
                     int x3SumM1 = 0;
+                    int speedSumM2 = 0;
+                    int positionSumM2 = 0;
+                    int torqueSumM2 = 0;
+                    int currentSumM2 = 0;
+                    int voltageSumM2 = 0;
+                    int PsumM2 = 0;
+                    int IsumM2 = 0;
+                    int DsumM2 = 0;
+                    int x1SumM2 = 0;
+                    int x2SumM2 = 0;
+                    int x3SumM2 = 0;
                     int ID = 1;
+
 
                     duration = 0;
                     timer.Enabled = true;
@@ -382,37 +401,389 @@ namespace Praca_Inżynierska
                                     }
                                 }
 
-                                textBoxRead4000.Invoke(new Action(delegate ()
-                                {
-                                    textBoxRead4000.Text = Convert.ToString(speedSumM1);
-                                    textBoxRead4001.Text = Convert.ToString(result1[0]);
-                                    textBoxRead4010.Text = settings.AddrM1SpeedR;
-                                    textBoxRead4011.Text = settings.AddrM1SpeedRNOP;
-                                    chart2.Series.Clear();
-                                    Series series1 = new Series();
-                                    series1.Name = "ser1";
-                                    series1.Color = System.Drawing.Color.Green;
-                                    series1.IsVisibleInLegend = true;
-                                    series1.IsXValueIndexed = true;
-                                    series1.ChartType = SeriesChartType.Spline;
-                                    chart2.Series.Add(series1);
-                                    chart2.DataSource = export;
-                                    foreach (Excel_Export data in export)
-                                    {
-                                        series1.Points.AddXY(data.ID, data.Speed);
-                                    }
-                                }));
-
-                                export.Add(new Excel_Export() { ID = ID, Speed = Convert.ToString(speedSumM1), Torque = Convert.ToString(result1[1]) });
-                                //dataGridView2.DataSource = export;
-
-
-                                ID = ID + 1;                // zwiększa ID    
-                                Thread.Sleep(20);
-                                duration = duration + 20;
-
                             }
+                            if (startM2 == true)
+                            {
+                                if (M2DC == true)
+                                {
+                                    if (settings.CheckM2DCSpeedR == true)
+                                    {
+                                        speedSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCSpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCSpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCSpeedRNOP); i++)
+                                        {
+                                            speedSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCPositionR == true)
+                                    {
+                                        positionSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCPositionR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCPositionR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCPositionRNOP); i++)
+                                        {
+                                            positionSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCTorqueR == true)
+                                    {
+                                        torqueSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCTorqueR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCTorqueR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCTorqueRNOP); i++)
+                                        {
+                                            torqueSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCCurrentR == true)
+                                    {
+                                        currentSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCCurrentR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCCurrentR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCCurrentRNOP); i++)
+                                        {
+                                            currentSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCVoltageR == true)
+                                    {
+                                        voltageSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCVoltageR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCVoltageR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCVoltageRNOP); i++)
+                                        {
+                                            voltageSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCPR == true)
+                                    {
+                                        PsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCPR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCPR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCPRNOP); i++)
+                                        {
+                                            PsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCIR == true)
+                                    {
+                                        IsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCIR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCIR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCIRNOP); i++)
+                                        {
+                                            IsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCDR == true)
+                                    {
+                                        DsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCDR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCDR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCDRNOP); i++)
+                                        {
+                                            DsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCx1R == true)
+                                    {
+                                        x1SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCx1R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCx1R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCx1RNOP); i++)
+                                        {
+                                            x1SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCx2R == true)
+                                    {
+                                        x2SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCx2R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCx2R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCx2RNOP); i++)
+                                        {
+                                            x2SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2DCx3R == true)
+                                    {
+                                        x3SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2DCx3R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2DCx3R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2DCx3RNOP); i++)
+                                        {
+                                            x3SumM2 += result1[i];
+                                        }
+                                    }
+                                }
+                                if (M2Asynch == true)
+                                {
+                                    if (settings.CheckM2AsynchSpeedR == true)
+                                    {
+                                        speedSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchSpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchSpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchSpeedRNOP); i++)
+                                        {
+                                            speedSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchPositionR == true)
+                                    {
+                                        positionSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchPositionR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchPositionR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchPositionRNOP); i++)
+                                        {
+                                            positionSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchTorqueR == true)
+                                    {
+                                        torqueSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchTorqueR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchTorqueR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchTorqueRNOP); i++)
+                                        {
+                                            torqueSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchCurrentR == true)
+                                    {
+                                        currentSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchCurrentR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchCurrentR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchCurrentRNOP); i++)
+                                        {
+                                            currentSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchVoltageR == true)
+                                    {
+                                        voltageSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchVoltageR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchVoltageR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchVoltageRNOP); i++)
+                                        {
+                                            voltageSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchPR == true)
+                                    {
+                                        PsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchPR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchPR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchPRNOP); i++)
+                                        {
+                                            PsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchIR == true)
+                                    {
+                                        IsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchIR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchIR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchIRNOP); i++)
+                                        {
+                                            IsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2AsynchDR == true)
+                                    {
+                                        DsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2AsynchDR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchDR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchDRNOP); i++)
+                                        {
+                                            DsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2Asynchx1R == true)
+                                    {
+                                        x1SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2Asynchx1R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2Asynchx1R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2Asynchx1RNOP); i++)
+                                        {
+                                            x1SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2Asynchx2R == true)
+                                    {
+                                        x2SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2Asynchx2R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2Asynchx2R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2Asynchx2RNOP); i++)
+                                        {
+                                            x2SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2Asynchx3R == true)
+                                    {
+                                        x3SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2Asynchx3R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2Asynchx3R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2Asynchx3RNOP); i++)
+                                        {
+                                            x3SumM2 += result1[i];
+                                        }
+                                    }
+                                }
+                                if (M2BLDC == true)
+                                {
+                                    if (settings.CheckM2BLDCSpeedR == true)
+                                    {
+                                        speedSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCSpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCSpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCSpeedRNOP); i++)
+                                        {
+                                            speedSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCPositionR == true)
+                                    {
+                                        positionSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCPositionR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCPositionR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCPositionRNOP); i++)
+                                        {
+                                            positionSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCTorqueR == true)
+                                    {
+                                        torqueSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCTorqueR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCTorqueR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCTorqueRNOP); i++)
+                                        {
+                                            torqueSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCCurrentR == true)
+                                    {
+                                        currentSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCCurrentR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCCurrentR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCCurrentRNOP); i++)
+                                        {
+                                            currentSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCVoltageR == true)
+                                    {
+                                        voltageSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCVoltageR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCVoltageR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCVoltageRNOP); i++)
+                                        {
+                                            voltageSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCPR == true)
+                                    {
+                                        PsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCPR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCPR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCPRNOP); i++)
+                                        {
+                                            PsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCIR == true)
+                                    {
+                                        IsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCIR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCIR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCIRNOP); i++)
+                                        {
+                                            IsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCDR == true)
+                                    {
+                                        DsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCDR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCDR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCDRNOP); i++)
+                                        {
+                                            DsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCx1R == true)
+                                    {
+                                        x1SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCx1R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCx1R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCx1RNOP); i++)
+                                        {
+                                            x1SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCx2R == true)
+                                    {
+                                        x2SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCx2R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCx2R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCx2RNOP); i++)
+                                        {
+                                            x2SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2BLDCx3R == true)
+                                    {
+                                        x3SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2BLDCx3R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2BLDCx3R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2BLDCx3RNOP); i++)
+                                        {
+                                            x3SumM2 += result1[i];
+                                        }
+                                    }
+                                }
+                                if (M2PMSM == true)
+                                {
+                                    if (settings.CheckM2PMSMSpeedR == true)
+                                    {
+                                        speedSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMSpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMSpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMSpeedRNOP); i++)
+                                        {
+                                            speedSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMPositionR == true)
+                                    {
+                                        positionSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMPositionR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMPositionR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMPositionRNOP); i++)
+                                        {
+                                            positionSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMTorqueR == true)
+                                    {
+                                        torqueSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMTorqueR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMTorqueR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMTorqueRNOP); i++)
+                                        {
+                                            torqueSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMCurrentR == true)
+                                    {
+                                        currentSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMCurrentR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMCurrentR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMCurrentRNOP); i++)
+                                        {
+                                            currentSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMVoltageR == true)
+                                    {
+                                        voltageSumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMVoltageR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMVoltageR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMVoltageRNOP); i++)
+                                        {
+                                            voltageSumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMPR == true)
+                                    {
+                                        PsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMPR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMPR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMPRNOP); i++)
+                                        {
+                                            PsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMIR == true)
+                                    {
+                                        IsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMIR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMIR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMIRNOP); i++)
+                                        {
+                                            IsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMDR == true)
+                                    {
+                                        DsumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMDR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMDR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMDRNOP); i++)
+                                        {
+                                            DsumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMx1R == true)
+                                    {
+                                        x1SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMx1R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMx1R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMx1RNOP); i++)
+                                        {
+                                            x1SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMx2R == true)
+                                    {
+                                        x2SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMx2R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMx2R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMx2RNOP); i++)
+                                        {
+                                            x2SumM2 += result1[i];
+                                        }
+                                    }
+                                    if (settings.CheckM2PMSMx3R == true)
+                                    {
+                                        x3SumM2 = 0;
+                                        for (int i = Convert.ToInt32(settings.AddrM2PMSMx3R) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMx3R) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMx3RNOP); i++)
+                                        {
+                                            x3SumM2 += result1[i];
+                                        }
+                                    }
+                                }
+                            }
+                            export.Add(new Excel_Export() { ID = ID, M1Speed = Convert.ToString(speedSumM1), M1Position = Convert.ToString(positionSumM1), M1Torque = Convert.ToString(torqueSumM1), M1Current = Convert.ToString(currentSumM1), M1Voltage = Convert.ToString(voltageSumM1), M1P = Convert.ToString(PsumM1), M1I = Convert.ToString(IsumM1), M1D = Convert.ToString(DsumM1), M1x1 = Convert.ToString(x1SumM1), M1x2 = Convert.ToString(x2SumM1), M1x3 = Convert.ToString(x3SumM1), M2Speed = Convert.ToString(speedSumM2), M2Position = Convert.ToString(positionSumM2), M2Torque = Convert.ToString(torqueSumM2), M2Current = Convert.ToString(currentSumM2), M2Voltage = Convert.ToString(voltageSumM2), M2P = Convert.ToString(PsumM2), M2I = Convert.ToString(IsumM2), M2D = Convert.ToString(DsumM2), M2x1 = Convert.ToString(x1SumM2), M2x2 = Convert.ToString(x2SumM2), M2x3 = Convert.ToString(x3SumM2) });
 
+                            textBoxRead4000.Invoke(new Action(delegate ()
+                            {
+                                textBoxRead4000.Text = Convert.ToString(speedSumM1);
+                                textBoxRead4001.Text = Convert.ToString(result1[0]);
+                                textBoxRead4010.Text = settings.AddrM1SpeedR;
+                                textBoxRead4011.Text = settings.AddrM1SpeedRNOP;
+                                Runchart();
+                            }));
+
+                            
+                            ID = ID + 1;                // zwiększa ID    
+                            Thread.Sleep(20);
+                            duration = duration + 20;
                         }
                     }));
                 }
@@ -439,7 +810,7 @@ namespace Praca_Inżynierska
                 IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);            //tworzy połączenie do protokołu modbus przez port seryjny      
                 masterRtu.Transport.WriteTimeout = 50;
                 masterRtu.Transport.Retries = 5;
-                ushort[] WriteMulipleRegistersTable = { Convert.ToUInt16(textBoxWrite4001.Text), Convert.ToUInt16(textBoxWrite4002.Text), 0, 0, 0, 0, 0, 0, 0, Convert.ToUInt16(textBoxWrite4010.Text), Convert.ToUInt16(textBoxWrite4011.Text) }; //tworzy tabelę wartości z pól tekstowych 
+                ushort[] WriteMulipleRegistersTable = { Convert.ToUInt16(textBoxWrite4001.Text), Convert.ToUInt16(textBoxWrite4002.Text), 0, 0, 0, 0, 0, 0, 0, Convert.ToUInt16(textBoxWrite4010.Text), Convert.ToUInt16(textBoxWrite4011.Text) }; //tworzy tabelę wartości z pól tekstowych
                 masterRtu.WriteMultipleRegisters(slaveAddress, writeStartAddress, WriteMulipleRegistersTable);      //wysyła wcześniej zdefiniowane wartości na konkretne adresy urządzenia
                 Thread.Sleep(10);
                 if (start == false)
@@ -468,7 +839,15 @@ namespace Praca_Inżynierska
         }
         private void BtnStartM2DC_Click(object sender, EventArgs e)
         {
+            start = false;
+            Thread.Sleep(10);
+            writeStartAddress = Convert.ToUInt16(settings.WriteGenAddr);
             Write();
+            Thread.Sleep(10);
+            start = true;
+            startM1 = true;
+            M2DC = true;
+            ReadTEST();
         }
         private void TrackBarM1Speed_Scroll(object sender, EventArgs e)
         {
@@ -762,17 +1141,873 @@ namespace Praca_Inżynierska
                 {
                     settings = serializer.Deserialize(fs) as Settings;
                 }
+
+                EnableDisable();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         public void LoadReadAddress()
         {
 
+        }
+        private void Runchart()
+        {
+            chart2.Series.Clear();
+            Series series1 = new Series();
+            Series series2 = new Series();
+            Series series3 = new Series();
+            Series series4 = new Series();
+            series1.Name = "M1" + comboBoxY1chart.Text+"1";
+            series1.IsVisibleInLegend = true;
+            series1.IsXValueIndexed = true;
+            series1.ChartType = SeriesChartType.Spline;
+            series2.Name = "M2" + comboBoxY1chart.Text + "1";
+            series2.IsVisibleInLegend = true;
+            series2.IsXValueIndexed = true;
+            series2.ChartType = SeriesChartType.Spline;
+            series3.Name = "M1" + comboBoxY2chart.Text + "2";
+            series3.IsVisibleInLegend = true;
+            series3.IsXValueIndexed = true;
+            series3.ChartType = SeriesChartType.Spline;
+            series4.Name = "M2" + comboBoxY2chart.Text + "2";
+            series4.IsVisibleInLegend = true;
+            series4.IsXValueIndexed = true;
+            series4.ChartType = SeriesChartType.Spline;
+            chart2.Series.Add(series1);
+            chart2.Series.Add(series2);
+            chart2.Series.Add(series3);
+            chart2.Series.Add(series4);
+            chart2.DataSource = export;
+            foreach (Excel_Export data in export)
+            {
+                string dataX = "";
+                string dataY1 = "";
+                string dataY2 = "";
+                string dataY3 = "";
+                string dataY4 = "";
+                if (comboBoxXchart.Text != "")
+                {
+                    if (comboBoxXchart.Text == "Time")
+                    {
+                        dataX = data.Time;
+                    }
+                    if (comboBoxXchart.Text == "ID")
+                    {
+                        dataX = Convert.ToString(data.ID);
+                    }
+                    if (comboBoxXchart.Text == "M1Speed")
+                    {
+                        dataX = data.M1Speed;
+                    }
+                    if (comboBoxXchart.Text == "M1Position")
+                    {
+                        dataX = data.M1Position;
+                    }
+                    if (comboBoxXchart.Text == "M1Torque")
+                    {
+                        dataX = data.M1Torque;
+                    }
+                    if (comboBoxXchart.Text == "M1Current")
+                    {
+                        dataX = data.M1Current;
+                    }
+                    if (comboBoxXchart.Text == "M1Voltage")
+                    {
+                        dataX = data.M1Voltage;
+                    }
+                    if (comboBoxXchart.Text == "M1P")
+                    {
+                        dataX = data.M1P;
+                    }
+                    if (comboBoxXchart.Text == "M1I")
+                    {
+                        dataX = data.M1I;
+                    }
+                    if (comboBoxXchart.Text == "M1D")
+                    {
+                        dataX = data.M1D;
+                    }
+                    if (comboBoxXchart.Text == "M1x1")
+                    {
+                        dataX = data.M1x1;
+                    }
+                    if (comboBoxXchart.Text == "M1x2")
+                    {
+                        dataX = data.M1x2;
+                    }
+                    if (comboBoxXchart.Text == "M1x3")
+                    {
+                        dataX = data.M1x3;
+                    }
+                    if (comboBoxXchart.Text == "M2Speed")
+                    {
+                        dataX = data.M2Speed;
+                    }
+                    if (comboBoxXchart.Text == "M2Position")
+                    {
+                        dataX = data.M2Position;
+                    }
+                    if (comboBoxXchart.Text == "M2Torque")
+                    {
+                        dataX = data.M2Torque;
+                    }
+                    if (comboBoxXchart.Text == "M2Current")
+                    {
+                        dataX = data.M2Current;
+                    }
+                    if (comboBoxXchart.Text == "M2Voltage")
+                    {
+                        dataX = data.M2Voltage;
+                    }
+                    if (comboBoxXchart.Text == "M2P")
+                    {
+                        dataX = data.M2P;
+                    }
+                    if (comboBoxXchart.Text == "M2I")
+                    {
+                        dataX = data.M2I;
+                    }
+                    if (comboBoxXchart.Text == "M2D")
+                    {
+                        dataX = data.M2D;
+                    }
+                    if (comboBoxXchart.Text == "M2x1")
+                    {
+                        dataX = data.M2x1;
+                    }
+                    if (comboBoxXchart.Text == "M2x2")
+                    {
+                        dataX = data.M2x2;
+                    }
+                    if (comboBoxXchart.Text == "M2x3")
+                    {
+                        dataX = data.M2x3;
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR", "Uknow value assigned on Axis X", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                if (comboBoxY1chart.Text != "")
+                {
+                    if (comboBoxY1chart.Text == "Speed")
+                    {
+                        dataY1 = data.M1Speed;
+                        dataY2 = data.M2Speed;
+
+                    }
+                    if (comboBoxY1chart.Text == "Position")
+                    {
+                        dataY1 = data.M1Position;
+                        dataY2 = data.M2Position;
+                    }
+                    if (comboBoxY1chart.Text == "Torque")
+                    {
+                        dataY1 = data.M1Speed;
+                        dataY2 = data.M2Speed;
+                    }
+                    if (comboBoxY1chart.Text == "Current")
+                    {
+                        dataY1 = data.M1Speed;
+                        dataY2 = data.M2Speed;
+                    }
+                    if (comboBoxY1chart.Text == "Voltage")
+                    {
+                        dataY1 = data.M1Speed;
+                        dataY2 = data.M2Speed;
+                    }
+                    if (comboBoxY1chart.Text == "P")
+                    {
+                        dataY1 = data.M1P;
+                        dataY2 = data.M2P;
+                    }
+                    if (comboBoxY1chart.Text == "I")
+                    {
+                        dataY1 = data.M1I;
+                        dataY2 = data.M2I;
+                    }
+                    if (comboBoxY1chart.Text == "D")
+                    {
+                        dataY1 = data.M1D;
+                        dataY2 = data.M2D;
+                    }
+                    if (comboBoxY1chart.Text == "x1")
+                    {
+                        dataY1 = data.M1x1;
+                        dataY2 = data.M2x1;
+                    }
+                    if (comboBoxY1chart.Text == "x2")
+                    {
+                        dataY1 = data.M1x2;
+                        dataY2 = data.M2x2;
+                    }
+                    if (comboBoxY1chart.Text == "x3")
+                    {
+                        dataY1 = data.M1x3;
+                        dataY2 = data.M2x3;
+                    }
+                }
+                if (comboBoxY2chart.Text != "")
+                {
+                    if (comboBoxY2chart.Text == "Speed")
+                    {
+                        dataY3 = data.M1Speed;
+                        dataY4 = data.M2Speed;
+
+                    }
+                    if (comboBoxY2chart.Text == "Position")
+                    {
+                        dataY3 = data.M1Position;
+                        dataY4 = data.M2Position;
+                    }
+                    if (comboBoxY2chart.Text == "Torque")
+                    {
+                        dataY3 = data.M1Speed;
+                        dataY4 = data.M2Speed;
+                    }
+                    if (comboBoxY2chart.Text == "Current")
+                    {
+                        dataY3 = data.M1Speed;
+                        dataY4 = data.M2Speed;
+                    }
+                    if (comboBoxY2chart.Text == "Voltage")
+                    {
+                        dataY3 = data.M1Speed;
+                        dataY4 = data.M2Speed;
+                    }
+                    if (comboBoxY2chart.Text == "P")
+                    {
+                        dataY3 = data.M1P;
+                        dataY4 = data.M2P;
+                    }
+                    if (comboBoxY2chart.Text == "I")
+                    {
+                        dataY3 = data.M1I;
+                        dataY4 = data.M2I;
+                    }
+                    if (comboBoxY2chart.Text == "D")
+                    {
+                        dataY3 = data.M1D;
+                        dataY4 = data.M2D;
+                    }
+                    if (comboBoxY2chart.Text == "x1")
+                    {
+                        dataY3 = data.M1x1;
+                        dataY4 = data.M2x1;
+                    }
+                    if (comboBoxY2chart.Text == "x2")
+                    {
+                        dataY3 = data.M1x2;
+                        dataY4 = data.M2x2;
+                    }
+                    if (comboBoxY2chart.Text == "x3")
+                    {
+                        dataY3 = data.M1x3;
+                        dataY4 = data.M2x3;
+                    }
+                }
+                    series1.Points.AddXY(dataX, dataY1);
+                    //series2.Points.AddXY(dataX, dataY2);
+                    //series3.Points.AddXY(dataX, dataY3);
+                    //series4.Points.AddXY(dataX, dataY4);
+                
+            }
+        }
+
+        private void btnStartM2Asynch_Click(object sender, EventArgs e)
+        {
+            start = false;
+            Thread.Sleep(10);
+            writeStartAddress = Convert.ToUInt16(settings.WriteGenAddr);
+            Write();
+            Thread.Sleep(10);
+            start = true;
+            startM1 = true;
+            M2Asynch = true;
+            ReadTEST();
+        }
+
+        private void btnStartM2BLDC_Click(object sender, EventArgs e)
+        {
+            start = false;
+            Thread.Sleep(10);
+            writeStartAddress = Convert.ToUInt16(settings.WriteGenAddr);
+            Write();
+            Thread.Sleep(10);
+            start = true;
+            startM1 = true;
+            M2BLDC = true;
+            ReadTEST();
+        }
+
+        private void btnStartM2PMSM_Click(object sender, EventArgs e)
+        {
+            start = false;
+            Thread.Sleep(10);
+            writeStartAddress = Convert.ToUInt16(settings.WriteGenAddr);
+            Write();
+            Thread.Sleep(10);
+            start = true;
+            startM1 = true;
+            M2PMSM = true;
+            ReadTEST();
+        }
+        private void EnableDisable()
+        {
+            if (settings.CheckM1SpeedS == false)
+            {
+                trackBarM1Speed.Enabled = false;
+                textBoxM1Speed.Enabled = false;
+            }
+            else
+            {
+                trackBarM1Speed.Enabled = true;
+                textBoxM1Speed.Enabled = true;
+            }
+            if (settings.CheckM1PositionS == false)
+            {
+                trackBarM1Position.Enabled = false;
+                textBoxM1Position.Enabled = false;
+            }
+            else
+            {
+                trackBarM1Position.Enabled = true;
+                textBoxM1Position.Enabled = true;
+            }
+            if (settings.CheckM1TorqueS == false)
+            {
+                trackBarM1Torque.Enabled = false;
+                textBoxM1Torque.Enabled = false;
+            }
+            else
+            {
+                trackBarM1Torque.Enabled = true;
+                textBoxM1Torque.Enabled = true;
+            }
+            if (settings.CheckM1CurrentS == false)
+            {
+                trackBarM1Current.Enabled = false;
+                textBoxM1Current.Enabled = false;
+            }
+            else
+            {
+                trackBarM1Current.Enabled = true;
+                textBoxM1Current.Enabled = true;
+            }
+            if (settings.CheckM1VoltageS == false)
+            {
+                trackBarM1Voltage.Enabled = false;
+                textBoxM1Voltage.Enabled = false;
+            }
+            else
+            {
+                trackBarM1Voltage.Enabled = true;
+                textBoxM1Voltage.Enabled = true;
+            }
+            if (settings.CheckM1PS == false)
+            {
+                trackBarM1P.Enabled = false;
+                textBoxM1P.Enabled = false;
+            }
+            else
+            {
+                trackBarM1P.Enabled = true;
+                textBoxM1P.Enabled = true;
+            }
+            if (settings.CheckM1IS == false)
+            {
+                trackBarM1I.Enabled = false;
+                textBoxM1I.Enabled = false;
+            }
+            else
+            {
+                trackBarM1I.Enabled = true;
+                textBoxM1I.Enabled = true;
+            }
+            if (settings.CheckM1DS == false)
+            {
+                trackBarM1D.Enabled = false;
+                textBoxM1D.Enabled = false;
+            }
+            else
+            {
+                trackBarM1D.Enabled = true;
+                textBoxM1D.Enabled = true;
+            }
+            if (settings.CheckM1x1S == false)
+            {
+                trackBarM1x1.Enabled = false;
+                textBoxM1x1.Enabled = false;
+            }
+            else
+            {
+                trackBarM1x1.Enabled = true;
+                textBoxM1x1.Enabled = true;
+            }
+            if (settings.CheckM1x2S == false)
+            {
+                trackBarM1x2.Enabled = false;
+                textBoxM1x2.Enabled = false;
+            }
+            else
+            {
+                trackBarM1x2.Enabled = true;
+                textBoxM1x2.Enabled = true;
+            }
+            if (settings.CheckM1x3S == false)
+            {
+                trackBarM1x3.Enabled = false;
+                textBoxM1x3.Enabled = false;
+            }
+            else
+            {
+                trackBarM1x3.Enabled = true;
+                textBoxM1x3.Enabled = true;
+            }
+            if (settings.CheckM2DCSpeedS == false)
+            {
+                trackBarM2DCSpeed.Enabled = false;
+                textBoxM2DCSpeed.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCSpeed.Enabled = true;
+                textBoxM2DCSpeed.Enabled = true;
+            }
+            if (settings.CheckM2DCPositionS == false)
+            {
+                trackBarM2DCPosition.Enabled = false;
+                textBoxM2DCPosition.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCPosition.Enabled = true;
+                textBoxM2DCPosition.Enabled = true;
+            }
+            if (settings.CheckM2DCTorqueS == false)
+            {
+                trackBarM2DCTorque.Enabled = false;
+                textBoxM2DCTorque.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCTorque.Enabled = true;
+                textBoxM2DCTorque.Enabled = true;
+            }
+            if (settings.CheckM2DCCurrentS == false)
+            {
+                trackBarM2DCCurrent.Enabled = false;
+                textBoxM2DCCurrent.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCCurrent.Enabled = true;
+                textBoxM2DCCurrent.Enabled = true;
+            }
+            if (settings.CheckM2DCVoltageS == false)
+            {
+                trackBarM2DCVoltage.Enabled = false;
+                textBoxM2DCVoltage.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCVoltage.Enabled = true;
+                textBoxM2DCVoltage.Enabled = true;
+            }
+            if (settings.CheckM2DCPS == false)
+            {
+                trackBarM2DCP.Enabled = false;
+                textBoxM2DCP.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCP.Enabled = true;
+                textBoxM2DCP.Enabled = true;
+            }
+            if (settings.CheckM2DCIS == false)
+            {
+                trackBarM2DCI.Enabled = false;
+                textBoxM2DCI.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCI.Enabled = true;
+                textBoxM2DCI.Enabled = true;
+            }
+            if (settings.CheckM2DCDS == false)
+            {
+                trackBarM2DCD.Enabled = false;
+                textBoxM2DCD.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCD.Enabled = true;
+                textBoxM2DCD.Enabled = true;
+            }
+            if (settings.CheckM2DCx1S == false)
+            {
+                trackBarM2DCx1.Enabled = false;
+                textBoxM2DCx1.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCx1.Enabled = true;
+                textBoxM2DCx1.Enabled = true;
+            }
+            if (settings.CheckM2DCx2S == false)
+            {
+                trackBarM2DCx2.Enabled = false;
+                textBoxM2DCx2.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCx2.Enabled = true;
+                textBoxM2DCx2.Enabled = true;
+            }
+            if (settings.CheckM2DCx3S == false)
+            {
+                trackBarM2DCx3.Enabled = false;
+                textBoxM2DCx3.Enabled = false;
+            }
+            else
+            {
+                trackBarM2DCx3.Enabled = true;
+                textBoxM2DCx3.Enabled = true;
+            }
+            if (settings.CheckM2AsynchSpeedS == false)
+            {
+                trackBarM2AsynchSpeed.Enabled = false;
+                textBoxM2AsynchSpeed.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchSpeed.Enabled = true;
+                textBoxM2AsynchSpeed.Enabled = true;
+            }
+            if (settings.CheckM2AsynchPositionS == false)
+            {
+                trackBarM2AsynchPosition.Enabled = false;
+                textBoxM2AsynchPosition.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchPosition.Enabled = true;
+                textBoxM2AsynchPosition.Enabled = true;
+            }
+            if (settings.CheckM2AsynchTorqueS == false)
+            {
+                trackBarM2AsynchTorque.Enabled = false;
+                textBoxM2AsynchTorque.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchTorque.Enabled = true;
+                textBoxM2AsynchTorque.Enabled = true;
+            }
+            if (settings.CheckM2AsynchCurrentS == false)
+            {
+                trackBarM2AsynchCurrent.Enabled = false;
+                textBoxM2AsynchCurrent.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchCurrent.Enabled = true;
+                textBoxM2AsynchCurrent.Enabled = true;
+            }
+            if (settings.CheckM2AsynchVoltageS == false)
+            {
+                trackBarM2AsynchVoltage.Enabled = false;
+                textBoxM2AsynchVoltage.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchVoltage.Enabled = true;
+                textBoxM2AsynchVoltage.Enabled = true;
+            }
+            if (settings.CheckM2AsynchPS == false)
+            {
+                trackBarM2AsynchP.Enabled = false;
+                textBoxM2AsynchP.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchP.Enabled = true;
+                textBoxM2AsynchP.Enabled = true;
+            }
+            if (settings.CheckM2AsynchIS == false)
+            {
+                trackBarM2AsynchI.Enabled = false;
+                textBoxM2AsynchI.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchI.Enabled = true;
+                textBoxM2AsynchI.Enabled = true;
+            }
+            if (settings.CheckM2AsynchDS == false)
+            {
+                trackBarM2AsynchD.Enabled = false;
+                textBoxM2AsynchD.Enabled = false;
+            }
+            else
+            {
+                trackBarM2AsynchD.Enabled = true;
+                textBoxM2AsynchD.Enabled = true;
+            }
+            if (settings.CheckM2Asynchx1S == false)
+            {
+                trackBarM2Asynchx1.Enabled = false;
+                textBoxM2Asynchx1.Enabled = false;
+            }
+            else
+            {
+                trackBarM2Asynchx1.Enabled = true;
+                textBoxM2Asynchx1.Enabled = true;
+            }
+            if (settings.CheckM2Asynchx2S == false)
+            {
+                trackBarM2Asynchx2.Enabled = false;
+                textBoxM2Asynchx2.Enabled = false;
+            }
+            else
+            {
+                trackBarM2Asynchx2.Enabled = true;
+                textBoxM2Asynchx2.Enabled = true;
+            }
+            if (settings.CheckM2Asynchx3S == false)
+            {
+                trackBarM2Asynchx3.Enabled = false;
+                textBoxM2Asynchx3.Enabled = false;
+            }
+            else
+            {
+                trackBarM2Asynchx3.Enabled = true;
+                textBoxM2Asynchx3.Enabled = true;
+            }
+            if (settings.CheckM2BLDCSpeedS == false)
+            {
+                trackBarM2BLDCSpeed.Enabled = false;
+                textBoxM2BLDCSpeed.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCSpeed.Enabled = true;
+                textBoxM2BLDCSpeed.Enabled = true;
+            }
+            if (settings.CheckM2BLDCPositionS == false)
+            {
+                trackBarM2BLDCPosition.Enabled = false;
+                textBoxM2BLDCPosition.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCPosition.Enabled = true;
+                textBoxM2BLDCPosition.Enabled = true;
+            }
+            if (settings.CheckM2BLDCTorqueS == false)
+            {
+                trackBarM2BLDCTorque.Enabled = false;
+                textBoxM2BLDCTorque.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCTorque.Enabled = true;
+                textBoxM2BLDCTorque.Enabled = true;
+            }
+            if (settings.CheckM2BLDCCurrentS == false)
+            {
+                trackBarM2BLDCCurrent.Enabled = false;
+                textBoxM2BLDCCurrent.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCCurrent.Enabled = true;
+                textBoxM2BLDCCurrent.Enabled = true;
+            }
+            if (settings.CheckM2BLDCVoltageS == false)
+            {
+                trackBarM2BLDCVoltage.Enabled = false;
+                textBoxM2BLDCVoltage.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCVoltage.Enabled = true;
+                textBoxM2BLDCVoltage.Enabled = true;
+            }
+            if (settings.CheckM2BLDCPS == false)
+            {
+                trackBarM2BLDCP.Enabled = false;
+                textBoxM2BLDCP.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCP.Enabled = true;
+                textBoxM2BLDCP.Enabled = true;
+            }
+            if (settings.CheckM2BLDCIS == false)
+            {
+                trackBarM2BLDCI.Enabled = false;
+                textBoxM2BLDCI.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCI.Enabled = true;
+                textBoxM2BLDCI.Enabled = true;
+            }
+            if (settings.CheckM2BLDCDS == false)
+            {
+                trackBarM2BLDCD.Enabled = false;
+                textBoxM2BLDCD.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCD.Enabled = true;
+                textBoxM2BLDCD.Enabled = true;
+            }
+            if (settings.CheckM2BLDCx1S == false)
+            {
+                trackBarM2BLDCx1.Enabled = false;
+                textBoxM2BLDCx1.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCx1.Enabled = true;
+                textBoxM2BLDCx1.Enabled = true;
+            }
+            if (settings.CheckM2BLDCx2S == false)
+            {
+                trackBarM2BLDCx2.Enabled = false;
+                textBoxM2BLDCx2.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCx2.Enabled = true;
+                textBoxM2BLDCx2.Enabled = true;
+            }
+            if (settings.CheckM2BLDCx3S == false)
+            {
+                trackBarM2BLDCx3.Enabled = false;
+                textBoxM2BLDCx3.Enabled = false;
+            }
+            else
+            {
+                trackBarM2BLDCx3.Enabled = true;
+                textBoxM2BLDCx3.Enabled = true;
+            }
+            if (settings.CheckM2PMSMSpeedS == false)
+            {
+                trackBarM2PMSMSpeed.Enabled = false;
+                textBoxM2PMSMSpeed.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMSpeed.Enabled = true;
+                textBoxM2PMSMSpeed.Enabled = true;
+            }
+            if (settings.CheckM2PMSMPositionS == false)
+            {
+                trackBarM2PMSMPosition.Enabled = false;
+                textBoxM2PMSMPosition.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMPosition.Enabled = true;
+                textBoxM2PMSMPosition.Enabled = true;
+            }
+            if (settings.CheckM2PMSMTorqueS == false)
+            {
+                trackBarM2PMSMTorque.Enabled = false;
+                textBoxM2PMSMTorque.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMTorque.Enabled = true;
+                textBoxM2PMSMTorque.Enabled = true;
+            }
+            if (settings.CheckM2PMSMCurrentS == false)
+            {
+                trackBarM2PMSMCurrent.Enabled = false;
+                textBoxM2PMSMCurrent.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMCurrent.Enabled = true;
+                textBoxM2PMSMCurrent.Enabled = true;
+            }
+            if (settings.CheckM2PMSMVoltageS == false)
+            {
+                trackBarM2PMSMVoltage.Enabled = false;
+                textBoxM2PMSMVoltage.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMVoltage.Enabled = true;
+                textBoxM2PMSMVoltage.Enabled = true;
+            }
+            if (settings.CheckM2PMSMPS == false)
+            {
+                trackBarM2PMSMP.Enabled = false;
+                textBoxM2PMSMP.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMP.Enabled = true;
+                textBoxM2PMSMP.Enabled = true;
+            }
+            if (settings.CheckM2PMSMIS == false)
+            {
+                trackBarM2PMSMI.Enabled = false;
+                textBoxM2PMSMI.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMI.Enabled = true;
+                textBoxM2PMSMI.Enabled = true;
+            }
+            if (settings.CheckM2PMSMDS == false)
+            {
+                trackBarM2PMSMD.Enabled = false;
+                textBoxM2PMSMD.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMD.Enabled = true;
+                textBoxM2PMSMD.Enabled = true;
+            }
+            if (settings.CheckM2PMSMx1S == false)
+            {
+                trackBarM2PMSMx1.Enabled = false;
+                textBoxM2PMSMx1.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMx1.Enabled = true;
+                textBoxM2PMSMx1.Enabled = true;
+            }
+            if (settings.CheckM2PMSMx2S == false)
+            {
+                trackBarM2PMSMx2.Enabled = false;
+                textBoxM2PMSMx2.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMx2.Enabled = true;
+                textBoxM2PMSMx2.Enabled = true;
+            }
+            if (settings.CheckM2PMSMx3S == false)
+            {
+                trackBarM2PMSMx3.Enabled = false;
+                textBoxM2PMSMx3.Enabled = false;
+            }
+            else
+            {
+                trackBarM2PMSMx3.Enabled = true;
+                textBoxM2PMSMx3.Enabled = true;
+            }
         }
 
     }

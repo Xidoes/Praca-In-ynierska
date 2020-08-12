@@ -44,7 +44,7 @@
   <AddrM1x3R />
   <CheckM1SpeedR>true</CheckM1SpeedR>
   <CheckM1PositionR>true</CheckM1PositionR>
-  <CheckM1TorqueR>false</CheckM1TorqueR>
+  <CheckM1TorqueR>true</CheckM1TorqueR>
   <CheckM1CurrentR>false</CheckM1CurrentR>
   <CheckM1VoltageR>false</CheckM1VoltageR>
   <CheckM1PR>false</CheckM1PR>
