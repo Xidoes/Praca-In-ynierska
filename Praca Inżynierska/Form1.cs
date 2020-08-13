@@ -99,6 +99,7 @@ namespace Praca_Inżynierska
         {
             try
             {
+                Stop();
                 serialPort.Close();                                     // zamyka port COM
                 progressBarComPort.Value = 0;
             }
@@ -153,6 +154,7 @@ namespace Praca_Inżynierska
                 Write();
                 Thread.Sleep(10);
                 start = true;
+                ReadTEST();
             }
             catch (Exception ex)
             {
@@ -775,9 +777,260 @@ namespace Praca_Inżynierska
                             {
                                 textBoxRead4000.Text = Convert.ToString(speedSumM1);
                                 textBoxRead4001.Text = Convert.ToString(result1[0]);
-                                textBoxRead4010.Text = settings.AddrM1SpeedR;
-                                textBoxRead4011.Text = settings.AddrM1SpeedRNOP;
-                                Runchart();
+                                string dataX = "";
+                                string dataY1 = "";
+                                string dataY2 = "";
+                                string dataY3 = "";
+                                string dataY4 = "";
+                                chart2.Series.Clear();
+                                Series series1 = new Series();
+                                Series series2 = new Series();
+                                Series series3 = new Series();
+                                Series series4 = new Series();
+                                series1.Name = "M1" + comboBoxY1chart.Text + "1";
+                                series1.IsVisibleInLegend = true;
+                                series1.ChartType = SeriesChartType.Spline;
+                                series2.Name = "M2" + comboBoxY1chart.Text + "1";
+                                series2.IsVisibleInLegend = true;
+                                series2.IsXValueIndexed = true;
+                                series2.ChartType = SeriesChartType.Spline;
+                                series3.Name = "M1" + comboBoxY2chart.Text + "2";
+                                series3.IsVisibleInLegend = true;
+                                series3.IsXValueIndexed = true;
+                                series3.ChartType = SeriesChartType.Spline;
+                                series4.Name = "M2" + comboBoxY2chart.Text + "2";
+                                series4.IsVisibleInLegend = true;
+                                series4.IsXValueIndexed = true;
+                                series4.ChartType = SeriesChartType.Spline;
+                                chart2.Series.Add(series1);
+                                chart2.Series.Add(series2);
+                                chart2.Series.Add(series3);
+                                chart2.Series.Add(series4);
+                                chart2.DataSource = export;
+                                foreach (Excel_Export data in export)
+                                {
+                                    if (comboBoxXchart.Text == "Time")
+                                    {
+                                        dataX = data.Time;
+                                    }
+                                    if (comboBoxXchart.Text == "ID")
+                                    {
+                                        dataX = Convert.ToString(data.ID);
+
+                                    }
+                                    if (comboBoxXchart.Text == "M1Speed")
+                                    {
+                                        dataX = data.M1Speed;
+                                    }
+                                    if (comboBoxXchart.Text == "M1Position")
+                                    {
+                                        dataX = data.M1Position;
+                                    }
+                                    if (comboBoxXchart.Text == "M1Torque")
+                                    {
+                                        dataX = data.M1Torque;
+                                    }
+                                    if (comboBoxXchart.Text == "M1Current")
+                                    {
+                                        dataX = data.M1Current;
+                                    }
+                                    if (comboBoxXchart.Text == "M1Voltage")
+                                    {
+                                        dataX = data.M1Voltage;
+                                    }
+                                    if (comboBoxXchart.Text == "M1P")
+                                    {
+                                        dataX = data.M1P;
+                                    }
+                                    if (comboBoxXchart.Text == "M1I")
+                                    {
+                                        dataX = data.M1I;
+                                    }
+                                    if (comboBoxXchart.Text == "M1D")
+                                    {
+                                        dataX = data.M1D;
+                                    }
+                                    if (comboBoxXchart.Text == "M1x1")
+                                    {
+                                        dataX = data.M1x1;
+                                    }
+                                    if (comboBoxXchart.Text == "M1x2")
+                                    {
+                                        dataX = data.M1x2;
+                                    }
+                                    if (comboBoxXchart.Text == "M1x3")
+                                    {
+                                        dataX = data.M1x3;
+                                    }
+                                    if (comboBoxXchart.Text == "M2Speed")
+                                    {
+                                        dataX = data.M2Speed;
+                                    }
+                                    if (comboBoxXchart.Text == "M2Position")
+                                    {
+                                        dataX = data.M2Position;
+                                    }
+                                    if (comboBoxXchart.Text == "M2Torque")
+                                    {
+                                        dataX = data.M2Torque;
+                                    }
+                                    if (comboBoxXchart.Text == "M2Current")
+                                    {
+                                        dataX = data.M2Current;
+                                    }
+                                    if (comboBoxXchart.Text == "M2Voltage")
+                                    {
+                                        dataX = data.M2Voltage;
+                                    }
+                                    if (comboBoxXchart.Text == "M2P")
+                                    {
+                                        dataX = data.M2P;
+                                    }
+                                    if (comboBoxXchart.Text == "M2I")
+                                    {
+                                        dataX = data.M2I;
+                                    }
+                                    if (comboBoxXchart.Text == "M2D")
+                                    {
+                                        dataX = data.M2D;
+                                    }
+                                    if (comboBoxXchart.Text == "M2x1")
+                                    {
+                                        dataX = data.M2x1;
+                                    }
+                                    if (comboBoxXchart.Text == "M2x2")
+                                    {
+                                        dataX = data.M2x2;
+                                    }
+                                    if (comboBoxXchart.Text == "M2x3")
+                                    {
+                                        dataX = data.M2x3;
+                                    }
+                                    
+                                    if (comboBoxY1chart.Text == "Speed")
+                                    {
+                                        dataY1 = data.M1Speed;
+                                        dataY2 = data.M2Speed;
+
+                                    }
+                                    if (comboBoxY1chart.Text == "Position")
+                                    {
+                                        dataY1 = data.M1Position;
+                                        dataY2 = data.M2Position;
+                                    }
+                                    if (comboBoxY1chart.Text == "Torque")
+                                    {
+                                        dataY1 = data.M1Speed;
+                                        dataY2 = data.M2Speed;
+                                    }
+                                    if (comboBoxY1chart.Text == "Current")
+                                    {
+                                        dataY1 = data.M1Speed;
+                                        dataY2 = data.M2Speed;
+                                    }
+                                    if (comboBoxY1chart.Text == "Voltage")
+                                    {
+                                        dataY1 = data.M1Speed;
+                                        dataY2 = data.M2Speed;
+                                    }
+                                    if (comboBoxY1chart.Text == "P")
+                                    {
+                                        dataY1 = data.M1P;
+                                        dataY2 = data.M2P;
+                                    }
+                                    if (comboBoxY1chart.Text == "I")
+                                    {
+                                        dataY1 = data.M1I;
+                                        dataY2 = data.M2I;
+                                    }
+                                    if (comboBoxY1chart.Text == "D")
+                                    {
+                                        dataY1 = data.M1D;
+                                        dataY2 = data.M2D;
+                                    }
+                                    if (comboBoxY1chart.Text == "x1")
+                                    {
+                                        dataY1 = data.M1x1;
+                                        dataY2 = data.M2x1;
+                                    }
+                                    if (comboBoxY1chart.Text == "x2")
+                                    {
+                                        dataY1 = data.M1x2;
+                                        dataY2 = data.M2x2;
+                                    }
+                                    if (comboBoxY1chart.Text == "x3")
+                                    {
+                                        dataY1 = data.M1x3;
+                                        dataY2 = data.M2x3;
+                                    }
+
+                                    if (comboBoxY2chart.Text == "Speed")
+                                    {
+                                        dataY3 = data.M1Speed;
+                                        dataY4 = data.M2Speed;
+
+                                    }
+                                    if (comboBoxY2chart.Text == "Position")
+                                    {
+                                        dataY3 = data.M1Position;
+                                        dataY4 = data.M2Position;
+                                    }
+                                    if (comboBoxY2chart.Text == "Torque")
+                                    {
+                                        dataY3 = data.M1Speed;
+                                        dataY4 = data.M2Speed;
+                                    }
+                                    if (comboBoxY2chart.Text == "Current")
+                                    {
+                                        dataY3 = data.M1Speed;
+                                        dataY4 = data.M2Speed;
+                                    }
+                                    if (comboBoxY2chart.Text == "Voltage")
+                                    {
+                                        dataY3 = data.M1Speed;
+                                        dataY4 = data.M2Speed;
+                                    }
+                                    if (comboBoxY2chart.Text == "P")
+                                    {
+                                        dataY3 = data.M1P;
+                                        dataY4 = data.M2P;
+                                    }
+                                    if (comboBoxY2chart.Text == "I")
+                                    {
+                                        dataY3 = data.M1I;
+                                        dataY4 = data.M2I;
+                                    }
+                                    if (comboBoxY2chart.Text == "D")
+                                    {
+                                        dataY3 = data.M1D;
+                                        dataY4 = data.M2D;
+                                    }
+                                    if (comboBoxY2chart.Text == "x1")
+                                    {
+                                        dataY3 = data.M1x1;
+                                        dataY4 = data.M2x1;
+                                    }
+                                    if (comboBoxY2chart.Text == "x2")
+                                    {
+                                        dataY3 = data.M1x2;
+                                        dataY4 = data.M2x2;
+                                    }
+                                    if (comboBoxY2chart.Text == "x3")
+                                    {
+                                        dataY3 = data.M1x3;
+                                        dataY4 = data.M2x3;
+                                    }
+                                    textBoxRead4010.Text = dataX;
+
+                                    //series1.XValueMember = Convert.ToString(data.ID);
+                                    //series1.YValueMembers = data.M1Speed;
+                                    //series1.Points.AddXY(Convert.ToString(data.ID), data.M1Speed);
+                                    series1.Points.AddXY(dataX, dataY1);
+
+                                    //series2.Points.AddXY(dataX, dataY2);
+                                    //series3.Points.AddXY(dataX, dataY3);
+                                    //series4.Points.AddXY(dataX, dataY4);
+                                }
                             }));
 
                             
@@ -1156,40 +1409,39 @@ namespace Praca_Inżynierska
         }
         private void Runchart()
         {
-            chart2.Series.Clear();
-            Series series1 = new Series();
-            Series series2 = new Series();
-            Series series3 = new Series();
-            Series series4 = new Series();
-            series1.Name = "M1" + comboBoxY1chart.Text+"1";
-            series1.IsVisibleInLegend = true;
-            series1.IsXValueIndexed = true;
-            series1.ChartType = SeriesChartType.Spline;
-            series2.Name = "M2" + comboBoxY1chart.Text + "1";
-            series2.IsVisibleInLegend = true;
-            series2.IsXValueIndexed = true;
-            series2.ChartType = SeriesChartType.Spline;
-            series3.Name = "M1" + comboBoxY2chart.Text + "2";
-            series3.IsVisibleInLegend = true;
-            series3.IsXValueIndexed = true;
-            series3.ChartType = SeriesChartType.Spline;
-            series4.Name = "M2" + comboBoxY2chart.Text + "2";
-            series4.IsVisibleInLegend = true;
-            series4.IsXValueIndexed = true;
-            series4.ChartType = SeriesChartType.Spline;
-            chart2.Series.Add(series1);
-            chart2.Series.Add(series2);
-            chart2.Series.Add(series3);
-            chart2.Series.Add(series4);
-            chart2.DataSource = export;
-            foreach (Excel_Export data in export)
-            {
+          
                 string dataX = "";
                 string dataY1 = "";
                 string dataY2 = "";
                 string dataY3 = "";
                 string dataY4 = "";
-                if (comboBoxXchart.Text != "")
+                chart2.Series.Clear();
+                Series series1 = new Series();
+                Series series2 = new Series();
+                Series series3 = new Series();
+                Series series4 = new Series();
+                series1.Name = "M1" + comboBoxY1chart.Text + "1";
+                series1.IsVisibleInLegend = true;
+                series1.IsXValueIndexed = true;
+                series1.ChartType = SeriesChartType.Spline;
+                series2.Name = "M2" + comboBoxY1chart.Text + "1";
+                series2.IsVisibleInLegend = true;
+                series2.IsXValueIndexed = true;
+                series2.ChartType = SeriesChartType.Spline;
+                series3.Name = "M1" + comboBoxY2chart.Text + "2";
+                series3.IsVisibleInLegend = true;
+                series3.IsXValueIndexed = true;
+                series3.ChartType = SeriesChartType.Spline;
+                series4.Name = "M2" + comboBoxY2chart.Text + "2";
+                series4.IsVisibleInLegend = true;
+                series4.IsXValueIndexed = true;
+                series4.ChartType = SeriesChartType.Spline;
+                chart2.Series.Add(series1);
+                chart2.Series.Add(series2);
+                chart2.Series.Add(series3);
+                chart2.Series.Add(series4);
+                chart2.DataSource = export;
+                foreach (Excel_Export data in export)
                 {
                     if (comboBoxXchart.Text == "Time")
                     {
@@ -1198,7 +1450,9 @@ namespace Praca_Inżynierska
                     if (comboBoxXchart.Text == "ID")
                     {
                         dataX = Convert.ToString(data.ID);
-                    }
+                        textBoxRead4011.Text = dataX;
+
+                }
                     if (comboBoxXchart.Text == "M1Speed")
                     {
                         dataX = data.M1Speed;
@@ -1291,9 +1545,7 @@ namespace Praca_Inżynierska
                     {
                         MessageBox.Show("ERROR", "Uknow value assigned on Axis X", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                if (comboBoxY1chart.Text != "")
-                {
+
                     if (comboBoxY1chart.Text == "Speed")
                     {
                         dataY1 = data.M1Speed;
@@ -1350,9 +1602,7 @@ namespace Praca_Inżynierska
                         dataY1 = data.M1x3;
                         dataY2 = data.M2x3;
                     }
-                }
-                if (comboBoxY2chart.Text != "")
-                {
+
                     if (comboBoxY2chart.Text == "Speed")
                     {
                         dataY3 = data.M1Speed;
@@ -1409,13 +1659,18 @@ namespace Praca_Inżynierska
                         dataY3 = data.M1x3;
                         dataY4 = data.M2x3;
                     }
-                }
-                    series1.Points.AddXY(dataX, dataY1);
+                    textBoxRead4010.Text = dataX;
+
+                    //series1.XValueMember = Convert.ToString(data.ID);
+                    //series1.YValueMembers = data.M1Speed;
+                    series1.Points.AddXY(Convert.ToString(data.ID), data.M1Speed);
+                    
+                    
                     //series2.Points.AddXY(dataX, dataY2);
                     //series3.Points.AddXY(dataX, dataY3);
                     //series4.Points.AddXY(dataX, dataY4);
-                
-            }
+                }
+            
         }
 
         private void btnStartM2Asynch_Click(object sender, EventArgs e)
