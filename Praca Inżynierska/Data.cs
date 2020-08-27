@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praca_Inżynierska
 {
-    public class Excel_Export
+    public class Data
     {
         public int ID { get; set; }
 

@@ -70,7 +70,7 @@ namespace Praca_Inżynierska
             settings.ReadGenAddr = txtBoxReadGenAddress.Text;
             settings.WriteGenAddr = txtBoxWriteGenAddress.Text;
             settings.ReadGenNOP = txtBoxReadGenNOP.Text;
-            settings.ReadGenNOP = txtBoxReadGenNOP.Text;
+            settings.WriteGenNOP = txtBoxWriteGenNOP.Text;
 
             settings.SlaveAddressM1 = txtBoxM1SlaveAddress.Text;
             settings.SlaveAddressM2DC = txtBoxM2DCSlaveAddress.Text;
@@ -1187,7 +1187,7 @@ namespace Praca_Inżynierska
             txtBoxReadGenAddress.Text = settings.ReadGenAddr;
             txtBoxWriteGenAddress.Text = settings.WriteGenAddr;
             txtBoxReadGenNOP.Text = settings.ReadGenNOP;
-            txtBoxReadGenNOP.Text = settings.ReadGenNOP;
+            txtBoxWriteGenNOP.Text = settings.WriteGenNOP;
             txtBoxM1SlaveAddress.Text = settings.SlaveAddressM1;
             txtBoxM2DCSlaveAddress.Text = settings.SlaveAddressM2DC;
             txtBoxM2AsynchSlaveAddress.Text = settings.SlaveAddressM2Asynch;

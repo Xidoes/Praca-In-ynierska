@@ -135,8 +135,6 @@
             this.txtBoxM1SpeedS = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxM1SlaveAddress = new System.Windows.Forms.TextBox();
-            this.btnSetToDefault = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtBoxM2DCVoltageRNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCVoltageR = new System.Windows.Forms.CheckBox();
@@ -529,17 +527,16 @@
             this.M2PMSM = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBoxSaveConfig = new System.Windows.Forms.ComboBox();
-            this.btnConfigSave = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label140 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.txtBoxReadGenNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxReadGenAddress = new System.Windows.Forms.TextBox();
             this.txtBoxWriteGenAddress = new System.Windows.Forms.TextBox();
             this.txtBoxWriteGenNOP = new System.Windows.Forms.TextBox();
             this.label142 = new System.Windows.Forms.Label();
             this.label143 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtBoxReadGenAddress = new System.Windows.Forms.TextBox();
+            this.txtBoxReadGenNOP = new System.Windows.Forms.TextBox();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -564,7 +561,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(953, 103);
+            this.btnSave.Location = new System.Drawing.Point(9, 63);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
@@ -574,7 +571,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(953, 136);
+            this.btnClose.Location = new System.Drawing.Point(949, 34);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 1;
@@ -692,7 +689,7 @@
             this.cBoxBaudRate.Name = "cBoxBaudRate";
             this.cBoxBaudRate.Size = new System.Drawing.Size(83, 21);
             this.cBoxBaudRate.TabIndex = 13;
-            this.cBoxBaudRate.Text = "zenon";
+            this.cBoxBaudRate.Text = "115200";
             // 
             // groupBox2
             // 
@@ -1560,26 +1557,6 @@
             this.txtBoxM1SlaveAddress.Size = new System.Drawing.Size(60, 20);
             this.txtBoxM1SlaveAddress.TabIndex = 0;
             this.txtBoxM1SlaveAddress.Text = "9";
-            // 
-            // btnSetToDefault
-            // 
-            this.btnSetToDefault.Location = new System.Drawing.Point(953, 70);
-            this.btnSetToDefault.Name = "btnSetToDefault";
-            this.btnSetToDefault.Size = new System.Drawing.Size(157, 23);
-            this.btnSetToDefault.TabIndex = 7;
-            this.btnSetToDefault.Text = "Set To Default";
-            this.btnSetToDefault.UseVisualStyleBackColor = true;
-            this.btnSetToDefault.Click += new System.EventHandler(this.BtnSetToDefault_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(953, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Set As Default";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // groupBox4
             // 
@@ -5132,8 +5109,8 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.comboBoxSaveConfig);
-            this.groupBox3.Controls.Add(this.btnConfigSave);
-            this.groupBox3.Location = new System.Drawing.Point(9, 240);
+            this.groupBox3.Controls.Add(this.btnSave);
+            this.groupBox3.Location = new System.Drawing.Point(9, 175);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(214, 96);
             this.groupBox3.TabIndex = 49;
@@ -5160,73 +5137,18 @@
             this.comboBoxSaveConfig.TabIndex = 1;
             this.comboBoxSaveConfig.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSaveConfig_SelectedIndexChanged);
             // 
-            // btnConfigSave
-            // 
-            this.btnConfigSave.Location = new System.Drawing.Point(9, 58);
-            this.btnConfigSave.Name = "btnConfigSave";
-            this.btnConfigSave.Size = new System.Drawing.Size(75, 23);
-            this.btnConfigSave.TabIndex = 0;
-            this.btnConfigSave.Text = "Save";
-            this.btnConfigSave.UseVisualStyleBackColor = true;
-            this.btnConfigSave.Click += new System.EventHandler(this.BtnConfigSave_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtBoxWriteGenAddress);
             this.groupBox5.Controls.Add(this.txtBoxWriteGenNOP);
             this.groupBox5.Controls.Add(this.label142);
             this.groupBox5.Controls.Add(this.label143);
-            this.groupBox5.Location = new System.Drawing.Point(9, 343);
+            this.groupBox5.Location = new System.Drawing.Point(9, 277);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(200, 100);
             this.groupBox5.TabIndex = 50;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Write Adress General";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.txtBoxReadGenAddress);
-            this.groupBox8.Controls.Add(this.txtBoxReadGenNOP);
-            this.groupBox8.Controls.Add(this.label141);
-            this.groupBox8.Controls.Add(this.label140);
-            this.groupBox8.Location = new System.Drawing.Point(9, 450);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(200, 100);
-            this.groupBox8.TabIndex = 51;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Read Adress General";
-            // 
-            // label140
-            // 
-            this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(4, 20);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(73, 13);
-            this.label140.TabIndex = 0;
-            this.label140.Text = "Start Address:";
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(4, 50);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(91, 13);
-            this.label141.TabIndex = 1;
-            this.label141.Text = "Number of Points:";
-            // 
-            // txtBoxReadGenNOP
-            // 
-            this.txtBoxReadGenNOP.Location = new System.Drawing.Point(93, 47);
-            this.txtBoxReadGenNOP.Name = "txtBoxReadGenNOP";
-            this.txtBoxReadGenNOP.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxReadGenNOP.TabIndex = 2;
-            // 
-            // txtBoxReadGenAddress
-            // 
-            this.txtBoxReadGenAddress.Location = new System.Drawing.Point(93, 17);
-            this.txtBoxReadGenAddress.Name = "txtBoxReadGenAddress";
-            this.txtBoxReadGenAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxReadGenAddress.TabIndex = 3;
             // 
             // txtBoxWriteGenAddress
             // 
@@ -5260,6 +5182,51 @@
             this.label143.TabIndex = 4;
             this.label143.Text = "Start Address:";
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txtBoxReadGenAddress);
+            this.groupBox8.Controls.Add(this.txtBoxReadGenNOP);
+            this.groupBox8.Controls.Add(this.label141);
+            this.groupBox8.Controls.Add(this.label140);
+            this.groupBox8.Location = new System.Drawing.Point(9, 383);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 100);
+            this.groupBox8.TabIndex = 51;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Read Adress General";
+            // 
+            // txtBoxReadGenAddress
+            // 
+            this.txtBoxReadGenAddress.Location = new System.Drawing.Point(93, 17);
+            this.txtBoxReadGenAddress.Name = "txtBoxReadGenAddress";
+            this.txtBoxReadGenAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxReadGenAddress.TabIndex = 3;
+            // 
+            // txtBoxReadGenNOP
+            // 
+            this.txtBoxReadGenNOP.Location = new System.Drawing.Point(93, 47);
+            this.txtBoxReadGenNOP.Name = "txtBoxReadGenNOP";
+            this.txtBoxReadGenNOP.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxReadGenNOP.TabIndex = 2;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(4, 50);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(91, 13);
+            this.label141.TabIndex = 1;
+            this.label141.Text = "Number of Points:";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(4, 20);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(73, 13);
+            this.label140.TabIndex = 0;
+            this.label140.Text = "Start Address:";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5269,13 +5236,10 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnSetToDefault);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSave);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Settings";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -5343,7 +5307,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSetToDefault;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBoxM1x3R;
         private System.Windows.Forms.CheckBox checkBoxM1x2R;
@@ -5399,7 +5362,6 @@
         private System.Windows.Forms.TextBox txtBoxM1DS;
         private System.Windows.Forms.TextBox txtBoxM1IS;
         private System.Windows.Forms.TextBox txtBoxM1PS;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBoxM2DCx3R;
         private System.Windows.Forms.CheckBox checkBoxM2DCx2R;
@@ -5822,7 +5784,6 @@
         private System.Windows.Forms.TextBox txtBoxM2PMSMVoltageS;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBoxSaveConfig;
-        private System.Windows.Forms.Button btnConfigSave;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtBoxWriteGenAddress;
         private System.Windows.Forms.TextBox txtBoxWriteGenNOP;

@@ -9,11 +9,11 @@
   <SlaveAddressM2Asynch>9</SlaveAddressM2Asynch>
   <SlaveAddressM2BLDC>9</SlaveAddressM2BLDC>
   <SlaveAddressM2PMSM>9</SlaveAddressM2PMSM>
-  <AddrM1SpeedS>4001</AddrM1SpeedS>
+  <AddrM1SpeedS>4000</AddrM1SpeedS>
   <AddrM1PositionS>4002</AddrM1PositionS>
-  <AddrM1TorqueS>4003</AddrM1TorqueS>
-  <AddrM1CurrentS />
-  <AddrM1VoltageS />
+  <AddrM1TorqueS>4005</AddrM1TorqueS>
+  <AddrM1CurrentS>4006</AddrM1CurrentS>
+  <AddrM1VoltageS>4007</AddrM1VoltageS>
   <AddrM1PS />
   <AddrM1IS />
   <AddrM1DS />
@@ -23,8 +23,8 @@
   <CheckM1SpeedS>true</CheckM1SpeedS>
   <CheckM1PositionS>true</CheckM1PositionS>
   <CheckM1TorqueS>true</CheckM1TorqueS>
-  <CheckM1CurrentS>false</CheckM1CurrentS>
-  <CheckM1VoltageS>false</CheckM1VoltageS>
+  <CheckM1CurrentS>true</CheckM1CurrentS>
+  <CheckM1VoltageS>true</CheckM1VoltageS>
   <CheckM1PS>false</CheckM1PS>
   <CheckM1IS>false</CheckM1IS>
   <CheckM1DS>false</CheckM1DS>
@@ -34,8 +34,8 @@
   <AddrM1SpeedR>4000</AddrM1SpeedR>
   <AddrM1PositionR>4002</AddrM1PositionR>
   <AddrM1TorqueR>4005</AddrM1TorqueR>
-  <AddrM1CurrentR />
-  <AddrM1VoltageR />
+  <AddrM1CurrentR>4006</AddrM1CurrentR>
+  <AddrM1VoltageR>4007</AddrM1VoltageR>
   <AddrM1PR />
   <AddrM1IR />
   <AddrM1DR />
@@ -45,8 +45,8 @@
   <CheckM1SpeedR>true</CheckM1SpeedR>
   <CheckM1PositionR>true</CheckM1PositionR>
   <CheckM1TorqueR>true</CheckM1TorqueR>
-  <CheckM1CurrentR>false</CheckM1CurrentR>
-  <CheckM1VoltageR>false</CheckM1VoltageR>
+  <CheckM1CurrentR>true</CheckM1CurrentR>
+  <CheckM1VoltageR>true</CheckM1VoltageR>
   <CheckM1PR>false</CheckM1PR>
   <CheckM1IR>false</CheckM1IR>
   <CheckM1DR>false</CheckM1DR>
@@ -231,9 +231,9 @@
   <CheckM2PMSMx3R>false</CheckM2PMSMx3R>
   <AddrM1SpeedSNOP>1</AddrM1SpeedSNOP>
   <AddrM1PositionSNOP>1</AddrM1PositionSNOP>
-  <AddrM1TorqueSNOP>2</AddrM1TorqueSNOP>
-  <AddrM1CurrentSNOP />
-  <AddrM1VoltageSNOP />
+  <AddrM1TorqueSNOP>1</AddrM1TorqueSNOP>
+  <AddrM1CurrentSNOP>1</AddrM1CurrentSNOP>
+  <AddrM1VoltageSNOP>1</AddrM1VoltageSNOP>
   <AddrM1PSNOP />
   <AddrM1ISNOP />
   <AddrM1DSNOP />
@@ -241,10 +241,10 @@
   <AddrM1x2SNOP />
   <AddrM1x3SNOP />
   <AddrM1SpeedRNOP>2</AddrM1SpeedRNOP>
-  <AddrM1PositionRNOP>2</AddrM1PositionRNOP>
+  <AddrM1PositionRNOP>1</AddrM1PositionRNOP>
   <AddrM1TorqueRNOP>1</AddrM1TorqueRNOP>
-  <AddrM1CurrentRNOP />
-  <AddrM1VoltageRNOP />
+  <AddrM1CurrentRNOP>1</AddrM1CurrentRNOP>
+  <AddrM1VoltageRNOP>1</AddrM1VoltageRNOP>
   <AddrM1PRNOP />
   <AddrM1IRNOP />
   <AddrM1DRNOP />
@@ -341,5 +341,6 @@
   <AddrM2PMSMx3RNOP />
   <ReadGenAddr>4000</ReadGenAddr>
   <ReadGenNOP>20</ReadGenNOP>
-  <WriteGenAddr>4001</WriteGenAddr>
+  <WriteGenAddr>4000</WriteGenAddr>
+  <WriteGenNOP>20</WriteGenNOP>
 </Settings>
