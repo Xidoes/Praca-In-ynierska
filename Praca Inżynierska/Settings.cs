@@ -12,11 +12,7 @@ namespace Praca_Inżynierska
         public string CPDataBits { get; set; }
         public string CPStopBits { get; set; }
         public string CPParity { get; set; }
-        public string SlaveAddressM1 { get; set; }
-        public string SlaveAddressM2DC { get; set; }
-        public string SlaveAddressM2Asynch { get; set; }
-        public string SlaveAddressM2BLDC { get; set; }
-        public string SlaveAddressM2PMSM { get; set; }
+        public string SlaveAddress { get; set; }
         public string AddrM1SpeedS { get; set; }
         public string AddrM1PositionS { get; set; }
         public string AddrM1TorqueS { get; set; }
@@ -110,6 +106,7 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchTorqueS { get; set; }
         public string AddrM2AsynchCurrentS { get; set; }
         public string AddrM2AsynchVoltageS { get; set; }
+        public string AddrM2AsynchFrequencyS { get; set; }
         public string AddrM2AsynchPS { get; set; }
         public string AddrM2AsynchIS { get; set; }
         public string AddrM2AsynchDS { get; set; }
@@ -121,6 +118,7 @@ namespace Praca_Inżynierska
         public bool CheckM2AsynchTorqueS { get; set; }
         public bool CheckM2AsynchCurrentS { get; set; }
         public bool CheckM2AsynchVoltageS { get; set; }
+        public bool CheckM2AsynchFrequencyS { get; set; }
         public bool CheckM2AsynchPS { get; set; }
         public bool CheckM2AsynchIS { get; set; }
         public bool CheckM2AsynchDS { get; set; }
@@ -132,6 +130,7 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchTorqueR { get; set; }
         public string AddrM2AsynchCurrentR { get; set; }
         public string AddrM2AsynchVoltageR { get; set; }
+        public string AddrM2AsynchFrequencyR { get; set; }
         public string AddrM2AsynchPR { get; set; }
         public string AddrM2AsynchIR { get; set; }
         public string AddrM2AsynchDR { get; set; }
@@ -143,6 +142,7 @@ namespace Praca_Inżynierska
         public bool CheckM2AsynchTorqueR { get; set; }
         public bool CheckM2AsynchCurrentR { get; set; }
         public bool CheckM2AsynchVoltageR { get; set; }
+        public bool CheckM2AsynchFrequencyR { get; set; }
         public bool CheckM2AsynchPR { get; set; }
         public bool CheckM2AsynchIR { get; set; }
         public bool CheckM2AsynchDR { get; set; }
@@ -198,6 +198,7 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMTorqueS { get; set; }
         public string AddrM2PMSMCurrentS { get; set; }
         public string AddrM2PMSMVoltageS { get; set; }
+        public string AddrM2PMSMFrequencyS { get; set; }
         public string AddrM2PMSMPS { get; set; }
         public string AddrM2PMSMIS { get; set; }
         public string AddrM2PMSMDS { get; set; }
@@ -209,6 +210,7 @@ namespace Praca_Inżynierska
         public bool CheckM2PMSMTorqueS { get; set; }
         public bool CheckM2PMSMCurrentS { get; set; }
         public bool CheckM2PMSMVoltageS { get; set; }
+        public bool CheckM2PMSMFrequencyS { get; set; }
         public bool CheckM2PMSMPS { get; set; }
         public bool CheckM2PMSMIS { get; set; }
         public bool CheckM2PMSMDS { get; set; }
@@ -220,6 +222,7 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMTorqueR { get; set; }
         public string AddrM2PMSMCurrentR { get; set; }
         public string AddrM2PMSMVoltageR { get; set; }
+        public string AddrM2PMSMFrequencyR { get; set; }
         public string AddrM2PMSMPR { get; set; }
         public string AddrM2PMSMIR { get; set; }
         public string AddrM2PMSMDR { get; set; }
@@ -231,6 +234,7 @@ namespace Praca_Inżynierska
         public bool CheckM2PMSMTorqueR { get; set; }
         public bool CheckM2PMSMCurrentR { get; set; }
         public bool CheckM2PMSMVoltageR { get; set; }
+        public bool CheckM2PMSMFrequencyR { get; set; }
         public bool CheckM2PMSMPR { get; set; }
         public bool CheckM2PMSMIR { get; set; }
         public bool CheckM2PMSMDR { get; set; }
@@ -288,6 +292,7 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchTorqueSNOP { get; set; }
         public string AddrM2AsynchCurrentSNOP { get; set; }
         public string AddrM2AsynchVoltageSNOP { get; set; }
+        public string AddrM2AsynchFrequencySNOP { get; set; }
         public string AddrM2AsynchPSNOP { get; set; }
         public string AddrM2AsynchISNOP { get; set; }
         public string AddrM2AsynchDSNOP { get; set; }
@@ -300,6 +305,7 @@ namespace Praca_Inżynierska
         public string AddrM2AsynchPowerRNOP { get; set; }
         public string AddrM2AsynchCurrentRNOP { get; set; }
         public string AddrM2AsynchVoltageRNOP { get; set; }
+        public string AddrM2AsynchFrequencyRNOP { get; set; }
         public string AddrM2AsynchPRNOP { get; set; }
         public string AddrM2AsynchIRNOP { get; set; }
         public string AddrM2AsynchDRNOP { get; set; }
@@ -334,6 +340,7 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMTorqueSNOP { get; set; }
         public string AddrM2PMSMCurrentSNOP { get; set; }
         public string AddrM2PMSMVoltageSNOP { get; set; }
+        public string AddrM2PMSMFrequencySNOP { get; set; }
         public string AddrM2PMSMPSNOP { get; set; }
         public string AddrM2PMSMISNOP { get; set; }
         public string AddrM2PMSMDSNOP { get; set; }
@@ -346,6 +353,7 @@ namespace Praca_Inżynierska
         public string AddrM2PMSMPowerRNOP { get; set; }
         public string AddrM2PMSMCurrentRNOP { get; set; }
         public string AddrM2PMSMVoltageRNOP { get; set; }
+        public string AddrM2PMSMFrequencyRNOP { get; set; }
         public string AddrM2PMSMPRNOP { get; set; }
         public string AddrM2PMSMIRNOP { get; set; }
         public string AddrM2PMSMDRNOP { get; set; }

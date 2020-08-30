@@ -4,11 +4,7 @@
   <CPDataBits>8</CPDataBits>
   <CPStopBits>One</CPStopBits>
   <CPParity>None</CPParity>
-  <SlaveAddressM1>9</SlaveAddressM1>
-  <SlaveAddressM2DC>9</SlaveAddressM2DC>
-  <SlaveAddressM2Asynch>9</SlaveAddressM2Asynch>
-  <SlaveAddressM2BLDC>9</SlaveAddressM2BLDC>
-  <SlaveAddressM2PMSM>9</SlaveAddressM2PMSM>
+  <SlaveAddress>9</SlaveAddress>
   <AddrM1SpeedS>4000</AddrM1SpeedS>
   <AddrM1PositionS>4002</AddrM1PositionS>
   <AddrM1TorqueS>4005</AddrM1TorqueS>
@@ -102,6 +98,7 @@
   <AddrM2AsynchTorqueS />
   <AddrM2AsynchCurrentS />
   <AddrM2AsynchVoltageS />
+  <AddrM2AsynchFrequencyS />
   <AddrM2AsynchPS />
   <AddrM2AsynchIS />
   <AddrM2AsynchDS />
@@ -113,6 +110,7 @@
   <CheckM2AsynchTorqueS>false</CheckM2AsynchTorqueS>
   <CheckM2AsynchCurrentS>false</CheckM2AsynchCurrentS>
   <CheckM2AsynchVoltageS>false</CheckM2AsynchVoltageS>
+  <CheckM2AsynchFrequencyS>false</CheckM2AsynchFrequencyS>
   <CheckM2AsynchPS>false</CheckM2AsynchPS>
   <CheckM2AsynchIS>false</CheckM2AsynchIS>
   <CheckM2AsynchDS>false</CheckM2AsynchDS>
@@ -124,6 +122,7 @@
   <AddrM2AsynchTorqueR />
   <AddrM2AsynchCurrentR />
   <AddrM2AsynchVoltageR />
+  <AddrM2AsynchFrequencyR />
   <AddrM2AsynchPR />
   <AddrM2AsynchIR />
   <AddrM2AsynchDR />
@@ -135,6 +134,7 @@
   <CheckM2AsynchTorqueR>false</CheckM2AsynchTorqueR>
   <CheckM2AsynchCurrentR>false</CheckM2AsynchCurrentR>
   <CheckM2AsynchVoltageR>false</CheckM2AsynchVoltageR>
+  <CheckM2AsynchFrequencyR>false</CheckM2AsynchFrequencyR>
   <CheckM2AsynchPR>false</CheckM2AsynchPR>
   <CheckM2AsynchIR>false</CheckM2AsynchIR>
   <CheckM2AsynchDR>false</CheckM2AsynchDR>
@@ -190,6 +190,7 @@
   <AddrM2PMSMTorqueS />
   <AddrM2PMSMCurrentS />
   <AddrM2PMSMVoltageS />
+  <AddrM2PMSMFrequencyS />
   <AddrM2PMSMPS />
   <AddrM2PMSMIS />
   <AddrM2PMSMDS />
@@ -201,6 +202,7 @@
   <CheckM2PMSMTorqueS>false</CheckM2PMSMTorqueS>
   <CheckM2PMSMCurrentS>false</CheckM2PMSMCurrentS>
   <CheckM2PMSMVoltageS>false</CheckM2PMSMVoltageS>
+  <CheckM2PMSMFrequencyS>false</CheckM2PMSMFrequencyS>
   <CheckM2PMSMPS>false</CheckM2PMSMPS>
   <CheckM2PMSMIS>false</CheckM2PMSMIS>
   <CheckM2PMSMDS>false</CheckM2PMSMDS>
@@ -212,6 +214,7 @@
   <AddrM2PMSMTorqueR />
   <AddrM2PMSMCurrentR />
   <AddrM2PMSMVoltageR />
+  <AddrM2PMSMFrequencyR />
   <AddrM2PMSMPR />
   <AddrM2PMSMIR />
   <AddrM2PMSMDR />
@@ -223,6 +226,7 @@
   <CheckM2PMSMTorqueR>false</CheckM2PMSMTorqueR>
   <CheckM2PMSMCurrentR>false</CheckM2PMSMCurrentR>
   <CheckM2PMSMVoltageR>false</CheckM2PMSMVoltageR>
+  <CheckM2PMSMFrequencyR>false</CheckM2PMSMFrequencyR>
   <CheckM2PMSMPR>false</CheckM2PMSMPR>
   <CheckM2PMSMIR>false</CheckM2PMSMIR>
   <CheckM2PMSMDR>false</CheckM2PMSMDR>
@@ -278,6 +282,7 @@
   <AddrM2AsynchTorqueSNOP />
   <AddrM2AsynchCurrentSNOP />
   <AddrM2AsynchVoltageSNOP />
+  <AddrM2AsynchFrequencySNOP />
   <AddrM2AsynchPSNOP />
   <AddrM2AsynchISNOP />
   <AddrM2AsynchDSNOP />
@@ -289,6 +294,7 @@
   <AddrM2AsynchTorqueRNOP />
   <AddrM2AsynchCurrentRNOP />
   <AddrM2AsynchVoltageRNOP />
+  <AddrM2AsynchFrequencyRNOP />
   <AddrM2AsynchPRNOP />
   <AddrM2AsynchIRNOP />
   <AddrM2AsynchDRNOP />
@@ -322,6 +328,7 @@
   <AddrM2PMSMTorqueSNOP />
   <AddrM2PMSMCurrentSNOP />
   <AddrM2PMSMVoltageSNOP />
+  <AddrM2PMSMFrequencySNOP />
   <AddrM2PMSMPSNOP />
   <AddrM2PMSMISNOP />
   <AddrM2PMSMDSNOP />
@@ -333,6 +340,7 @@
   <AddrM2PMSMTorqueRNOP />
   <AddrM2PMSMCurrentRNOP />
   <AddrM2PMSMVoltageRNOP />
+  <AddrM2PMSMFrequencyRNOP />
   <AddrM2PMSMPRNOP />
   <AddrM2PMSMIRNOP />
   <AddrM2PMSMDRNOP />

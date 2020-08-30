@@ -27,6 +27,7 @@ namespace Praca_Inżynierska
         public string M2Torque { get; set; }
         public string M2Current { get; set; }
         public string M2Voltage { get; set; }
+        public string M2Frequency { get; set; }
         public string M2P { get; set; }
         public string M2I { get; set; }
         public string M2D { get; set; }

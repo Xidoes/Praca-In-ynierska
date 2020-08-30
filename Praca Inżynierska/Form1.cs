@@ -22,23 +22,23 @@ namespace Praca_Inżynierska
     {
 
         public SerialPort serialPort = new SerialPort();                           //zarezerwowanie nazwy zmiennej portu seryjnego
-        int duration = 0;                                               //ilość tików czasu = 0
+        int duration = 0;                                                           //ilość tików czasu = 0
         public bool readStart = false;                                              //zmienna start, domyślnie ustawiona na false.
-        public bool writeStart = false;
-        public byte slaveAddress = 9;                                          //adres urządzenia slave
-        public ushort readStartAddress = 4000;                                 //
-        public ushort writeStartAddress;                                        //
-        public ushort numberOfPoints = 20;                                     //ilość adresów rejestru, które program ma obsłużyć
-        public List<Data> export = new List<Data>();    //przypisanie zmiennej export do listy klasy Excel Export
-        public Settings settings = new Settings();
-        public Form2 form2 = new Form2();
-        public bool startM1 = false;
-        public bool startM2 = false;
-        public bool M2DC = false;
-        public bool M2Asynch = false;
-        public bool M2BLDC = false;
-        public bool M2PMSM = false;
-        public bool chartStart = false;
+        public bool writeStart = false;                                         
+        public byte slaveAddress = 0;                                               //rezerwuje zmienną dla Adresu slave
+        public ushort readStartAddress = 0;                                         //rezerwuje zmienną dla Adresu read
+        public ushort writeStartAddress;                                            //rezerwuje zmienną dla Adresu write
+        public ushort numberOfPoints = 0;                                           //ilość adresów rejestru, które program ma obsłużyć
+        public List<Data> export = new List<Data>();                                //przypisanie zmiennej export do listy klasy Data
+        public Settings settings = new Settings();                                  //przypisanie zmiennej settings dla klasy settings
+        public Form2 form2 = new Form2();                                           //przypisanie zmiennej form2 do Formularza drugiego
+        public bool startM1 = false;                                                //przypisanie zmiennej startu silnika M1
+        public bool startM2 = false;                                                //przypisanie zmiennej startu silnika M2
+        public bool M2DC = false;                                                   //przypisanie zmiennej startu silnika M2 DC
+        public bool M2Asynch = false;                                               //przypisanie zmiennej startu silnika M2 Asynchronicznego
+        public bool M2BLDC = false;                                                 //przypisanie zmiennej startu silnika M2 BLDC
+        public bool M2PMSM = false;                                                 //przypisanie zmiennej startu silnika M2 PMSM
+        public bool chartStart = false;                                             //przypisanie zmiennej startu wykresu
 
 
 
@@ -58,14 +58,10 @@ namespace Praca_Inżynierska
         {
             try
             {
-                readStart = false;
+                readStart = false;                                             //wyłącza komunikacje poprzed protokół modbus
                 string[] serialPorts = SerialPort.GetPortNames();             //pobranie listy dostępnych portów COM
                 cBoxComPort.Items.AddRange(serialPorts);                      //pokazanie dostępnych portów w polu wyboru Port COM
-                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
-                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config.xml", FileMode.Open, FileAccess.Read))
-                {
-                    settings = serializer.Deserialize(fs) as Settings;
-                }
+                LockSettings();                                                 //wyłącza wszystkie pola przed wgraniem konfiguracji
 
             }
             catch (Exception ex)
@@ -75,22 +71,22 @@ namespace Praca_Inżynierska
 
         }
         private void BtnOpenComPort_Click(object sender, EventArgs e)
-        {                           //do dokończenia tak aby mieć wybór Parity i Stop Bite
+        {                           
             try
             {
-                serialPort.PortName = cBoxComPort.Text;
-                serialPort.BaudRate = Convert.ToInt32(settings.CPBaudRate);
-                serialPort.DataBits = Convert.ToInt32(settings.CPDataBits);
-                serialPort.Parity = (Parity)Enum.Parse(typeof(Parity), settings.CPParity);
-                serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), settings.CPStopBits);
-                serialPort.Open();
+                serialPort.PortName = cBoxComPort.Text;                                             //pobiera nazwę portu z pola
+                serialPort.BaudRate = Convert.ToInt32(settings.CPBaudRate);                         //pobiera baud rate zdefiniowany w formularzu 2
+                serialPort.DataBits = Convert.ToInt32(settings.CPDataBits);                         //pobiera data bits rate zdefiniowane w formularzu 2
+                serialPort.Parity = (Parity)Enum.Parse(typeof(Parity), settings.CPParity);          //pobiera parity rate zdefiniowany w formularzu 2
+                serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), settings.CPStopBits);  //pobiera stop bits rate zdefiniowane w formularzu 2
+                serialPort.Open();                                                                  //otwiera port com dla wyżej zdefiniowanych wartości
                 progressBarComPort.Value = 100;                        //Progress bar zmienia kolor na zielony, jako oznaczenie poprawnego połączenia z portem COM.
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                progressBarComPort.Value = 0;                           //W wypadku wystąpienia błędu,
+                progressBarComPort.Value = 0;                           //W wypadku wystąpienia błędu, ustawia progress bar na 0
             }
         }
 
@@ -98,9 +94,9 @@ namespace Praca_Inżynierska
         {
             try
             {
-                Stop();
-                serialPort.Close();                                     // zamyka port COM
-                progressBarComPort.Value = 0;
+                Stop();                                                 //kończy komunikację przez protokół modbus
+                serialPort.Close();                                     //zamyka port COM
+                progressBarComPort.Value = 0;                           //ustawia progress bar na 0
             }
             catch (Exception ex)
             {
@@ -121,55 +117,6 @@ namespace Praca_Inżynierska
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (readStart == true)
-                {
-                    Stop();
-                    startM1 = true;
-                    Thread.Sleep(50);
-                    ReadTEST();
-                    Thread.Sleep(50);
-                    Runchart();
-                }
-                else
-                {
-                    readStart = true;                       //ustawia wartość start na true
-                    startM1 = true;
-                    ReadTEST();
-                }
-            }
-            catch (TimeoutException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void BtnWriteMultipleRegistersWord_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                writeStart = true;
-                TestWrite();
-                writeStart = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void BtnStop_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Stop();                        //ustawia wartość parametru start na false, po powoduje zatrzymanie ściągania wartości z sterownika
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             try
@@ -182,12 +129,12 @@ namespace Praca_Inżynierska
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void ReadTEST()
+        private void ReadTEST()             //metoda odpowiada za odbiór danych z rejestrów protokołu modbus
         {
             try
             {
 
-                if (serialPort.IsOpen)
+                if (serialPort.IsOpen)      //sprawdza czy port com jest otwarty
                 {
                     int speedSumM1 = 0;
                     int positionSumM1 = 0;
@@ -205,6 +152,7 @@ namespace Praca_Inżynierska
                     int torqueSumM2 = 0;
                     int currentSumM2 = 0;
                     int voltageSumM2 = 0;
+                    int frequencySumM2 = 0;
                     int PsumM2 = 0;
                     int IsumM2 = 0;
                     int DsumM2 = 0;
@@ -212,31 +160,34 @@ namespace Praca_Inżynierska
                     int x2SumM2 = 0;
                     int x3SumM2 = 0;
                     int ID = 1;
+                    slaveAddress = Convert.ToByte(settings.SlaveAddress);           //przypisuje do zmiennej wartość slave adress z klasy settings
+                    readStartAddress = Convert.ToUInt16(settings.ReadGenAddr);      //przypisuje do zmiennej wartość read adress z klasy settings
+                    numberOfPoints = Convert.ToUInt16(settings.ReadGenNOP);         //przypisuje do zmiennej wartość number of points z klasy settings
 
 
-                    duration = 0;
-                    timer.Enabled = true;
-                    timer.Start();
+                    duration = 0;                                                   //ustawia czas na 0
+                    timer.Enabled = true;                                           //odblokowuje timer
+                    timer.Start();                                                  // startuje timer
                     ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>
                     {
-                        IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);
-                        masterRtu.Transport.Retries = 5000;
-                        masterRtu.Transport.ReadTimeout = 100;
-                        masterRtu.Transport.WaitToRetryMilliseconds = 10;
+                        IModbusMaster masterRtu = ModbusSerialMaster.CreateRtu(serialPort);     //tworzy połączenie z urządzeniem przez konkretny port com 
+                        masterRtu.Transport.Retries = 5000;                                     //ustawia ilość powtarzanych połączeń z urządzeniem przed stratą połączenia
+                        masterRtu.Transport.ReadTimeout = 100;                                  //czas do timeoutu       
+                        masterRtu.Transport.WaitToRetryMilliseconds = 10;                       //ile bęma czekać na ponowne wysłanei wiadomości przez protokół
 
-                        while (readStart == true)
+                        while (readStart == true)                                               //dopuki readstart m wartość true, będzie wysyłał wiadomość
                         {
-                            if (writeStart == false)
+                            if (writeStart == false)                                            //sprawdza czy akurat nie zapisujemy rejestrów
                             {
-                                ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress, numberOfPoints);
-                                if (startM1 == true)
+                                ushort[] result1 = masterRtu.ReadHoldingRegisters(slaveAddress, readStartAddress,numberOfPoints);   //wysyła wiadomość z prośbą o odczyt rejestrów
+                                if (startM1 == true)                                                                                //sprawdza czy silnik M1 powinien działać
                                 {
-                                    if (settings.CheckM1SpeedR == true)
-                                    {
-                                        speedSumM1 = 0;
+                                    if (settings.CheckM1SpeedR == true)                                                             //sprawdza czy wartość speed ma zostać zczytana
+                                    {   
+                                        speedSumM1 = 0;                                                                             //zeruje wartość zmiennej speedSumM1                                                 
                                         for (int i = Convert.ToInt32(settings.AddrM1SpeedR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM1SpeedR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM1SpeedRNOP); i++)
                                         {
-                                            speedSumM1 += result1[i];
+                                            speedSumM1 += result1[i];               //dla każdej odpowiedzi dla konkretnych adresów sumuje wartości prędkości
                                         }
                                     }
                                     if (settings.CheckM1PositionR == true)
@@ -456,6 +407,14 @@ namespace Praca_Inżynierska
                                                 voltageSumM2 += result1[i];
                                             }
                                         }
+                                        if (settings.CheckM2AsynchFrequencyR == true)
+                                        {
+                                            frequencySumM2 = 0;
+                                            for (int i = Convert.ToInt32(settings.AddrM2AsynchFrequencyR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2AsynchFrequencyR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2AsynchFrequencyRNOP); i++)
+                                            {
+                                                frequencySumM2 += result1[i];
+                                            }
+                                        }
                                         if (settings.CheckM2AsynchPR == true)
                                         {
                                             PsumM2 = 0;
@@ -638,6 +597,14 @@ namespace Praca_Inżynierska
                                                 voltageSumM2 += result1[i];
                                             }
                                         }
+                                        if (settings.CheckM2PMSMFrequencyR == true)
+                                        {
+                                            frequencySumM2 = 0;
+                                            for (int i = Convert.ToInt32(settings.AddrM2PMSMFrequencyR) - Convert.ToInt32(settings.ReadGenAddr); i < Convert.ToInt32(settings.AddrM2PMSMFrequencyR) - Convert.ToInt32(settings.ReadGenAddr) + Convert.ToInt32(settings.AddrM2PMSMFrequencyRNOP); i++)
+                                            {
+                                                frequencySumM2 += result1[i];
+                                            }
+                                        }
                                         if (settings.CheckM2PMSMPR == true)
                                         {
                                             PsumM2 = 0;
@@ -686,15 +653,14 @@ namespace Praca_Inżynierska
                                                 x3SumM2 += result1[i];
                                             }
                                         }
-                                        //powerSumM1 = currentSumM1 * voltageSumM1;
-                                        //powerSumM2 = currentSumM2 * voltageSumM2;
+        
                                     }
                                 }
-                                export.Add(new Data() { ID = ID, M1Speed = Convert.ToString(speedSumM1), M1Position = Convert.ToString(positionSumM1), M1Torque = Convert.ToString(torqueSumM1), M1Current = Convert.ToString(currentSumM1), M1Voltage = Convert.ToString(voltageSumM1), M1P = Convert.ToString(PsumM1), M1I = Convert.ToString(IsumM1), M1D = Convert.ToString(DsumM1), M1x1 = Convert.ToString(x1SumM1), M1x2 = Convert.ToString(x2SumM1), M1x3 = Convert.ToString(x3SumM1), M2Speed = Convert.ToString(speedSumM2), M2Position = Convert.ToString(positionSumM2), M2Torque = Convert.ToString(torqueSumM2), M2Current = Convert.ToString(currentSumM2), M2Voltage = Convert.ToString(voltageSumM2), M2P = Convert.ToString(PsumM2), M2I = Convert.ToString(IsumM2), M2D = Convert.ToString(DsumM2), M2x1 = Convert.ToString(x1SumM2), M2x2 = Convert.ToString(x2SumM2), M2x3 = Convert.ToString(x3SumM2) });
-
-                                readM1Speed.Invoke(new Action(delegate ()
+                                export.Add(new Data() { ID = ID, M1Speed = Convert.ToString(speedSumM1), M1Position = Convert.ToString(positionSumM1), M1Torque = Convert.ToString(torqueSumM1), M1Current = Convert.ToString(currentSumM1), M1Voltage = Convert.ToString(voltageSumM1), M1P = Convert.ToString(PsumM1), M1I = Convert.ToString(IsumM1), M1D = Convert.ToString(DsumM1), M1x1 = Convert.ToString(x1SumM1), M1x2 = Convert.ToString(x2SumM1), M1x3 = Convert.ToString(x3SumM1), M2Speed = Convert.ToString(speedSumM2), M2Position = Convert.ToString(positionSumM2), M2Torque = Convert.ToString(torqueSumM2), M2Current = Convert.ToString(currentSumM2), M2Voltage = Convert.ToString(voltageSumM2),M2Frequency = Convert.ToString(frequencySumM2), M2P = Convert.ToString(PsumM2), M2I = Convert.ToString(IsumM2), M2D = Convert.ToString(DsumM2), M2x1 = Convert.ToString(x1SumM2), M2x2 = Convert.ToString(x2SumM2), M2x3 = Convert.ToString(x3SumM2) });
+                                //dodajemy wszystkie zsumowane wartości do listy export stworzonej na bazie klasy Data
+                                readM1Speed.Invoke(new Action(delegate ()                   //invokuje nowe okna
                                 {
-                                    readM1Speed.Text = Convert.ToString(speedSumM1);
+                                    readM1Speed.Text = Convert.ToString(speedSumM1);        //wyświetla aktualne wartości zmiennych w polu tekstowym
                                     readM1Position.Text = Convert.ToString(positionSumM1);
                                     readM1Torque.Text = Convert.ToString(torqueSumM1);
                                     readM1Current.Text = Convert.ToString(currentSumM1);
@@ -712,16 +678,17 @@ namespace Praca_Inżynierska
                                     readM2x1.Text = Convert.ToString(x1SumM2);
                                     readM2x2.Text = Convert.ToString(x2SumM2);
                                     readM2x3.Text = Convert.ToString(x3SumM2);
+                                    Runchart();             //uruchamia metodę odpowiedzialną za wykresy
                                 }));
                                 ID = ID + 1;                // zwiększa ID    
-                                Thread.Sleep(20);
+                                Thread.Sleep(20);           //opóźnienie 20min
                             }
                         }
                     }));
                 }
                 else
                 {
-                    MessageBox.Show("Port COM jest zamknięty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Port COM jest zamknięty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // wyświetla błąd w wypadku zamkniętego portu com
                 }
             }
             catch (Exception ex)
@@ -730,7 +697,7 @@ namespace Praca_Inżynierska
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Stop()
+        private void Stop()  //metoda zatrzymująca wszystkie działania związane z komunikacją z urządzeniem, nie zamykająca portu com
         {
             readStart = false;
             writeStart = false;
@@ -740,23 +707,17 @@ namespace Praca_Inżynierska
             M2Asynch = false;
             M2BLDC = false;
             M2PMSM = false;
+            chartStart = false;
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
-            form2.ShowDialog();
+            form2.ShowDialog();         //otwiera formularz 2
         }
-
-        private void BtnTEST_Click(object sender, EventArgs e)
-        {
-            //Form2 form2 = new Form2(cBoxBaudRate.Text);
-            //form2.ShowDialog();
-            //form2.GetData();
-            //Thread.Sleep(1000);
-        }
-        private void BtnStartM2DC_Click(object sender, EventArgs e)
+        private void BtnStartM2DC_Click(object sender, EventArgs e) //uruchamia komunikacje przypisaną do silnika M2
         {
             Stop();
+            chartStart = true;
             startM1 = true;
             startM2 = true;
             M2DC = true;
@@ -765,7 +726,7 @@ namespace Praca_Inżynierska
         }
         private void TrackBarM1Speed_Scroll(object sender, EventArgs e)
         {
-            textBoxM1Speed.Text = trackBarM1Speed.Value.ToString();
+            textBoxM1Speed.Text = trackBarM1Speed.Value.ToString();             //w wypadku ruchu suwakiem, zmienia dopisane wartości w polu tekstowym
         }
 
         private void TrackBarM1Position_Scroll(object sender, EventArgs e)
@@ -818,8 +779,6 @@ namespace Praca_Inżynierska
         {
             textBoxM1x3.Text = trackBarM1x3.Value.ToString();
         }
-
-
 
         private void TrackBarM2DCSpeed_Scroll(object sender, EventArgs e)
         {
@@ -1042,12 +1001,13 @@ namespace Praca_Inżynierska
             
         }
 
-        private void BtnStartM1_Click(object sender, EventArgs e)
+        private void BtnStartM1_Click(object sender, EventArgs e) 
         {
 
             Stop();
             startM1 = true;
             readStart = true;
+            chartStart = true;
             ReadTEST();
 
         }
@@ -1056,13 +1016,13 @@ namespace Praca_Inżynierska
         {
             try
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(Settings));
-                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config" + comboBoxLoadConfig.Text + ".xml", FileMode.Open, FileAccess.Read))
+                XmlSerializer serializer = new XmlSerializer(typeof(Settings));         //tworzy zmienną serializer jako nową klasę XMLSerializer z zmiennymi klasy Settings
+                using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config" + comboBoxLoadConfig.Text + ".xml", FileMode.Open, FileAccess.Read))  //otwiera plik configuracyjny określony w polu comboBoxLoadConfig  
                 {
-                    settings = serializer.Deserialize(fs) as Settings;
+                    settings = serializer.Deserialize(fs) as Settings;          //dodaje wartości z pliku do zmiennych klasy settings
                 }
 
-                EnableDisable();
+                EnableDisable();                //metoda odpowiedzialna za odblokowywanie i zablokowywanie okien configuracji.
             }
             catch (Exception ex)
             {
@@ -1081,13 +1041,10 @@ namespace Praca_Inżynierska
                     masterRtu.Transport.Retries = 5000;
                     masterRtu.Transport.WaitToRetryMilliseconds = 5;
 
-                    ushort[] WriteMulipleRegistersTable = new ushort[Convert.ToInt16(settings.WriteGenNOP)];
+                    ushort[] WriteMulipleRegistersTable = new ushort[Convert.ToInt16(settings.WriteGenNOP)];        //tworzy matrycę WriteMultiple registers z ilością pół określoną w formularzu konfiguracyjnym
                     if (settings.CheckM1SpeedS == true)
                     {
-                        WriteMulipleRegistersTable[Convert.ToInt16(settings.AddrM1SpeedS) - Convert.ToInt16(settings.WriteGenAddr)] = Convert.ToUInt16(textBoxM1Speed.Text);
-                        readM1Speed.Text = Convert.ToString(Convert.ToInt16(settings.AddrM1SpeedS) - Convert.ToInt16(settings.WriteGenAddr));
-                        readM1Position.Text = settings.WriteGenNOP;
-
+                        WriteMulipleRegistersTable[Convert.ToInt16(settings.AddrM1SpeedS) - Convert.ToInt16(settings.WriteGenAddr)] = Convert.ToUInt16(textBoxM1Speed.Text); //nadpisuje konkretne pola wartościami ustawionymi w polach tekstowych
                     }
                     if (settings.CheckM1PositionS == true)
                     {
@@ -1305,9 +1262,9 @@ namespace Praca_Inżynierska
                     {
                         WriteMulipleRegistersTable[Convert.ToInt16(settings.AddrM2PMSMx3S) - Convert.ToInt16(settings.WriteGenAddr)] = Convert.ToUInt16(textBoxM2PMSMx3.Text);
                     }
-                    Thread.Sleep(10);
+                    Thread.Sleep(10); // opóźnienie 10ms
                     masterRtu.WriteMultipleRegisters(slaveAddress, Convert.ToUInt16(settings.WriteGenAddr), WriteMulipleRegistersTable);      //wysyła wcześniej zdefiniowane wartości na konkretne adresy urządzenia
-                    writeStart = false;
+                    writeStart = false;         //ustawia writeStart jako false
                 }
             }
             catch (Exception ex)
@@ -1325,15 +1282,14 @@ namespace Praca_Inżynierska
             string dataY4 = "";
             if (chartStart == true) 
             {
-                Thread.Sleep(200);
-                chart2.Series.Clear();
-                Series series1 = new Series();
+                chart2.Series.Clear();          //czyści wszystkie dane na wykresie
+                Series series1 = new Series();  //generuje nowe serie danych
                 Series series2 = new Series();
                 Series series3 = new Series();
                 Series series4 = new Series();
-                series1.Name = "M1" + comboBoxY1chart.Text + "1";
-                series1.IsVisibleInLegend = true;
-                series1.ChartType = SeriesChartType.Spline;
+                series1.Name = "M1" + comboBoxY1chart.Text + "1";   //definiuje nazwe seri
+                series1.IsVisibleInLegend = true;                   //seria widoczna w legendzie
+                series1.ChartType = SeriesChartType.Spline;         //rodzaj wykresu
                 series2.Name = "M2" + comboBoxY1chart.Text + "1";
                 series2.IsVisibleInLegend = true;
                 series2.IsXValueIndexed = true;
@@ -1346,20 +1302,20 @@ namespace Praca_Inżynierska
                 series4.IsVisibleInLegend = true;
                 series4.IsXValueIndexed = true;
                 series4.ChartType = SeriesChartType.Spline;
-                chart2.Series.Add(series1);
+                chart2.Series.Add(series1);     //dodaje serie do wykresu.
                 chart2.Series.Add(series2);
                 chart2.Series.Add(series3);
                 chart2.Series.Add(series4);
-                chart2.DataSource = export;
-                    foreach (Data data in export)
+                chart2.DataSource = export;     //źródło ustawia źródło danych dla wykresu jako export
+                    foreach (Data data in export)   
                     {
-                        if (comboBoxXchart.Text == "Time")
+                        if (comboBoxXchart.Text == "Time")      //sprawdza jakie pole ma wyświetlić, poniżej będą definiowane wartości na osi X
                         {
-                        dataX = "x";
+                        dataX = "x";            // dla czasu dane ustawia jako X, jako że będą definiowane inaczej
                         }
                         if (comboBoxXchart.Text == "ID")
                         {
-                            dataX = Convert.ToString(data.ID);
+                            dataX = Convert.ToString(data.ID);  //reszta danych to konkretn nowe pola z listy export
 
                         }
                         if (comboBoxXchart.Text == "M1Speed")
@@ -1451,7 +1407,7 @@ namespace Praca_Inżynierska
                             dataX = data.M2x3;
                         }
 
-                        if (comboBoxY1chart.Text == "Speed")
+                        if (comboBoxY1chart.Text == "Speed") // poniżej będą definiowane wartości na osi Y
                         {
                             dataY1 = data.M1Speed;
                             dataY2 = data.M2Speed;
@@ -1464,18 +1420,23 @@ namespace Praca_Inżynierska
                         }
                         if (comboBoxY1chart.Text == "Torque")
                         {
-                            dataY1 = data.M1Speed;
-                            dataY2 = data.M2Speed;
+                            dataY1 = data.M1Torque;
+                            dataY2 = data.M2Torque;
                         }
                         if (comboBoxY1chart.Text == "Current")
                         {
-                            dataY1 = data.M1Speed;
-                            dataY2 = data.M2Speed;
+                            dataY1 = data.M1Current;
+                            dataY2 = data.M2Current;
                         }
                         if (comboBoxY1chart.Text == "Voltage")
                         {
-                            dataY1 = data.M1Speed;
-                            dataY2 = data.M2Speed;
+                            dataY1 = data.M1Voltage;
+                            dataY2 = data.M2Voltage;
+                        }
+                        if (comboBoxY1chart.Text == "Frequency")
+                        {
+                            dataY1 = Convert.ToString(0); //M1 to silnik prądu stałego, więc częstotliwość nie będzie widoczna
+                            dataY2 = data.M2Frequency;
                         }
                         if (comboBoxY1chart.Text == "P")
                         {
@@ -1534,6 +1495,11 @@ namespace Praca_Inżynierska
                             dataY3 = data.M1Speed;
                             dataY4 = data.M2Speed;
                         }
+                        if (comboBoxY2chart.Text == "Frequency")
+                        {
+                            dataY3 = Convert.ToString(0);
+                            dataY4 = data.M2Frequency;
+                        }
                         if (comboBoxY2chart.Text == "P")
                         {
                             dataY3 = data.M1P;
@@ -1564,44 +1530,63 @@ namespace Praca_Inżynierska
                             dataY3 = data.M1x3;
                             dataY4 = data.M2x3;
                         }
-                    //textBoxRead4010.Text = dataX;
 
-                    //series1.XValueMember = Convert.ToString(data.ID);
-                    //series1.YValueMembers = data.M1Speed;
-                    //series1.Points.AddXY(Convert.ToString(data.ID), data.M1Speed);
-                    if (dataX == "x")
+                    if (dataX == "x")  //ustawia wyjątek gdy dane mają być liczone po czasie
                     {
                         series1.XValueType = ChartValueType.Time;
+                        series2.XValueType = ChartValueType.Time;
+                        series3.XValueType = ChartValueType.Time;
+                        series4.XValueType = ChartValueType.Time;
                         series1.Points.AddY(dataY1);
-                        //System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time
+                        series2.Points.AddY(dataY2);
+                        series3.Points.AddY(dataY3);
+                        series4.Points.AddY(dataY4);
                     }
-                    else
+                    else   //dane gdy na osi X wartością nie jest czas
                     {
                         series1.Points.AddXY(dataX, dataY1);
-                        //series2.Points.AddXY(dataX, dataY2);
-                        //series3.Points.AddXY(dataX, dataY3);
-                        //series4.Points.AddXY(dataX, dataY4);
+                        series2.Points.AddXY(dataX, dataY2);
+                        series3.Points.AddXY(dataX, dataY3);
+                        series4.Points.AddXY(dataX, dataY4);
                     }
                     }
-                    Thread.Sleep(20);
+                    Thread.Sleep(20); // opóźnienie 20ms
             }
         }
 
-        private void btnStartM2Asynch_Click(object sender, EventArgs e)
+        private void btnStartM2Asynch_Click(object sender, EventArgs e) 
         {
-
+            Stop();
+            chartStart = true;
+            startM1 = true;
+            startM2 = true;
+            M2Asynch = true;
+            readStart = true;
+            ReadTEST();
         }
 
         private void btnStartM2BLDC_Click(object sender, EventArgs e)
         {
-
+            Stop();
+            chartStart = true;
+            startM1 = true;
+            startM2 = true;
+            M2BLDC = true;
+            readStart = true;
+            ReadTEST();
         }
 
         private void btnStartM2PMSM_Click(object sender, EventArgs e)
         {
-
+            Stop();
+            chartStart = true;
+            startM1 = true;
+            startM2 = true;
+            M2PMSM = true;
+            readStart = true;
+            ReadTEST();
         }
-        private void EnableDisable()
+        private void EnableDisable()        //z zalezności od warości klasy settings, umożliwia lub uniemożliwia korzystanie z konkretnych pól
         {
             if (settings.CheckM1SpeedS == false)
             {
@@ -2155,18 +2140,6 @@ namespace Praca_Inżynierska
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             chartStart = true;
@@ -2247,6 +2220,123 @@ namespace Praca_Inżynierska
             writeStart = true;
             TestWrite();
             writeStart = false;
+        }
+        private void LockSettings()   //blokuje wszystkie pola umożliwiające wprowadzenie danych 
+        {
+            textBoxM1Speed.Enabled = false;
+            trackBarM1Speed.Enabled = false;
+            textBoxM1Position.Enabled = false;
+            trackBarM1Position.Enabled = false;
+            textBoxM1Torque.Enabled = false;
+            trackBarM1Torque.Enabled = false;
+            textBoxM1Current.Enabled = false;
+            trackBarM1Current.Enabled = false;
+            textBoxM1Voltage.Enabled = false;
+            trackBarM1Voltage.Enabled = false;
+            textBoxM1P.Enabled = false;
+            trackBarM1P.Enabled = false;
+            textBoxM1I.Enabled = false;
+            trackBarM1I.Enabled = false;
+            textBoxM1D.Enabled = false;
+            trackBarM1D.Enabled = false;
+            textBoxM1x1.Enabled = false;
+            trackBarM1x1.Enabled = false;
+            textBoxM1x2.Enabled = false;
+            trackBarM1x2.Enabled = false;
+            textBoxM1x3.Enabled = false;
+            trackBarM1x3.Enabled = false;
+            textBoxM2DCSpeed.Enabled = false;
+            trackBarM2DCSpeed.Enabled = false;
+            textBoxM2DCPosition.Enabled = false;
+            trackBarM2DCPosition.Enabled = false;
+            textBoxM2DCTorque.Enabled = false;
+            trackBarM2DCTorque.Enabled = false;
+            textBoxM2DCCurrent.Enabled = false;
+            trackBarM2DCCurrent.Enabled = false;
+            textBoxM2DCVoltage.Enabled = false;
+            trackBarM2DCVoltage.Enabled = false;
+            textBoxM2DCP.Enabled = false;
+            trackBarM2DCP.Enabled = false;
+            textBoxM2DCI.Enabled = false;
+            trackBarM2DCI.Enabled = false;
+            textBoxM2DCD.Enabled = false;
+            trackBarM2DCD.Enabled = false;
+            textBoxM2DCx1.Enabled = false;
+            trackBarM2DCx1.Enabled = false;
+            textBoxM2DCx2.Enabled = false;
+            trackBarM2DCx2.Enabled = false;
+            textBoxM2DCx3.Enabled = false;
+            trackBarM2DCx3.Enabled = false;
+            textBoxM2AsynchSpeed.Enabled = false;
+            trackBarM2AsynchSpeed.Enabled = false;
+            textBoxM2AsynchPosition.Enabled = false;
+            trackBarM2AsynchPosition.Enabled = false;
+            textBoxM2AsynchTorque.Enabled = false;
+            trackBarM2AsynchTorque.Enabled = false;
+            textBoxM2AsynchCurrent.Enabled = false;
+            trackBarM2AsynchCurrent.Enabled = false;
+            textBoxM2AsynchVoltage.Enabled = false;
+            trackBarM2AsynchVoltage.Enabled = false;
+            textBoxM2AsynchFrequency.Enabled = false;
+            trackBarM2AsynchFrequency.Enabled = false;
+            textBoxM2AsynchP.Enabled = false;
+            trackBarM2AsynchP.Enabled = false;
+            textBoxM2AsynchI.Enabled = false;
+            trackBarM2AsynchI.Enabled = false;
+            textBoxM2AsynchD.Enabled = false;
+            trackBarM2AsynchD.Enabled = false;
+            textBoxM2Asynchx1.Enabled = false;
+            trackBarM2Asynchx1.Enabled = false;
+            textBoxM2Asynchx2.Enabled = false;
+            trackBarM2Asynchx2.Enabled = false;
+            textBoxM2Asynchx3.Enabled = false;
+            trackBarM2Asynchx3.Enabled = false;
+            textBoxM2BLDCSpeed.Enabled = false;
+            trackBarM2BLDCSpeed.Enabled = false;
+            textBoxM2BLDCPosition.Enabled = false;
+            trackBarM2BLDCPosition.Enabled = false;
+            textBoxM2BLDCTorque.Enabled = false;
+            trackBarM2BLDCTorque.Enabled = false;
+            textBoxM2BLDCCurrent.Enabled = false;
+            trackBarM2BLDCCurrent.Enabled = false;
+            textBoxM2BLDCVoltage.Enabled = false;
+            trackBarM2BLDCVoltage.Enabled = false;
+            textBoxM2BLDCP.Enabled = false;
+            trackBarM2BLDCP.Enabled = false;
+            textBoxM2BLDCI.Enabled = false;
+            trackBarM2BLDCI.Enabled = false;
+            textBoxM2BLDCD.Enabled = false;
+            trackBarM2BLDCD.Enabled = false;
+            textBoxM2BLDCx1.Enabled = false;
+            trackBarM2BLDCx1.Enabled = false;
+            textBoxM2BLDCx2.Enabled = false;
+            trackBarM2BLDCx2.Enabled = false;
+            textBoxM2BLDCx3.Enabled = false;
+            trackBarM2BLDCx3.Enabled = false;
+            textBoxM2PMSMSpeed.Enabled = false;
+            trackBarM2PMSMSpeed.Enabled = false;
+            textBoxM2PMSMPosition.Enabled = false;
+            trackBarM2PMSMPosition.Enabled = false;
+            textBoxM2PMSMTorque.Enabled = false;
+            trackBarM2PMSMTorque.Enabled = false;
+            textBoxM2PMSMCurrent.Enabled = false;
+            trackBarM2PMSMCurrent.Enabled = false;
+            textBoxM2PMSMVoltage.Enabled = false;
+            trackBarM2PMSMVoltage.Enabled = false;
+            textBoxM2PMSMFrequency.Enabled = false;
+            trackBarM2PMSMFrequency.Enabled = false;
+            textBoxM2PMSMP.Enabled = false;
+            trackBarM2PMSMP.Enabled = false;
+            textBoxM2PMSMI.Enabled = false;
+            trackBarM2PMSMI.Enabled = false;
+            textBoxM2PMSMD.Enabled = false;
+            trackBarM2PMSMD.Enabled = false;
+            textBoxM2PMSMx1.Enabled = false;
+            trackBarM2PMSMx1.Enabled = false;
+            textBoxM2PMSMx2.Enabled = false;
+            trackBarM2PMSMx2.Enabled = false;
+            textBoxM2PMSMx3.Enabled = false;
+            trackBarM2PMSMx3.Enabled = false;
         }
     }
 }

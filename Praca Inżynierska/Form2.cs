@@ -27,7 +27,7 @@ namespace Praca_Inżynierska
             XmlSerializer serializer = new XmlSerializer(typeof(Settings));
             SaveData();
 
-            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config.xml",FileMode.Create, FileAccess.Write))
+            using (FileStream fs = new FileStream(Environment.CurrentDirectory + "\\config" + comboBoxSaveConfig.Text + ".xml", FileMode.Create, FileAccess.Write))
             {
                 serializer.Serialize(fs, settings);
                 MessageBox.Show("Created");
@@ -71,12 +71,7 @@ namespace Praca_Inżynierska
             settings.WriteGenAddr = txtBoxWriteGenAddress.Text;
             settings.ReadGenNOP = txtBoxReadGenNOP.Text;
             settings.WriteGenNOP = txtBoxWriteGenNOP.Text;
-
-            settings.SlaveAddressM1 = txtBoxM1SlaveAddress.Text;
-            settings.SlaveAddressM2DC = txtBoxM2DCSlaveAddress.Text;
-            settings.SlaveAddressM2Asynch = txtBoxM2AsynchSlaveAddress.Text;
-            settings.SlaveAddressM2BLDC = txtBoxM2BLDCSlaveAddress.Text;
-            settings.SlaveAddressM2PMSM = txtBoxM2PMSMSlaveAddress.Text;
+            settings.SlaveAddress = txtBoxSlaveAddress.Text;
             settings.AddrM1SpeedS = txtBoxM1SpeedS.Text;
             settings.AddrM1SpeedSNOP = txtBoxM1SpeedSNOP.Text;
             settings.AddrM1PositionS = txtBoxM1PositionS.Text;
@@ -175,6 +170,8 @@ namespace Praca_Inżynierska
             settings.AddrM2AsynchCurrentSNOP = txtBoxM2AsynchCurrentSNOP.Text;
             settings.AddrM2AsynchVoltageS = txtBoxM2AsynchVoltageS.Text;
             settings.AddrM2AsynchVoltageSNOP = txtBoxM2AsynchVoltageSNOP.Text;
+            settings.AddrM2AsynchFrequencyS = txtBoxM2AsynchFrequencyS.Text;
+            settings.AddrM2AsynchFrequencySNOP = txtBoxM2AsynchFrequencySNOP.Text;
             settings.AddrM2AsynchPS = txtBoxM2AsynchPS.Text;
             settings.AddrM2AsynchPSNOP = txtBoxM2AsynchPSNOP.Text;
             settings.AddrM2AsynchIS = txtBoxM2AsynchIS.Text;
@@ -197,6 +194,8 @@ namespace Praca_Inżynierska
             settings.AddrM2AsynchCurrentRNOP = txtBoxM2AsynchCurrentRNOP.Text;
             settings.AddrM2AsynchVoltageR = txtBoxM2AsynchVoltageR.Text;
             settings.AddrM2AsynchVoltageRNOP = txtBoxM2AsynchVoltageRNOP.Text;
+            settings.AddrM2AsynchFrequencyR = txtBoxM2AsynchFrequencyR.Text;
+            settings.AddrM2AsynchFrequencyRNOP = txtBoxM2AsynchFrequencyRNOP.Text;
             settings.AddrM2AsynchPR = txtBoxM2AsynchPR.Text;
             settings.AddrM2AsynchPRNOP = txtBoxM2AsynchPRNOP.Text;
             settings.AddrM2AsynchIR = txtBoxM2AsynchIR.Text;
@@ -263,6 +262,8 @@ namespace Praca_Inżynierska
             settings.AddrM2PMSMCurrentSNOP = txtBoxM2PMSMCurrentSNOP.Text;
             settings.AddrM2PMSMVoltageS = txtBoxM2PMSMVoltageS.Text;
             settings.AddrM2PMSMVoltageSNOP = txtBoxM2PMSMVoltageSNOP.Text;
+            settings.AddrM2PMSMFrequencyS = txtBoxM2PMSMFrequencyS.Text;
+            settings.AddrM2PMSMFrequencySNOP = txtBoxM2PMSMFrequencySNOP.Text;
             settings.AddrM2PMSMPS = txtBoxM2PMSMPS.Text;
             settings.AddrM2PMSMPSNOP = txtBoxM2PMSMPSNOP.Text;
             settings.AddrM2PMSMIS = txtBoxM2PMSMIS.Text;
@@ -285,6 +286,8 @@ namespace Praca_Inżynierska
             settings.AddrM2PMSMCurrentRNOP = txtBoxM2PMSMCurrentRNOP.Text;
             settings.AddrM2PMSMVoltageR = txtBoxM2PMSMVoltageR.Text;
             settings.AddrM2PMSMVoltageRNOP = txtBoxM2PMSMVoltageRNOP.Text;
+            settings.AddrM2PMSMFrequencyR = txtBoxM2PMSMFrequencyR.Text;
+            settings.AddrM2PMSMFrequencyRNOP = txtBoxM2PMSMFrequencyRNOP.Text;
             settings.AddrM2PMSMPR = txtBoxM2PMSMPR.Text;
             settings.AddrM2PMSMPRNOP = txtBoxM2PMSMPRNOP.Text;
             settings.AddrM2PMSMIR = txtBoxM2PMSMIR.Text;
@@ -689,6 +692,14 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2AsynchVoltageS = false;
             }
+            if (checkBoxM2AsynchFrequencyS.Checked)
+            {
+                settings.CheckM2AsynchFrequencyS = true;
+            }
+            else
+            {
+                settings.CheckM2AsynchFrequencyS = false;
+            }
             if (checkBoxM2AsynchPS.Checked)
             {
                 settings.CheckM2AsynchPS = true;
@@ -776,6 +787,14 @@ namespace Praca_Inżynierska
             else
             {
                 settings.CheckM2AsynchVoltageR = false;
+            }
+            if (checkBoxM2AsynchFrequencyR.Checked)
+            {
+                settings.CheckM2AsynchFrequencyR = true;
+            }
+            else
+            {
+                settings.CheckM2AsynchFrequencyR = false;
             }
             if (checkBoxM2AsynchPR.Checked)
             {
@@ -1041,6 +1060,14 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2PMSMVoltageS = false;
             }
+            if (checkBoxM2PMSMFrequencyS.Checked)
+            {
+                settings.CheckM2PMSMFrequencyS = true;
+            }
+            else
+            {
+                settings.CheckM2PMSMFrequencyS = false;
+            }
             if (checkBoxM2PMSMPS.Checked)
             {
                 settings.CheckM2PMSMPS = true;
@@ -1129,6 +1156,14 @@ namespace Praca_Inżynierska
             {
                 settings.CheckM2PMSMVoltageR = false;
             }
+            if (checkBoxM2PMSMFrequencyR.Checked)
+            {
+                settings.CheckM2PMSMFrequencyR = true;
+            }
+            else
+            {
+                settings.CheckM2PMSMFrequencyR = false;
+            }
             if (checkBoxM2PMSMPR.Checked)
             {
                 settings.CheckM2PMSMPR = true;
@@ -1188,11 +1223,7 @@ namespace Praca_Inżynierska
             txtBoxWriteGenAddress.Text = settings.WriteGenAddr;
             txtBoxReadGenNOP.Text = settings.ReadGenNOP;
             txtBoxWriteGenNOP.Text = settings.WriteGenNOP;
-            txtBoxM1SlaveAddress.Text = settings.SlaveAddressM1;
-            txtBoxM2DCSlaveAddress.Text = settings.SlaveAddressM2DC;
-            txtBoxM2AsynchSlaveAddress.Text = settings.SlaveAddressM2Asynch;
-            txtBoxM2BLDCSlaveAddress.Text = settings.SlaveAddressM2BLDC;
-            txtBoxM2PMSMSlaveAddress.Text = settings.SlaveAddressM2PMSM;
+            txtBoxSlaveAddress.Text = settings.SlaveAddress;
             txtBoxM1SpeedS.Text = settings.AddrM1SpeedS;
             txtBoxM1SpeedSNOP.Text = settings.AddrM1SpeedSNOP;
             txtBoxM1PositionS.Text = settings.AddrM1PositionS;
@@ -1247,6 +1278,8 @@ namespace Praca_Inżynierska
             txtBoxM2DCCurrentSNOP.Text = settings.AddrM2DCCurrentSNOP;
             txtBoxM2DCVoltageS.Text = settings.AddrM2DCVoltageS;
             txtBoxM2DCVoltageSNOP.Text = settings.AddrM2DCVoltageSNOP;
+            txtBoxM2DCVoltageS.Text = settings.AddrM2DCVoltageS;
+            txtBoxM2DCVoltageSNOP.Text = settings.AddrM2DCVoltageSNOP;
             txtBoxM2DCPS.Text = settings.AddrM2DCPS;
             txtBoxM2DCPSNOP.Text = settings.AddrM2DCPSNOP;
             txtBoxM2DCIS.Text = settings.AddrM2DCIS;
@@ -1291,6 +1324,8 @@ namespace Praca_Inżynierska
             txtBoxM2AsynchCurrentSNOP.Text = settings.AddrM2AsynchCurrentSNOP;
             txtBoxM2AsynchVoltageS.Text = settings.AddrM2AsynchVoltageS;
             txtBoxM2AsynchVoltageSNOP.Text = settings.AddrM2AsynchVoltageSNOP;
+            txtBoxM2AsynchFrequencyS.Text = settings.AddrM2AsynchFrequencyS;
+            txtBoxM2AsynchFrequencySNOP.Text = settings.AddrM2AsynchFrequencySNOP;
             txtBoxM2AsynchPS.Text = settings.AddrM2AsynchPS;
             txtBoxM2AsynchPSNOP.Text = settings.AddrM2AsynchPSNOP;
             txtBoxM2AsynchIS.Text = settings.AddrM2AsynchIS;
@@ -1313,6 +1348,8 @@ namespace Praca_Inżynierska
             txtBoxM2AsynchCurrentRNOP.Text = settings.AddrM2AsynchCurrentRNOP;
             txtBoxM2AsynchVoltageR.Text = settings.AddrM2AsynchVoltageR;
             txtBoxM2AsynchVoltageRNOP.Text = settings.AddrM2AsynchVoltageRNOP;
+            txtBoxM2AsynchFrequencyR.Text = settings.AddrM2AsynchFrequencyR;
+            txtBoxM2AsynchFrequencyRNOP.Text = settings.AddrM2AsynchFrequencyRNOP;
             txtBoxM2AsynchPR.Text = settings.AddrM2AsynchPR;
             txtBoxM2AsynchPRNOP.Text = settings.AddrM2AsynchPRNOP;
             txtBoxM2AsynchIR.Text = settings.AddrM2AsynchIR;
@@ -1377,8 +1414,10 @@ namespace Praca_Inżynierska
             txtBoxM2PMSMTorqueSNOP.Text = settings.AddrM2PMSMTorqueSNOP;
             txtBoxM2PMSMCurrentS.Text = settings.AddrM2PMSMCurrentS;
             txtBoxM2PMSMCurrentSNOP.Text = settings.AddrM2PMSMCurrentSNOP;
-            txtBoxM2PMSMCurrentS.Text = settings.AddrM2PMSMVoltageS;
-            txtBoxM2PMSMCurrentSNOP.Text = settings.AddrM2PMSMVoltageSNOP;
+            txtBoxM2PMSMVoltageS.Text = settings.AddrM2PMSMVoltageS;
+            txtBoxM2PMSMVoltageSNOP.Text = settings.AddrM2PMSMVoltageSNOP;
+            txtBoxM2PMSMFrequencyS.Text = settings.AddrM2PMSMFrequencyS;
+            txtBoxM2PMSMFrequencySNOP.Text = settings.AddrM2PMSMFrequencySNOP;
             txtBoxM2PMSMPS.Text = settings.AddrM2PMSMPS;
             txtBoxM2PMSMPSNOP.Text = settings.AddrM2PMSMPSNOP;
             txtBoxM2PMSMIS.Text = settings.AddrM2PMSMIS;
@@ -1401,6 +1440,8 @@ namespace Praca_Inżynierska
             txtBoxM2PMSMCurrentRNOP.Text = settings.AddrM2PMSMCurrentRNOP;
             txtBoxM2PMSMVoltageR.Text = settings.AddrM2PMSMVoltageR;
             txtBoxM2PMSMVoltageRNOP.Text = settings.AddrM2PMSMVoltageRNOP;
+            txtBoxM2PMSMFrequencyR.Text = settings.AddrM2PMSMFrequencyR;
+            txtBoxM2PMSMFrequencyRNOP.Text = settings.AddrM2PMSMFrequencyRNOP;
             txtBoxM2PMSMPR.Text = settings.AddrM2PMSMPR;
             txtBoxM2PMSMPRNOP.Text = settings.AddrM2PMSMPRNOP;
             txtBoxM2PMSMIR.Text = settings.AddrM2PMSMIR;
@@ -1806,6 +1847,14 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2AsynchVoltageS.Checked = false;
             }
+            if (settings.CheckM2AsynchFrequencyS == true)
+            {
+                checkBoxM2AsynchFrequencyS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2AsynchFrequencyS.Checked = false;
+            }
             if (settings.CheckM2AsynchPS == true)
             {
                 checkBoxM2AsynchPS.Checked = true;
@@ -1893,6 +1942,14 @@ namespace Praca_Inżynierska
             else
             {
                 checkBoxM2AsynchVoltageR.Checked = false;
+            }
+            if (settings.CheckM2AsynchFrequencyR == true)
+            {
+                checkBoxM2AsynchFrequencyR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2AsynchFrequencyR.Checked = false;
             }
             if (settings.CheckM2AsynchPR == true)
             {
@@ -2158,6 +2215,14 @@ namespace Praca_Inżynierska
             {
                 checkBoxM2PMSMVoltageS.Checked = false;
             }
+            if (settings.CheckM2PMSMFrequencyS == true)
+            {
+                checkBoxM2PMSMFrequencyS.Checked = true;
+            }
+            else
+            {
+                checkBoxM2PMSMFrequencyS.Checked = false;
+            }
             if (settings.CheckM2PMSMPS == true)
             {
                 checkBoxM2PMSMPS.Checked = true;
@@ -2237,6 +2302,22 @@ namespace Praca_Inżynierska
             else
             {
                 checkBoxM2PMSMCurrentR.Checked = false;
+            }
+            if (settings.CheckM2PMSMVoltageR == true)
+            {
+                checkBoxM2PMSMVoltageR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2PMSMVoltageR.Checked = false;
+            }
+            if (settings.CheckM2PMSMFrequencyR == true)
+            {
+                checkBoxM2PMSMFrequencyR.Checked = true;
+            }
+            else
+            {
+                checkBoxM2PMSMFrequencyR.Checked = false;
             }
             if (settings.CheckM2PMSMPR == true)
             {

@@ -518,7 +518,7 @@
             this.txtBoxM2PMSMPositionS = new System.Windows.Forms.TextBox();
             this.txtBoxM2PMSMSpeedS = new System.Windows.Forms.TextBox();
             this.label129 = new System.Windows.Forms.Label();
-            this.txtBoxM2PMSMSlaveAddress = new System.Windows.Forms.TextBox();
+            this.txtBoxSlaveAddress = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.M1 = new System.Windows.Forms.TabPage();
             this.M2DC = new System.Windows.Forms.TabPage();
@@ -537,6 +537,22 @@
             this.txtBoxReadGenNOP = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
+            this.txtBoxM2AsynchFrequencySNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2AsynchFrequencyS = new System.Windows.Forms.CheckBox();
+            this.label144 = new System.Windows.Forms.Label();
+            this.txtBoxM2AsynchFrequencyS = new System.Windows.Forms.TextBox();
+            this.txtBoxM2AsynchFrequencyRNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2AsynchFrequencyR = new System.Windows.Forms.CheckBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.txtBoxM2AsynchFrequencyR = new System.Windows.Forms.TextBox();
+            this.txtBoxM2PMSMFrequencySNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2PMSMFrequencyS = new System.Windows.Forms.CheckBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.txtBoxM2PMSMFrequencyS = new System.Windows.Forms.TextBox();
+            this.checkBoxM2PMSMFrequencyR = new System.Windows.Forms.CheckBox();
+            this.txtBoxM2PMSMFrequencyRNOP = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.txtBoxM2PMSMFrequencyR = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -571,7 +587,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(949, 34);
+            this.btnClose.Location = new System.Drawing.Point(996, 42);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 1;
@@ -2427,6 +2443,10 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.txtBoxM2AsynchFrequencyRNOP);
+            this.groupBox9.Controls.Add(this.checkBoxM2AsynchFrequencyR);
+            this.groupBox9.Controls.Add(this.label145);
+            this.groupBox9.Controls.Add(this.txtBoxM2AsynchFrequencyR);
             this.groupBox9.Controls.Add(this.txtBoxM2AsynchVoltageRNOP);
             this.groupBox9.Controls.Add(this.checkBoxM2AsynchVoltageR);
             this.groupBox9.Controls.Add(this.label135);
@@ -2499,7 +2519,7 @@
             // label135
             // 
             this.label135.AutoSize = true;
-            this.label135.Location = new System.Drawing.Point(14, 143);
+            this.label135.Location = new System.Drawing.Point(15, 143);
             this.label135.Name = "label135";
             this.label135.Size = new System.Drawing.Size(46, 13);
             this.label135.TabIndex = 91;
@@ -2523,7 +2543,7 @@
             // 
             // txtBoxM2Asynchx3RNOP
             // 
-            this.txtBoxM2Asynchx3RNOP.Location = new System.Drawing.Point(173, 296);
+            this.txtBoxM2Asynchx3RNOP.Location = new System.Drawing.Point(173, 325);
             this.txtBoxM2Asynchx3RNOP.Name = "txtBoxM2Asynchx3RNOP";
             this.txtBoxM2Asynchx3RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx3RNOP.TabIndex = 89;
@@ -2531,7 +2551,7 @@
             // checkBoxM2Asynchx3R
             // 
             this.checkBoxM2Asynchx3R.AutoSize = true;
-            this.checkBoxM2Asynchx3R.Location = new System.Drawing.Point(274, 302);
+            this.checkBoxM2Asynchx3R.Location = new System.Drawing.Point(274, 331);
             this.checkBoxM2Asynchx3R.Name = "checkBoxM2Asynchx3R";
             this.checkBoxM2Asynchx3R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx3R.TabIndex = 46;
@@ -2539,7 +2559,7 @@
             // 
             // txtBoxM2Asynchx2RNOP
             // 
-            this.txtBoxM2Asynchx2RNOP.Location = new System.Drawing.Point(173, 270);
+            this.txtBoxM2Asynchx2RNOP.Location = new System.Drawing.Point(173, 299);
             this.txtBoxM2Asynchx2RNOP.Name = "txtBoxM2Asynchx2RNOP";
             this.txtBoxM2Asynchx2RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx2RNOP.TabIndex = 88;
@@ -2547,7 +2567,7 @@
             // checkBoxM2Asynchx2R
             // 
             this.checkBoxM2Asynchx2R.AutoSize = true;
-            this.checkBoxM2Asynchx2R.Location = new System.Drawing.Point(274, 276);
+            this.checkBoxM2Asynchx2R.Location = new System.Drawing.Point(274, 305);
             this.checkBoxM2Asynchx2R.Name = "checkBoxM2Asynchx2R";
             this.checkBoxM2Asynchx2R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx2R.TabIndex = 45;
@@ -2555,7 +2575,7 @@
             // 
             // txtBoxM2Asynchx1RNOP
             // 
-            this.txtBoxM2Asynchx1RNOP.Location = new System.Drawing.Point(173, 244);
+            this.txtBoxM2Asynchx1RNOP.Location = new System.Drawing.Point(173, 273);
             this.txtBoxM2Asynchx1RNOP.Name = "txtBoxM2Asynchx1RNOP";
             this.txtBoxM2Asynchx1RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx1RNOP.TabIndex = 87;
@@ -2563,7 +2583,7 @@
             // checkBoxM2Asynchx1R
             // 
             this.checkBoxM2Asynchx1R.AutoSize = true;
-            this.checkBoxM2Asynchx1R.Location = new System.Drawing.Point(274, 250);
+            this.checkBoxM2Asynchx1R.Location = new System.Drawing.Point(274, 279);
             this.checkBoxM2Asynchx1R.Name = "checkBoxM2Asynchx1R";
             this.checkBoxM2Asynchx1R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx1R.TabIndex = 44;
@@ -2571,7 +2591,7 @@
             // 
             // txtBoxM2AsynchDRNOP
             // 
-            this.txtBoxM2AsynchDRNOP.Location = new System.Drawing.Point(173, 218);
+            this.txtBoxM2AsynchDRNOP.Location = new System.Drawing.Point(173, 247);
             this.txtBoxM2AsynchDRNOP.Name = "txtBoxM2AsynchDRNOP";
             this.txtBoxM2AsynchDRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchDRNOP.TabIndex = 86;
@@ -2579,7 +2599,7 @@
             // checkBoxM2AsynchDR
             // 
             this.checkBoxM2AsynchDR.AutoSize = true;
-            this.checkBoxM2AsynchDR.Location = new System.Drawing.Point(274, 221);
+            this.checkBoxM2AsynchDR.Location = new System.Drawing.Point(274, 250);
             this.checkBoxM2AsynchDR.Name = "checkBoxM2AsynchDR";
             this.checkBoxM2AsynchDR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchDR.TabIndex = 43;
@@ -2587,7 +2607,7 @@
             // 
             // txtBoxM2AsynchIRNOP
             // 
-            this.txtBoxM2AsynchIRNOP.Location = new System.Drawing.Point(173, 192);
+            this.txtBoxM2AsynchIRNOP.Location = new System.Drawing.Point(173, 221);
             this.txtBoxM2AsynchIRNOP.Name = "txtBoxM2AsynchIRNOP";
             this.txtBoxM2AsynchIRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchIRNOP.TabIndex = 85;
@@ -2595,7 +2615,7 @@
             // checkBoxM2AsynchIR
             // 
             this.checkBoxM2AsynchIR.AutoSize = true;
-            this.checkBoxM2AsynchIR.Location = new System.Drawing.Point(274, 198);
+            this.checkBoxM2AsynchIR.Location = new System.Drawing.Point(274, 227);
             this.checkBoxM2AsynchIR.Name = "checkBoxM2AsynchIR";
             this.checkBoxM2AsynchIR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchIR.TabIndex = 42;
@@ -2603,7 +2623,7 @@
             // 
             // txtBoxM2AsynchPRNOP
             // 
-            this.txtBoxM2AsynchPRNOP.Location = new System.Drawing.Point(173, 166);
+            this.txtBoxM2AsynchPRNOP.Location = new System.Drawing.Point(173, 195);
             this.txtBoxM2AsynchPRNOP.Name = "txtBoxM2AsynchPRNOP";
             this.txtBoxM2AsynchPRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchPRNOP.TabIndex = 84;
@@ -2611,7 +2631,7 @@
             // checkBoxM2AsynchPR
             // 
             this.checkBoxM2AsynchPR.AutoSize = true;
-            this.checkBoxM2AsynchPR.Location = new System.Drawing.Point(274, 172);
+            this.checkBoxM2AsynchPR.Location = new System.Drawing.Point(274, 201);
             this.checkBoxM2AsynchPR.Name = "checkBoxM2AsynchPR";
             this.checkBoxM2AsynchPR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchPR.TabIndex = 41;
@@ -2693,7 +2713,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 299);
+            this.label11.Location = new System.Drawing.Point(40, 328);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 13);
             this.label11.TabIndex = 33;
@@ -2702,7 +2722,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 273);
+            this.label26.Location = new System.Drawing.Point(40, 302);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(21, 13);
             this.label26.TabIndex = 32;
@@ -2711,7 +2731,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(14, 247);
+            this.label27.Location = new System.Drawing.Point(43, 276);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(18, 13);
             this.label27.TabIndex = 31;
@@ -2720,7 +2740,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(14, 221);
+            this.label39.Location = new System.Drawing.Point(43, 250);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(18, 13);
             this.label39.TabIndex = 30;
@@ -2729,7 +2749,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(14, 195);
+            this.label40.Location = new System.Drawing.Point(48, 224);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(13, 13);
             this.label40.TabIndex = 29;
@@ -2738,7 +2758,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(14, 169);
+            this.label52.Location = new System.Drawing.Point(44, 198);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(17, 13);
             this.label52.TabIndex = 28;
@@ -2746,42 +2766,42 @@
             // 
             // txtBoxM2Asynchx3R
             // 
-            this.txtBoxM2Asynchx3R.Location = new System.Drawing.Point(67, 296);
+            this.txtBoxM2Asynchx3R.Location = new System.Drawing.Point(67, 325);
             this.txtBoxM2Asynchx3R.Name = "txtBoxM2Asynchx3R";
             this.txtBoxM2Asynchx3R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx3R.TabIndex = 27;
             // 
             // txtBoxM2Asynchx2R
             // 
-            this.txtBoxM2Asynchx2R.Location = new System.Drawing.Point(67, 270);
+            this.txtBoxM2Asynchx2R.Location = new System.Drawing.Point(67, 299);
             this.txtBoxM2Asynchx2R.Name = "txtBoxM2Asynchx2R";
             this.txtBoxM2Asynchx2R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx2R.TabIndex = 26;
             // 
             // txtBoxM2Asynchx1R
             // 
-            this.txtBoxM2Asynchx1R.Location = new System.Drawing.Point(67, 244);
+            this.txtBoxM2Asynchx1R.Location = new System.Drawing.Point(67, 273);
             this.txtBoxM2Asynchx1R.Name = "txtBoxM2Asynchx1R";
             this.txtBoxM2Asynchx1R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx1R.TabIndex = 25;
             // 
             // txtBoxM2AsynchDR
             // 
-            this.txtBoxM2AsynchDR.Location = new System.Drawing.Point(67, 218);
+            this.txtBoxM2AsynchDR.Location = new System.Drawing.Point(67, 247);
             this.txtBoxM2AsynchDR.Name = "txtBoxM2AsynchDR";
             this.txtBoxM2AsynchDR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchDR.TabIndex = 24;
             // 
             // txtBoxM2AsynchIR
             // 
-            this.txtBoxM2AsynchIR.Location = new System.Drawing.Point(67, 192);
+            this.txtBoxM2AsynchIR.Location = new System.Drawing.Point(67, 221);
             this.txtBoxM2AsynchIR.Name = "txtBoxM2AsynchIR";
             this.txtBoxM2AsynchIR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchIR.TabIndex = 23;
             // 
             // txtBoxM2AsynchPR
             // 
-            this.txtBoxM2AsynchPR.Location = new System.Drawing.Point(67, 166);
+            this.txtBoxM2AsynchPR.Location = new System.Drawing.Point(67, 195);
             this.txtBoxM2AsynchPR.Name = "txtBoxM2AsynchPR";
             this.txtBoxM2AsynchPR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchPR.TabIndex = 22;
@@ -2789,7 +2809,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(14, 117);
+            this.label53.Location = new System.Drawing.Point(17, 117);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(44, 13);
             this.label53.TabIndex = 19;
@@ -2798,7 +2818,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(14, 91);
+            this.label59.Location = new System.Drawing.Point(17, 91);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(44, 13);
             this.label59.TabIndex = 18;
@@ -2816,7 +2836,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(14, 36);
+            this.label61.Location = new System.Drawing.Point(20, 36);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(41, 13);
             this.label61.TabIndex = 16;
@@ -2852,6 +2872,10 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.txtBoxM2AsynchFrequencySNOP);
+            this.groupBox10.Controls.Add(this.checkBoxM2AsynchFrequencyS);
+            this.groupBox10.Controls.Add(this.label144);
+            this.groupBox10.Controls.Add(this.txtBoxM2AsynchFrequencyS);
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchVoltageSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchVoltageS);
             this.groupBox10.Controls.Add(this.label134);
@@ -2924,7 +2948,7 @@
             // label134
             // 
             this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(14, 143);
+            this.label134.Location = new System.Drawing.Point(15, 143);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(46, 13);
             this.label134.TabIndex = 92;
@@ -2939,7 +2963,7 @@
             // 
             // txtBoxM2Asynchx3SNOP
             // 
-            this.txtBoxM2Asynchx3SNOP.Location = new System.Drawing.Point(175, 296);
+            this.txtBoxM2Asynchx3SNOP.Location = new System.Drawing.Point(175, 325);
             this.txtBoxM2Asynchx3SNOP.Name = "txtBoxM2Asynchx3SNOP";
             this.txtBoxM2Asynchx3SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx3SNOP.TabIndex = 90;
@@ -2947,7 +2971,7 @@
             // checkBoxM2Asynchx3S
             // 
             this.checkBoxM2Asynchx3S.AutoSize = true;
-            this.checkBoxM2Asynchx3S.Location = new System.Drawing.Point(283, 302);
+            this.checkBoxM2Asynchx3S.Location = new System.Drawing.Point(283, 331);
             this.checkBoxM2Asynchx3S.Name = "checkBoxM2Asynchx3S";
             this.checkBoxM2Asynchx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx3S.TabIndex = 46;
@@ -2955,7 +2979,7 @@
             // 
             // txtBoxM2Asynchx2SNOP
             // 
-            this.txtBoxM2Asynchx2SNOP.Location = new System.Drawing.Point(175, 270);
+            this.txtBoxM2Asynchx2SNOP.Location = new System.Drawing.Point(175, 299);
             this.txtBoxM2Asynchx2SNOP.Name = "txtBoxM2Asynchx2SNOP";
             this.txtBoxM2Asynchx2SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx2SNOP.TabIndex = 89;
@@ -2963,7 +2987,7 @@
             // checkBoxM2Asynchx2S
             // 
             this.checkBoxM2Asynchx2S.AutoSize = true;
-            this.checkBoxM2Asynchx2S.Location = new System.Drawing.Point(283, 276);
+            this.checkBoxM2Asynchx2S.Location = new System.Drawing.Point(283, 305);
             this.checkBoxM2Asynchx2S.Name = "checkBoxM2Asynchx2S";
             this.checkBoxM2Asynchx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx2S.TabIndex = 45;
@@ -2971,7 +2995,7 @@
             // 
             // txtBoxM2Asynchx1SNOP
             // 
-            this.txtBoxM2Asynchx1SNOP.Location = new System.Drawing.Point(175, 244);
+            this.txtBoxM2Asynchx1SNOP.Location = new System.Drawing.Point(175, 273);
             this.txtBoxM2Asynchx1SNOP.Name = "txtBoxM2Asynchx1SNOP";
             this.txtBoxM2Asynchx1SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2Asynchx1SNOP.TabIndex = 88;
@@ -2979,7 +3003,7 @@
             // checkBoxM2Asynchx1S
             // 
             this.checkBoxM2Asynchx1S.AutoSize = true;
-            this.checkBoxM2Asynchx1S.Location = new System.Drawing.Point(283, 250);
+            this.checkBoxM2Asynchx1S.Location = new System.Drawing.Point(283, 279);
             this.checkBoxM2Asynchx1S.Name = "checkBoxM2Asynchx1S";
             this.checkBoxM2Asynchx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx1S.TabIndex = 44;
@@ -2987,7 +3011,7 @@
             // 
             // txtBoxM2AsynchDSNOP
             // 
-            this.txtBoxM2AsynchDSNOP.Location = new System.Drawing.Point(175, 218);
+            this.txtBoxM2AsynchDSNOP.Location = new System.Drawing.Point(175, 247);
             this.txtBoxM2AsynchDSNOP.Name = "txtBoxM2AsynchDSNOP";
             this.txtBoxM2AsynchDSNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchDSNOP.TabIndex = 87;
@@ -2995,7 +3019,7 @@
             // checkBoxM2AsynchDS
             // 
             this.checkBoxM2AsynchDS.AutoSize = true;
-            this.checkBoxM2AsynchDS.Location = new System.Drawing.Point(283, 221);
+            this.checkBoxM2AsynchDS.Location = new System.Drawing.Point(283, 250);
             this.checkBoxM2AsynchDS.Name = "checkBoxM2AsynchDS";
             this.checkBoxM2AsynchDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchDS.TabIndex = 43;
@@ -3003,7 +3027,7 @@
             // 
             // txtBoxM2AsynchISNOP
             // 
-            this.txtBoxM2AsynchISNOP.Location = new System.Drawing.Point(175, 192);
+            this.txtBoxM2AsynchISNOP.Location = new System.Drawing.Point(175, 221);
             this.txtBoxM2AsynchISNOP.Name = "txtBoxM2AsynchISNOP";
             this.txtBoxM2AsynchISNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchISNOP.TabIndex = 86;
@@ -3011,7 +3035,7 @@
             // checkBoxM2AsynchIS
             // 
             this.checkBoxM2AsynchIS.AutoSize = true;
-            this.checkBoxM2AsynchIS.Location = new System.Drawing.Point(283, 198);
+            this.checkBoxM2AsynchIS.Location = new System.Drawing.Point(283, 227);
             this.checkBoxM2AsynchIS.Name = "checkBoxM2AsynchIS";
             this.checkBoxM2AsynchIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchIS.TabIndex = 42;
@@ -3019,7 +3043,7 @@
             // 
             // txtBoxM2AsynchPSNOP
             // 
-            this.txtBoxM2AsynchPSNOP.Location = new System.Drawing.Point(175, 166);
+            this.txtBoxM2AsynchPSNOP.Location = new System.Drawing.Point(175, 195);
             this.txtBoxM2AsynchPSNOP.Name = "txtBoxM2AsynchPSNOP";
             this.txtBoxM2AsynchPSNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2AsynchPSNOP.TabIndex = 85;
@@ -3027,7 +3051,7 @@
             // checkBoxM2AsynchPS
             // 
             this.checkBoxM2AsynchPS.AutoSize = true;
-            this.checkBoxM2AsynchPS.Location = new System.Drawing.Point(283, 172);
+            this.checkBoxM2AsynchPS.Location = new System.Drawing.Point(283, 201);
             this.checkBoxM2AsynchPS.Name = "checkBoxM2AsynchPS";
             this.checkBoxM2AsynchPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchPS.TabIndex = 41;
@@ -3118,7 +3142,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(14, 299);
+            this.label63.Location = new System.Drawing.Point(40, 328);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(21, 13);
             this.label63.TabIndex = 33;
@@ -3127,7 +3151,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(14, 273);
+            this.label64.Location = new System.Drawing.Point(40, 302);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(21, 13);
             this.label64.TabIndex = 32;
@@ -3136,7 +3160,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(14, 247);
+            this.label65.Location = new System.Drawing.Point(43, 276);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(18, 13);
             this.label65.TabIndex = 31;
@@ -3145,7 +3169,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(14, 221);
+            this.label66.Location = new System.Drawing.Point(43, 250);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(18, 13);
             this.label66.TabIndex = 30;
@@ -3154,7 +3178,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(14, 195);
+            this.label67.Location = new System.Drawing.Point(48, 224);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(13, 13);
             this.label67.TabIndex = 29;
@@ -3163,7 +3187,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(14, 169);
+            this.label68.Location = new System.Drawing.Point(44, 198);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(17, 13);
             this.label68.TabIndex = 28;
@@ -3171,42 +3195,42 @@
             // 
             // txtBoxM2Asynchx3S
             // 
-            this.txtBoxM2Asynchx3S.Location = new System.Drawing.Point(67, 296);
+            this.txtBoxM2Asynchx3S.Location = new System.Drawing.Point(67, 325);
             this.txtBoxM2Asynchx3S.Name = "txtBoxM2Asynchx3S";
             this.txtBoxM2Asynchx3S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx3S.TabIndex = 27;
             // 
             // txtBoxM2Asynchx2S
             // 
-            this.txtBoxM2Asynchx2S.Location = new System.Drawing.Point(67, 270);
+            this.txtBoxM2Asynchx2S.Location = new System.Drawing.Point(67, 299);
             this.txtBoxM2Asynchx2S.Name = "txtBoxM2Asynchx2S";
             this.txtBoxM2Asynchx2S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx2S.TabIndex = 26;
             // 
             // txtBoxM2Asynchx1S
             // 
-            this.txtBoxM2Asynchx1S.Location = new System.Drawing.Point(67, 244);
+            this.txtBoxM2Asynchx1S.Location = new System.Drawing.Point(67, 273);
             this.txtBoxM2Asynchx1S.Name = "txtBoxM2Asynchx1S";
             this.txtBoxM2Asynchx1S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2Asynchx1S.TabIndex = 25;
             // 
             // txtBoxM2AsynchDS
             // 
-            this.txtBoxM2AsynchDS.Location = new System.Drawing.Point(67, 218);
+            this.txtBoxM2AsynchDS.Location = new System.Drawing.Point(67, 247);
             this.txtBoxM2AsynchDS.Name = "txtBoxM2AsynchDS";
             this.txtBoxM2AsynchDS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchDS.TabIndex = 24;
             // 
             // txtBoxM2AsynchIS
             // 
-            this.txtBoxM2AsynchIS.Location = new System.Drawing.Point(67, 192);
+            this.txtBoxM2AsynchIS.Location = new System.Drawing.Point(67, 221);
             this.txtBoxM2AsynchIS.Name = "txtBoxM2AsynchIS";
             this.txtBoxM2AsynchIS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchIS.TabIndex = 23;
             // 
             // txtBoxM2AsynchPS
             // 
-            this.txtBoxM2AsynchPS.Location = new System.Drawing.Point(67, 166);
+            this.txtBoxM2AsynchPS.Location = new System.Drawing.Point(67, 195);
             this.txtBoxM2AsynchPS.Name = "txtBoxM2AsynchPS";
             this.txtBoxM2AsynchPS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchPS.TabIndex = 22;
@@ -3214,7 +3238,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(14, 117);
+            this.label69.Location = new System.Drawing.Point(17, 117);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(44, 13);
             this.label69.TabIndex = 19;
@@ -3223,7 +3247,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(14, 91);
+            this.label70.Location = new System.Drawing.Point(17, 91);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(44, 13);
             this.label70.TabIndex = 18;
@@ -3241,7 +3265,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(14, 36);
+            this.label72.Location = new System.Drawing.Point(20, 36);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(41, 13);
             this.label72.TabIndex = 16;
@@ -4161,6 +4185,10 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.checkBoxM2PMSMFrequencyR);
+            this.groupBox15.Controls.Add(this.txtBoxM2PMSMFrequencyRNOP);
+            this.groupBox15.Controls.Add(this.label147);
+            this.groupBox15.Controls.Add(this.txtBoxM2PMSMFrequencyR);
             this.groupBox15.Controls.Add(this.checkBoxM2PMSMVoltageR);
             this.groupBox15.Controls.Add(this.txtBoxM2PMSMVoltageRNOP);
             this.groupBox15.Controls.Add(this.label139);
@@ -4233,7 +4261,7 @@
             // label139
             // 
             this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(14, 142);
+            this.label139.Location = new System.Drawing.Point(15, 141);
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(46, 13);
             this.label139.TabIndex = 92;
@@ -4248,7 +4276,7 @@
             // 
             // txtBoxM2PMSMx3RNOP
             // 
-            this.txtBoxM2PMSMx3RNOP.Location = new System.Drawing.Point(173, 296);
+            this.txtBoxM2PMSMx3RNOP.Location = new System.Drawing.Point(173, 322);
             this.txtBoxM2PMSMx3RNOP.Name = "txtBoxM2PMSMx3RNOP";
             this.txtBoxM2PMSMx3RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx3RNOP.TabIndex = 90;
@@ -4256,7 +4284,7 @@
             // checkBoxM2PMSMx3R
             // 
             this.checkBoxM2PMSMx3R.AutoSize = true;
-            this.checkBoxM2PMSMx3R.Location = new System.Drawing.Point(277, 302);
+            this.checkBoxM2PMSMx3R.Location = new System.Drawing.Point(277, 328);
             this.checkBoxM2PMSMx3R.Name = "checkBoxM2PMSMx3R";
             this.checkBoxM2PMSMx3R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx3R.TabIndex = 46;
@@ -4265,7 +4293,7 @@
             // checkBoxM2PMSMx2R
             // 
             this.checkBoxM2PMSMx2R.AutoSize = true;
-            this.checkBoxM2PMSMx2R.Location = new System.Drawing.Point(277, 276);
+            this.checkBoxM2PMSMx2R.Location = new System.Drawing.Point(277, 302);
             this.checkBoxM2PMSMx2R.Name = "checkBoxM2PMSMx2R";
             this.checkBoxM2PMSMx2R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx2R.TabIndex = 45;
@@ -4274,7 +4302,7 @@
             // checkBoxM2PMSMx1R
             // 
             this.checkBoxM2PMSMx1R.AutoSize = true;
-            this.checkBoxM2PMSMx1R.Location = new System.Drawing.Point(277, 250);
+            this.checkBoxM2PMSMx1R.Location = new System.Drawing.Point(277, 276);
             this.checkBoxM2PMSMx1R.Name = "checkBoxM2PMSMx1R";
             this.checkBoxM2PMSMx1R.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx1R.TabIndex = 44;
@@ -4282,7 +4310,7 @@
             // 
             // txtBoxM2PMSMx2RNOP
             // 
-            this.txtBoxM2PMSMx2RNOP.Location = new System.Drawing.Point(173, 268);
+            this.txtBoxM2PMSMx2RNOP.Location = new System.Drawing.Point(173, 294);
             this.txtBoxM2PMSMx2RNOP.Name = "txtBoxM2PMSMx2RNOP";
             this.txtBoxM2PMSMx2RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx2RNOP.TabIndex = 89;
@@ -4290,7 +4318,7 @@
             // checkBoxM2PMSMDR
             // 
             this.checkBoxM2PMSMDR.AutoSize = true;
-            this.checkBoxM2PMSMDR.Location = new System.Drawing.Point(277, 221);
+            this.checkBoxM2PMSMDR.Location = new System.Drawing.Point(277, 247);
             this.checkBoxM2PMSMDR.Name = "checkBoxM2PMSMDR";
             this.checkBoxM2PMSMDR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMDR.TabIndex = 43;
@@ -4299,7 +4327,7 @@
             // checkBoxM2PMSMIR
             // 
             this.checkBoxM2PMSMIR.AutoSize = true;
-            this.checkBoxM2PMSMIR.Location = new System.Drawing.Point(277, 198);
+            this.checkBoxM2PMSMIR.Location = new System.Drawing.Point(277, 224);
             this.checkBoxM2PMSMIR.Name = "checkBoxM2PMSMIR";
             this.checkBoxM2PMSMIR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMIR.TabIndex = 42;
@@ -4308,7 +4336,7 @@
             // checkBoxM2PMSMPR
             // 
             this.checkBoxM2PMSMPR.AutoSize = true;
-            this.checkBoxM2PMSMPR.Location = new System.Drawing.Point(277, 172);
+            this.checkBoxM2PMSMPR.Location = new System.Drawing.Point(277, 198);
             this.checkBoxM2PMSMPR.Name = "checkBoxM2PMSMPR";
             this.checkBoxM2PMSMPR.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMPR.TabIndex = 41;
@@ -4316,7 +4344,7 @@
             // 
             // txtBoxM2PMSMx1RNOP
             // 
-            this.txtBoxM2PMSMx1RNOP.Location = new System.Drawing.Point(173, 242);
+            this.txtBoxM2PMSMx1RNOP.Location = new System.Drawing.Point(173, 268);
             this.txtBoxM2PMSMx1RNOP.Name = "txtBoxM2PMSMx1RNOP";
             this.txtBoxM2PMSMx1RNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx1RNOP.TabIndex = 88;
@@ -4359,7 +4387,7 @@
             // 
             // txtBoxM2PMSMDRNOP
             // 
-            this.txtBoxM2PMSMDRNOP.Location = new System.Drawing.Point(173, 216);
+            this.txtBoxM2PMSMDRNOP.Location = new System.Drawing.Point(173, 242);
             this.txtBoxM2PMSMDRNOP.Name = "txtBoxM2PMSMDRNOP";
             this.txtBoxM2PMSMDRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMDRNOP.TabIndex = 87;
@@ -4385,7 +4413,7 @@
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(14, 299);
+            this.label101.Location = new System.Drawing.Point(40, 324);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(21, 13);
             this.label101.TabIndex = 33;
@@ -4393,7 +4421,7 @@
             // 
             // txtBoxM2PMSMIRNOP
             // 
-            this.txtBoxM2PMSMIRNOP.Location = new System.Drawing.Point(173, 190);
+            this.txtBoxM2PMSMIRNOP.Location = new System.Drawing.Point(173, 216);
             this.txtBoxM2PMSMIRNOP.Name = "txtBoxM2PMSMIRNOP";
             this.txtBoxM2PMSMIRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMIRNOP.TabIndex = 86;
@@ -4401,7 +4429,7 @@
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(14, 273);
+            this.label102.Location = new System.Drawing.Point(40, 298);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(21, 13);
             this.label102.TabIndex = 32;
@@ -4410,7 +4438,7 @@
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(14, 247);
+            this.label103.Location = new System.Drawing.Point(43, 272);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(18, 13);
             this.label103.TabIndex = 31;
@@ -4419,7 +4447,7 @@
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(14, 221);
+            this.label104.Location = new System.Drawing.Point(43, 246);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(18, 13);
             this.label104.TabIndex = 30;
@@ -4427,7 +4455,7 @@
             // 
             // txtBoxM2PMSMPRNOP
             // 
-            this.txtBoxM2PMSMPRNOP.Location = new System.Drawing.Point(173, 164);
+            this.txtBoxM2PMSMPRNOP.Location = new System.Drawing.Point(173, 190);
             this.txtBoxM2PMSMPRNOP.Name = "txtBoxM2PMSMPRNOP";
             this.txtBoxM2PMSMPRNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMPRNOP.TabIndex = 85;
@@ -4435,7 +4463,7 @@
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(14, 195);
+            this.label105.Location = new System.Drawing.Point(48, 220);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(13, 13);
             this.label105.TabIndex = 29;
@@ -4444,7 +4472,7 @@
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(14, 169);
+            this.label106.Location = new System.Drawing.Point(44, 194);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(17, 13);
             this.label106.TabIndex = 28;
@@ -4466,7 +4494,7 @@
             // 
             // txtBoxM2PMSMx3R
             // 
-            this.txtBoxM2PMSMx3R.Location = new System.Drawing.Point(67, 296);
+            this.txtBoxM2PMSMx3R.Location = new System.Drawing.Point(67, 322);
             this.txtBoxM2PMSMx3R.Name = "txtBoxM2PMSMx3R";
             this.txtBoxM2PMSMx3R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx3R.TabIndex = 27;
@@ -4480,7 +4508,7 @@
             // 
             // txtBoxM2PMSMx2R
             // 
-            this.txtBoxM2PMSMx2R.Location = new System.Drawing.Point(67, 268);
+            this.txtBoxM2PMSMx2R.Location = new System.Drawing.Point(67, 294);
             this.txtBoxM2PMSMx2R.Name = "txtBoxM2PMSMx2R";
             this.txtBoxM2PMSMx2R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx2R.TabIndex = 26;
@@ -4494,28 +4522,28 @@
             // 
             // txtBoxM2PMSMx1R
             // 
-            this.txtBoxM2PMSMx1R.Location = new System.Drawing.Point(67, 242);
+            this.txtBoxM2PMSMx1R.Location = new System.Drawing.Point(67, 268);
             this.txtBoxM2PMSMx1R.Name = "txtBoxM2PMSMx1R";
             this.txtBoxM2PMSMx1R.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx1R.TabIndex = 25;
             // 
             // txtBoxM2PMSMDR
             // 
-            this.txtBoxM2PMSMDR.Location = new System.Drawing.Point(67, 216);
+            this.txtBoxM2PMSMDR.Location = new System.Drawing.Point(67, 242);
             this.txtBoxM2PMSMDR.Name = "txtBoxM2PMSMDR";
             this.txtBoxM2PMSMDR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMDR.TabIndex = 24;
             // 
             // txtBoxM2PMSMIR
             // 
-            this.txtBoxM2PMSMIR.Location = new System.Drawing.Point(67, 190);
+            this.txtBoxM2PMSMIR.Location = new System.Drawing.Point(67, 216);
             this.txtBoxM2PMSMIR.Name = "txtBoxM2PMSMIR";
             this.txtBoxM2PMSMIR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMIR.TabIndex = 23;
             // 
             // txtBoxM2PMSMPR
             // 
-            this.txtBoxM2PMSMPR.Location = new System.Drawing.Point(67, 164);
+            this.txtBoxM2PMSMPR.Location = new System.Drawing.Point(67, 190);
             this.txtBoxM2PMSMPR.Name = "txtBoxM2PMSMPR";
             this.txtBoxM2PMSMPR.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMPR.TabIndex = 22;
@@ -4523,7 +4551,7 @@
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(14, 117);
+            this.label107.Location = new System.Drawing.Point(17, 116);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(44, 13);
             this.label107.TabIndex = 19;
@@ -4532,7 +4560,7 @@
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(14, 91);
+            this.label108.Location = new System.Drawing.Point(17, 90);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(44, 13);
             this.label108.TabIndex = 18;
@@ -4541,7 +4569,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(14, 64);
+            this.label109.Location = new System.Drawing.Point(14, 63);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(47, 13);
             this.label109.TabIndex = 17;
@@ -4550,7 +4578,7 @@
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(14, 36);
+            this.label110.Location = new System.Drawing.Point(20, 35);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(41, 13);
             this.label110.TabIndex = 16;
@@ -4586,6 +4614,10 @@
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.txtBoxM2PMSMFrequencySNOP);
+            this.groupBox16.Controls.Add(this.checkBoxM2PMSMFrequencyS);
+            this.groupBox16.Controls.Add(this.label146);
+            this.groupBox16.Controls.Add(this.txtBoxM2PMSMFrequencyS);
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMVoltageSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMVoltageS);
             this.groupBox16.Controls.Add(this.label138);
@@ -4658,7 +4690,7 @@
             // label138
             // 
             this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(14, 144);
+            this.label138.Location = new System.Drawing.Point(15, 145);
             this.label138.Name = "label138";
             this.label138.Size = new System.Drawing.Size(46, 13);
             this.label138.TabIndex = 81;
@@ -4673,7 +4705,7 @@
             // 
             // txtBoxM2PMSMx3SNOP
             // 
-            this.txtBoxM2PMSMx3SNOP.Location = new System.Drawing.Point(175, 297);
+            this.txtBoxM2PMSMx3SNOP.Location = new System.Drawing.Point(175, 323);
             this.txtBoxM2PMSMx3SNOP.Name = "txtBoxM2PMSMx3SNOP";
             this.txtBoxM2PMSMx3SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx3SNOP.TabIndex = 79;
@@ -4681,7 +4713,7 @@
             // checkBoxM2PMSMx3S
             // 
             this.checkBoxM2PMSMx3S.AutoSize = true;
-            this.checkBoxM2PMSMx3S.Location = new System.Drawing.Point(283, 303);
+            this.checkBoxM2PMSMx3S.Location = new System.Drawing.Point(283, 329);
             this.checkBoxM2PMSMx3S.Name = "checkBoxM2PMSMx3S";
             this.checkBoxM2PMSMx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx3S.TabIndex = 46;
@@ -4689,7 +4721,7 @@
             // 
             // txtBoxM2PMSMx2SNOP
             // 
-            this.txtBoxM2PMSMx2SNOP.Location = new System.Drawing.Point(175, 271);
+            this.txtBoxM2PMSMx2SNOP.Location = new System.Drawing.Point(175, 297);
             this.txtBoxM2PMSMx2SNOP.Name = "txtBoxM2PMSMx2SNOP";
             this.txtBoxM2PMSMx2SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx2SNOP.TabIndex = 78;
@@ -4697,7 +4729,7 @@
             // checkBoxM2PMSMx2S
             // 
             this.checkBoxM2PMSMx2S.AutoSize = true;
-            this.checkBoxM2PMSMx2S.Location = new System.Drawing.Point(283, 277);
+            this.checkBoxM2PMSMx2S.Location = new System.Drawing.Point(283, 303);
             this.checkBoxM2PMSMx2S.Name = "checkBoxM2PMSMx2S";
             this.checkBoxM2PMSMx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx2S.TabIndex = 45;
@@ -4705,7 +4737,7 @@
             // 
             // txtBoxM2PMSMx1SNOP
             // 
-            this.txtBoxM2PMSMx1SNOP.Location = new System.Drawing.Point(175, 245);
+            this.txtBoxM2PMSMx1SNOP.Location = new System.Drawing.Point(175, 271);
             this.txtBoxM2PMSMx1SNOP.Name = "txtBoxM2PMSMx1SNOP";
             this.txtBoxM2PMSMx1SNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMx1SNOP.TabIndex = 77;
@@ -4713,7 +4745,7 @@
             // checkBoxM2PMSMx1S
             // 
             this.checkBoxM2PMSMx1S.AutoSize = true;
-            this.checkBoxM2PMSMx1S.Location = new System.Drawing.Point(283, 251);
+            this.checkBoxM2PMSMx1S.Location = new System.Drawing.Point(283, 277);
             this.checkBoxM2PMSMx1S.Name = "checkBoxM2PMSMx1S";
             this.checkBoxM2PMSMx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx1S.TabIndex = 44;
@@ -4721,7 +4753,7 @@
             // 
             // txtBoxM2PMSMDSNOP
             // 
-            this.txtBoxM2PMSMDSNOP.Location = new System.Drawing.Point(175, 219);
+            this.txtBoxM2PMSMDSNOP.Location = new System.Drawing.Point(175, 245);
             this.txtBoxM2PMSMDSNOP.Name = "txtBoxM2PMSMDSNOP";
             this.txtBoxM2PMSMDSNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMDSNOP.TabIndex = 76;
@@ -4729,7 +4761,7 @@
             // checkBoxM2PMSMDS
             // 
             this.checkBoxM2PMSMDS.AutoSize = true;
-            this.checkBoxM2PMSMDS.Location = new System.Drawing.Point(283, 222);
+            this.checkBoxM2PMSMDS.Location = new System.Drawing.Point(283, 248);
             this.checkBoxM2PMSMDS.Name = "checkBoxM2PMSMDS";
             this.checkBoxM2PMSMDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMDS.TabIndex = 43;
@@ -4737,7 +4769,7 @@
             // 
             // txtBoxM2PMSMISNOP
             // 
-            this.txtBoxM2PMSMISNOP.Location = new System.Drawing.Point(175, 193);
+            this.txtBoxM2PMSMISNOP.Location = new System.Drawing.Point(175, 219);
             this.txtBoxM2PMSMISNOP.Name = "txtBoxM2PMSMISNOP";
             this.txtBoxM2PMSMISNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMISNOP.TabIndex = 75;
@@ -4745,7 +4777,7 @@
             // checkBoxM2PMSMIS
             // 
             this.checkBoxM2PMSMIS.AutoSize = true;
-            this.checkBoxM2PMSMIS.Location = new System.Drawing.Point(283, 199);
+            this.checkBoxM2PMSMIS.Location = new System.Drawing.Point(283, 225);
             this.checkBoxM2PMSMIS.Name = "checkBoxM2PMSMIS";
             this.checkBoxM2PMSMIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMIS.TabIndex = 42;
@@ -4753,7 +4785,7 @@
             // 
             // txtBoxM2PMSMPSNOP
             // 
-            this.txtBoxM2PMSMPSNOP.Location = new System.Drawing.Point(175, 167);
+            this.txtBoxM2PMSMPSNOP.Location = new System.Drawing.Point(175, 193);
             this.txtBoxM2PMSMPSNOP.Name = "txtBoxM2PMSMPSNOP";
             this.txtBoxM2PMSMPSNOP.Size = new System.Drawing.Size(93, 20);
             this.txtBoxM2PMSMPSNOP.TabIndex = 74;
@@ -4761,7 +4793,7 @@
             // checkBoxM2PMSMPS
             // 
             this.checkBoxM2PMSMPS.AutoSize = true;
-            this.checkBoxM2PMSMPS.Location = new System.Drawing.Point(283, 173);
+            this.checkBoxM2PMSMPS.Location = new System.Drawing.Point(283, 199);
             this.checkBoxM2PMSMPS.Name = "checkBoxM2PMSMPS";
             this.checkBoxM2PMSMPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMPS.TabIndex = 41;
@@ -4852,7 +4884,7 @@
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(14, 300);
+            this.label113.Location = new System.Drawing.Point(40, 327);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(21, 13);
             this.label113.TabIndex = 33;
@@ -4861,7 +4893,7 @@
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(14, 274);
+            this.label114.Location = new System.Drawing.Point(40, 301);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(21, 13);
             this.label114.TabIndex = 32;
@@ -4870,7 +4902,7 @@
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(14, 248);
+            this.label115.Location = new System.Drawing.Point(43, 275);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(18, 13);
             this.label115.TabIndex = 31;
@@ -4879,7 +4911,7 @@
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(14, 222);
+            this.label116.Location = new System.Drawing.Point(43, 249);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(18, 13);
             this.label116.TabIndex = 30;
@@ -4888,7 +4920,7 @@
             // label117
             // 
             this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(14, 196);
+            this.label117.Location = new System.Drawing.Point(48, 223);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(13, 13);
             this.label117.TabIndex = 29;
@@ -4897,7 +4929,7 @@
             // label118
             // 
             this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(14, 170);
+            this.label118.Location = new System.Drawing.Point(44, 197);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(17, 13);
             this.label118.TabIndex = 28;
@@ -4905,42 +4937,42 @@
             // 
             // txtBoxM2PMSMx3S
             // 
-            this.txtBoxM2PMSMx3S.Location = new System.Drawing.Point(67, 297);
+            this.txtBoxM2PMSMx3S.Location = new System.Drawing.Point(67, 323);
             this.txtBoxM2PMSMx3S.Name = "txtBoxM2PMSMx3S";
             this.txtBoxM2PMSMx3S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx3S.TabIndex = 27;
             // 
             // txtBoxM2PMSMx2S
             // 
-            this.txtBoxM2PMSMx2S.Location = new System.Drawing.Point(67, 271);
+            this.txtBoxM2PMSMx2S.Location = new System.Drawing.Point(67, 297);
             this.txtBoxM2PMSMx2S.Name = "txtBoxM2PMSMx2S";
             this.txtBoxM2PMSMx2S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx2S.TabIndex = 26;
             // 
             // txtBoxM2PMSMx1S
             // 
-            this.txtBoxM2PMSMx1S.Location = new System.Drawing.Point(67, 245);
+            this.txtBoxM2PMSMx1S.Location = new System.Drawing.Point(67, 271);
             this.txtBoxM2PMSMx1S.Name = "txtBoxM2PMSMx1S";
             this.txtBoxM2PMSMx1S.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMx1S.TabIndex = 25;
             // 
             // txtBoxM2PMSMDS
             // 
-            this.txtBoxM2PMSMDS.Location = new System.Drawing.Point(67, 219);
+            this.txtBoxM2PMSMDS.Location = new System.Drawing.Point(67, 245);
             this.txtBoxM2PMSMDS.Name = "txtBoxM2PMSMDS";
             this.txtBoxM2PMSMDS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMDS.TabIndex = 24;
             // 
             // txtBoxM2PMSMIS
             // 
-            this.txtBoxM2PMSMIS.Location = new System.Drawing.Point(67, 193);
+            this.txtBoxM2PMSMIS.Location = new System.Drawing.Point(67, 219);
             this.txtBoxM2PMSMIS.Name = "txtBoxM2PMSMIS";
             this.txtBoxM2PMSMIS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMIS.TabIndex = 23;
             // 
             // txtBoxM2PMSMPS
             // 
-            this.txtBoxM2PMSMPS.Location = new System.Drawing.Point(67, 167);
+            this.txtBoxM2PMSMPS.Location = new System.Drawing.Point(67, 193);
             this.txtBoxM2PMSMPS.Name = "txtBoxM2PMSMPS";
             this.txtBoxM2PMSMPS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMPS.TabIndex = 22;
@@ -4948,7 +4980,7 @@
             // label119
             // 
             this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(14, 117);
+            this.label119.Location = new System.Drawing.Point(17, 118);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(44, 13);
             this.label119.TabIndex = 19;
@@ -4957,7 +4989,7 @@
             // label126
             // 
             this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(14, 91);
+            this.label126.Location = new System.Drawing.Point(17, 92);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(44, 13);
             this.label126.TabIndex = 18;
@@ -4966,7 +4998,7 @@
             // label127
             // 
             this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(14, 64);
+            this.label127.Location = new System.Drawing.Point(14, 65);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(47, 13);
             this.label127.TabIndex = 17;
@@ -4975,7 +5007,7 @@
             // label128
             // 
             this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(14, 36);
+            this.label128.Location = new System.Drawing.Point(20, 37);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(41, 13);
             this.label128.TabIndex = 16;
@@ -5004,7 +5036,7 @@
             // 
             // txtBoxM2PMSMSpeedS
             // 
-            this.txtBoxM2PMSMSpeedS.Location = new System.Drawing.Point(67, 33);
+            this.txtBoxM2PMSMSpeedS.Location = new System.Drawing.Point(67, 34);
             this.txtBoxM2PMSMSpeedS.Name = "txtBoxM2PMSMSpeedS";
             this.txtBoxM2PMSMSpeedS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMSpeedS.TabIndex = 10;
@@ -5012,19 +5044,19 @@
             // label129
             // 
             this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(0, 15);
+            this.label129.Location = new System.Drawing.Point(6, 486);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(69, 13);
             this.label129.TabIndex = 3;
             this.label129.Text = "Slave Adress";
             // 
-            // txtBoxM2PMSMSlaveAddress
+            // txtBoxSlaveAddress
             // 
-            this.txtBoxM2PMSMSlaveAddress.Location = new System.Drawing.Point(70, 12);
-            this.txtBoxM2PMSMSlaveAddress.Name = "txtBoxM2PMSMSlaveAddress";
-            this.txtBoxM2PMSMSlaveAddress.Size = new System.Drawing.Size(60, 20);
-            this.txtBoxM2PMSMSlaveAddress.TabIndex = 0;
-            this.txtBoxM2PMSMSlaveAddress.Text = "9";
+            this.txtBoxSlaveAddress.Location = new System.Drawing.Point(76, 483);
+            this.txtBoxSlaveAddress.Name = "txtBoxSlaveAddress";
+            this.txtBoxSlaveAddress.Size = new System.Drawing.Size(60, 20);
+            this.txtBoxSlaveAddress.TabIndex = 0;
+            this.txtBoxSlaveAddress.Text = "9";
             // 
             // tabControl1
             // 
@@ -5033,7 +5065,7 @@
             this.tabControl1.Controls.Add(this.M2Asynch);
             this.tabControl1.Controls.Add(this.M2BLDC);
             this.tabControl1.Controls.Add(this.M2PMSM);
-            this.tabControl1.Location = new System.Drawing.Point(229, 12);
+            this.tabControl1.Location = new System.Drawing.Point(272, 20);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(718, 426);
@@ -5097,8 +5129,6 @@
             // 
             this.M2PMSM.Controls.Add(this.groupBox15);
             this.M2PMSM.Controls.Add(this.groupBox16);
-            this.M2PMSM.Controls.Add(this.txtBoxM2PMSMSlaveAddress);
-            this.M2PMSM.Controls.Add(this.label129);
             this.M2PMSM.Location = new System.Drawing.Point(4, 22);
             this.M2PMSM.Name = "M2PMSM";
             this.M2PMSM.Size = new System.Drawing.Size(710, 400);
@@ -5227,6 +5257,134 @@
             this.label140.TabIndex = 0;
             this.label140.Text = "Start Address:";
             // 
+            // txtBoxM2AsynchFrequencySNOP
+            // 
+            this.txtBoxM2AsynchFrequencySNOP.Location = new System.Drawing.Point(175, 170);
+            this.txtBoxM2AsynchFrequencySNOP.Name = "txtBoxM2AsynchFrequencySNOP";
+            this.txtBoxM2AsynchFrequencySNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2AsynchFrequencySNOP.TabIndex = 98;
+            // 
+            // checkBoxM2AsynchFrequencyS
+            // 
+            this.checkBoxM2AsynchFrequencyS.AutoSize = true;
+            this.checkBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(283, 172);
+            this.checkBoxM2AsynchFrequencyS.Name = "checkBoxM2AsynchFrequencyS";
+            this.checkBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2AsynchFrequencyS.TabIndex = 97;
+            this.checkBoxM2AsynchFrequencyS.UseVisualStyleBackColor = true;
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(1, 172);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(60, 13);
+            this.label144.TabIndex = 96;
+            this.label144.Text = "Frequency:";
+            // 
+            // txtBoxM2AsynchFrequencyS
+            // 
+            this.txtBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(67, 169);
+            this.txtBoxM2AsynchFrequencyS.Name = "txtBoxM2AsynchFrequencyS";
+            this.txtBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2AsynchFrequencyS.TabIndex = 95;
+            // 
+            // txtBoxM2AsynchFrequencyRNOP
+            // 
+            this.txtBoxM2AsynchFrequencyRNOP.Location = new System.Drawing.Point(173, 170);
+            this.txtBoxM2AsynchFrequencyRNOP.Name = "txtBoxM2AsynchFrequencyRNOP";
+            this.txtBoxM2AsynchFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2AsynchFrequencyRNOP.TabIndex = 97;
+            // 
+            // checkBoxM2AsynchFrequencyR
+            // 
+            this.checkBoxM2AsynchFrequencyR.AutoSize = true;
+            this.checkBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(274, 172);
+            this.checkBoxM2AsynchFrequencyR.Name = "checkBoxM2AsynchFrequencyR";
+            this.checkBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2AsynchFrequencyR.TabIndex = 96;
+            this.checkBoxM2AsynchFrequencyR.UseVisualStyleBackColor = true;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(1, 172);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(60, 13);
+            this.label145.TabIndex = 95;
+            this.label145.Text = "Frequency:";
+            // 
+            // txtBoxM2AsynchFrequencyR
+            // 
+            this.txtBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(67, 169);
+            this.txtBoxM2AsynchFrequencyR.Name = "txtBoxM2AsynchFrequencyR";
+            this.txtBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2AsynchFrequencyR.TabIndex = 94;
+            // 
+            // txtBoxM2PMSMFrequencySNOP
+            // 
+            this.txtBoxM2PMSMFrequencySNOP.Location = new System.Drawing.Point(175, 168);
+            this.txtBoxM2PMSMFrequencySNOP.Name = "txtBoxM2PMSMFrequencySNOP";
+            this.txtBoxM2PMSMFrequencySNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2PMSMFrequencySNOP.TabIndex = 87;
+            // 
+            // checkBoxM2PMSMFrequencyS
+            // 
+            this.checkBoxM2PMSMFrequencyS.AutoSize = true;
+            this.checkBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(283, 171);
+            this.checkBoxM2PMSMFrequencyS.Name = "checkBoxM2PMSMFrequencyS";
+            this.checkBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2PMSMFrequencyS.TabIndex = 86;
+            this.checkBoxM2PMSMFrequencyS.UseVisualStyleBackColor = true;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(1, 171);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(60, 13);
+            this.label146.TabIndex = 85;
+            this.label146.Text = "Frequency:";
+            // 
+            // txtBoxM2PMSMFrequencyS
+            // 
+            this.txtBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(67, 167);
+            this.txtBoxM2PMSMFrequencyS.Name = "txtBoxM2PMSMFrequencyS";
+            this.txtBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2PMSMFrequencyS.TabIndex = 84;
+            // 
+            // checkBoxM2PMSMFrequencyR
+            // 
+            this.checkBoxM2PMSMFrequencyR.AutoSize = true;
+            this.checkBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(277, 168);
+            this.checkBoxM2PMSMFrequencyR.Name = "checkBoxM2PMSMFrequencyR";
+            this.checkBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2PMSMFrequencyR.TabIndex = 97;
+            this.checkBoxM2PMSMFrequencyR.UseVisualStyleBackColor = true;
+            // 
+            // txtBoxM2PMSMFrequencyRNOP
+            // 
+            this.txtBoxM2PMSMFrequencyRNOP.Location = new System.Drawing.Point(173, 164);
+            this.txtBoxM2PMSMFrequencyRNOP.Name = "txtBoxM2PMSMFrequencyRNOP";
+            this.txtBoxM2PMSMFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2PMSMFrequencyRNOP.TabIndex = 98;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(1, 167);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(60, 13);
+            this.label147.TabIndex = 96;
+            this.label147.Text = "Frequency:";
+            // 
+            // txtBoxM2PMSMFrequencyR
+            // 
+            this.txtBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(67, 164);
+            this.txtBoxM2PMSMFrequencyR.Name = "txtBoxM2PMSMFrequencyR";
+            this.txtBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2PMSMFrequencyR.TabIndex = 95;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5234,7 +5392,9 @@
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.txtBoxSlaveAddress);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label129);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
@@ -5273,13 +5433,13 @@
             this.M2BLDC.ResumeLayout(false);
             this.M2BLDC.PerformLayout();
             this.M2PMSM.ResumeLayout(false);
-            this.M2PMSM.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -5735,7 +5895,7 @@
         private System.Windows.Forms.TextBox txtBoxM2PMSMPositionS;
         private System.Windows.Forms.TextBox txtBoxM2PMSMSpeedS;
         private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMSlaveAddress;
+        private System.Windows.Forms.TextBox txtBoxSlaveAddress;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage M1;
         private System.Windows.Forms.TabPage M2DC;
@@ -5794,5 +5954,21 @@
         private System.Windows.Forms.TextBox txtBoxReadGenNOP;
         private System.Windows.Forms.Label label141;
         private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencyRNOP;
+        private System.Windows.Forms.CheckBox checkBoxM2AsynchFrequencyR;
+        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencyR;
+        private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencySNOP;
+        private System.Windows.Forms.CheckBox checkBoxM2AsynchFrequencyS;
+        private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencyS;
+        private System.Windows.Forms.CheckBox checkBoxM2PMSMFrequencyR;
+        private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyRNOP;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyR;
+        private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencySNOP;
+        private System.Windows.Forms.CheckBox checkBoxM2PMSMFrequencyS;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyS;
     }
 }
