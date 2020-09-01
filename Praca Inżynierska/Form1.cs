@@ -681,7 +681,7 @@ namespace Praca_Inżynierska
                                     Runchart();             //uruchamia metodę odpowiedzialną za wykresy
                                 }));
                                 ID = ID + 1;                // zwiększa ID    
-                                Thread.Sleep(20);           //opóźnienie 20min
+                               Thread.Sleep(20);           //opóźnienie 20min
                             }
                         }
                     }));
@@ -1482,18 +1482,18 @@ namespace Praca_Inżynierska
                         }
                         if (comboBoxY2chart.Text == "Torque")
                         {
-                            dataY3 = data.M1Speed;
-                            dataY4 = data.M2Speed;
+                            dataY3 = data.M1Torque;
+                            dataY4 = data.M2Torque;
                         }
                         if (comboBoxY2chart.Text == "Current")
                         {
-                            dataY3 = data.M1Speed;
-                            dataY4 = data.M2Speed;
+                            dataY3 = data.M1Current;
+                            dataY4 = data.M2Current;
                         }
                         if (comboBoxY2chart.Text == "Voltage")
                         {
-                            dataY3 = data.M1Speed;
-                            dataY4 = data.M2Speed;
+                            dataY3 = data.M1Voltage;
+                            dataY4 = data.M2Voltage;
                         }
                         if (comboBoxY2chart.Text == "Frequency")
                         {
@@ -1531,24 +1531,24 @@ namespace Praca_Inżynierska
                             dataY4 = data.M2x3;
                         }
 
-                    if (dataX == "x")  //ustawia wyjątek gdy dane mają być liczone po czasie
-                    {
-                        series1.XValueType = ChartValueType.Time;
-                        series2.XValueType = ChartValueType.Time;
-                        series3.XValueType = ChartValueType.Time;
-                        series4.XValueType = ChartValueType.Time;
-                        series1.Points.AddY(dataY1);
-                        series2.Points.AddY(dataY2);
-                        series3.Points.AddY(dataY3);
-                        series4.Points.AddY(dataY4);
-                    }
-                    else   //dane gdy na osi X wartością nie jest czas
-                    {
-                        series1.Points.AddXY(dataX, dataY1);
-                        series2.Points.AddXY(dataX, dataY2);
-                        series3.Points.AddXY(dataX, dataY3);
-                        series4.Points.AddXY(dataX, dataY4);
-                    }
+                        if (dataX == "x")  //ustawia wyjątek gdy dane mają być liczone po czasie
+                        {
+                            series1.XValueType = ChartValueType.Time;
+                            series2.XValueType = ChartValueType.Time;
+                            series3.XValueType = ChartValueType.Time;
+                            series4.XValueType = ChartValueType.Time;
+                            series1.Points.AddY(dataY1);
+                            series2.Points.AddY(dataY2);
+                            series3.Points.AddY(dataY3);
+                            series4.Points.AddY(dataY4);
+                        }
+                        else   //dane gdy na osi X wartością nie jest czas
+                        {
+                            series1.Points.AddXY(dataX, dataY1);
+                            series2.Points.AddXY(dataX, dataY2);
+                            series3.Points.AddXY(dataX, dataY3);
+                            series4.Points.AddXY(dataX, dataY4);
+                        }
                     }
                     Thread.Sleep(20); // opóźnienie 20ms
             }
@@ -2337,6 +2337,12 @@ namespace Praca_Inżynierska
             trackBarM2PMSMx2.Enabled = false;
             textBoxM2PMSMx3.Enabled = false;
             trackBarM2PMSMx3.Enabled = false;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            export.Clear();
+            //List<Data> export = new List<Data>();
         }
     }
 }

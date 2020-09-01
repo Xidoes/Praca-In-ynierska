@@ -130,6 +130,10 @@
             this.btnStopM2DC = new System.Windows.Forms.Button();
             this.btnStartM2DC = new System.Windows.Forms.Button();
             this.tabAsych = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.trackBarM2AsynchFrequency = new System.Windows.Forms.TrackBar();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBoxM2AsynchFrequency = new System.Windows.Forms.TextBox();
             this.btnConfirmM2Asynch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -220,6 +224,10 @@
             this.btnStopM2BLDC = new System.Windows.Forms.Button();
             this.btnStartM2BLDC = new System.Windows.Forms.Button();
             this.tabPMSM = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.trackBarM2PMSMFrequency = new System.Windows.Forms.TrackBar();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBoxM2PMSMFrequency = new System.Windows.Forms.TextBox();
             this.btnConfirmM2PMSM = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -341,15 +349,8 @@
             this.label147 = new System.Windows.Forms.Label();
             this.label148 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.trackBarM2AsynchFrequency = new System.Windows.Forms.TrackBar();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBoxM2AsynchFrequency = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.trackBarM2PMSMFrequency = new System.Windows.Forms.TrackBar();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBoxM2PMSMFrequency = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM1D)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM1I)).BeginInit();
@@ -377,6 +378,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2DCPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2DCSpeed)).BeginInit();
             this.tabAsych.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchFrequency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchTorque)).BeginInit();
@@ -401,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2BLDCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2BLDCP)).BeginInit();
             this.tabPMSM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMFrequency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMTorque)).BeginInit();
@@ -414,8 +417,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMP)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchFrequency)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMFrequency)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -1414,6 +1415,40 @@
             this.tabAsych.Text = "M2 Asynchronous";
             this.tabAsych.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(503, 40);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(20, 13);
+            this.label26.TabIndex = 93;
+            this.label26.Text = "Hz";
+            // 
+            // trackBarM2AsynchFrequency
+            // 
+            this.trackBarM2AsynchFrequency.Location = new System.Drawing.Point(331, 14);
+            this.trackBarM2AsynchFrequency.Maximum = 1000;
+            this.trackBarM2AsynchFrequency.Name = "trackBarM2AsynchFrequency";
+            this.trackBarM2AsynchFrequency.Size = new System.Drawing.Size(104, 45);
+            this.trackBarM2AsynchFrequency.TabIndex = 92;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(273, 40);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 13);
+            this.label27.TabIndex = 91;
+            this.label27.Text = "Frequency";
+            // 
+            // textBoxM2AsynchFrequency
+            // 
+            this.textBoxM2AsynchFrequency.Location = new System.Drawing.Point(441, 37);
+            this.textBoxM2AsynchFrequency.Name = "textBoxM2AsynchFrequency";
+            this.textBoxM2AsynchFrequency.Size = new System.Drawing.Size(56, 20);
+            this.textBoxM2AsynchFrequency.TabIndex = 90;
+            this.textBoxM2AsynchFrequency.Text = "0";
+            // 
             // btnConfirmM2Asynch
             // 
             this.btnConfirmM2Asynch.Location = new System.Drawing.Point(99, 18);
@@ -2298,6 +2333,40 @@
             this.tabPMSM.Text = "M2 PMSM";
             this.tabPMSM.UseVisualStyleBackColor = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(507, 41);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(20, 13);
+            this.label28.TabIndex = 133;
+            this.label28.Text = "Hz";
+            // 
+            // trackBarM2PMSMFrequency
+            // 
+            this.trackBarM2PMSMFrequency.Location = new System.Drawing.Point(335, 15);
+            this.trackBarM2PMSMFrequency.Maximum = 1000;
+            this.trackBarM2PMSMFrequency.Name = "trackBarM2PMSMFrequency";
+            this.trackBarM2PMSMFrequency.Size = new System.Drawing.Size(104, 45);
+            this.trackBarM2PMSMFrequency.TabIndex = 132;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(277, 41);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 13);
+            this.label30.TabIndex = 131;
+            this.label30.Text = "Frequency";
+            // 
+            // textBoxM2PMSMFrequency
+            // 
+            this.textBoxM2PMSMFrequency.Location = new System.Drawing.Point(445, 38);
+            this.textBoxM2PMSMFrequency.Name = "textBoxM2PMSMFrequency";
+            this.textBoxM2PMSMFrequency.Size = new System.Drawing.Size(56, 20);
+            this.textBoxM2PMSMFrequency.TabIndex = 130;
+            this.textBoxM2PMSMFrequency.Text = "0";
+            // 
             // btnConfirmM2PMSM
             // 
             this.btnConfirmM2PMSM.Location = new System.Drawing.Point(95, 18);
@@ -2812,7 +2881,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(952, 530);
+            this.label54.Location = new System.Drawing.Point(952, 633);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(17, 13);
             this.label54.TabIndex = 23;
@@ -2821,7 +2890,7 @@
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(952, 440);
+            this.label108.Location = new System.Drawing.Point(952, 543);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(23, 13);
             this.label108.TabIndex = 24;
@@ -2841,7 +2910,7 @@
             "x2",
             "x3",
             "ID"});
-            this.comboBoxXchart.Location = new System.Drawing.Point(954, 546);
+            this.comboBoxXchart.Location = new System.Drawing.Point(954, 649);
             this.comboBoxXchart.Name = "comboBoxXchart";
             this.comboBoxXchart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxXchart.TabIndex = 25;
@@ -2860,7 +2929,7 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxY1chart.Location = new System.Drawing.Point(952, 456);
+            this.comboBoxY1chart.Location = new System.Drawing.Point(952, 559);
             this.comboBoxY1chart.Name = "comboBoxY1chart";
             this.comboBoxY1chart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxY1chart.TabIndex = 26;
@@ -2879,7 +2948,7 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxY2chart.Location = new System.Drawing.Point(952, 496);
+            this.comboBoxY2chart.Location = new System.Drawing.Point(952, 599);
             this.comboBoxY2chart.Name = "comboBoxY2chart";
             this.comboBoxY2chart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxY2chart.TabIndex = 28;
@@ -2888,7 +2957,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(952, 480);
+            this.label109.Location = new System.Drawing.Point(952, 583);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(23, 13);
             this.label109.TabIndex = 27;
@@ -3387,83 +3456,24 @@
             this.label149.TabIndex = 99;
             this.label149.Text = "Hz";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(952, 440);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 100;
+            this.button1.Text = "Clear Chart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1115, 312);
+            this.button2.Location = new System.Drawing.Point(952, 469);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 100;
-            this.button2.Text = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 34);
+            this.button2.TabIndex = 101;
+            this.button2.Text = "Export to Excel";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(503, 40);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(20, 13);
-            this.label26.TabIndex = 93;
-            this.label26.Text = "Hz";
-            // 
-            // trackBarM2AsynchFrequency
-            // 
-            this.trackBarM2AsynchFrequency.Location = new System.Drawing.Point(331, 14);
-            this.trackBarM2AsynchFrequency.Maximum = 1000;
-            this.trackBarM2AsynchFrequency.Name = "trackBarM2AsynchFrequency";
-            this.trackBarM2AsynchFrequency.Size = new System.Drawing.Size(104, 45);
-            this.trackBarM2AsynchFrequency.TabIndex = 92;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(273, 40);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(57, 13);
-            this.label27.TabIndex = 91;
-            this.label27.Text = "Frequency";
-            // 
-            // textBoxM2AsynchFrequency
-            // 
-            this.textBoxM2AsynchFrequency.Location = new System.Drawing.Point(441, 37);
-            this.textBoxM2AsynchFrequency.Name = "textBoxM2AsynchFrequency";
-            this.textBoxM2AsynchFrequency.Size = new System.Drawing.Size(56, 20);
-            this.textBoxM2AsynchFrequency.TabIndex = 90;
-            this.textBoxM2AsynchFrequency.Text = "0";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(507, 41);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(20, 13);
-            this.label28.TabIndex = 133;
-            this.label28.Text = "Hz";
-            // 
-            // trackBarM2PMSMFrequency
-            // 
-            this.trackBarM2PMSMFrequency.Location = new System.Drawing.Point(335, 15);
-            this.trackBarM2PMSMFrequency.Maximum = 1000;
-            this.trackBarM2PMSMFrequency.Name = "trackBarM2PMSMFrequency";
-            this.trackBarM2PMSMFrequency.Size = new System.Drawing.Size(104, 45);
-            this.trackBarM2PMSMFrequency.TabIndex = 132;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(277, 41);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(57, 13);
-            this.label30.TabIndex = 131;
-            this.label30.Text = "Frequency";
-            // 
-            // textBoxM2PMSMFrequency
-            // 
-            this.textBoxM2PMSMFrequency.Location = new System.Drawing.Point(445, 38);
-            this.textBoxM2PMSMFrequency.Name = "textBoxM2PMSMFrequency";
-            this.textBoxM2PMSMFrequency.Size = new System.Drawing.Size(56, 20);
-            this.textBoxM2PMSMFrequency.TabIndex = 130;
-            this.textBoxM2PMSMFrequency.Text = "0";
             // 
             // Form1
             // 
@@ -3471,6 +3481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 984);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label149);
             this.Controls.Add(this.label122);
             this.Controls.Add(this.label123);
@@ -3577,6 +3588,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2DCSpeed)).EndInit();
             this.tabAsych.ResumeLayout(false);
             this.tabAsych.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchFrequency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchTorque)).EndInit();
@@ -3603,6 +3615,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2BLDCP)).EndInit();
             this.tabPMSM.ResumeLayout(false);
             this.tabPMSM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMFrequency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMTorque)).EndInit();
@@ -3617,8 +3630,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2AsynchFrequency)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarM2PMSMFrequency)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3924,7 +3935,6 @@
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.Label label149;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnConfirmM1;
         private System.Windows.Forms.Button btnConfirmM2DC;
         private System.Windows.Forms.Button btnConfirmM2Asynch;
@@ -3938,6 +3948,8 @@
         private System.Windows.Forms.TrackBar trackBarM2PMSMFrequency;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBoxM2PMSMFrequency;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
