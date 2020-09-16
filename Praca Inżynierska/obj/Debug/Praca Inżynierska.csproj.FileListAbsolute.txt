@@ -14,3 +14,5 @@ C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\Unme
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csproj.CopyComplete
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca_Inżynierska.Form2.resources
 C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\obj\Debug\Praca Inżynierska.csprojAssemblyReference.cache
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\EPPlus.dll
+C:\Users\slesn\source\repos\Praca Inżynierska\Praca Inżynierska\bin\Debug\EPPlus.xml

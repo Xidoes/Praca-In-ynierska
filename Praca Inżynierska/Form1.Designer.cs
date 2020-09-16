@@ -32,11 +32,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConfirmM1 = new System.Windows.Forms.Button();
             this.trackBarM1D = new System.Windows.Forms.TrackBar();
@@ -351,6 +346,9 @@
             this.label149 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBoxreadTime = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM1D)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM1I)).BeginInit();
@@ -871,34 +869,8 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
-            series1.Name = "Test0";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Test1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Test2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "Test3";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Test4";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Power";
+            series1.Name = "Series1";
             this.chart2.Series.Add(series1);
-            this.chart2.Series.Add(series2);
-            this.chart2.Series.Add(series3);
-            this.chart2.Series.Add(series4);
-            this.chart2.Series.Add(series5);
-            this.chart2.Series.Add(series6);
             this.chart2.Size = new System.Drawing.Size(934, 532);
             this.chart2.TabIndex = 6;
             this.chart2.Text = "chart2";
@@ -2823,10 +2795,6 @@
             this.btnOpenComPort.UseVisualStyleBackColor = true;
             this.btnOpenComPort.Click += new System.EventHandler(this.BtnOpenComPort_Click);
             // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
             // btnSettings
             // 
             this.btnSettings.Location = new System.Drawing.Point(1290, 25);
@@ -2881,7 +2849,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(952, 633);
+            this.label54.Location = new System.Drawing.Point(952, 560);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(17, 13);
             this.label54.TabIndex = 23;
@@ -2890,7 +2858,7 @@
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(952, 543);
+            this.label108.Location = new System.Drawing.Point(952, 470);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(23, 13);
             this.label108.TabIndex = 24;
@@ -2900,17 +2868,23 @@
             // 
             this.comboBoxXchart.FormattingEnabled = true;
             this.comboBoxXchart.Items.AddRange(new object[] {
-            "Speed",
-            "Position",
-            "Current",
-            "Voltage",
-            "Power",
+            "M1Speed",
+            "M1Position",
+            "M1Current",
+            "M1Voltage",
+            "M1Power",
+            "M2Speed",
+            "M2Position",
+            "M2Current",
+            "M2Voltage",
+            "M2Power",
+            "M2Frequency",
             "Time",
             "x1",
             "x2",
             "x3",
             "ID"});
-            this.comboBoxXchart.Location = new System.Drawing.Point(954, 649);
+            this.comboBoxXchart.Location = new System.Drawing.Point(954, 576);
             this.comboBoxXchart.Name = "comboBoxXchart";
             this.comboBoxXchart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxXchart.TabIndex = 25;
@@ -2929,7 +2903,7 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxY1chart.Location = new System.Drawing.Point(952, 559);
+            this.comboBoxY1chart.Location = new System.Drawing.Point(952, 486);
             this.comboBoxY1chart.Name = "comboBoxY1chart";
             this.comboBoxY1chart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxY1chart.TabIndex = 26;
@@ -2948,7 +2922,7 @@
             "x1",
             "x2",
             "x3"});
-            this.comboBoxY2chart.Location = new System.Drawing.Point(952, 599);
+            this.comboBoxY2chart.Location = new System.Drawing.Point(952, 526);
             this.comboBoxY2chart.Name = "comboBoxY2chart";
             this.comboBoxY2chart.Size = new System.Drawing.Size(121, 21);
             this.comboBoxY2chart.TabIndex = 28;
@@ -2957,7 +2931,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(952, 583);
+            this.label109.Location = new System.Drawing.Point(952, 510);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(23, 13);
             this.label109.TabIndex = 27;
@@ -3468,18 +3442,49 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(952, 469);
+            this.button2.Location = new System.Drawing.Point(1115, 312);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 101;
             this.button2.Text = "Export to Excel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1145, 364);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 102;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1231, 364);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 103;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBoxreadTime
+            // 
+            this.textBoxreadTime.Location = new System.Drawing.Point(988, 743);
+            this.textBoxreadTime.Name = "textBoxreadTime";
+            this.textBoxreadTime.Size = new System.Drawing.Size(100, 20);
+            this.textBoxreadTime.TabIndex = 104;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 984);
+            this.Controls.Add(this.textBoxreadTime);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label149);
@@ -3950,6 +3955,9 @@
         private System.Windows.Forms.TextBox textBoxM2PMSMFrequency;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxreadTime;
     }
 }
 

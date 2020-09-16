@@ -16,6 +16,7 @@ namespace Praca_Inżynierska
         public string M1Torque { get; set; }
         public string M1Current { get; set; }
         public string M1Voltage { get; set; }
+        public string M1Power { get; set; }
         public string M1P { get; set; }
         public string M1I { get; set; }
         public string M1D { get; set; }
@@ -28,6 +29,7 @@ namespace Praca_Inżynierska
         public string M2Current { get; set; }
         public string M2Voltage { get; set; }
         public string M2Frequency { get; set; }
+        public string M2Power { get; set; }
         public string M2P { get; set; }
         public string M2I { get; set; }
         public string M2D { get; set; }

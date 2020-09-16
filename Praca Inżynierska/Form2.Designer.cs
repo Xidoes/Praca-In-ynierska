@@ -87,21 +87,9 @@
             this.txtBoxM1PositionR = new System.Windows.Forms.TextBox();
             this.txtBoxM1SpeedR = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtBoxM1VoltageSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM1VoltageS = new System.Windows.Forms.CheckBox();
             this.label130 = new System.Windows.Forms.Label();
             this.txtBoxM1VoltageS = new System.Windows.Forms.TextBox();
-            this.txtBoxM1x3SNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1x2SNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1x1SNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1DSNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1ISNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1PSNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1CurrentSNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1TorqueSNOP = new System.Windows.Forms.TextBox();
-            this.txtBoxM1PositionSNOP = new System.Windows.Forms.TextBox();
-            this.label120 = new System.Windows.Forms.Label();
-            this.txtBoxM1SpeedSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM1x3S = new System.Windows.Forms.CheckBox();
             this.checkBoxM1x2S = new System.Windows.Forms.CheckBox();
             this.checkBoxM1x1S = new System.Windows.Forms.CheckBox();
@@ -133,8 +121,6 @@
             this.txtBoxM1TorqueS = new System.Windows.Forms.TextBox();
             this.txtBoxM1PositionS = new System.Windows.Forms.TextBox();
             this.txtBoxM1SpeedS = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxM1SlaveAddress = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtBoxM2DCVoltageRNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCVoltageR = new System.Windows.Forms.CheckBox();
@@ -183,30 +169,18 @@
             this.txtBoxM2DCPositionR = new System.Windows.Forms.TextBox();
             this.txtBoxM2DCSpeedR = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtBoxM2DCVoltageSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCVoltageS = new System.Windows.Forms.CheckBox();
             this.label132 = new System.Windows.Forms.Label();
             this.txtBoxM2DCVoltageS = new System.Windows.Forms.TextBox();
-            this.txtBoxM2DCx3SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCx3S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCx2SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCx2S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCx1SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCx1S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCDSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCDS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCISNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCIS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCPSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCPS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCCurrentSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCCurrentS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCTorqueSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCTorqueS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2DCPositionSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCPositionS = new System.Windows.Forms.CheckBox();
-            this.label122 = new System.Windows.Forms.Label();
-            this.txtBoxM2DCSpeedSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2DCSpeedS = new System.Windows.Forms.CheckBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -229,9 +203,11 @@
             this.txtBoxM2DCTorqueS = new System.Windows.Forms.TextBox();
             this.txtBoxM2DCPositionS = new System.Windows.Forms.TextBox();
             this.txtBoxM2DCSpeedS = new System.Windows.Forms.TextBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.txtBoxM2DCSlaveAddress = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtBoxM2AsynchFrequencyRNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2AsynchFrequencyR = new System.Windows.Forms.CheckBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.txtBoxM2AsynchFrequencyR = new System.Windows.Forms.TextBox();
             this.txtBoxM2AsynchVoltageRNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchVoltageR = new System.Windows.Forms.CheckBox();
             this.label135 = new System.Windows.Forms.Label();
@@ -279,30 +255,21 @@
             this.txtBoxM2AsynchPositionR = new System.Windows.Forms.TextBox();
             this.txtBoxM2AsynchSpeedR = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtBoxM2AsynchVoltageSNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2AsynchFrequencyS = new System.Windows.Forms.CheckBox();
+            this.label144 = new System.Windows.Forms.Label();
+            this.txtBoxM2AsynchFrequencyS = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchVoltageS = new System.Windows.Forms.CheckBox();
             this.label134 = new System.Windows.Forms.Label();
             this.txtBoxM2AsynchVoltageS = new System.Windows.Forms.TextBox();
-            this.txtBoxM2Asynchx3SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2Asynchx3S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2Asynchx2SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2Asynchx2S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2Asynchx1SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2Asynchx1S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchDSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchDS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchISNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchIS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchPSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchPS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchCurrentSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchCurrentS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchTorqueSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchTorqueS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2AsynchPositionSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchPositionS = new System.Windows.Forms.CheckBox();
-            this.label124 = new System.Windows.Forms.Label();
-            this.txtBoxM2AsynchSpeedSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2AsynchSpeedS = new System.Windows.Forms.CheckBox();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
@@ -325,8 +292,6 @@
             this.txtBoxM2AsynchTorqueS = new System.Windows.Forms.TextBox();
             this.txtBoxM2AsynchPositionS = new System.Windows.Forms.TextBox();
             this.txtBoxM2AsynchSpeedS = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.txtBoxM2AsynchSlaveAddress = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.checkBoxM2BLDCVoltageR = new System.Windows.Forms.CheckBox();
             this.txtBoxM2BLDCVoltageRNOP = new System.Windows.Forms.TextBox();
@@ -375,30 +340,18 @@
             this.txtBoxM2BLDCPositionR = new System.Windows.Forms.TextBox();
             this.txtBoxM2BLDCSpeedR = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.txtBoxM2BLDCVoltageSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCVoltageS = new System.Windows.Forms.CheckBox();
             this.label136 = new System.Windows.Forms.Label();
             this.txtBoxM2BLDCVoltageS = new System.Windows.Forms.TextBox();
-            this.txtBoxM2BLDCx3SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCx3S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCx2SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCx2S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCx1SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCx1S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCDSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCDS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCISNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCIS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCPSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCPS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCCurrentSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCCurrentS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCTorqueSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCTorqueS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2BLDCPositionSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCPositionS = new System.Windows.Forms.CheckBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.txtBoxM2BLDCSpeedSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2BLDCSpeedS = new System.Windows.Forms.CheckBox();
             this.label87 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
@@ -421,9 +374,11 @@
             this.txtBoxM2BLDCTorqueS = new System.Windows.Forms.TextBox();
             this.txtBoxM2BLDCPositionS = new System.Windows.Forms.TextBox();
             this.txtBoxM2BLDCSpeedS = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.txtBoxM2BLDCSlaveAddress = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM2PMSMFrequencyR = new System.Windows.Forms.CheckBox();
+            this.txtBoxM2PMSMFrequencyRNOP = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.txtBoxM2PMSMFrequencyR = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMVoltageR = new System.Windows.Forms.CheckBox();
             this.txtBoxM2PMSMVoltageRNOP = new System.Windows.Forms.TextBox();
             this.label139 = new System.Windows.Forms.Label();
@@ -471,30 +426,21 @@
             this.txtBoxM2PMSMPositionR = new System.Windows.Forms.TextBox();
             this.txtBoxM2PMSMSpeedR = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.txtBoxM2PMSMVoltageSNOP = new System.Windows.Forms.TextBox();
+            this.checkBoxM2PMSMFrequencyS = new System.Windows.Forms.CheckBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.txtBoxM2PMSMFrequencyS = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMVoltageS = new System.Windows.Forms.CheckBox();
             this.label138 = new System.Windows.Forms.Label();
             this.txtBoxM2PMSMVoltageS = new System.Windows.Forms.TextBox();
-            this.txtBoxM2PMSMx3SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMx3S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMx2SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMx2S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMx1SNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMx1S = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMDSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMDS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMISNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMIS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMPSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMPS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMCurrentSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMCurrentS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMTorqueSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMTorqueS = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMPositionSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMPositionS = new System.Windows.Forms.CheckBox();
-            this.label111 = new System.Windows.Forms.Label();
-            this.txtBoxM2PMSMSpeedSNOP = new System.Windows.Forms.TextBox();
             this.checkBoxM2PMSMSpeedS = new System.Windows.Forms.CheckBox();
             this.label112 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
@@ -537,22 +483,6 @@
             this.txtBoxReadGenNOP = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
-            this.txtBoxM2AsynchFrequencySNOP = new System.Windows.Forms.TextBox();
-            this.checkBoxM2AsynchFrequencyS = new System.Windows.Forms.CheckBox();
-            this.label144 = new System.Windows.Forms.Label();
-            this.txtBoxM2AsynchFrequencyS = new System.Windows.Forms.TextBox();
-            this.txtBoxM2AsynchFrequencyRNOP = new System.Windows.Forms.TextBox();
-            this.checkBoxM2AsynchFrequencyR = new System.Windows.Forms.CheckBox();
-            this.label145 = new System.Windows.Forms.Label();
-            this.txtBoxM2AsynchFrequencyR = new System.Windows.Forms.TextBox();
-            this.txtBoxM2PMSMFrequencySNOP = new System.Windows.Forms.TextBox();
-            this.checkBoxM2PMSMFrequencyS = new System.Windows.Forms.CheckBox();
-            this.label146 = new System.Windows.Forms.Label();
-            this.txtBoxM2PMSMFrequencyS = new System.Windows.Forms.TextBox();
-            this.checkBoxM2PMSMFrequencyR = new System.Windows.Forms.CheckBox();
-            this.txtBoxM2PMSMFrequencyRNOP = new System.Windows.Forms.TextBox();
-            this.label147 = new System.Windows.Forms.Label();
-            this.txtBoxM2PMSMFrequencyR = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -587,7 +517,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(996, 42);
+            this.btnClose.Location = new System.Drawing.Point(133, 63);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 1;
@@ -755,7 +685,7 @@
             this.groupBox2.Controls.Add(this.txtBoxM1TorqueR);
             this.groupBox2.Controls.Add(this.txtBoxM1PositionR);
             this.groupBox2.Controls.Add(this.txtBoxM1SpeedR);
-            this.groupBox2.Location = new System.Drawing.Point(334, 32);
+            this.groupBox2.Location = new System.Drawing.Point(234, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(329, 362);
             this.groupBox2.TabIndex = 47;
@@ -1134,21 +1064,9 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.txtBoxM1VoltageSNOP);
             this.groupBox7.Controls.Add(this.checkBoxM1VoltageS);
             this.groupBox7.Controls.Add(this.label130);
             this.groupBox7.Controls.Add(this.txtBoxM1VoltageS);
-            this.groupBox7.Controls.Add(this.txtBoxM1x3SNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1x2SNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1x1SNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1DSNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1ISNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1PSNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1CurrentSNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1TorqueSNOP);
-            this.groupBox7.Controls.Add(this.txtBoxM1PositionSNOP);
-            this.groupBox7.Controls.Add(this.label120);
-            this.groupBox7.Controls.Add(this.txtBoxM1SpeedSNOP);
             this.groupBox7.Controls.Add(this.checkBoxM1x3S);
             this.groupBox7.Controls.Add(this.checkBoxM1x2S);
             this.groupBox7.Controls.Add(this.checkBoxM1x1S);
@@ -1180,24 +1098,17 @@
             this.groupBox7.Controls.Add(this.txtBoxM1TorqueS);
             this.groupBox7.Controls.Add(this.txtBoxM1PositionS);
             this.groupBox7.Controls.Add(this.txtBoxM1SpeedS);
-            this.groupBox7.Location = new System.Drawing.Point(9, 32);
+            this.groupBox7.Location = new System.Drawing.Point(6, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(319, 362);
+            this.groupBox7.Size = new System.Drawing.Size(222, 362);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Send Address";
             // 
-            // txtBoxM1VoltageSNOP
-            // 
-            this.txtBoxM1VoltageSNOP.Location = new System.Drawing.Point(173, 140);
-            this.txtBoxM1VoltageSNOP.Name = "txtBoxM1VoltageSNOP";
-            this.txtBoxM1VoltageSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1VoltageSNOP.TabIndex = 61;
-            // 
             // checkBoxM1VoltageS
             // 
             this.checkBoxM1VoltageS.AutoSize = true;
-            this.checkBoxM1VoltageS.Location = new System.Drawing.Point(278, 145);
+            this.checkBoxM1VoltageS.Location = new System.Drawing.Point(171, 145);
             this.checkBoxM1VoltageS.Name = "checkBoxM1VoltageS";
             this.checkBoxM1VoltageS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1VoltageS.TabIndex = 60;
@@ -1219,89 +1130,10 @@
             this.txtBoxM1VoltageS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM1VoltageS.TabIndex = 58;
             // 
-            // txtBoxM1x3SNOP
-            // 
-            this.txtBoxM1x3SNOP.Location = new System.Drawing.Point(174, 296);
-            this.txtBoxM1x3SNOP.Name = "txtBoxM1x3SNOP";
-            this.txtBoxM1x3SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1x3SNOP.TabIndex = 57;
-            // 
-            // txtBoxM1x2SNOP
-            // 
-            this.txtBoxM1x2SNOP.Location = new System.Drawing.Point(173, 270);
-            this.txtBoxM1x2SNOP.Name = "txtBoxM1x2SNOP";
-            this.txtBoxM1x2SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1x2SNOP.TabIndex = 56;
-            // 
-            // txtBoxM1x1SNOP
-            // 
-            this.txtBoxM1x1SNOP.Location = new System.Drawing.Point(173, 244);
-            this.txtBoxM1x1SNOP.Name = "txtBoxM1x1SNOP";
-            this.txtBoxM1x1SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1x1SNOP.TabIndex = 55;
-            // 
-            // txtBoxM1DSNOP
-            // 
-            this.txtBoxM1DSNOP.Location = new System.Drawing.Point(174, 218);
-            this.txtBoxM1DSNOP.Name = "txtBoxM1DSNOP";
-            this.txtBoxM1DSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1DSNOP.TabIndex = 54;
-            // 
-            // txtBoxM1ISNOP
-            // 
-            this.txtBoxM1ISNOP.Location = new System.Drawing.Point(173, 192);
-            this.txtBoxM1ISNOP.Name = "txtBoxM1ISNOP";
-            this.txtBoxM1ISNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1ISNOP.TabIndex = 53;
-            // 
-            // txtBoxM1PSNOP
-            // 
-            this.txtBoxM1PSNOP.Location = new System.Drawing.Point(173, 166);
-            this.txtBoxM1PSNOP.Name = "txtBoxM1PSNOP";
-            this.txtBoxM1PSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1PSNOP.TabIndex = 52;
-            // 
-            // txtBoxM1CurrentSNOP
-            // 
-            this.txtBoxM1CurrentSNOP.Location = new System.Drawing.Point(173, 115);
-            this.txtBoxM1CurrentSNOP.Name = "txtBoxM1CurrentSNOP";
-            this.txtBoxM1CurrentSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1CurrentSNOP.TabIndex = 51;
-            // 
-            // txtBoxM1TorqueSNOP
-            // 
-            this.txtBoxM1TorqueSNOP.Location = new System.Drawing.Point(173, 88);
-            this.txtBoxM1TorqueSNOP.Name = "txtBoxM1TorqueSNOP";
-            this.txtBoxM1TorqueSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1TorqueSNOP.TabIndex = 50;
-            // 
-            // txtBoxM1PositionSNOP
-            // 
-            this.txtBoxM1PositionSNOP.Location = new System.Drawing.Point(173, 62);
-            this.txtBoxM1PositionSNOP.Name = "txtBoxM1PositionSNOP";
-            this.txtBoxM1PositionSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1PositionSNOP.TabIndex = 49;
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(171, 16);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(91, 13);
-            this.label120.TabIndex = 48;
-            this.label120.Text = "Number of Points:";
-            // 
-            // txtBoxM1SpeedSNOP
-            // 
-            this.txtBoxM1SpeedSNOP.Location = new System.Drawing.Point(174, 34);
-            this.txtBoxM1SpeedSNOP.Name = "txtBoxM1SpeedSNOP";
-            this.txtBoxM1SpeedSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM1SpeedSNOP.TabIndex = 47;
-            // 
             // checkBoxM1x3S
             // 
             this.checkBoxM1x3S.AutoSize = true;
-            this.checkBoxM1x3S.Location = new System.Drawing.Point(278, 301);
+            this.checkBoxM1x3S.Location = new System.Drawing.Point(171, 301);
             this.checkBoxM1x3S.Name = "checkBoxM1x3S";
             this.checkBoxM1x3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1x3S.TabIndex = 46;
@@ -1310,7 +1142,7 @@
             // checkBoxM1x2S
             // 
             this.checkBoxM1x2S.AutoSize = true;
-            this.checkBoxM1x2S.Location = new System.Drawing.Point(278, 275);
+            this.checkBoxM1x2S.Location = new System.Drawing.Point(171, 275);
             this.checkBoxM1x2S.Name = "checkBoxM1x2S";
             this.checkBoxM1x2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1x2S.TabIndex = 45;
@@ -1319,7 +1151,7 @@
             // checkBoxM1x1S
             // 
             this.checkBoxM1x1S.AutoSize = true;
-            this.checkBoxM1x1S.Location = new System.Drawing.Point(278, 249);
+            this.checkBoxM1x1S.Location = new System.Drawing.Point(171, 249);
             this.checkBoxM1x1S.Name = "checkBoxM1x1S";
             this.checkBoxM1x1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1x1S.TabIndex = 44;
@@ -1328,7 +1160,7 @@
             // checkBoxM1DS
             // 
             this.checkBoxM1DS.AutoSize = true;
-            this.checkBoxM1DS.Location = new System.Drawing.Point(278, 220);
+            this.checkBoxM1DS.Location = new System.Drawing.Point(171, 220);
             this.checkBoxM1DS.Name = "checkBoxM1DS";
             this.checkBoxM1DS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1DS.TabIndex = 43;
@@ -1337,7 +1169,7 @@
             // checkBoxM1IS
             // 
             this.checkBoxM1IS.AutoSize = true;
-            this.checkBoxM1IS.Location = new System.Drawing.Point(278, 197);
+            this.checkBoxM1IS.Location = new System.Drawing.Point(171, 197);
             this.checkBoxM1IS.Name = "checkBoxM1IS";
             this.checkBoxM1IS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1IS.TabIndex = 42;
@@ -1346,7 +1178,7 @@
             // checkBoxM1PS
             // 
             this.checkBoxM1PS.AutoSize = true;
-            this.checkBoxM1PS.Location = new System.Drawing.Point(278, 171);
+            this.checkBoxM1PS.Location = new System.Drawing.Point(171, 171);
             this.checkBoxM1PS.Name = "checkBoxM1PS";
             this.checkBoxM1PS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1PS.TabIndex = 41;
@@ -1355,7 +1187,7 @@
             // checkBoxM1CurrentS
             // 
             this.checkBoxM1CurrentS.AutoSize = true;
-            this.checkBoxM1CurrentS.Location = new System.Drawing.Point(278, 116);
+            this.checkBoxM1CurrentS.Location = new System.Drawing.Point(171, 116);
             this.checkBoxM1CurrentS.Name = "checkBoxM1CurrentS";
             this.checkBoxM1CurrentS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1CurrentS.TabIndex = 38;
@@ -1364,7 +1196,7 @@
             // checkBoxM1TorqueS
             // 
             this.checkBoxM1TorqueS.AutoSize = true;
-            this.checkBoxM1TorqueS.Location = new System.Drawing.Point(278, 90);
+            this.checkBoxM1TorqueS.Location = new System.Drawing.Point(171, 90);
             this.checkBoxM1TorqueS.Name = "checkBoxM1TorqueS";
             this.checkBoxM1TorqueS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1TorqueS.TabIndex = 37;
@@ -1373,7 +1205,7 @@
             // checkBoxM1PositionS
             // 
             this.checkBoxM1PositionS.AutoSize = true;
-            this.checkBoxM1PositionS.Location = new System.Drawing.Point(278, 64);
+            this.checkBoxM1PositionS.Location = new System.Drawing.Point(171, 64);
             this.checkBoxM1PositionS.Name = "checkBoxM1PositionS";
             this.checkBoxM1PositionS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1PositionS.TabIndex = 36;
@@ -1382,7 +1214,7 @@
             // checkBoxM1SpeedS
             // 
             this.checkBoxM1SpeedS.AutoSize = true;
-            this.checkBoxM1SpeedS.Location = new System.Drawing.Point(278, 35);
+            this.checkBoxM1SpeedS.Location = new System.Drawing.Point(171, 35);
             this.checkBoxM1SpeedS.Name = "checkBoxM1SpeedS";
             this.checkBoxM1SpeedS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM1SpeedS.TabIndex = 35;
@@ -1391,7 +1223,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(275, 16);
+            this.label14.Location = new System.Drawing.Point(168, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 13);
             this.label14.TabIndex = 34;
@@ -1557,23 +1389,6 @@
             this.txtBoxM1SpeedS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM1SpeedS.TabIndex = 10;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Slave Adress";
-            // 
-            // txtBoxM1SlaveAddress
-            // 
-            this.txtBoxM1SlaveAddress.Location = new System.Drawing.Point(80, 6);
-            this.txtBoxM1SlaveAddress.Name = "txtBoxM1SlaveAddress";
-            this.txtBoxM1SlaveAddress.Size = new System.Drawing.Size(60, 20);
-            this.txtBoxM1SlaveAddress.TabIndex = 0;
-            this.txtBoxM1SlaveAddress.Text = "9";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtBoxM2DCVoltageRNOP);
@@ -1622,7 +1437,7 @@
             this.groupBox4.Controls.Add(this.txtBoxM2DCTorqueR);
             this.groupBox4.Controls.Add(this.txtBoxM2DCPositionR);
             this.groupBox4.Controls.Add(this.txtBoxM2DCSpeedR);
-            this.groupBox4.Location = new System.Drawing.Point(349, 36);
+            this.groupBox4.Location = new System.Drawing.Point(240, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(324, 358);
             this.groupBox4.TabIndex = 47;
@@ -2001,30 +1816,18 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.txtBoxM2DCVoltageSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCVoltageS);
             this.groupBox6.Controls.Add(this.label132);
             this.groupBox6.Controls.Add(this.txtBoxM2DCVoltageS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCx3SNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCx3S);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCx2SNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCx2S);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCx1SNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCx1S);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCDSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCDS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCISNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCIS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCPSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCPS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCCurrentSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCCurrentS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCTorqueSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCTorqueS);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCPositionSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCPositionS);
-            this.groupBox6.Controls.Add(this.label122);
-            this.groupBox6.Controls.Add(this.txtBoxM2DCSpeedSNOP);
             this.groupBox6.Controls.Add(this.checkBoxM2DCSpeedS);
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label46);
@@ -2047,24 +1850,17 @@
             this.groupBox6.Controls.Add(this.txtBoxM2DCTorqueS);
             this.groupBox6.Controls.Add(this.txtBoxM2DCPositionS);
             this.groupBox6.Controls.Add(this.txtBoxM2DCSpeedS);
-            this.groupBox6.Location = new System.Drawing.Point(9, 36);
+            this.groupBox6.Location = new System.Drawing.Point(6, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(334, 358);
+            this.groupBox6.Size = new System.Drawing.Size(228, 358);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Send Address";
             // 
-            // txtBoxM2DCVoltageSNOP
-            // 
-            this.txtBoxM2DCVoltageSNOP.Location = new System.Drawing.Point(175, 140);
-            this.txtBoxM2DCVoltageSNOP.Name = "txtBoxM2DCVoltageSNOP";
-            this.txtBoxM2DCVoltageSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCVoltageSNOP.TabIndex = 83;
-            // 
             // checkBoxM2DCVoltageS
             // 
             this.checkBoxM2DCVoltageS.AutoSize = true;
-            this.checkBoxM2DCVoltageS.Location = new System.Drawing.Point(283, 146);
+            this.checkBoxM2DCVoltageS.Location = new System.Drawing.Point(175, 146);
             this.checkBoxM2DCVoltageS.Name = "checkBoxM2DCVoltageS";
             this.checkBoxM2DCVoltageS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCVoltageS.TabIndex = 82;
@@ -2086,170 +1882,91 @@
             this.txtBoxM2DCVoltageS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2DCVoltageS.TabIndex = 80;
             // 
-            // txtBoxM2DCx3SNOP
-            // 
-            this.txtBoxM2DCx3SNOP.Location = new System.Drawing.Point(175, 297);
-            this.txtBoxM2DCx3SNOP.Name = "txtBoxM2DCx3SNOP";
-            this.txtBoxM2DCx3SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCx3SNOP.TabIndex = 79;
-            // 
             // checkBoxM2DCx3S
             // 
             this.checkBoxM2DCx3S.AutoSize = true;
-            this.checkBoxM2DCx3S.Location = new System.Drawing.Point(283, 303);
+            this.checkBoxM2DCx3S.Location = new System.Drawing.Point(175, 303);
             this.checkBoxM2DCx3S.Name = "checkBoxM2DCx3S";
             this.checkBoxM2DCx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCx3S.TabIndex = 46;
             this.checkBoxM2DCx3S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCx2SNOP
-            // 
-            this.txtBoxM2DCx2SNOP.Location = new System.Drawing.Point(175, 271);
-            this.txtBoxM2DCx2SNOP.Name = "txtBoxM2DCx2SNOP";
-            this.txtBoxM2DCx2SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCx2SNOP.TabIndex = 78;
-            // 
             // checkBoxM2DCx2S
             // 
             this.checkBoxM2DCx2S.AutoSize = true;
-            this.checkBoxM2DCx2S.Location = new System.Drawing.Point(283, 277);
+            this.checkBoxM2DCx2S.Location = new System.Drawing.Point(175, 277);
             this.checkBoxM2DCx2S.Name = "checkBoxM2DCx2S";
             this.checkBoxM2DCx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCx2S.TabIndex = 45;
             this.checkBoxM2DCx2S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCx1SNOP
-            // 
-            this.txtBoxM2DCx1SNOP.Location = new System.Drawing.Point(175, 245);
-            this.txtBoxM2DCx1SNOP.Name = "txtBoxM2DCx1SNOP";
-            this.txtBoxM2DCx1SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCx1SNOP.TabIndex = 77;
-            // 
             // checkBoxM2DCx1S
             // 
             this.checkBoxM2DCx1S.AutoSize = true;
-            this.checkBoxM2DCx1S.Location = new System.Drawing.Point(283, 251);
+            this.checkBoxM2DCx1S.Location = new System.Drawing.Point(175, 251);
             this.checkBoxM2DCx1S.Name = "checkBoxM2DCx1S";
             this.checkBoxM2DCx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCx1S.TabIndex = 44;
             this.checkBoxM2DCx1S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCDSNOP
-            // 
-            this.txtBoxM2DCDSNOP.Location = new System.Drawing.Point(175, 219);
-            this.txtBoxM2DCDSNOP.Name = "txtBoxM2DCDSNOP";
-            this.txtBoxM2DCDSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCDSNOP.TabIndex = 76;
-            // 
             // checkBoxM2DCDS
             // 
             this.checkBoxM2DCDS.AutoSize = true;
-            this.checkBoxM2DCDS.Location = new System.Drawing.Point(283, 222);
+            this.checkBoxM2DCDS.Location = new System.Drawing.Point(175, 222);
             this.checkBoxM2DCDS.Name = "checkBoxM2DCDS";
             this.checkBoxM2DCDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCDS.TabIndex = 43;
             this.checkBoxM2DCDS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCISNOP
-            // 
-            this.txtBoxM2DCISNOP.Location = new System.Drawing.Point(175, 193);
-            this.txtBoxM2DCISNOP.Name = "txtBoxM2DCISNOP";
-            this.txtBoxM2DCISNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCISNOP.TabIndex = 75;
-            // 
             // checkBoxM2DCIS
             // 
             this.checkBoxM2DCIS.AutoSize = true;
-            this.checkBoxM2DCIS.Location = new System.Drawing.Point(283, 199);
+            this.checkBoxM2DCIS.Location = new System.Drawing.Point(175, 199);
             this.checkBoxM2DCIS.Name = "checkBoxM2DCIS";
             this.checkBoxM2DCIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCIS.TabIndex = 42;
             this.checkBoxM2DCIS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCPSNOP
-            // 
-            this.txtBoxM2DCPSNOP.Location = new System.Drawing.Point(175, 167);
-            this.txtBoxM2DCPSNOP.Name = "txtBoxM2DCPSNOP";
-            this.txtBoxM2DCPSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCPSNOP.TabIndex = 74;
-            // 
             // checkBoxM2DCPS
             // 
             this.checkBoxM2DCPS.AutoSize = true;
-            this.checkBoxM2DCPS.Location = new System.Drawing.Point(283, 173);
+            this.checkBoxM2DCPS.Location = new System.Drawing.Point(175, 173);
             this.checkBoxM2DCPS.Name = "checkBoxM2DCPS";
             this.checkBoxM2DCPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCPS.TabIndex = 41;
             this.checkBoxM2DCPS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCCurrentSNOP
-            // 
-            this.txtBoxM2DCCurrentSNOP.Location = new System.Drawing.Point(175, 115);
-            this.txtBoxM2DCCurrentSNOP.Name = "txtBoxM2DCCurrentSNOP";
-            this.txtBoxM2DCCurrentSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCCurrentSNOP.TabIndex = 73;
-            // 
             // checkBoxM2DCCurrentS
             // 
             this.checkBoxM2DCCurrentS.AutoSize = true;
-            this.checkBoxM2DCCurrentS.Location = new System.Drawing.Point(283, 117);
+            this.checkBoxM2DCCurrentS.Location = new System.Drawing.Point(175, 117);
             this.checkBoxM2DCCurrentS.Name = "checkBoxM2DCCurrentS";
             this.checkBoxM2DCCurrentS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCCurrentS.TabIndex = 38;
             this.checkBoxM2DCCurrentS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCTorqueSNOP
-            // 
-            this.txtBoxM2DCTorqueSNOP.Location = new System.Drawing.Point(175, 88);
-            this.txtBoxM2DCTorqueSNOP.Name = "txtBoxM2DCTorqueSNOP";
-            this.txtBoxM2DCTorqueSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCTorqueSNOP.TabIndex = 72;
-            // 
             // checkBoxM2DCTorqueS
             // 
             this.checkBoxM2DCTorqueS.AutoSize = true;
-            this.checkBoxM2DCTorqueS.Location = new System.Drawing.Point(283, 91);
+            this.checkBoxM2DCTorqueS.Location = new System.Drawing.Point(175, 91);
             this.checkBoxM2DCTorqueS.Name = "checkBoxM2DCTorqueS";
             this.checkBoxM2DCTorqueS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCTorqueS.TabIndex = 37;
             this.checkBoxM2DCTorqueS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2DCPositionSNOP
-            // 
-            this.txtBoxM2DCPositionSNOP.Location = new System.Drawing.Point(175, 62);
-            this.txtBoxM2DCPositionSNOP.Name = "txtBoxM2DCPositionSNOP";
-            this.txtBoxM2DCPositionSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCPositionSNOP.TabIndex = 71;
-            // 
             // checkBoxM2DCPositionS
             // 
             this.checkBoxM2DCPositionS.AutoSize = true;
-            this.checkBoxM2DCPositionS.Location = new System.Drawing.Point(283, 65);
+            this.checkBoxM2DCPositionS.Location = new System.Drawing.Point(175, 65);
             this.checkBoxM2DCPositionS.Name = "checkBoxM2DCPositionS";
             this.checkBoxM2DCPositionS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCPositionS.TabIndex = 36;
             this.checkBoxM2DCPositionS.UseVisualStyleBackColor = true;
             // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(173, 16);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(91, 13);
-            this.label122.TabIndex = 70;
-            this.label122.Text = "Number of Points:";
-            // 
-            // txtBoxM2DCSpeedSNOP
-            // 
-            this.txtBoxM2DCSpeedSNOP.Location = new System.Drawing.Point(175, 34);
-            this.txtBoxM2DCSpeedSNOP.Name = "txtBoxM2DCSpeedSNOP";
-            this.txtBoxM2DCSpeedSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2DCSpeedSNOP.TabIndex = 69;
-            // 
             // checkBoxM2DCSpeedS
             // 
             this.checkBoxM2DCSpeedS.AutoSize = true;
-            this.checkBoxM2DCSpeedS.Location = new System.Drawing.Point(283, 36);
+            this.checkBoxM2DCSpeedS.Location = new System.Drawing.Point(175, 36);
             this.checkBoxM2DCSpeedS.Name = "checkBoxM2DCSpeedS";
             this.checkBoxM2DCSpeedS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2DCSpeedS.TabIndex = 35;
@@ -2258,7 +1975,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(284, 16);
+            this.label45.Location = new System.Drawing.Point(176, 16);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(40, 13);
             this.label45.TabIndex = 34;
@@ -2424,23 +2141,6 @@
             this.txtBoxM2DCSpeedS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2DCSpeedS.TabIndex = 10;
             // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(6, 10);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(69, 13);
-            this.label58.TabIndex = 3;
-            this.label58.Text = "Slave Adress";
-            // 
-            // txtBoxM2DCSlaveAddress
-            // 
-            this.txtBoxM2DCSlaveAddress.Location = new System.Drawing.Point(76, 7);
-            this.txtBoxM2DCSlaveAddress.Name = "txtBoxM2DCSlaveAddress";
-            this.txtBoxM2DCSlaveAddress.Size = new System.Drawing.Size(60, 20);
-            this.txtBoxM2DCSlaveAddress.TabIndex = 0;
-            this.txtBoxM2DCSlaveAddress.Text = "9";
-            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.txtBoxM2AsynchFrequencyRNOP);
@@ -2493,12 +2193,44 @@
             this.groupBox9.Controls.Add(this.txtBoxM2AsynchTorqueR);
             this.groupBox9.Controls.Add(this.txtBoxM2AsynchPositionR);
             this.groupBox9.Controls.Add(this.txtBoxM2AsynchSpeedR);
-            this.groupBox9.Location = new System.Drawing.Point(348, 38);
+            this.groupBox9.Location = new System.Drawing.Point(228, 5);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(329, 359);
             this.groupBox9.TabIndex = 47;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Receive Address";
+            // 
+            // txtBoxM2AsynchFrequencyRNOP
+            // 
+            this.txtBoxM2AsynchFrequencyRNOP.Location = new System.Drawing.Point(173, 170);
+            this.txtBoxM2AsynchFrequencyRNOP.Name = "txtBoxM2AsynchFrequencyRNOP";
+            this.txtBoxM2AsynchFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2AsynchFrequencyRNOP.TabIndex = 97;
+            // 
+            // checkBoxM2AsynchFrequencyR
+            // 
+            this.checkBoxM2AsynchFrequencyR.AutoSize = true;
+            this.checkBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(274, 172);
+            this.checkBoxM2AsynchFrequencyR.Name = "checkBoxM2AsynchFrequencyR";
+            this.checkBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2AsynchFrequencyR.TabIndex = 96;
+            this.checkBoxM2AsynchFrequencyR.UseVisualStyleBackColor = true;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(1, 172);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(60, 13);
+            this.label145.TabIndex = 95;
+            this.label145.Text = "Frequency:";
+            // 
+            // txtBoxM2AsynchFrequencyR
+            // 
+            this.txtBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(67, 169);
+            this.txtBoxM2AsynchFrequencyR.Name = "txtBoxM2AsynchFrequencyR";
+            this.txtBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2AsynchFrequencyR.TabIndex = 94;
             // 
             // txtBoxM2AsynchVoltageRNOP
             // 
@@ -2872,34 +2604,21 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchFrequencySNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchFrequencyS);
             this.groupBox10.Controls.Add(this.label144);
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchFrequencyS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchVoltageSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchVoltageS);
             this.groupBox10.Controls.Add(this.label134);
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchVoltageS);
-            this.groupBox10.Controls.Add(this.txtBoxM2Asynchx3SNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2Asynchx3S);
-            this.groupBox10.Controls.Add(this.txtBoxM2Asynchx2SNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2Asynchx2S);
-            this.groupBox10.Controls.Add(this.txtBoxM2Asynchx1SNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2Asynchx1S);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchDSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchDS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchISNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchIS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchPSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchPS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchCurrentSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchCurrentS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchTorqueSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchTorqueS);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchPositionSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchPositionS);
-            this.groupBox10.Controls.Add(this.label124);
-            this.groupBox10.Controls.Add(this.txtBoxM2AsynchSpeedSNOP);
             this.groupBox10.Controls.Add(this.checkBoxM2AsynchSpeedS);
             this.groupBox10.Controls.Add(this.label62);
             this.groupBox10.Controls.Add(this.label63);
@@ -2922,24 +2641,42 @@
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchTorqueS);
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchPositionS);
             this.groupBox10.Controls.Add(this.txtBoxM2AsynchSpeedS);
-            this.groupBox10.Location = new System.Drawing.Point(14, 38);
+            this.groupBox10.Location = new System.Drawing.Point(3, 5);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(328, 359);
+            this.groupBox10.Size = new System.Drawing.Size(219, 359);
             this.groupBox10.TabIndex = 4;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Send Address";
             // 
-            // txtBoxM2AsynchVoltageSNOP
+            // checkBoxM2AsynchFrequencyS
             // 
-            this.txtBoxM2AsynchVoltageSNOP.Location = new System.Drawing.Point(175, 141);
-            this.txtBoxM2AsynchVoltageSNOP.Name = "txtBoxM2AsynchVoltageSNOP";
-            this.txtBoxM2AsynchVoltageSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchVoltageSNOP.TabIndex = 94;
+            this.checkBoxM2AsynchFrequencyS.AutoSize = true;
+            this.checkBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(173, 172);
+            this.checkBoxM2AsynchFrequencyS.Name = "checkBoxM2AsynchFrequencyS";
+            this.checkBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2AsynchFrequencyS.TabIndex = 97;
+            this.checkBoxM2AsynchFrequencyS.UseVisualStyleBackColor = true;
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(1, 172);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(60, 13);
+            this.label144.TabIndex = 96;
+            this.label144.Text = "Frequency:";
+            // 
+            // txtBoxM2AsynchFrequencyS
+            // 
+            this.txtBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(67, 169);
+            this.txtBoxM2AsynchFrequencyS.Name = "txtBoxM2AsynchFrequencyS";
+            this.txtBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2AsynchFrequencyS.TabIndex = 95;
             // 
             // checkBoxM2AsynchVoltageS
             // 
             this.checkBoxM2AsynchVoltageS.AutoSize = true;
-            this.checkBoxM2AsynchVoltageS.Location = new System.Drawing.Point(283, 143);
+            this.checkBoxM2AsynchVoltageS.Location = new System.Drawing.Point(173, 143);
             this.checkBoxM2AsynchVoltageS.Name = "checkBoxM2AsynchVoltageS";
             this.checkBoxM2AsynchVoltageS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchVoltageS.TabIndex = 93;
@@ -2961,170 +2698,91 @@
             this.txtBoxM2AsynchVoltageS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchVoltageS.TabIndex = 91;
             // 
-            // txtBoxM2Asynchx3SNOP
-            // 
-            this.txtBoxM2Asynchx3SNOP.Location = new System.Drawing.Point(175, 325);
-            this.txtBoxM2Asynchx3SNOP.Name = "txtBoxM2Asynchx3SNOP";
-            this.txtBoxM2Asynchx3SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2Asynchx3SNOP.TabIndex = 90;
-            // 
             // checkBoxM2Asynchx3S
             // 
             this.checkBoxM2Asynchx3S.AutoSize = true;
-            this.checkBoxM2Asynchx3S.Location = new System.Drawing.Point(283, 331);
+            this.checkBoxM2Asynchx3S.Location = new System.Drawing.Point(173, 331);
             this.checkBoxM2Asynchx3S.Name = "checkBoxM2Asynchx3S";
             this.checkBoxM2Asynchx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx3S.TabIndex = 46;
             this.checkBoxM2Asynchx3S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2Asynchx2SNOP
-            // 
-            this.txtBoxM2Asynchx2SNOP.Location = new System.Drawing.Point(175, 299);
-            this.txtBoxM2Asynchx2SNOP.Name = "txtBoxM2Asynchx2SNOP";
-            this.txtBoxM2Asynchx2SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2Asynchx2SNOP.TabIndex = 89;
-            // 
             // checkBoxM2Asynchx2S
             // 
             this.checkBoxM2Asynchx2S.AutoSize = true;
-            this.checkBoxM2Asynchx2S.Location = new System.Drawing.Point(283, 305);
+            this.checkBoxM2Asynchx2S.Location = new System.Drawing.Point(173, 305);
             this.checkBoxM2Asynchx2S.Name = "checkBoxM2Asynchx2S";
             this.checkBoxM2Asynchx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx2S.TabIndex = 45;
             this.checkBoxM2Asynchx2S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2Asynchx1SNOP
-            // 
-            this.txtBoxM2Asynchx1SNOP.Location = new System.Drawing.Point(175, 273);
-            this.txtBoxM2Asynchx1SNOP.Name = "txtBoxM2Asynchx1SNOP";
-            this.txtBoxM2Asynchx1SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2Asynchx1SNOP.TabIndex = 88;
-            // 
             // checkBoxM2Asynchx1S
             // 
             this.checkBoxM2Asynchx1S.AutoSize = true;
-            this.checkBoxM2Asynchx1S.Location = new System.Drawing.Point(283, 279);
+            this.checkBoxM2Asynchx1S.Location = new System.Drawing.Point(173, 279);
             this.checkBoxM2Asynchx1S.Name = "checkBoxM2Asynchx1S";
             this.checkBoxM2Asynchx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2Asynchx1S.TabIndex = 44;
             this.checkBoxM2Asynchx1S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchDSNOP
-            // 
-            this.txtBoxM2AsynchDSNOP.Location = new System.Drawing.Point(175, 247);
-            this.txtBoxM2AsynchDSNOP.Name = "txtBoxM2AsynchDSNOP";
-            this.txtBoxM2AsynchDSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchDSNOP.TabIndex = 87;
-            // 
             // checkBoxM2AsynchDS
             // 
             this.checkBoxM2AsynchDS.AutoSize = true;
-            this.checkBoxM2AsynchDS.Location = new System.Drawing.Point(283, 250);
+            this.checkBoxM2AsynchDS.Location = new System.Drawing.Point(173, 250);
             this.checkBoxM2AsynchDS.Name = "checkBoxM2AsynchDS";
             this.checkBoxM2AsynchDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchDS.TabIndex = 43;
             this.checkBoxM2AsynchDS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchISNOP
-            // 
-            this.txtBoxM2AsynchISNOP.Location = new System.Drawing.Point(175, 221);
-            this.txtBoxM2AsynchISNOP.Name = "txtBoxM2AsynchISNOP";
-            this.txtBoxM2AsynchISNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchISNOP.TabIndex = 86;
-            // 
             // checkBoxM2AsynchIS
             // 
             this.checkBoxM2AsynchIS.AutoSize = true;
-            this.checkBoxM2AsynchIS.Location = new System.Drawing.Point(283, 227);
+            this.checkBoxM2AsynchIS.Location = new System.Drawing.Point(173, 227);
             this.checkBoxM2AsynchIS.Name = "checkBoxM2AsynchIS";
             this.checkBoxM2AsynchIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchIS.TabIndex = 42;
             this.checkBoxM2AsynchIS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchPSNOP
-            // 
-            this.txtBoxM2AsynchPSNOP.Location = new System.Drawing.Point(175, 195);
-            this.txtBoxM2AsynchPSNOP.Name = "txtBoxM2AsynchPSNOP";
-            this.txtBoxM2AsynchPSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchPSNOP.TabIndex = 85;
-            // 
             // checkBoxM2AsynchPS
             // 
             this.checkBoxM2AsynchPS.AutoSize = true;
-            this.checkBoxM2AsynchPS.Location = new System.Drawing.Point(283, 201);
+            this.checkBoxM2AsynchPS.Location = new System.Drawing.Point(173, 201);
             this.checkBoxM2AsynchPS.Name = "checkBoxM2AsynchPS";
             this.checkBoxM2AsynchPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchPS.TabIndex = 41;
             this.checkBoxM2AsynchPS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchCurrentSNOP
-            // 
-            this.txtBoxM2AsynchCurrentSNOP.Location = new System.Drawing.Point(175, 115);
-            this.txtBoxM2AsynchCurrentSNOP.Name = "txtBoxM2AsynchCurrentSNOP";
-            this.txtBoxM2AsynchCurrentSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchCurrentSNOP.TabIndex = 84;
-            // 
             // checkBoxM2AsynchCurrentS
             // 
             this.checkBoxM2AsynchCurrentS.AutoSize = true;
-            this.checkBoxM2AsynchCurrentS.Location = new System.Drawing.Point(283, 117);
+            this.checkBoxM2AsynchCurrentS.Location = new System.Drawing.Point(173, 117);
             this.checkBoxM2AsynchCurrentS.Name = "checkBoxM2AsynchCurrentS";
             this.checkBoxM2AsynchCurrentS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchCurrentS.TabIndex = 38;
             this.checkBoxM2AsynchCurrentS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchTorqueSNOP
-            // 
-            this.txtBoxM2AsynchTorqueSNOP.Location = new System.Drawing.Point(175, 88);
-            this.txtBoxM2AsynchTorqueSNOP.Name = "txtBoxM2AsynchTorqueSNOP";
-            this.txtBoxM2AsynchTorqueSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchTorqueSNOP.TabIndex = 83;
-            // 
             // checkBoxM2AsynchTorqueS
             // 
             this.checkBoxM2AsynchTorqueS.AutoSize = true;
-            this.checkBoxM2AsynchTorqueS.Location = new System.Drawing.Point(283, 91);
+            this.checkBoxM2AsynchTorqueS.Location = new System.Drawing.Point(173, 91);
             this.checkBoxM2AsynchTorqueS.Name = "checkBoxM2AsynchTorqueS";
             this.checkBoxM2AsynchTorqueS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchTorqueS.TabIndex = 37;
             this.checkBoxM2AsynchTorqueS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2AsynchPositionSNOP
-            // 
-            this.txtBoxM2AsynchPositionSNOP.Location = new System.Drawing.Point(175, 62);
-            this.txtBoxM2AsynchPositionSNOP.Name = "txtBoxM2AsynchPositionSNOP";
-            this.txtBoxM2AsynchPositionSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchPositionSNOP.TabIndex = 82;
-            // 
             // checkBoxM2AsynchPositionS
             // 
             this.checkBoxM2AsynchPositionS.AutoSize = true;
-            this.checkBoxM2AsynchPositionS.Location = new System.Drawing.Point(283, 65);
+            this.checkBoxM2AsynchPositionS.Location = new System.Drawing.Point(173, 65);
             this.checkBoxM2AsynchPositionS.Name = "checkBoxM2AsynchPositionS";
             this.checkBoxM2AsynchPositionS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchPositionS.TabIndex = 36;
             this.checkBoxM2AsynchPositionS.UseVisualStyleBackColor = true;
             // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(173, 16);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(91, 13);
-            this.label124.TabIndex = 81;
-            this.label124.Text = "Number of Points:";
-            // 
-            // txtBoxM2AsynchSpeedSNOP
-            // 
-            this.txtBoxM2AsynchSpeedSNOP.Location = new System.Drawing.Point(175, 34);
-            this.txtBoxM2AsynchSpeedSNOP.Name = "txtBoxM2AsynchSpeedSNOP";
-            this.txtBoxM2AsynchSpeedSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchSpeedSNOP.TabIndex = 80;
-            // 
             // checkBoxM2AsynchSpeedS
             // 
             this.checkBoxM2AsynchSpeedS.AutoSize = true;
-            this.checkBoxM2AsynchSpeedS.Location = new System.Drawing.Point(283, 36);
+            this.checkBoxM2AsynchSpeedS.Location = new System.Drawing.Point(173, 36);
             this.checkBoxM2AsynchSpeedS.Name = "checkBoxM2AsynchSpeedS";
             this.checkBoxM2AsynchSpeedS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2AsynchSpeedS.TabIndex = 35;
@@ -3133,7 +2791,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(284, 16);
+            this.label62.Location = new System.Drawing.Point(174, 16);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(40, 13);
             this.label62.TabIndex = 34;
@@ -3299,23 +2957,6 @@
             this.txtBoxM2AsynchSpeedS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2AsynchSpeedS.TabIndex = 10;
             // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(11, 15);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(69, 13);
-            this.label73.TabIndex = 3;
-            this.label73.Text = "Slave Adress";
-            // 
-            // txtBoxM2AsynchSlaveAddress
-            // 
-            this.txtBoxM2AsynchSlaveAddress.Location = new System.Drawing.Point(81, 12);
-            this.txtBoxM2AsynchSlaveAddress.Name = "txtBoxM2AsynchSlaveAddress";
-            this.txtBoxM2AsynchSlaveAddress.Size = new System.Drawing.Size(60, 20);
-            this.txtBoxM2AsynchSlaveAddress.TabIndex = 0;
-            this.txtBoxM2AsynchSlaveAddress.Text = "9";
-            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.checkBoxM2BLDCVoltageR);
@@ -3364,7 +3005,7 @@
             this.groupBox12.Controls.Add(this.txtBoxM2BLDCTorqueR);
             this.groupBox12.Controls.Add(this.txtBoxM2BLDCPositionR);
             this.groupBox12.Controls.Add(this.txtBoxM2BLDCSpeedR);
-            this.groupBox12.Location = new System.Drawing.Point(346, 33);
+            this.groupBox12.Location = new System.Drawing.Point(231, 5);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(324, 364);
             this.groupBox12.TabIndex = 47;
@@ -3743,30 +3384,18 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCVoltageSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCVoltageS);
             this.groupBox13.Controls.Add(this.label136);
             this.groupBox13.Controls.Add(this.txtBoxM2BLDCVoltageS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCx3SNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCx3S);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCx2SNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCx2S);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCx1SNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCx1S);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCDSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCDS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCISNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCIS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCPSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCPS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCCurrentSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCCurrentS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCTorqueSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCTorqueS);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCPositionSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCPositionS);
-            this.groupBox13.Controls.Add(this.label86);
-            this.groupBox13.Controls.Add(this.txtBoxM2BLDCSpeedSNOP);
             this.groupBox13.Controls.Add(this.checkBoxM2BLDCSpeedS);
             this.groupBox13.Controls.Add(this.label87);
             this.groupBox13.Controls.Add(this.label88);
@@ -3789,24 +3418,17 @@
             this.groupBox13.Controls.Add(this.txtBoxM2BLDCTorqueS);
             this.groupBox13.Controls.Add(this.txtBoxM2BLDCPositionS);
             this.groupBox13.Controls.Add(this.txtBoxM2BLDCSpeedS);
-            this.groupBox13.Location = new System.Drawing.Point(6, 33);
+            this.groupBox13.Location = new System.Drawing.Point(3, 5);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(334, 364);
+            this.groupBox13.Size = new System.Drawing.Size(222, 364);
             this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Send Address";
             // 
-            // txtBoxM2BLDCVoltageSNOP
-            // 
-            this.txtBoxM2BLDCVoltageSNOP.Location = new System.Drawing.Point(175, 141);
-            this.txtBoxM2BLDCVoltageSNOP.Name = "txtBoxM2BLDCVoltageSNOP";
-            this.txtBoxM2BLDCVoltageSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCVoltageSNOP.TabIndex = 83;
-            // 
             // checkBoxM2BLDCVoltageS
             // 
             this.checkBoxM2BLDCVoltageS.AutoSize = true;
-            this.checkBoxM2BLDCVoltageS.Location = new System.Drawing.Point(283, 143);
+            this.checkBoxM2BLDCVoltageS.Location = new System.Drawing.Point(173, 143);
             this.checkBoxM2BLDCVoltageS.Name = "checkBoxM2BLDCVoltageS";
             this.checkBoxM2BLDCVoltageS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCVoltageS.TabIndex = 82;
@@ -3828,170 +3450,91 @@
             this.txtBoxM2BLDCVoltageS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2BLDCVoltageS.TabIndex = 80;
             // 
-            // txtBoxM2BLDCx3SNOP
-            // 
-            this.txtBoxM2BLDCx3SNOP.Location = new System.Drawing.Point(175, 294);
-            this.txtBoxM2BLDCx3SNOP.Name = "txtBoxM2BLDCx3SNOP";
-            this.txtBoxM2BLDCx3SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCx3SNOP.TabIndex = 79;
-            // 
             // checkBoxM2BLDCx3S
             // 
             this.checkBoxM2BLDCx3S.AutoSize = true;
-            this.checkBoxM2BLDCx3S.Location = new System.Drawing.Point(283, 300);
+            this.checkBoxM2BLDCx3S.Location = new System.Drawing.Point(173, 300);
             this.checkBoxM2BLDCx3S.Name = "checkBoxM2BLDCx3S";
             this.checkBoxM2BLDCx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCx3S.TabIndex = 46;
             this.checkBoxM2BLDCx3S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCx2SNOP
-            // 
-            this.txtBoxM2BLDCx2SNOP.Location = new System.Drawing.Point(175, 268);
-            this.txtBoxM2BLDCx2SNOP.Name = "txtBoxM2BLDCx2SNOP";
-            this.txtBoxM2BLDCx2SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCx2SNOP.TabIndex = 78;
-            // 
             // checkBoxM2BLDCx2S
             // 
             this.checkBoxM2BLDCx2S.AutoSize = true;
-            this.checkBoxM2BLDCx2S.Location = new System.Drawing.Point(283, 274);
+            this.checkBoxM2BLDCx2S.Location = new System.Drawing.Point(173, 274);
             this.checkBoxM2BLDCx2S.Name = "checkBoxM2BLDCx2S";
             this.checkBoxM2BLDCx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCx2S.TabIndex = 45;
             this.checkBoxM2BLDCx2S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCx1SNOP
-            // 
-            this.txtBoxM2BLDCx1SNOP.Location = new System.Drawing.Point(175, 242);
-            this.txtBoxM2BLDCx1SNOP.Name = "txtBoxM2BLDCx1SNOP";
-            this.txtBoxM2BLDCx1SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCx1SNOP.TabIndex = 77;
-            // 
             // checkBoxM2BLDCx1S
             // 
             this.checkBoxM2BLDCx1S.AutoSize = true;
-            this.checkBoxM2BLDCx1S.Location = new System.Drawing.Point(283, 248);
+            this.checkBoxM2BLDCx1S.Location = new System.Drawing.Point(173, 248);
             this.checkBoxM2BLDCx1S.Name = "checkBoxM2BLDCx1S";
             this.checkBoxM2BLDCx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCx1S.TabIndex = 44;
             this.checkBoxM2BLDCx1S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCDSNOP
-            // 
-            this.txtBoxM2BLDCDSNOP.Location = new System.Drawing.Point(175, 216);
-            this.txtBoxM2BLDCDSNOP.Name = "txtBoxM2BLDCDSNOP";
-            this.txtBoxM2BLDCDSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCDSNOP.TabIndex = 76;
-            // 
             // checkBoxM2BLDCDS
             // 
             this.checkBoxM2BLDCDS.AutoSize = true;
-            this.checkBoxM2BLDCDS.Location = new System.Drawing.Point(283, 219);
+            this.checkBoxM2BLDCDS.Location = new System.Drawing.Point(173, 219);
             this.checkBoxM2BLDCDS.Name = "checkBoxM2BLDCDS";
             this.checkBoxM2BLDCDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCDS.TabIndex = 43;
             this.checkBoxM2BLDCDS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCISNOP
-            // 
-            this.txtBoxM2BLDCISNOP.Location = new System.Drawing.Point(175, 190);
-            this.txtBoxM2BLDCISNOP.Name = "txtBoxM2BLDCISNOP";
-            this.txtBoxM2BLDCISNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCISNOP.TabIndex = 75;
-            // 
             // checkBoxM2BLDCIS
             // 
             this.checkBoxM2BLDCIS.AutoSize = true;
-            this.checkBoxM2BLDCIS.Location = new System.Drawing.Point(283, 196);
+            this.checkBoxM2BLDCIS.Location = new System.Drawing.Point(173, 196);
             this.checkBoxM2BLDCIS.Name = "checkBoxM2BLDCIS";
             this.checkBoxM2BLDCIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCIS.TabIndex = 42;
             this.checkBoxM2BLDCIS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCPSNOP
-            // 
-            this.txtBoxM2BLDCPSNOP.Location = new System.Drawing.Point(175, 164);
-            this.txtBoxM2BLDCPSNOP.Name = "txtBoxM2BLDCPSNOP";
-            this.txtBoxM2BLDCPSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCPSNOP.TabIndex = 74;
-            // 
             // checkBoxM2BLDCPS
             // 
             this.checkBoxM2BLDCPS.AutoSize = true;
-            this.checkBoxM2BLDCPS.Location = new System.Drawing.Point(283, 170);
+            this.checkBoxM2BLDCPS.Location = new System.Drawing.Point(173, 170);
             this.checkBoxM2BLDCPS.Name = "checkBoxM2BLDCPS";
             this.checkBoxM2BLDCPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCPS.TabIndex = 41;
             this.checkBoxM2BLDCPS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCCurrentSNOP
-            // 
-            this.txtBoxM2BLDCCurrentSNOP.Location = new System.Drawing.Point(175, 115);
-            this.txtBoxM2BLDCCurrentSNOP.Name = "txtBoxM2BLDCCurrentSNOP";
-            this.txtBoxM2BLDCCurrentSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCCurrentSNOP.TabIndex = 73;
-            // 
             // checkBoxM2BLDCCurrentS
             // 
             this.checkBoxM2BLDCCurrentS.AutoSize = true;
-            this.checkBoxM2BLDCCurrentS.Location = new System.Drawing.Point(283, 117);
+            this.checkBoxM2BLDCCurrentS.Location = new System.Drawing.Point(173, 117);
             this.checkBoxM2BLDCCurrentS.Name = "checkBoxM2BLDCCurrentS";
             this.checkBoxM2BLDCCurrentS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCCurrentS.TabIndex = 38;
             this.checkBoxM2BLDCCurrentS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCTorqueSNOP
-            // 
-            this.txtBoxM2BLDCTorqueSNOP.Location = new System.Drawing.Point(175, 88);
-            this.txtBoxM2BLDCTorqueSNOP.Name = "txtBoxM2BLDCTorqueSNOP";
-            this.txtBoxM2BLDCTorqueSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCTorqueSNOP.TabIndex = 72;
-            // 
             // checkBoxM2BLDCTorqueS
             // 
             this.checkBoxM2BLDCTorqueS.AutoSize = true;
-            this.checkBoxM2BLDCTorqueS.Location = new System.Drawing.Point(283, 91);
+            this.checkBoxM2BLDCTorqueS.Location = new System.Drawing.Point(173, 91);
             this.checkBoxM2BLDCTorqueS.Name = "checkBoxM2BLDCTorqueS";
             this.checkBoxM2BLDCTorqueS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCTorqueS.TabIndex = 37;
             this.checkBoxM2BLDCTorqueS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2BLDCPositionSNOP
-            // 
-            this.txtBoxM2BLDCPositionSNOP.Location = new System.Drawing.Point(175, 62);
-            this.txtBoxM2BLDCPositionSNOP.Name = "txtBoxM2BLDCPositionSNOP";
-            this.txtBoxM2BLDCPositionSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCPositionSNOP.TabIndex = 71;
-            // 
             // checkBoxM2BLDCPositionS
             // 
             this.checkBoxM2BLDCPositionS.AutoSize = true;
-            this.checkBoxM2BLDCPositionS.Location = new System.Drawing.Point(283, 65);
+            this.checkBoxM2BLDCPositionS.Location = new System.Drawing.Point(173, 65);
             this.checkBoxM2BLDCPositionS.Name = "checkBoxM2BLDCPositionS";
             this.checkBoxM2BLDCPositionS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCPositionS.TabIndex = 36;
             this.checkBoxM2BLDCPositionS.UseVisualStyleBackColor = true;
             // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(173, 16);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(91, 13);
-            this.label86.TabIndex = 70;
-            this.label86.Text = "Number of Points:";
-            // 
-            // txtBoxM2BLDCSpeedSNOP
-            // 
-            this.txtBoxM2BLDCSpeedSNOP.Location = new System.Drawing.Point(175, 34);
-            this.txtBoxM2BLDCSpeedSNOP.Name = "txtBoxM2BLDCSpeedSNOP";
-            this.txtBoxM2BLDCSpeedSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2BLDCSpeedSNOP.TabIndex = 69;
-            // 
             // checkBoxM2BLDCSpeedS
             // 
             this.checkBoxM2BLDCSpeedS.AutoSize = true;
-            this.checkBoxM2BLDCSpeedS.Location = new System.Drawing.Point(283, 36);
+            this.checkBoxM2BLDCSpeedS.Location = new System.Drawing.Point(173, 36);
             this.checkBoxM2BLDCSpeedS.Name = "checkBoxM2BLDCSpeedS";
             this.checkBoxM2BLDCSpeedS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2BLDCSpeedS.TabIndex = 35;
@@ -4000,7 +3543,7 @@
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(284, 16);
+            this.label87.Location = new System.Drawing.Point(174, 16);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(40, 13);
             this.label87.TabIndex = 34;
@@ -4166,23 +3709,6 @@
             this.txtBoxM2BLDCSpeedS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2BLDCSpeedS.TabIndex = 10;
             // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(3, 10);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(69, 13);
-            this.label98.TabIndex = 3;
-            this.label98.Text = "Slave Adress";
-            // 
-            // txtBoxM2BLDCSlaveAddress
-            // 
-            this.txtBoxM2BLDCSlaveAddress.Location = new System.Drawing.Point(73, 7);
-            this.txtBoxM2BLDCSlaveAddress.Name = "txtBoxM2BLDCSlaveAddress";
-            this.txtBoxM2BLDCSlaveAddress.Size = new System.Drawing.Size(60, 20);
-            this.txtBoxM2BLDCSlaveAddress.TabIndex = 0;
-            this.txtBoxM2BLDCSlaveAddress.Text = "9";
-            // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.checkBoxM2PMSMFrequencyR);
@@ -4235,12 +3761,44 @@
             this.groupBox15.Controls.Add(this.txtBoxM2PMSMTorqueR);
             this.groupBox15.Controls.Add(this.txtBoxM2PMSMPositionR);
             this.groupBox15.Controls.Add(this.txtBoxM2PMSMSpeedR);
-            this.groupBox15.Location = new System.Drawing.Point(343, 41);
+            this.groupBox15.Location = new System.Drawing.Point(237, 5);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(334, 356);
             this.groupBox15.TabIndex = 47;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Receive Address";
+            // 
+            // checkBoxM2PMSMFrequencyR
+            // 
+            this.checkBoxM2PMSMFrequencyR.AutoSize = true;
+            this.checkBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(277, 168);
+            this.checkBoxM2PMSMFrequencyR.Name = "checkBoxM2PMSMFrequencyR";
+            this.checkBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2PMSMFrequencyR.TabIndex = 97;
+            this.checkBoxM2PMSMFrequencyR.UseVisualStyleBackColor = true;
+            // 
+            // txtBoxM2PMSMFrequencyRNOP
+            // 
+            this.txtBoxM2PMSMFrequencyRNOP.Location = new System.Drawing.Point(173, 164);
+            this.txtBoxM2PMSMFrequencyRNOP.Name = "txtBoxM2PMSMFrequencyRNOP";
+            this.txtBoxM2PMSMFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
+            this.txtBoxM2PMSMFrequencyRNOP.TabIndex = 98;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(1, 167);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(60, 13);
+            this.label147.TabIndex = 96;
+            this.label147.Text = "Frequency:";
+            // 
+            // txtBoxM2PMSMFrequencyR
+            // 
+            this.txtBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(67, 164);
+            this.txtBoxM2PMSMFrequencyR.Name = "txtBoxM2PMSMFrequencyR";
+            this.txtBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2PMSMFrequencyR.TabIndex = 95;
             // 
             // checkBoxM2PMSMVoltageR
             // 
@@ -4614,34 +4172,21 @@
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMFrequencySNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMFrequencyS);
             this.groupBox16.Controls.Add(this.label146);
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMFrequencyS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMVoltageSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMVoltageS);
             this.groupBox16.Controls.Add(this.label138);
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMVoltageS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMx3SNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMx3S);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMx2SNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMx2S);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMx1SNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMx1S);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMDSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMDS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMISNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMIS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMPSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMPS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMCurrentSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMCurrentS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMTorqueSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMTorqueS);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMPositionSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMPositionS);
-            this.groupBox16.Controls.Add(this.label111);
-            this.groupBox16.Controls.Add(this.txtBoxM2PMSMSpeedSNOP);
             this.groupBox16.Controls.Add(this.checkBoxM2PMSMSpeedS);
             this.groupBox16.Controls.Add(this.label112);
             this.groupBox16.Controls.Add(this.label113);
@@ -4664,24 +4209,42 @@
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMTorqueS);
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMPositionS);
             this.groupBox16.Controls.Add(this.txtBoxM2PMSMSpeedS);
-            this.groupBox16.Location = new System.Drawing.Point(3, 38);
+            this.groupBox16.Location = new System.Drawing.Point(3, 5);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(334, 359);
+            this.groupBox16.Size = new System.Drawing.Size(228, 359);
             this.groupBox16.TabIndex = 4;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Send Address";
             // 
-            // txtBoxM2PMSMVoltageSNOP
+            // checkBoxM2PMSMFrequencyS
             // 
-            this.txtBoxM2PMSMVoltageSNOP.Location = new System.Drawing.Point(175, 142);
-            this.txtBoxM2PMSMVoltageSNOP.Name = "txtBoxM2PMSMVoltageSNOP";
-            this.txtBoxM2PMSMVoltageSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMVoltageSNOP.TabIndex = 83;
+            this.checkBoxM2PMSMFrequencyS.AutoSize = true;
+            this.checkBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(172, 171);
+            this.checkBoxM2PMSMFrequencyS.Name = "checkBoxM2PMSMFrequencyS";
+            this.checkBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxM2PMSMFrequencyS.TabIndex = 86;
+            this.checkBoxM2PMSMFrequencyS.UseVisualStyleBackColor = true;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(1, 171);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(60, 13);
+            this.label146.TabIndex = 85;
+            this.label146.Text = "Frequency:";
+            // 
+            // txtBoxM2PMSMFrequencyS
+            // 
+            this.txtBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(67, 167);
+            this.txtBoxM2PMSMFrequencyS.Name = "txtBoxM2PMSMFrequencyS";
+            this.txtBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxM2PMSMFrequencyS.TabIndex = 84;
             // 
             // checkBoxM2PMSMVoltageS
             // 
             this.checkBoxM2PMSMVoltageS.AutoSize = true;
-            this.checkBoxM2PMSMVoltageS.Location = new System.Drawing.Point(283, 145);
+            this.checkBoxM2PMSMVoltageS.Location = new System.Drawing.Point(172, 145);
             this.checkBoxM2PMSMVoltageS.Name = "checkBoxM2PMSMVoltageS";
             this.checkBoxM2PMSMVoltageS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMVoltageS.TabIndex = 82;
@@ -4703,170 +4266,91 @@
             this.txtBoxM2PMSMVoltageS.Size = new System.Drawing.Size(100, 20);
             this.txtBoxM2PMSMVoltageS.TabIndex = 80;
             // 
-            // txtBoxM2PMSMx3SNOP
-            // 
-            this.txtBoxM2PMSMx3SNOP.Location = new System.Drawing.Point(175, 323);
-            this.txtBoxM2PMSMx3SNOP.Name = "txtBoxM2PMSMx3SNOP";
-            this.txtBoxM2PMSMx3SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMx3SNOP.TabIndex = 79;
-            // 
             // checkBoxM2PMSMx3S
             // 
             this.checkBoxM2PMSMx3S.AutoSize = true;
-            this.checkBoxM2PMSMx3S.Location = new System.Drawing.Point(283, 329);
+            this.checkBoxM2PMSMx3S.Location = new System.Drawing.Point(172, 326);
             this.checkBoxM2PMSMx3S.Name = "checkBoxM2PMSMx3S";
             this.checkBoxM2PMSMx3S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx3S.TabIndex = 46;
             this.checkBoxM2PMSMx3S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMx2SNOP
-            // 
-            this.txtBoxM2PMSMx2SNOP.Location = new System.Drawing.Point(175, 297);
-            this.txtBoxM2PMSMx2SNOP.Name = "txtBoxM2PMSMx2SNOP";
-            this.txtBoxM2PMSMx2SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMx2SNOP.TabIndex = 78;
-            // 
             // checkBoxM2PMSMx2S
             // 
             this.checkBoxM2PMSMx2S.AutoSize = true;
-            this.checkBoxM2PMSMx2S.Location = new System.Drawing.Point(283, 303);
+            this.checkBoxM2PMSMx2S.Location = new System.Drawing.Point(172, 300);
             this.checkBoxM2PMSMx2S.Name = "checkBoxM2PMSMx2S";
             this.checkBoxM2PMSMx2S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx2S.TabIndex = 45;
             this.checkBoxM2PMSMx2S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMx1SNOP
-            // 
-            this.txtBoxM2PMSMx1SNOP.Location = new System.Drawing.Point(175, 271);
-            this.txtBoxM2PMSMx1SNOP.Name = "txtBoxM2PMSMx1SNOP";
-            this.txtBoxM2PMSMx1SNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMx1SNOP.TabIndex = 77;
-            // 
             // checkBoxM2PMSMx1S
             // 
             this.checkBoxM2PMSMx1S.AutoSize = true;
-            this.checkBoxM2PMSMx1S.Location = new System.Drawing.Point(283, 277);
+            this.checkBoxM2PMSMx1S.Location = new System.Drawing.Point(172, 274);
             this.checkBoxM2PMSMx1S.Name = "checkBoxM2PMSMx1S";
             this.checkBoxM2PMSMx1S.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMx1S.TabIndex = 44;
             this.checkBoxM2PMSMx1S.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMDSNOP
-            // 
-            this.txtBoxM2PMSMDSNOP.Location = new System.Drawing.Point(175, 245);
-            this.txtBoxM2PMSMDSNOP.Name = "txtBoxM2PMSMDSNOP";
-            this.txtBoxM2PMSMDSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMDSNOP.TabIndex = 76;
-            // 
             // checkBoxM2PMSMDS
             // 
             this.checkBoxM2PMSMDS.AutoSize = true;
-            this.checkBoxM2PMSMDS.Location = new System.Drawing.Point(283, 248);
+            this.checkBoxM2PMSMDS.Location = new System.Drawing.Point(172, 248);
             this.checkBoxM2PMSMDS.Name = "checkBoxM2PMSMDS";
             this.checkBoxM2PMSMDS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMDS.TabIndex = 43;
             this.checkBoxM2PMSMDS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMISNOP
-            // 
-            this.txtBoxM2PMSMISNOP.Location = new System.Drawing.Point(175, 219);
-            this.txtBoxM2PMSMISNOP.Name = "txtBoxM2PMSMISNOP";
-            this.txtBoxM2PMSMISNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMISNOP.TabIndex = 75;
-            // 
             // checkBoxM2PMSMIS
             // 
             this.checkBoxM2PMSMIS.AutoSize = true;
-            this.checkBoxM2PMSMIS.Location = new System.Drawing.Point(283, 225);
+            this.checkBoxM2PMSMIS.Location = new System.Drawing.Point(172, 225);
             this.checkBoxM2PMSMIS.Name = "checkBoxM2PMSMIS";
             this.checkBoxM2PMSMIS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMIS.TabIndex = 42;
             this.checkBoxM2PMSMIS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMPSNOP
-            // 
-            this.txtBoxM2PMSMPSNOP.Location = new System.Drawing.Point(175, 193);
-            this.txtBoxM2PMSMPSNOP.Name = "txtBoxM2PMSMPSNOP";
-            this.txtBoxM2PMSMPSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMPSNOP.TabIndex = 74;
-            // 
             // checkBoxM2PMSMPS
             // 
             this.checkBoxM2PMSMPS.AutoSize = true;
-            this.checkBoxM2PMSMPS.Location = new System.Drawing.Point(283, 199);
+            this.checkBoxM2PMSMPS.Location = new System.Drawing.Point(172, 199);
             this.checkBoxM2PMSMPS.Name = "checkBoxM2PMSMPS";
             this.checkBoxM2PMSMPS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMPS.TabIndex = 41;
             this.checkBoxM2PMSMPS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMCurrentSNOP
-            // 
-            this.txtBoxM2PMSMCurrentSNOP.Location = new System.Drawing.Point(175, 115);
-            this.txtBoxM2PMSMCurrentSNOP.Name = "txtBoxM2PMSMCurrentSNOP";
-            this.txtBoxM2PMSMCurrentSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMCurrentSNOP.TabIndex = 73;
-            // 
             // checkBoxM2PMSMCurrentS
             // 
             this.checkBoxM2PMSMCurrentS.AutoSize = true;
-            this.checkBoxM2PMSMCurrentS.Location = new System.Drawing.Point(283, 118);
+            this.checkBoxM2PMSMCurrentS.Location = new System.Drawing.Point(172, 118);
             this.checkBoxM2PMSMCurrentS.Name = "checkBoxM2PMSMCurrentS";
             this.checkBoxM2PMSMCurrentS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMCurrentS.TabIndex = 38;
             this.checkBoxM2PMSMCurrentS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMTorqueSNOP
-            // 
-            this.txtBoxM2PMSMTorqueSNOP.Location = new System.Drawing.Point(175, 88);
-            this.txtBoxM2PMSMTorqueSNOP.Name = "txtBoxM2PMSMTorqueSNOP";
-            this.txtBoxM2PMSMTorqueSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMTorqueSNOP.TabIndex = 72;
-            // 
             // checkBoxM2PMSMTorqueS
             // 
             this.checkBoxM2PMSMTorqueS.AutoSize = true;
-            this.checkBoxM2PMSMTorqueS.Location = new System.Drawing.Point(283, 91);
+            this.checkBoxM2PMSMTorqueS.Location = new System.Drawing.Point(172, 91);
             this.checkBoxM2PMSMTorqueS.Name = "checkBoxM2PMSMTorqueS";
             this.checkBoxM2PMSMTorqueS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMTorqueS.TabIndex = 37;
             this.checkBoxM2PMSMTorqueS.UseVisualStyleBackColor = true;
             // 
-            // txtBoxM2PMSMPositionSNOP
-            // 
-            this.txtBoxM2PMSMPositionSNOP.Location = new System.Drawing.Point(175, 62);
-            this.txtBoxM2PMSMPositionSNOP.Name = "txtBoxM2PMSMPositionSNOP";
-            this.txtBoxM2PMSMPositionSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMPositionSNOP.TabIndex = 71;
-            // 
             // checkBoxM2PMSMPositionS
             // 
             this.checkBoxM2PMSMPositionS.AutoSize = true;
-            this.checkBoxM2PMSMPositionS.Location = new System.Drawing.Point(283, 65);
+            this.checkBoxM2PMSMPositionS.Location = new System.Drawing.Point(172, 65);
             this.checkBoxM2PMSMPositionS.Name = "checkBoxM2PMSMPositionS";
             this.checkBoxM2PMSMPositionS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMPositionS.TabIndex = 36;
             this.checkBoxM2PMSMPositionS.UseVisualStyleBackColor = true;
             // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(173, 16);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(91, 13);
-            this.label111.TabIndex = 70;
-            this.label111.Text = "Number of Points:";
-            // 
-            // txtBoxM2PMSMSpeedSNOP
-            // 
-            this.txtBoxM2PMSMSpeedSNOP.Location = new System.Drawing.Point(175, 34);
-            this.txtBoxM2PMSMSpeedSNOP.Name = "txtBoxM2PMSMSpeedSNOP";
-            this.txtBoxM2PMSMSpeedSNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMSpeedSNOP.TabIndex = 69;
-            // 
             // checkBoxM2PMSMSpeedS
             // 
             this.checkBoxM2PMSMSpeedS.AutoSize = true;
-            this.checkBoxM2PMSMSpeedS.Location = new System.Drawing.Point(283, 36);
+            this.checkBoxM2PMSMSpeedS.Location = new System.Drawing.Point(172, 36);
             this.checkBoxM2PMSMSpeedS.Name = "checkBoxM2PMSMSpeedS";
             this.checkBoxM2PMSMSpeedS.Size = new System.Drawing.Size(15, 14);
             this.checkBoxM2PMSMSpeedS.TabIndex = 35;
@@ -4875,7 +4359,7 @@
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(284, 16);
+            this.label112.Location = new System.Drawing.Point(173, 16);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(40, 13);
             this.label112.TabIndex = 34;
@@ -5068,19 +4552,17 @@
             this.tabControl1.Location = new System.Drawing.Point(272, 20);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(718, 426);
+            this.tabControl1.Size = new System.Drawing.Size(590, 396);
             this.tabControl1.TabIndex = 48;
             // 
             // M1
             // 
-            this.M1.Controls.Add(this.label2);
-            this.M1.Controls.Add(this.txtBoxM1SlaveAddress);
             this.M1.Controls.Add(this.groupBox2);
             this.M1.Controls.Add(this.groupBox7);
             this.M1.Location = new System.Drawing.Point(4, 22);
             this.M1.Name = "M1";
             this.M1.Padding = new System.Windows.Forms.Padding(3);
-            this.M1.Size = new System.Drawing.Size(710, 400);
+            this.M1.Size = new System.Drawing.Size(721, 400);
             this.M1.TabIndex = 0;
             this.M1.Text = "M1 ";
             this.M1.UseVisualStyleBackColor = true;
@@ -5088,13 +4570,11 @@
             // M2DC
             // 
             this.M2DC.Controls.Add(this.groupBox4);
-            this.M2DC.Controls.Add(this.label58);
             this.M2DC.Controls.Add(this.groupBox6);
-            this.M2DC.Controls.Add(this.txtBoxM2DCSlaveAddress);
             this.M2DC.Location = new System.Drawing.Point(4, 22);
             this.M2DC.Name = "M2DC";
             this.M2DC.Padding = new System.Windows.Forms.Padding(3);
-            this.M2DC.Size = new System.Drawing.Size(710, 400);
+            this.M2DC.Size = new System.Drawing.Size(721, 400);
             this.M2DC.TabIndex = 1;
             this.M2DC.Text = "M2 DC ";
             this.M2DC.UseVisualStyleBackColor = true;
@@ -5103,11 +4583,9 @@
             // 
             this.M2Asynch.Controls.Add(this.groupBox9);
             this.M2Asynch.Controls.Add(this.groupBox10);
-            this.M2Asynch.Controls.Add(this.txtBoxM2AsynchSlaveAddress);
-            this.M2Asynch.Controls.Add(this.label73);
             this.M2Asynch.Location = new System.Drawing.Point(4, 22);
             this.M2Asynch.Name = "M2Asynch";
-            this.M2Asynch.Size = new System.Drawing.Size(710, 400);
+            this.M2Asynch.Size = new System.Drawing.Size(582, 370);
             this.M2Asynch.TabIndex = 2;
             this.M2Asynch.Text = "M2 Asynch ";
             this.M2Asynch.UseVisualStyleBackColor = true;
@@ -5115,12 +4593,10 @@
             // M2BLDC
             // 
             this.M2BLDC.Controls.Add(this.groupBox12);
-            this.M2BLDC.Controls.Add(this.label98);
             this.M2BLDC.Controls.Add(this.groupBox13);
-            this.M2BLDC.Controls.Add(this.txtBoxM2BLDCSlaveAddress);
             this.M2BLDC.Location = new System.Drawing.Point(4, 22);
             this.M2BLDC.Name = "M2BLDC";
-            this.M2BLDC.Size = new System.Drawing.Size(710, 400);
+            this.M2BLDC.Size = new System.Drawing.Size(721, 400);
             this.M2BLDC.TabIndex = 3;
             this.M2BLDC.Text = "M2 BLDC";
             this.M2BLDC.UseVisualStyleBackColor = true;
@@ -5131,7 +4607,7 @@
             this.M2PMSM.Controls.Add(this.groupBox16);
             this.M2PMSM.Location = new System.Drawing.Point(4, 22);
             this.M2PMSM.Name = "M2PMSM";
-            this.M2PMSM.Size = new System.Drawing.Size(710, 400);
+            this.M2PMSM.Size = new System.Drawing.Size(721, 400);
             this.M2PMSM.TabIndex = 4;
             this.M2PMSM.Text = "M2PMSM";
             this.M2PMSM.UseVisualStyleBackColor = true;
@@ -5140,6 +4616,7 @@
             // 
             this.groupBox3.Controls.Add(this.comboBoxSaveConfig);
             this.groupBox3.Controls.Add(this.btnSave);
+            this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Location = new System.Drawing.Point(9, 175);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(214, 96);
@@ -5257,134 +4734,6 @@
             this.label140.TabIndex = 0;
             this.label140.Text = "Start Address:";
             // 
-            // txtBoxM2AsynchFrequencySNOP
-            // 
-            this.txtBoxM2AsynchFrequencySNOP.Location = new System.Drawing.Point(175, 170);
-            this.txtBoxM2AsynchFrequencySNOP.Name = "txtBoxM2AsynchFrequencySNOP";
-            this.txtBoxM2AsynchFrequencySNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchFrequencySNOP.TabIndex = 98;
-            // 
-            // checkBoxM2AsynchFrequencyS
-            // 
-            this.checkBoxM2AsynchFrequencyS.AutoSize = true;
-            this.checkBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(283, 172);
-            this.checkBoxM2AsynchFrequencyS.Name = "checkBoxM2AsynchFrequencyS";
-            this.checkBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxM2AsynchFrequencyS.TabIndex = 97;
-            this.checkBoxM2AsynchFrequencyS.UseVisualStyleBackColor = true;
-            // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(1, 172);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(60, 13);
-            this.label144.TabIndex = 96;
-            this.label144.Text = "Frequency:";
-            // 
-            // txtBoxM2AsynchFrequencyS
-            // 
-            this.txtBoxM2AsynchFrequencyS.Location = new System.Drawing.Point(67, 169);
-            this.txtBoxM2AsynchFrequencyS.Name = "txtBoxM2AsynchFrequencyS";
-            this.txtBoxM2AsynchFrequencyS.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxM2AsynchFrequencyS.TabIndex = 95;
-            // 
-            // txtBoxM2AsynchFrequencyRNOP
-            // 
-            this.txtBoxM2AsynchFrequencyRNOP.Location = new System.Drawing.Point(173, 170);
-            this.txtBoxM2AsynchFrequencyRNOP.Name = "txtBoxM2AsynchFrequencyRNOP";
-            this.txtBoxM2AsynchFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2AsynchFrequencyRNOP.TabIndex = 97;
-            // 
-            // checkBoxM2AsynchFrequencyR
-            // 
-            this.checkBoxM2AsynchFrequencyR.AutoSize = true;
-            this.checkBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(274, 172);
-            this.checkBoxM2AsynchFrequencyR.Name = "checkBoxM2AsynchFrequencyR";
-            this.checkBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxM2AsynchFrequencyR.TabIndex = 96;
-            this.checkBoxM2AsynchFrequencyR.UseVisualStyleBackColor = true;
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(1, 172);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(60, 13);
-            this.label145.TabIndex = 95;
-            this.label145.Text = "Frequency:";
-            // 
-            // txtBoxM2AsynchFrequencyR
-            // 
-            this.txtBoxM2AsynchFrequencyR.Location = new System.Drawing.Point(67, 169);
-            this.txtBoxM2AsynchFrequencyR.Name = "txtBoxM2AsynchFrequencyR";
-            this.txtBoxM2AsynchFrequencyR.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxM2AsynchFrequencyR.TabIndex = 94;
-            // 
-            // txtBoxM2PMSMFrequencySNOP
-            // 
-            this.txtBoxM2PMSMFrequencySNOP.Location = new System.Drawing.Point(175, 168);
-            this.txtBoxM2PMSMFrequencySNOP.Name = "txtBoxM2PMSMFrequencySNOP";
-            this.txtBoxM2PMSMFrequencySNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMFrequencySNOP.TabIndex = 87;
-            // 
-            // checkBoxM2PMSMFrequencyS
-            // 
-            this.checkBoxM2PMSMFrequencyS.AutoSize = true;
-            this.checkBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(283, 171);
-            this.checkBoxM2PMSMFrequencyS.Name = "checkBoxM2PMSMFrequencyS";
-            this.checkBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxM2PMSMFrequencyS.TabIndex = 86;
-            this.checkBoxM2PMSMFrequencyS.UseVisualStyleBackColor = true;
-            // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(1, 171);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(60, 13);
-            this.label146.TabIndex = 85;
-            this.label146.Text = "Frequency:";
-            // 
-            // txtBoxM2PMSMFrequencyS
-            // 
-            this.txtBoxM2PMSMFrequencyS.Location = new System.Drawing.Point(67, 167);
-            this.txtBoxM2PMSMFrequencyS.Name = "txtBoxM2PMSMFrequencyS";
-            this.txtBoxM2PMSMFrequencyS.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxM2PMSMFrequencyS.TabIndex = 84;
-            // 
-            // checkBoxM2PMSMFrequencyR
-            // 
-            this.checkBoxM2PMSMFrequencyR.AutoSize = true;
-            this.checkBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(277, 168);
-            this.checkBoxM2PMSMFrequencyR.Name = "checkBoxM2PMSMFrequencyR";
-            this.checkBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxM2PMSMFrequencyR.TabIndex = 97;
-            this.checkBoxM2PMSMFrequencyR.UseVisualStyleBackColor = true;
-            // 
-            // txtBoxM2PMSMFrequencyRNOP
-            // 
-            this.txtBoxM2PMSMFrequencyRNOP.Location = new System.Drawing.Point(173, 164);
-            this.txtBoxM2PMSMFrequencyRNOP.Name = "txtBoxM2PMSMFrequencyRNOP";
-            this.txtBoxM2PMSMFrequencyRNOP.Size = new System.Drawing.Size(93, 20);
-            this.txtBoxM2PMSMFrequencyRNOP.TabIndex = 98;
-            // 
-            // label147
-            // 
-            this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(1, 167);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(60, 13);
-            this.label147.TabIndex = 96;
-            this.label147.Text = "Frequency:";
-            // 
-            // txtBoxM2PMSMFrequencyR
-            // 
-            this.txtBoxM2PMSMFrequencyR.Location = new System.Drawing.Point(67, 164);
-            this.txtBoxM2PMSMFrequencyR.Name = "txtBoxM2PMSMFrequencyR";
-            this.txtBoxM2PMSMFrequencyR.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxM2PMSMFrequencyR.TabIndex = 95;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5397,7 +4746,6 @@
             this.Controls.Add(this.label129);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnClose);
             this.Name = "Form2";
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -5425,13 +4773,9 @@
             this.groupBox16.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.M1.ResumeLayout(false);
-            this.M1.PerformLayout();
             this.M2DC.ResumeLayout(false);
-            this.M2DC.PerformLayout();
             this.M2Asynch.ResumeLayout(false);
-            this.M2Asynch.PerformLayout();
             this.M2BLDC.ResumeLayout(false);
-            this.M2BLDC.PerformLayout();
             this.M2PMSM.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -5461,8 +4805,6 @@
         private System.Windows.Forms.TextBox txtBoxM1TorqueS;
         private System.Windows.Forms.TextBox txtBoxM1PositionS;
         private System.Windows.Forms.TextBox txtBoxM1SpeedS;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxM1SlaveAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
@@ -5586,8 +4928,6 @@
         private System.Windows.Forms.TextBox txtBoxM2DCTorqueS;
         private System.Windows.Forms.TextBox txtBoxM2DCPositionS;
         private System.Windows.Forms.TextBox txtBoxM2DCSpeedS;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox txtBoxM2DCSlaveAddress;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.CheckBox checkBoxM2Asynchx3R;
         private System.Windows.Forms.CheckBox checkBoxM2Asynchx2R;
@@ -5652,8 +4992,6 @@
         private System.Windows.Forms.TextBox txtBoxM2AsynchTorqueS;
         private System.Windows.Forms.TextBox txtBoxM2AsynchPositionS;
         private System.Windows.Forms.TextBox txtBoxM2AsynchSpeedS;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchSlaveAddress;
         private System.Windows.Forms.TextBox txtBoxM1x3RNOP;
         private System.Windows.Forms.TextBox txtBoxM1x2RNOP;
         private System.Windows.Forms.TextBox txtBoxM1x1RNOP;
@@ -5665,17 +5003,6 @@
         private System.Windows.Forms.TextBox txtBoxM1PositionRNOP;
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.TextBox txtBoxM1SpeedRNOP;
-        private System.Windows.Forms.TextBox txtBoxM1x3SNOP;
-        private System.Windows.Forms.TextBox txtBoxM1x2SNOP;
-        private System.Windows.Forms.TextBox txtBoxM1x1SNOP;
-        private System.Windows.Forms.TextBox txtBoxM1DSNOP;
-        private System.Windows.Forms.TextBox txtBoxM1ISNOP;
-        private System.Windows.Forms.TextBox txtBoxM1PSNOP;
-        private System.Windows.Forms.TextBox txtBoxM1CurrentSNOP;
-        private System.Windows.Forms.TextBox txtBoxM1TorqueSNOP;
-        private System.Windows.Forms.TextBox txtBoxM1PositionSNOP;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.TextBox txtBoxM1SpeedSNOP;
         private System.Windows.Forms.TextBox txtBoxM2DCx3RNOP;
         private System.Windows.Forms.TextBox txtBoxM2DCx2RNOP;
         private System.Windows.Forms.TextBox txtBoxM2DCx1RNOP;
@@ -5687,17 +5014,6 @@
         private System.Windows.Forms.TextBox txtBoxM2DCCurrentRNOP;
         private System.Windows.Forms.TextBox txtBoxM2DCPositionRNOP;
         private System.Windows.Forms.TextBox txtBoxM2DCTorqueRNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCx3SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCx2SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCx1SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCDSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCISNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCPSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCCurrentSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCTorqueSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2DCPositionSNOP;
-        private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.TextBox txtBoxM2DCSpeedSNOP;
         private System.Windows.Forms.Label label125;
         private System.Windows.Forms.TextBox txtBoxM2Asynchx3RNOP;
         private System.Windows.Forms.TextBox txtBoxM2Asynchx2RNOP;
@@ -5709,17 +5025,6 @@
         private System.Windows.Forms.TextBox txtBoxM2AsynchTorqueRNOP;
         private System.Windows.Forms.TextBox txtBoxM2AsynchPositionRNOP;
         private System.Windows.Forms.TextBox txtBoxM2AsynchSpeedRNOP;
-        private System.Windows.Forms.TextBox txtBoxM2Asynchx3SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2Asynchx2SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2Asynchx1SNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchDSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchISNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchPSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchCurrentSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchTorqueSNOP;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchPositionSNOP;
-        private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchSpeedSNOP;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.TextBox txtBoxM2BLDCx3RNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCx3R;
@@ -5764,26 +5069,15 @@
         private System.Windows.Forms.TextBox txtBoxM2BLDCPositionR;
         private System.Windows.Forms.TextBox txtBoxM2BLDCSpeedR;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCx3SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCx3S;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCx2SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCx2S;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCx1SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCx1S;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCDSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCDS;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCISNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCIS;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCPSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCPS;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCCurrentSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCCurrentS;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCTorqueSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCTorqueS;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCPositionSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCPositionS;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCSpeedSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCSpeedS;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.Label label88;
@@ -5806,8 +5100,6 @@
         private System.Windows.Forms.TextBox txtBoxM2BLDCTorqueS;
         private System.Windows.Forms.TextBox txtBoxM2BLDCPositionS;
         private System.Windows.Forms.TextBox txtBoxM2BLDCSpeedS;
-        private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCSlaveAddress;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.TextBox txtBoxM2PMSMx3RNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMx3R;
@@ -5852,26 +5144,15 @@
         private System.Windows.Forms.TextBox txtBoxM2PMSMPositionR;
         private System.Windows.Forms.TextBox txtBoxM2PMSMSpeedR;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMx3SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMx3S;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMx2SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMx2S;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMx1SNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMx1S;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMDSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMDS;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMISNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMIS;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMPSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMPS;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMCurrentSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMCurrentS;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMTorqueSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMTorqueS;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMPositionSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMPositionS;
-        private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMSpeedSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMSpeedS;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Label label113;
@@ -5902,7 +5183,6 @@
         private System.Windows.Forms.TabPage M2Asynch;
         private System.Windows.Forms.TabPage M2BLDC;
         private System.Windows.Forms.TabPage M2PMSM;
-        private System.Windows.Forms.TextBox txtBoxM1VoltageSNOP;
         private System.Windows.Forms.CheckBox checkBoxM1VoltageS;
         private System.Windows.Forms.Label label130;
         private System.Windows.Forms.TextBox txtBoxM1VoltageS;
@@ -5914,7 +5194,6 @@
         private System.Windows.Forms.CheckBox checkBoxM2DCVoltageR;
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.TextBox txtBoxM2DCVoltageR;
-        private System.Windows.Forms.TextBox txtBoxM2DCVoltageSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2DCVoltageS;
         private System.Windows.Forms.Label label132;
         private System.Windows.Forms.TextBox txtBoxM2DCVoltageS;
@@ -5922,7 +5201,6 @@
         private System.Windows.Forms.CheckBox checkBoxM2AsynchVoltageR;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.TextBox txtBoxM2AsynchVoltageR;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchVoltageSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2AsynchVoltageS;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.TextBox txtBoxM2AsynchVoltageS;
@@ -5930,7 +5208,6 @@
         private System.Windows.Forms.TextBox txtBoxM2BLDCVoltageRNOP;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.TextBox txtBoxM2BLDCVoltageR;
-        private System.Windows.Forms.TextBox txtBoxM2BLDCVoltageSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2BLDCVoltageS;
         private System.Windows.Forms.Label label136;
         private System.Windows.Forms.TextBox txtBoxM2BLDCVoltageS;
@@ -5938,7 +5215,6 @@
         private System.Windows.Forms.TextBox txtBoxM2PMSMVoltageRNOP;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.TextBox txtBoxM2PMSMVoltageR;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMVoltageSNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMVoltageS;
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.TextBox txtBoxM2PMSMVoltageS;
@@ -5958,7 +5234,6 @@
         private System.Windows.Forms.CheckBox checkBoxM2AsynchFrequencyR;
         private System.Windows.Forms.Label label145;
         private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencyR;
-        private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencySNOP;
         private System.Windows.Forms.CheckBox checkBoxM2AsynchFrequencyS;
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.TextBox txtBoxM2AsynchFrequencyS;
@@ -5966,7 +5241,6 @@
         private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyRNOP;
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyR;
-        private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencySNOP;
         private System.Windows.Forms.CheckBox checkBoxM2PMSMFrequencyS;
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.TextBox txtBoxM2PMSMFrequencyS;
